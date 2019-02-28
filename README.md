@@ -1,6 +1,5 @@
-# worksfair-frontend
-The frontend of worksfair
-
+# WORKSFAIR-FRONTEND - The ReactJS frontend of worksfair
+[![Build Status](https://travis-ci.com/Ideosynergy/worksfair-frontend.svg?branch=develop)](https://travis-ci.com/Ideosynergy/worksfair-frontend) [![Test Coverage](https://api.codeclimate.com/v1/badges/1b52fe112d83e17f90f7/test_coverage)](https://codeclimate.com/github/Ideosynergy/worksfair-frontend/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/1b52fe112d83e17f90f7/maintainability)](https://codeclimate.com/github/Ideosynergy/worksfair-frontend/maintainability)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
