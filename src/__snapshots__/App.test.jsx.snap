@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test that the Footer displays 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <header>
+          <nav
+            aria-label="main navigation"
+            class="navbar"
+            role="navigation"
+          >
+            <div
+              class="navbar-brand"
+            >
+              <a
+                class="navbar-item"
+                href=""
+              >
+                <img
+                  height="28"
+                  src="logo.png"
+                  width="112"
+                />
+              </a>
+              <a
+                aria-expanded="false"
+                aria-label="menu"
+                class="navbar-burger burger"
+                data-target="navbarBasicExample"
+                role="button"
+              >
+                <span
+                  aria-hidden="true"
+                />
+                <span
+                  aria-hidden="true"
+                />
+                <span
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+            <div
+              class="navbar-menu"
+              id="navbarBasicExample"
+            >
+              <div
+                class="navbar-start"
+              >
+                <a
+                  class="navbar-item"
+                >
+                  Home
+                </a>
+                <a
+                  class="navbar-item"
+                >
+                  About
+                </a>
+                <div
+                  class="navbar-item has-dropdown is-hoverable"
+                >
+                  <a
+                    class="navbar-link"
+                  >
+                    More
+                  </a>
+                  <div
+                    class="navbar-dropdown"
+                  >
+                    <a
+                      class="navbar-item"
+                    >
+                      About
+                    </a>
+                    <a
+                      class="navbar-item"
+                    >
+                      Jobs
+                    </a>
+                    <a
+                      class="navbar-item"
+                    >
+                      Contact
+                    </a>
+                    <hr
+                      class="navbar-divider"
+                    />
+                    <a
+                      class="navbar-item"
+                    >
+                      Report an issue
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="navbar-end"
+              >
+                <div
+                  class="navbar-item"
+                >
+                  <div
+                    class="buttons"
+                  >
+                    <a
+                      class="button is-light is-rounded"
+                    >
+                      Log in
+                    </a>
+                    <a
+                      class="button is-light is-rounded"
+                    >
+                      <strong>
+                        Sign up
+                      </strong>
+                    </a>
+                    <a
+                      class="button is-danger is-outlined is-rounded"
+                    >
+                      Create Website
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-plus-circle fa-w-16 "
+                        data-icon="plus-circle"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <footer
+          class="footer  sc-bdVaJa fXsUZL"
+        >
+          <div
+            class="content has-text-centered"
+          >
+            Copyright 
+            2019
+             Worksfair. All Rights Reserved.
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <header>
+        <nav
+          aria-label="main navigation"
+          class="navbar"
+          role="navigation"
+        >
+          <div
+            class="navbar-brand"
+          >
+            <a
+              class="navbar-item"
+              href=""
+            >
+              <img
+                height="28"
+                src="logo.png"
+                width="112"
+              />
+            </a>
+            <a
+              aria-expanded="false"
+              aria-label="menu"
+              class="navbar-burger burger"
+              data-target="navbarBasicExample"
+              role="button"
+            >
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+          <div
+            class="navbar-menu"
+            id="navbarBasicExample"
+          >
+            <div
+              class="navbar-start"
+            >
+              <a
+                class="navbar-item"
+              >
+                Home
+              </a>
+              <a
+                class="navbar-item"
+              >
+                About
+              </a>
+              <div
+                class="navbar-item has-dropdown is-hoverable"
+              >
+                <a
+                  class="navbar-link"
+                >
+                  More
+                </a>
+                <div
+                  class="navbar-dropdown"
+                >
+                  <a
+                    class="navbar-item"
+                  >
+                    About
+                  </a>
+                  <a
+                    class="navbar-item"
+                  >
+                    Jobs
+                  </a>
+                  <a
+                    class="navbar-item"
+                  >
+                    Contact
+                  </a>
+                  <hr
+                    class="navbar-divider"
+                  />
+                  <a
+                    class="navbar-item"
+                  >
+                    Report an issue
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="navbar-end"
+            >
+              <div
+                class="navbar-item"
+              >
+                <div
+                  class="buttons"
+                >
+                  <a
+                    class="button is-light is-rounded"
+                  >
+                    Log in
+                  </a>
+                  <a
+                    class="button is-light is-rounded"
+                  >
+                    <strong>
+                      Sign up
+                    </strong>
+                  </a>
+                  <a
+                    class="button is-danger is-outlined is-rounded"
+                  >
+                    Create Website
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-plus-circle fa-w-16 "
+                      data-icon="plus-circle"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <footer
+        class="footer  sc-bdVaJa fXsUZL"
+      >
+        <div
+          class="content has-text-centered"
+        >
+          Copyright 
+          2019
+           Worksfair. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

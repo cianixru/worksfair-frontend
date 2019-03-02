@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test that the Footer displays 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        aria-label="main navigation"
+        class="navbar"
+        role="navigation"
+      >
+        <div
+          class="navbar-brand"
+        >
+          <a
+            class="navbar-item"
+            href=""
+          >
+            <img
+              height="28"
+              src="logo.png"
+              width="112"
+            />
+          </a>
+          <a
+            aria-expanded="false"
+            aria-label="menu"
+            class="navbar-burger burger"
+            data-target="navbarBasicExample"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <div
+          class="navbar-menu"
+          id="navbarBasicExample"
+        >
+          <div
+            class="navbar-start"
+          >
+            <a
+              class="navbar-item"
+            >
+              Home
+            </a>
+            <a
+              class="navbar-item"
+            >
+              About
+            </a>
+            <div
+              class="navbar-item has-dropdown is-hoverable"
+            >
+              <a
+                class="navbar-link"
+              >
+                More
+              </a>
+              <div
+                class="navbar-dropdown"
+              >
+                <a
+                  class="navbar-item"
+                >
+                  About
+                </a>
+                <a
+                  class="navbar-item"
+                >
+                  Jobs
+                </a>
+                <a
+                  class="navbar-item"
+                >
+                  Contact
+                </a>
+                <hr
+                  class="navbar-divider"
+                />
+                <a
+                  class="navbar-item"
+                >
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="navbar-end"
+          >
+            <div
+              class="navbar-item"
+            >
+              <div
+                class="buttons"
+              >
+                <a
+                  class="button is-light is-rounded"
+                >
+                  Log in
+                </a>
+                <a
+                  class="button is-light is-rounded"
+                >
+                  <strong>
+                    Sign up
+                  </strong>
+                </a>
+                <a
+                  class="button is-danger is-outlined is-rounded"
+                >
+                  Create Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      aria-label="main navigation"
+      class="navbar"
+      role="navigation"
+    >
+      <div
+        class="navbar-brand"
+      >
+        <a
+          class="navbar-item"
+          href=""
+        >
+          <img
+            height="28"
+            src="logo.png"
+            width="112"
+          />
+        </a>
+        <a
+          aria-expanded="false"
+          aria-label="menu"
+          class="navbar-burger burger"
+          data-target="navbarBasicExample"
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+        </a>
+      </div>
+      <div
+        class="navbar-menu"
+        id="navbarBasicExample"
+      >
+        <div
+          class="navbar-start"
+        >
+          <a
+            class="navbar-item"
+          >
+            Home
+          </a>
+          <a
+            class="navbar-item"
+          >
+            About
+          </a>
+          <div
+            class="navbar-item has-dropdown is-hoverable"
+          >
+            <a
+              class="navbar-link"
+            >
+              More
+            </a>
+            <div
+              class="navbar-dropdown"
+            >
+              <a
+                class="navbar-item"
+              >
+                About
+              </a>
+              <a
+                class="navbar-item"
+              >
+                Jobs
+              </a>
+              <a
+                class="navbar-item"
+              >
+                Contact
+              </a>
+              <hr
+                class="navbar-divider"
+              />
+              <a
+                class="navbar-item"
+              >
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="navbar-end"
+        >
+          <div
+            class="navbar-item"
+          >
+            <div
+              class="buttons"
+            >
+              <a
+                class="button is-light is-rounded"
+              >
+                Log in
+              </a>
+              <a
+                class="button is-light is-rounded"
+              >
+                <strong>
+                  Sign up
+                </strong>
+              </a>
+              <a
+                class="button is-danger is-outlined is-rounded"
+              >
+                Create Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
