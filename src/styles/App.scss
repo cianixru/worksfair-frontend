@@ -1,0 +1,34 @@
+body, h1, h2, h3, h4, h5, h6,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea, select,
+input[type="button"],
+input[type="submit"],
+button {
+    font-family: raleway, helveticaneue, helvetica neue, Helvetica, Arial, sans-serif;
+    text-transform: none;
+}
+
+body {
+    font-size: 16px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 0em;
+    left: 0em;  
+    padding-bottom: 3em;
+}
+
+.field {
+    padding-bottom: 15px;
+}
+
+.layout-auth {
+    padding: 20px;
+    margin: 30px 0px;
+}
+
+

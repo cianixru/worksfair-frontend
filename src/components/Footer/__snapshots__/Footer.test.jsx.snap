@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <footer
-        class="footer  sc-bdVaJa fXsUZL"
+        class="footer "
       >
         <div
           class="content has-text-centered"
@@ -20,7 +20,7 @@ Object {
   </body>,
   "container": <div>
     <footer
-      class="footer  sc-bdVaJa fXsUZL"
+      class="footer "
     >
       <div
         class="content has-text-centered"

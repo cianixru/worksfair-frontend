@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SigninForm.tsx Test that the Signin form displays 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form>
+        <div
+          class="field"
+        >
+          <label>
+            Email
+          </label>
+          <div
+            class="control has-icons-left"
+          >
+            <input
+              class="input is-medium"
+              data-testid="signin-email"
+              name="email"
+              placeholder="Email"
+              type="email"
+              value=""
+            />
+            <span
+              class="icon is-medium is-left"
+            >
+              <i
+                class="fa fa-envelope-o"
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <label>
+            Password
+          </label>
+          <div
+            class="control has-icons-left"
+          >
+            <input
+              class="input is-medium"
+              data-testid="signin-password"
+              name="password"
+              placeholder="Password"
+              type="password"
+              value=""
+            />
+            <span
+              class="icon is-medium is-left"
+            >
+              <i
+                class="fa fa-lock"
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          Don't have an account? 
+          <a
+            href="/signup"
+          >
+            Sign up
+          </a>
+        </div>
+        <div
+          class="control"
+        >
+          <button
+            class="button is-danger is-medium is-rounded"
+            disabled=""
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form>
+      <div
+        class="field"
+      >
+        <label>
+          Email
+        </label>
+        <div
+          class="control has-icons-left"
+        >
+          <input
+            class="input is-medium"
+            data-testid="signin-email"
+            name="email"
+            placeholder="Email"
+            type="email"
+            value=""
+          />
+          <span
+            class="icon is-medium is-left"
+          >
+            <i
+              class="fa fa-envelope-o"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="field"
+      >
+        <label>
+          Password
+        </label>
+        <div
+          class="control has-icons-left"
+        >
+          <input
+            class="input is-medium"
+            data-testid="signin-password"
+            name="password"
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+          <span
+            class="icon is-medium is-left"
+          >
+            <i
+              class="fa fa-lock"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="field"
+      >
+        Don't have an account? 
+        <a
+          href="/signup"
+        >
+          Sign up
+        </a>
+      </div>
+      <div
+        class="control"
+      >
+        <button
+          class="button is-danger is-medium is-rounded"
+          disabled=""
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

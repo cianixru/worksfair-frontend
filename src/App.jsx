@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// import { ToastContainer } from 'react-toastify';
+import 'font-awesome/css/font-awesome.min.css';
+import store from './store';
 
 import 'bulma/css/bulma.min.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import './styles/App.scss';
 
-import Footer from './components/Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
-
-library.add(faPlusCircle);
+import Routes from './routes/Index';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header>
-          <Navbar />
-          
-        </header>
-
-        <Footer />
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Router>
+            <Routes />
+          </Router>
+        </div>
+      </Provider>
     );
   }
 }

@@ -11,4 +11,5 @@ before_script:
   - ./cc-test-reporter before-build
 script: npm test
 after_success:
+  - npm run test:coverage
   - codeclimate-test-reporter < coverage/lcov.info
