@@ -1,0 +1,58 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import SideNav from '../components/SideNav/SideNav';
+
+
+const DashboardLayout = ({ Component }) => {
+  const username = localStorage.getItem('username');
+  const links = {
+    main: [
+      {
+        text: 'Dashboard',
+        to: `/dashboard/${username}`,
+        icon: 'fa fa-tachometer',
+      },
+    ],
+    webpage: [
+      {
+        text: 'Create Webpage',
+        to: `/dashboard/${username}/webpage/new`,
+        icon: 'fa fa-plus-square',
+      },
+      {
+        text: 'Your Webpages',
+        to: `/dashboard/${username}/webpages`,
+        icon: 'fa fa-th-list',
+      },
+    ],
+    settings: [
+      {
+        text: 'Your Profile',
+        to: `/dashboard/${username}/profile`,
+        icon: 'fa fa-user',
+      },
+      {
+        text: 'Logout',
+        to: '/logout',
+        icon: 'fa fa-power-off',
+      },
+    ]
+  };
+
+  return (
+    <div className="columns dashboard-layout">
+      <div className="column is-one-quarter-desktop">
+        <SideNav links={links} />
+      </div>
+      <div className="column is-three-quarters-desktop" >
+        <Component />
+      </div>
+    </div>
+  );
+};
+
+DashboardLayout.propTypes = {
+  Component: PropTypes.func,
+};
+
+export default DashboardLayout;

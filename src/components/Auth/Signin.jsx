@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import SigninForm from '../../forms/Auth/SigninForm';
 import { signin } from '../../actions/auth';
@@ -13,9 +14,10 @@ class Signin extends Component {
    * @param {object} user
    */
   onSubmit = async (user) => {
-    const { actions } = this.props;
+    const { actions, history } = this.props;
     try {
       await actions.signin(user);
+      history.push('/dashboard');
     } catch (err) {
       console.log(err);
     }
@@ -35,6 +37,7 @@ class Signin extends Component {
 
 Signin.propTypes = {
   actions: PropTypes.object,
+  history: PropTypes.object,
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -49,4 +52,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps,
-)(Signin);
+)(withRouter(Signin));

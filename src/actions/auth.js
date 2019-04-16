@@ -1,8 +1,11 @@
 import api from '../utils/api';
+import auth from '../utils/auth';
 
-export const AUTHENTICATED_USER = 'AUTHENTICATED_USER'
-export const AUTHENTICATION_FAILED = 'AUTHENTICATION_FAILED'
-export const signup = (user) => async (dispatch) => {
+const manageAuth = new auth();
+
+export const AUTHENTICATED_USER = 'AUTHENTICATED_USER';
+export const AUTHENTICATION_FAILED = 'AUTHENTICATION_FAILED';
+export const signup = user => async (dispatch) => {
   const { email } = user;
   try {
     user.email = email.toLowerCase();
@@ -20,7 +23,7 @@ export const signup = (user) => async (dispatch) => {
   }
 };
 
-export const signin = (user) => async (dispatch) => {
+export const signin = user => async (dispatch) => {
   const { email } = user;
   try {
     user.email = email.toLowerCase();
@@ -36,4 +39,10 @@ export const signin = (user) => async (dispatch) => {
       message: err.message,
     });
   }
+};
+
+export const LOGOUT = 'LOGOUT';
+export const logout = () => (dispatch) => {
+  manageAuth.logout();
+  return dispatch({ type: LOGOUT, data: null });
 };

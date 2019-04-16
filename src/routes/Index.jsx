@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthRoute from './Auth';
 import Navbar from '../components/Navbar/Navbar';
+import Dashboard from './Dashboard';
 
 class Routes extends Component {
   render() {
@@ -10,6 +11,7 @@ class Routes extends Component {
           <Navbar />
         </header>
         <AuthRoute />
+        <Dashboard />
       </div>
     );
   }
