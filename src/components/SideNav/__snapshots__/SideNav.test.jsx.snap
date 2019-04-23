@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardHeader.jsx Should display the SideNave Component with links 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="dashboard-nav"
+      >
+        <div
+          class="dashboard-nav-inner"
+        >
+          <ul
+            data-submenu-title="Main"
+          >
+            <li>
+              <a
+                href="/dashboard/theo"
+              >
+                <i
+                  aria-hidden="true"
+                />
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/theo/webpage/new"
+              >
+                <i
+                  aria-hidden="true"
+                />
+                Create Webpage
+              </a>
+            </li>
+          </ul>
+          <ul
+            data-submenu-title="Webpages"
+          >
+            <li>
+              <a
+                href="/dashboard/theo/webpage/new"
+              >
+                <i
+                  aria-hidden="true"
+                />
+                Create Webpage
+              </a>
+            </li>
+          </ul>
+          <ul
+            data-submenu-title="Settings"
+          >
+            <li>
+              <a
+                href="/dashboard/theo/webpage/new"
+              >
+                <i
+                  aria-hidden="true"
+                />
+                Create Webpage
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="dashboard-nav"
+    >
+      <div
+        class="dashboard-nav-inner"
+      >
+        <ul
+          data-submenu-title="Main"
+        >
+          <li>
+            <a
+              href="/dashboard/theo"
+            >
+              <i
+                aria-hidden="true"
+              />
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              href="/dashboard/theo/webpage/new"
+            >
+              <i
+                aria-hidden="true"
+              />
+              Create Webpage
+            </a>
+          </li>
+        </ul>
+        <ul
+          data-submenu-title="Webpages"
+        >
+          <li>
+            <a
+              href="/dashboard/theo/webpage/new"
+            >
+              <i
+                aria-hidden="true"
+              />
+              Create Webpage
+            </a>
+          </li>
+        </ul>
+        <ul
+          data-submenu-title="Settings"
+        >
+          <li>
+            <a
+              href="/dashboard/theo/webpage/new"
+            >
+              <i
+                aria-hidden="true"
+              />
+              Create Webpage
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

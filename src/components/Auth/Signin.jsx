@@ -17,7 +17,8 @@ class Signin extends Component {
     const { actions, history } = this.props;
     try {
       await actions.signin(user);
-      history.push('/dashboard');
+      const username = localStorage.getItem('username');
+      history.push(`/dashboard/${username}`);
     } catch (err) {
       console.log(err);
     }

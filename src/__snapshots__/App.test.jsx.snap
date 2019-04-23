@@ -50,19 +50,6 @@ Object {
               </div>
             </nav>
           </header>
-          <div>
-            <div
-              class="layout-auth"
-            >
-              <div
-                class="columns is-mobile is-centered"
-              >
-                <div
-                  class="column is-one-third-desktop"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -113,19 +100,6 @@ Object {
             </div>
           </nav>
         </header>
-        <div>
-          <div
-            class="layout-auth"
-          >
-            <div
-              class="columns is-mobile is-centered"
-            >
-              <div
-                class="column is-one-third-desktop"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>,

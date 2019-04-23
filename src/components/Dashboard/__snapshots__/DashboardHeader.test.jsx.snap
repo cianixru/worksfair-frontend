@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardHeader.jsx Should display the DashboardHeader Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="dashboard-titlebar"
+      >
+        <div
+          class="columns"
+        >
+          <div
+            class="column"
+          >
+            <h2 />
+          </div>
+          <div
+            class="column"
+          />
+          <nav
+            aria-label="breadcrumbs"
+            class="column breadcrumb"
+          >
+            <ul>
+              <li>
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="dashboard-titlebar"
+    >
+      <div
+        class="columns"
+      >
+        <div
+          class="column"
+        >
+          <h2 />
+        </div>
+        <div
+          class="column"
+        />
+        <nav
+          aria-label="breadcrumbs"
+          class="column breadcrumb"
+        >
+          <ul>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`DashboardHeader.jsx Should display the DashboardHeader Component with links 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="dashboard-titlebar"
+      >
+        <div
+          class="columns"
+        >
+          <div
+            class="column"
+          >
+            <h2>
+              The Dashboard
+            </h2>
+            <p>
+              This is a dashboard
+            </p>
+          </div>
+          <div
+            class="column"
+          />
+          <nav
+            aria-label="breadcrumbs"
+            class="column breadcrumb"
+          >
+            <ul>
+              <li>
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/theo"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/theo/webpage/new"
+                >
+                  Create Webpage
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="dashboard-titlebar"
+    >
+      <div
+        class="columns"
+      >
+        <div
+          class="column"
+        >
+          <h2>
+            The Dashboard
+          </h2>
+          <p>
+            This is a dashboard
+          </p>
+        </div>
+        <div
+          class="column"
+        />
+        <nav
+          aria-label="breadcrumbs"
+          class="column breadcrumb"
+        >
+          <ul>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/theo"
+              >
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/theo/webpage/new"
+              >
+                Create Webpage
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

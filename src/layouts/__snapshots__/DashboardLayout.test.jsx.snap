@@ -1,0 +1,628 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateWebpage.jsx Should display the CreateWebpage Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="columns dashboard-layout"
+      >
+        <div
+          class="column is-one-quarter-desktop"
+        >
+          <div
+            class="dashboard-nav"
+          >
+            <div
+              class="dashboard-nav-inner"
+            >
+              <ul
+                data-submenu-title="Main"
+              >
+                <li>
+                  <a
+                    href="/dashboard/null"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-tachometer"
+                    />
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+              <ul
+                data-submenu-title="Webpages"
+              >
+                <li>
+                  <a
+                    href="/dashboard/null/webpage/new"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-plus-square"
+                    />
+                    Create Webpage
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dashboard/null/webpages"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-th-list"
+                    />
+                    Your Webpages
+                  </a>
+                </li>
+              </ul>
+              <ul
+                data-submenu-title="Settings"
+              >
+                <li>
+                  <a
+                    href="/dashboard/null/profile"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-user"
+                    />
+                    Your Profile
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/logout"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-power-off"
+                    />
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="column is-three-quarters-desktop"
+        >
+          <div
+            class="dashboard-content"
+          >
+            <div
+              class="dashboard-titlebar"
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column"
+                >
+                  <h2>
+                    Create Webpage
+                  </h2>
+                  <a
+                    href="/demo"
+                  >
+                    View Sample Webpage
+                  </a>
+                </div>
+                <div
+                  class="column"
+                />
+                <nav
+                  aria-label="breadcrumbs"
+                  class="column breadcrumb"
+                >
+                  <ul>
+                    <li>
+                      <a
+                        href="/"
+                      >
+                        Home
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/dashboard/null"
+                      >
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/dashboard/null/webpage/new"
+                      >
+                        Create Webpage
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div
+              class="add-webpage-section"
+            >
+              <div
+                class="add-webpage-headline"
+              >
+                <h3
+                  class="add-webpage-header"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-globe"
+                  />
+                  Basic Info
+                </h3>
+              </div>
+              <div
+                class="add-webpage-content"
+              >
+                <h5>
+                  Website Owner
+                </h5>
+                <div
+                  class="media"
+                >
+                  <div
+                    class="media-left"
+                  >
+                    <figure
+                      class="image is-32x32"
+                    >
+                      <img
+                        alt=""
+                        class=".is-rounded"
+                        src="worksfair-avatar.png"
+                      />
+                    </figure>
+                  </div>
+                  <div
+                    class="media-content"
+                  >
+                    Theo Okafor
+                  </div>
+                </div>
+                <div
+                  class="add-webpage-form"
+                >
+                  <form>
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Business Name
+                        <i
+                          class="tip"
+                        >
+                          <div
+                            class="tip-content"
+                          >
+                            Keep it short. It is also your Webpage title.
+                          </div>
+                        </i>
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="business-name"
+                          name="title"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Describe your business
+                        <i
+                          class="tip"
+                        >
+                          <div
+                            class="tip-content"
+                          >
+                            Your customers will see this message on webpage.
+                          </div>
+                        </i>
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="business-keywords"
+                          name="keywords"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Keywords
+                        <i
+                          class="tip"
+                        >
+                          <div
+                            class="tip-content"
+                          >
+                            Some search keywords relating to your business.It will help people to find your business.
+                          </div>
+                        </i>
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="business-keywords"
+                          name="keywords"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="control"
+                    >
+                      <button
+                        class="button is-danger is-medium is-rounded"
+                        disabled=""
+                        type="submit"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="columns dashboard-layout"
+    >
+      <div
+        class="column is-one-quarter-desktop"
+      >
+        <div
+          class="dashboard-nav"
+        >
+          <div
+            class="dashboard-nav-inner"
+          >
+            <ul
+              data-submenu-title="Main"
+            >
+              <li>
+                <a
+                  href="/dashboard/null"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-tachometer"
+                  />
+                  Dashboard
+                </a>
+              </li>
+            </ul>
+            <ul
+              data-submenu-title="Webpages"
+            >
+              <li>
+                <a
+                  href="/dashboard/null/webpage/new"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-plus-square"
+                  />
+                  Create Webpage
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/null/webpages"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-th-list"
+                  />
+                  Your Webpages
+                </a>
+              </li>
+            </ul>
+            <ul
+              data-submenu-title="Settings"
+            >
+              <li>
+                <a
+                  href="/dashboard/null/profile"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-user"
+                  />
+                  Your Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/logout"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-power-off"
+                  />
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="column is-three-quarters-desktop"
+      >
+        <div
+          class="dashboard-content"
+        >
+          <div
+            class="dashboard-titlebar"
+          >
+            <div
+              class="columns"
+            >
+              <div
+                class="column"
+              >
+                <h2>
+                  Create Webpage
+                </h2>
+                <a
+                  href="/demo"
+                >
+                  View Sample Webpage
+                </a>
+              </div>
+              <div
+                class="column"
+              />
+              <nav
+                aria-label="breadcrumbs"
+                class="column breadcrumb"
+              >
+                <ul>
+                  <li>
+                    <a
+                      href="/"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/dashboard/null"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/dashboard/null/webpage/new"
+                    >
+                      Create Webpage
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="add-webpage-section"
+          >
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="add-webpage-header"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-globe"
+                />
+                Basic Info
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <h5>
+                Website Owner
+              </h5>
+              <div
+                class="media"
+              >
+                <div
+                  class="media-left"
+                >
+                  <figure
+                    class="image is-32x32"
+                  >
+                    <img
+                      alt=""
+                      class=".is-rounded"
+                      src="worksfair-avatar.png"
+                    />
+                  </figure>
+                </div>
+                <div
+                  class="media-content"
+                >
+                  Theo Okafor
+                </div>
+              </div>
+              <div
+                class="add-webpage-form"
+              >
+                <form>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Business Name
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Keep it short. It is also your Webpage title.
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-name"
+                        name="title"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Describe your business
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Your customers will see this message on webpage.
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-keywords"
+                        name="keywords"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Keywords
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Some search keywords relating to your business.It will help people to find your business.
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-keywords"
+                        name="keywords"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="control"
+                  >
+                    <button
+                      class="button is-danger is-medium is-rounded"
+                      disabled=""
+                      type="submit"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 
 class Logout extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.actions.logout();
   }
 
