@@ -1,9 +1,10 @@
 import React from 'react';
-import { Form, Field } from 'react-final-form';
+import { Form } from 'react-final-form';
 import PropTypes from 'prop-types';
 
 import Tooltip from '../../atoms/Tooltip';
 import { tooltipMessage } from '../../utils/messages';
+import WebpageText from '../../atoms/WebpageText';
 
 // @ts-check
 /**
@@ -11,7 +12,12 @@ import { tooltipMessage } from '../../utils/messages';
  * @param {object} props
  * @returns {JSX}
  */
-const CreateWebpageForm = ({ onSubmit, validate, }) => {
+const CreateWebpageForm = ({
+  onSubmit,
+  validate,
+  validationErrors,
+  handleErrorReset,
+}) => {
   return (
     <Form
       onSubmit={onSubmit}
@@ -26,13 +32,13 @@ const CreateWebpageForm = ({ onSubmit, validate, }) => {
                 <Tooltip message={tooltipMessage.businessName} />
               </h5>
               <div className="control">
-                <Field
+                <WebpageText
                   className="input is-medium"
                   name="title"
-                  type="text"
-                  component="input"
                   validate={validate}
-                  data-testid="business-name"
+                  dataTestId="business-name"
+                  validationErrors={validationErrors}
+                  handleErrorReset={handleErrorReset}
                 />
               </div>
             </div>
@@ -43,13 +49,13 @@ const CreateWebpageForm = ({ onSubmit, validate, }) => {
                 <Tooltip message={tooltipMessage.description} />
               </h5>
               <div className="control">
-                <Field
+                <WebpageText
                   className="input is-medium"
-                  name="keywords"
-                  type="text"
-                  component="input"
+                  name="description"
                   validate={validate}
-                  data-testid="business-keywords"
+                  dataTestId="description"
+                  validationErrors={validationErrors}
+                  handleErrorReset={handleErrorReset}
                 />
               </div>
             </div>
@@ -60,13 +66,13 @@ const CreateWebpageForm = ({ onSubmit, validate, }) => {
                 <Tooltip message={tooltipMessage.keywords} />
               </h5>
               <div className="control">
-                <Field
+                <WebpageText
                   className="input is-medium"
                   name="keywords"
-                  type="text"
-                  component="input"
                   validate={validate}
-                  data-testid="business-keywords"
+                  dataTestId="business-keywords"
+                  validationErrors={validationErrors}
+                  handleErrorReset={handleErrorReset}
                 />
               </div>
             </div>
@@ -75,6 +81,7 @@ const CreateWebpageForm = ({ onSubmit, validate, }) => {
                 type="submit"
                 disabled={pristine || invalid}
                 className="button is-danger is-medium is-rounded"
+                data-testid="create-webpage"
               >
                 Save
               </button>
@@ -89,6 +96,8 @@ const CreateWebpageForm = ({ onSubmit, validate, }) => {
 CreateWebpageForm.propTypes = {
   onSubmit: PropTypes.func,
   validate: PropTypes.func,
+  validationErrors: PropTypes.object,
+  handleErrorReset: PropTypes.func,
 };
 
 export default CreateWebpageForm;

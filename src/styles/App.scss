@@ -38,3 +38,12 @@ body {
     padding: 20px;
     margin: 30px 0px;
 }
+
+.input-error {
+    position: relative;
+    display: block;
+    top: 2px;
+    left: 0.5em;
+    color: red;
+    font-size: 14px;
+}

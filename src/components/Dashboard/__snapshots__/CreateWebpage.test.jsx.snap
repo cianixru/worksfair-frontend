@@ -100,8 +100,8 @@ Object {
                 >
                   <input
                     class="input is-medium"
-                    data-testid="business-keywords"
-                    name="keywords"
+                    data-testid="description"
+                    name="description"
                     type="text"
                     value=""
                   />
@@ -139,6 +139,7 @@ Object {
               >
                 <button
                   class="button is-danger is-medium is-rounded"
+                  data-testid="create-webpage"
                   disabled=""
                   type="submit"
                 >
@@ -247,8 +248,8 @@ Object {
               >
                 <input
                   class="input is-medium"
-                  data-testid="business-keywords"
-                  name="keywords"
+                  data-testid="description"
+                  name="description"
                   type="text"
                   value=""
                 />
@@ -286,6 +287,7 @@ Object {
             >
               <button
                 class="button is-danger is-medium is-rounded"
+                data-testid="create-webpage"
                 disabled=""
                 type="submit"
               >

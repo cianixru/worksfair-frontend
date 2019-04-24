@@ -51,6 +51,9 @@ Object {
             </nav>
           </header>
         </div>
+        <div
+          class="Toastify"
+        />
       </div>
     </div>
   </body>,
@@ -101,6 +104,9 @@ Object {
           </nav>
         </header>
       </div>
+      <div
+        class="Toastify"
+      />
     </div>
   </div>,
   "debug": [Function],
