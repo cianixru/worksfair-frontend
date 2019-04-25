@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const AuthLayout = (props) => {
+const AuthLayout = ({ Component }) => {
   return (
     <div className="layout-auth">
       <div className="columns is-mobile is-centered">
         <div className="column is-one-third-desktop" >
-          {props.children}
+          <Component />
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@ const AuthLayout = (props) => {
 };
 
 AuthLayout.propTypes = {
-  children: PropTypes.element,
+  Component: PropTypes.func,
 };
 
 export default AuthLayout;

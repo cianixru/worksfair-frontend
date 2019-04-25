@@ -15,27 +15,27 @@ describe('Sign up reducer test', () => {
     expect(
       authReducer([], {
         type: AUTHENTICATED_USER,
-        data: user,
+        data: { user },
       })
     ).toEqual({
-      currentUser: user,
+      currentUser: { user },
     });
 
     expect(
       authReducer([
         {
-          currentUser: user,
+          currentUser: { user },
         }
       ],
       {
         type: AUTHENTICATED_USER,
-        data: user,
+        data: { user },
       })
     ).toEqual({
       0: {
-        currentUser: user,
+        currentUser: { user },
       },
-      currentUser: user,
+      currentUser: { user },
     });
   });
 });

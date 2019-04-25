@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import SignupForm from '../../forms/Auth/SignupForm';
 import { signup } from '../../actions/auth';
 
 class Signup extends Component {
   onSubmit = async (user) => {
-    const { actions } = this.props;
+    const { actions, history } = this.props;
     try {
       await actions.signup(user);
+      history.push('/dashboard');
     } catch (err) {
       console.log(err);
     }
@@ -30,6 +32,7 @@ class Signup extends Component {
 
 Signup.propTypes = {
   actions: PropTypes.object,
+  history: PropTypes.object,
 };
 
 export const mapDispatchToProps = dispatch => ({
@@ -44,4 +47,4 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps,
-)(Signup);
+)(withRouter(Signup));

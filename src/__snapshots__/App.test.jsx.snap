@@ -50,20 +50,10 @@ Object {
               </div>
             </nav>
           </header>
-          <div>
-            <div
-              class="layout-auth"
-            >
-              <div
-                class="columns is-mobile is-centered"
-              >
-                <div
-                  class="column is-one-third-desktop"
-                />
-              </div>
-            </div>
-          </div>
         </div>
+        <div
+          class="Toastify"
+        />
       </div>
     </div>
   </body>,
@@ -113,20 +103,10 @@ Object {
             </div>
           </nav>
         </header>
-        <div>
-          <div
-            class="layout-auth"
-          >
-            <div
-              class="columns is-mobile is-centered"
-            >
-              <div
-                class="column is-one-third-desktop"
-              />
-            </div>
-          </div>
-        </div>
       </div>
+      <div
+        class="Toastify"
+      />
     </div>
   </div>,
   "debug": [Function],

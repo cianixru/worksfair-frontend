@@ -1,7 +1,8 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import api from '../utils/api';
 import MockAdapter from 'axios-mock-adapter';
+
+import api from '../utils/api';
 import {
   AUTHENTICATED_USER,
   signup,
@@ -9,6 +10,7 @@ import {
   signin,
 } from './auth';
 
+// eslint-disable-next-line import/prefer-default-export
 export const user = {
   username: 'Theookafor2',
   first_name: 'eod',
