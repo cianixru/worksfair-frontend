@@ -1,6 +1,8 @@
 import api from '../utils/api';
 import auth from '../utils/auth';
 
+const apiToken = localStorage.getItem('token');
+
 const manageAuth = new auth();
 
 export const AUTHENTICATED_USER = 'AUTHENTICATED_USER';
@@ -15,10 +17,10 @@ export const signup = user => async (dispatch) => {
       type: AUTHENTICATED_USER,
       data: newUser.data,
     });
-  } catch (err) {
+  } catch (error) {
     return dispatch({
       type: AUTHENTICATION_FAILED,
-      message: err.message,
+      message: error.response.data.message,
     });
   }
 };
@@ -27,16 +29,18 @@ export const signin = user => async (dispatch) => {
   const { email } = user;
   try {
     user.email = email.toLowerCase();
+    delete api.defaults.headers.common.Authorization;
 
     const returningUser = await api.post('/auth/login/', { user });
     return dispatch({
       type: AUTHENTICATED_USER,
       data: returningUser.data,
     });
-  } catch (err) {
+  } catch (error) {
     return dispatch({
       type: AUTHENTICATION_FAILED,
-      message: err.message,
+      message: error.message,
+      data: error.response.data.user,
     });
   }
 };
@@ -45,4 +49,22 @@ export const LOGOUT = 'LOGOUT';
 export const logout = () => (dispatch) => {
   manageAuth.logout();
   return dispatch({ type: LOGOUT, data: null });
+};
+
+export const GET_CURRENT_USER = 'GET_CURRENT_USER';
+export const GET_USER_FAILED = 'GET_USER_FAILED';
+export const getCurrentUser = () => async (dispatch) => {
+  try {
+    api.defaults.headers.common.Authorization = `Token ${apiToken}`;
+    const currentUser = await api.get('/auth/user/');
+    return dispatch({
+      type: GET_CURRENT_USER,
+      data: currentUser.data,
+    });
+  } catch (err) {
+    return dispatch({
+      type: GET_USER_FAILED,
+      message: err.message,
+    });
+  }
 };

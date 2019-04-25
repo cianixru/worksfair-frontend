@@ -37,7 +37,7 @@ Object {
                 class="image is-32x32"
               >
                 <img
-                  alt=""
+                  alt="avatar"
                   class=".is-rounded"
                   src="worksfair-avatar.png"
                 />
@@ -45,9 +45,7 @@ Object {
             </div>
             <div
               class="media-content"
-            >
-              Theo Okafor
-            </div>
+            />
           </div>
           <div
             class="add-webpage-form"
@@ -185,7 +183,7 @@ Object {
               class="image is-32x32"
             >
               <img
-                alt=""
+                alt="avatar"
                 class=".is-rounded"
                 src="worksfair-avatar.png"
               />
@@ -193,9 +191,7 @@ Object {
           </div>
           <div
             class="media-content"
-          >
-            Theo Okafor
-          </div>
+          />
         </div>
         <div
           class="add-webpage-form"

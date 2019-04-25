@@ -10,6 +10,7 @@ import {
   CREATE_WEBPAGE_FAILED,
 } from '../../actions/webpage';
 import alert from '../utils/alert';
+import { toSentenceCase } from '../utils/helpers';
 
 class CreateWebpage extends Component {
   state = {
@@ -57,6 +58,7 @@ class CreateWebpage extends Component {
 
   render() {
     const { validationErrors } = this.state;
+    const { user } = this.props;
     return (
       <div className="add-webpage-section">
         <div className="add-webpage-headline">
@@ -71,14 +73,16 @@ class CreateWebpage extends Component {
             <div className="media-left">
               <figure className="image is-32x32">
                 <img
-                  src={avatar}
-                  alt=""
+                  src={user && user.image_url ? user.image_url : avatar}
+                  alt="avatar"
                   className=".is-rounded"
                 />
               </figure>
             </div>
             <div className="media-content">
-              Theo Okafor
+              { user
+                && `${toSentenceCase(user.first_name)} ${toSentenceCase(user.last_name)}`
+              }
             </div>
           </div>
           <div className="add-webpage-form">
@@ -97,7 +101,12 @@ class CreateWebpage extends Component {
 CreateWebpage.propTypes = {
   links: PropTypes.object,
   actions: PropTypes.object,
+  user: PropTypes.object,
 };
+
+const mapStateToProps = ({ auth: { currentUser } }) => ({
+  user: currentUser.user,
+});
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
@@ -109,6 +118,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(CreateWebpage);

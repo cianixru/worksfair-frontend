@@ -6,21 +6,25 @@ import { withRouter } from 'react-router-dom';
 
 import SigninForm from '../../forms/Auth/SigninForm';
 import { signin } from '../../actions/auth';
+import { isLoading, isComplete } from '../../actions/loader';
 
 class Signin extends Component {
   // ts-check
   /**
    * @description Handles the form submit event
-   * @param {object} user
+   * @param {object} data
    */
-  onSubmit = async (user) => {
-    const { actions, history } = this.props;
+  onSubmit = async (data) => {
+    const { actions, history, user } = this.props;
     try {
-      await actions.signin(user);
-      const username = localStorage.getItem('username');
+      await actions.isLoading();
+      await actions.signin(data);
+      const { username } = user;
       history.push(`/dashboard/${username}`);
     } catch (err) {
       console.log(err);
+    } finally {
+      await actions.isComplete();
     }
   };
 
@@ -39,18 +43,25 @@ class Signin extends Component {
 Signin.propTypes = {
   actions: PropTypes.object,
   history: PropTypes.object,
+  user: PropTypes.object,
 };
+
+const mapStateToProps = ({ auth: { currentUser } }) => ({
+  user: currentUser.user,
+});
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
       signin,
+      isLoading,
+      isComplete,
     },
     dispatch,
   ),
 });
 
-export default connect(
-  null,
+export default withRouter(connect(
+  mapStateToProps,
   mapDispatchToProps,
-)(withRouter(Signin));
+)(Signin));

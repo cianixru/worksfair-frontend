@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 input[type="text"],
 input[type="password"],
@@ -46,4 +51,20 @@ body {
     left: 0.5em;
     color: red;
     font-size: 14px;
+}
+
+.spin-loader {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+}
+
+.spinner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: 0 auto;
+    z-index: 100000;
 }

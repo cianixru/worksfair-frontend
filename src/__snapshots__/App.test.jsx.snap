@@ -9,6 +9,9 @@ Object {
         class="App"
       >
         <div>
+          <div
+            class=""
+          />
           <header>
             <nav
               aria-label="main navigation"
@@ -48,6 +51,56 @@ Object {
                   />
                 </a>
               </div>
+              <div
+                class="navbar-menu"
+              >
+                <div
+                  class="navbar-start"
+                >
+                  <a
+                    class="navbar-item"
+                    href="/"
+                  >
+                    Home
+                  </a>
+                  <a
+                    class="navbar-item"
+                    href="/"
+                  >
+                    About
+                  </a>
+                </div>
+                <div
+                  class="navbar-end"
+                >
+                  <div
+                    class="navbar-item"
+                  >
+                    <div
+                      class="buttons"
+                    >
+                      <a
+                        class="button is-white"
+                        href="/login"
+                      >
+                        Log in
+                      </a>
+                      <a
+                        class="button is-white"
+                        href="/signup"
+                      >
+                        Sign up
+                      </a>
+                      <a
+                        class="button is-danger is-outlined is-rounded"
+                        href="/"
+                      >
+                        Create Website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </nav>
           </header>
         </div>
@@ -62,6 +115,9 @@ Object {
       class="App"
     >
       <div>
+        <div
+          class=""
+        />
         <header>
           <nav
             aria-label="main navigation"
@@ -100,6 +156,56 @@ Object {
                   aria-hidden="true"
                 />
               </a>
+            </div>
+            <div
+              class="navbar-menu"
+            >
+              <div
+                class="navbar-start"
+              >
+                <a
+                  class="navbar-item"
+                  href="/"
+                >
+                  Home
+                </a>
+                <a
+                  class="navbar-item"
+                  href="/"
+                >
+                  About
+                </a>
+              </div>
+              <div
+                class="navbar-end"
+              >
+                <div
+                  class="navbar-item"
+                >
+                  <div
+                    class="buttons"
+                  >
+                    <a
+                      class="button is-white"
+                      href="/login"
+                    >
+                      Log in
+                    </a>
+                    <a
+                      class="button is-white"
+                      href="/signup"
+                    >
+                      Sign up
+                    </a>
+                    <a
+                      class="button is-danger is-outlined is-rounded"
+                      href="/"
+                    >
+                      Create Website
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </nav>
         </header>

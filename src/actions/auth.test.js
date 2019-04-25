@@ -8,6 +8,9 @@ import {
   signup,
   AUTHENTICATION_FAILED,
   signin,
+  GET_CURRENT_USER,
+  getCurrentUser,
+  GET_USER_FAILED,
 } from './auth';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -44,6 +47,7 @@ describe('Signup action', () => {
   });
   afterEach(() => {
     mock.reset();
+    localStorage.clear();
   });
   afterAll(() => {
     store.clearActions();
@@ -66,6 +70,7 @@ describe('Signup action', () => {
     mock.onPost('/auth/register/').reply(500, {
       type: AUTHENTICATION_FAILED,
       message: 'Cannot read property \'toLowerCase\' of undefined',
+      response: { data: { user: {}, }, }
     });
     const expectedActions = [{
       type: AUTHENTICATION_FAILED,
@@ -94,6 +99,7 @@ describe('Signup action', () => {
     mock.onPost('/auth/login/').reply(500, {
       type: AUTHENTICATION_FAILED,
       message: 'Cannot read property \'toLowerCase\' of undefined',
+      response: { data: { user: {}, }, }
     });
     const expectedActions = [{
       type: AUTHENTICATION_FAILED,
@@ -104,4 +110,35 @@ describe('Signup action', () => {
         expect(store.getActions()).toEqual(expectedActions);
       });
   });
+
+  test('should dispatch the credentials to the store after fetching user',
+    () => {
+      localStorage.setItem('token', 'WYSISYG');
+      mock.onGet('/auth/user/').reply(200, user);
+      const expectedActions = [{
+        type: GET_CURRENT_USER,
+        data: {
+          ...user,
+        }
+      }];
+      return store.dispatch(getCurrentUser())
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+  test('should dispatch the credentials to the store after fetching user',
+    () => {
+      mock.onGet('/user/').reply(404, {
+        type: GET_USER_FAILED,
+        message: 'Request failed with status code 404',
+      });
+      const expectedActions = [{
+        type: GET_USER_FAILED,
+        message: 'Request failed with status code 404',
+      }];
+      return store.dispatch(getCurrentUser())
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
 });

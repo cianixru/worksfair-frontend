@@ -14,7 +14,7 @@ const actions = {
 };
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({});
+const mockStore = store({ auth: { currentUser: {} } });
 
 describe('Signin.jsx', () => {
   test('renders correctly', () => {
@@ -28,7 +28,7 @@ describe('Signin.jsx', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should register a user', () => {
+  test('should login a user', () => {
     const { getByText, getByTestId } = render(
       <Provider store={mockStore}>
         <Router>
