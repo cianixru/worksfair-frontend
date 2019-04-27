@@ -44,6 +44,7 @@ class Navbar extends Component {
         role="navigation"
         aria-label="main navigation"
         ref="navbar"
+        data-testid="navbar"
       >
         <div className="navbar-brand">
           <Link className="navbar-item" to="/home">

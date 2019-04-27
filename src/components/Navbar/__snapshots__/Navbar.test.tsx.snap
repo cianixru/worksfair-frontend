@@ -8,6 +8,7 @@ Object {
       <nav
         aria-label="main navigation"
         class="navbar"
+        data-testid="navbar"
         role="navigation"
       >
         <div
@@ -100,6 +101,7 @@ Object {
     <nav
       aria-label="main navigation"
       class="navbar"
+      data-testid="navbar"
       role="navigation"
     >
       <div
@@ -181,6 +183,367 @@ Object {
               >
                 Create Website
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Test that the Navbar displays with userNav 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        aria-label="main navigation"
+        class="navbar"
+        data-testid="navbar"
+        role="navigation"
+      >
+        <div
+          class="navbar-brand"
+        >
+          <a
+            class="navbar-item"
+            href="/home"
+          >
+            <img
+              alt="logo"
+              height="28"
+              src="logo.png"
+              width="112"
+            />
+          </a>
+          <a
+            aria-expanded="false"
+            aria-label="menu"
+            class="navbar-burger burger"
+            data-target="navbarBasicExample"
+            href="/"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <div
+          class="navbar-menu"
+        >
+          <div
+            class="navbar-start"
+          >
+            <a
+              class="navbar-item"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="navbar-item"
+              href="/"
+            >
+              About
+            </a>
+          </div>
+          <div
+            class="navbar-end"
+          >
+            <div
+              class="navbar-item"
+            >
+              <div
+                class="buttons"
+              >
+                <a
+                  class="button is-white"
+                  href="/login"
+                >
+                  Log in
+                </a>
+                <a
+                  class="button is-white"
+                  href="/signup"
+                >
+                  Sign up
+                </a>
+                <a
+                  class="button is-danger is-outlined is-rounded"
+                  href="/"
+                >
+                  Create Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <nav
+        aria-label="main navigation"
+        class="navbar"
+        data-testid="navbar"
+        role="navigation"
+      >
+        <div
+          class="navbar-brand"
+        >
+          <a
+            class="navbar-item"
+            href="/home"
+          >
+            <img
+              alt="logo"
+              height="28"
+              src="logo.png"
+              width="112"
+            />
+          </a>
+          <a
+            aria-expanded="false"
+            aria-label="menu"
+            class="navbar-burger burger"
+            data-target="navbarBasicExample"
+            href="/"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <div
+          class="navbar-menu"
+        >
+          <div
+            class="navbar-start"
+          >
+            <a
+              class="navbar-item"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="navbar-item"
+              href="/"
+            >
+              About
+            </a>
+          </div>
+          <div
+            class="navbar-end"
+          >
+            <div
+              class="navbar-item"
+            >
+              <div
+                class="user-menu"
+              >
+                <div
+                  class="user-name "
+                >
+                  <span>
+                    <img
+                      alt="avatar"
+                      src="worksfair-avatar.png"
+                    />
+                  </span>
+                  eod okafor
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      href="/dashboard/Theookafor2"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-tachometer"
+                      />
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/logout"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-power-off"
+                      />
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      aria-label="main navigation"
+      class="navbar"
+      data-testid="navbar"
+      role="navigation"
+    >
+      <div
+        class="navbar-brand"
+      >
+        <a
+          class="navbar-item"
+          href="/home"
+        >
+          <img
+            alt="logo"
+            height="28"
+            src="logo.png"
+            width="112"
+          />
+        </a>
+        <a
+          aria-expanded="false"
+          aria-label="menu"
+          class="navbar-burger burger"
+          data-target="navbarBasicExample"
+          href="/"
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+        </a>
+      </div>
+      <div
+        class="navbar-menu"
+      >
+        <div
+          class="navbar-start"
+        >
+          <a
+            class="navbar-item"
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            class="navbar-item"
+            href="/"
+          >
+            About
+          </a>
+        </div>
+        <div
+          class="navbar-end"
+        >
+          <div
+            class="navbar-item"
+          >
+            <div
+              class="user-menu"
+            >
+              <div
+                class="user-name "
+              >
+                <span>
+                  <img
+                    alt="avatar"
+                    src="worksfair-avatar.png"
+                  />
+                </span>
+                eod okafor
+              </div>
+              <ul>
+                <li>
+                  <a
+                    href="/dashboard/Theookafor2"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-tachometer"
+                    />
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/logout"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-power-off"
+                    />
+                    Logout
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

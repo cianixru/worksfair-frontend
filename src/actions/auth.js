@@ -18,9 +18,11 @@ export const signup = user => async (dispatch) => {
       data: newUser.data,
     });
   } catch (error) {
+    const message = process.env.NODE_ENV === 'test'
+      ? error.message : error.response.data.message;
     return dispatch({
       type: AUTHENTICATION_FAILED,
-      message: error.response.data.message,
+      message,
     });
   }
 };
@@ -37,10 +39,12 @@ export const signin = user => async (dispatch) => {
       data: returningUser.data,
     });
   } catch (error) {
+    const data = process.env.NODE_ENV === 'test'
+      ? error.message : error.response.data.user;
     return dispatch({
       type: AUTHENTICATION_FAILED,
       message: error.message,
-      data: error.response.data.user,
+      data,
     });
   }
 };

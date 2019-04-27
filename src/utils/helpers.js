@@ -1,6 +1,6 @@
 /**
  * @description formats the error response messages
- * @param { array } data
+ * @param { object } data
  * @returns { string } errorMessage
  */
 export default (data) => {

@@ -1,6 +1,6 @@
 import authReducer from './auth';
 import { AUTHENTICATED_USER, GET_CURRENT_USER } from '../actions/auth';
-import { user } from '../actions/auth.test';
+import { user } from '../utils/test-utils/mockData';
 
 const initialState = {
   currentUser: {},

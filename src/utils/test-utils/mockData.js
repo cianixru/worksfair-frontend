@@ -1,0 +1,20 @@
+// eslint-disable-next-line import/prefer-default-export
+export const user = {
+  username: 'Theookafor2',
+  first_name: 'eod',
+  last_name: 'okafor',
+  email: 'theodorehope@andela.com',
+  facebook: null,
+  instagram: null,
+  twitter: null,
+  headline: null,
+  current_location: null,
+  role: 'admin',
+  confirmed_account: false,
+  verified_account: false,
+  reset_token: null,
+  image_url: null,
+  created_at: '2019-03-10T08:48:42.942532Z',
+  modified_at: '2019-03-10T08:48:42.942544Z',
+  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9',
+};
