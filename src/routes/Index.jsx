@@ -9,6 +9,9 @@ import AuthRoute from './Auth';
 import Navbar from '../components/Navbar/Navbar';
 import Dashboard from './Dashboard';
 import { getCurrentUser } from '../actions/auth';
+import { getWebpage } from '../actions/webpage';
+import Webpage from './Webpage';
+import WebpageNav from '../components/Navbar/WebpageNav';
 
 class Routes extends Component {
   async componentDidMount() {
@@ -20,8 +23,19 @@ class Routes extends Component {
     }
   }
 
+  getWebpage = async (name) => {
+    try {
+      const { actions } = this.props;
+      await actions.getWebpage(name);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   render() {
-    const { currentUser, isLoading, } = this.props;
+    const { currentUser, isLoading, webpage } = this.props;
+    const url = window.location.pathname;
+    console.log(webpage);
     return (
       <div>
         <div className={isLoading ? 'spin-loader' : ''}>
@@ -34,10 +48,16 @@ class Routes extends Component {
           }
         </div>
         <header>
-          <Navbar user={currentUser && currentUser.user} />
+          { url.includes('webpage') && !url.includes('webpages/new')
+            ? <WebpageNav
+              user={currentUser && currentUser.user}
+              webpage={webpage && webpage} />
+            : <Navbar user={currentUser && currentUser.user} />
+          }
         </header>
         <AuthRoute />
         <Dashboard />
+        <Webpage getWebpage={this.getWebpage} />
       </div>
     );
   }
@@ -47,21 +67,24 @@ Routes.propTypes = {
   actions: PropTypes.object,
   currentUser: PropTypes.object,
   isLoading: PropTypes.bool,
+  webpage: PropTypes.object,
 };
 
 Routes.defaultProps = {
   currentUser: {},
 };
 
-const mapStateToProps = ({ auth, loader, }) => ({
+const mapStateToProps = ({ auth, loader, webpage, }) => ({
   currentUser: auth.currentUser,
   isLoading: loader.isLoading,
+  webpage: webpage.webpage,
 });
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
       getCurrentUser,
+      getWebpage,
     },
     dispatch,
   ),

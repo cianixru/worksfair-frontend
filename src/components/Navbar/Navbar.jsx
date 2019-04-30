@@ -17,7 +17,7 @@ class Navbar extends Component {
   scrollHandler = (event) => {
     const { navbar } = this.refs;
     const { pageYOffset } = event.currentTarget;
-    if (pageYOffset >= 100) {
+    if (pageYOffset >= 70) {
       navbar.className = 'navbar is-fixed-top';
     } else {
       navbar.className = 'navbar';
@@ -44,7 +44,7 @@ class Navbar extends Component {
         role="navigation"
         aria-label="main navigation"
         ref="navbar"
-        data-testid="navbar"
+        data-testid=""
       >
         <div className="navbar-brand">
           <Link className="navbar-item" to="/home">

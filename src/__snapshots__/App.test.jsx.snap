@@ -16,7 +16,7 @@ Object {
             <nav
               aria-label="main navigation"
               class="navbar"
-              data-testid="navbar"
+              data-testid=""
               role="navigation"
             >
               <div
@@ -123,7 +123,7 @@ Object {
           <nav
             aria-label="main navigation"
             class="navbar"
-            data-testid="navbar"
+            data-testid=""
             role="navigation"
           >
             <div

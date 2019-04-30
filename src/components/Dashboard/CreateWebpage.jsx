@@ -75,7 +75,7 @@ class CreateWebpage extends Component {
                 <img
                   src={user && user.image_url ? user.image_url : avatar}
                   alt="avatar"
-                  className=".is-rounded"
+                  className="is-rounded"
                 />
               </figure>
             </div>

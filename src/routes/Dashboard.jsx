@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
           component={composeLayout(CreateWebpage)} />
         <Route
           exact
-          path="/dashboard/:username/webpage/new"
+          path="/dashboard/:username/webpages/new"
           component={composeLayout(CreateWebpage)} />
       </Switch>
     );

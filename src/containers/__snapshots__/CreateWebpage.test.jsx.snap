@@ -50,7 +50,7 @@ Object {
                 </li>
                 <li>
                   <a
-                    href="/dashboard/null/webpage/new"
+                    href="/dashboard/null/webpages/new"
                   >
                     Create Webpage
                   </a>
@@ -92,7 +92,7 @@ Object {
                 >
                   <img
                     alt="avatar"
-                    class=".is-rounded"
+                    class="is-rounded"
                     src="worksfair-avatar.png"
                   />
                 </figure>
@@ -187,6 +187,66 @@ Object {
                   </div>
                 </div>
                 <div
+                  class="field"
+                >
+                  <h5>
+                    Colour
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        The colour theme for your webpage. the default is plain gray-scale
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="field"
+                  >
+                    <div
+                      class="control"
+                    >
+                      <div
+                        class="select is-danger"
+                      >
+                        <select
+                          name="colour"
+                        >
+                          <option>
+                            Select Colour Theme
+                          </option>
+                          <option
+                            value="is-danger"
+                          >
+                            ❤️ Red
+                          </option>
+                          <option
+                            value="is-primary"
+                          >
+                            💚 Green
+                          </option>
+                          <option
+                            value="is-info"
+                          >
+                            💙 Blue
+                          </option>
+                          <option
+                            value="is-warning"
+                          >
+                            🧡 Orange
+                          </option>
+                          <option
+                            value="is-dark"
+                          >
+                            🖤 Black
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
                   class="control"
                 >
                   <button
@@ -251,7 +311,7 @@ Object {
               </li>
               <li>
                 <a
-                  href="/dashboard/null/webpage/new"
+                  href="/dashboard/null/webpages/new"
                 >
                   Create Webpage
                 </a>
@@ -293,7 +353,7 @@ Object {
               >
                 <img
                   alt="avatar"
-                  class=".is-rounded"
+                  class="is-rounded"
                   src="worksfair-avatar.png"
                 />
               </figure>
@@ -385,6 +445,66 @@ Object {
                     type="text"
                     value=""
                   />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Colour
+                  <i
+                    class="tip"
+                  >
+                    <div
+                      class="tip-content"
+                    >
+                      The colour theme for your webpage. the default is plain gray-scale
+                    </div>
+                  </i>
+                </h5>
+                <div
+                  class="field"
+                >
+                  <div
+                    class="control"
+                  >
+                    <div
+                      class="select is-danger"
+                    >
+                      <select
+                        name="colour"
+                      >
+                        <option>
+                          Select Colour Theme
+                        </option>
+                        <option
+                          value="is-danger"
+                        >
+                          ❤️ Red
+                        </option>
+                        <option
+                          value="is-primary"
+                        >
+                          💚 Green
+                        </option>
+                        <option
+                          value="is-info"
+                        >
+                          💙 Blue
+                        </option>
+                        <option
+                          value="is-warning"
+                        >
+                          🧡 Orange
+                        </option>
+                        <option
+                          value="is-dark"
+                        >
+                          🖤 Black
+                        </option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div

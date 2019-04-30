@@ -16,7 +16,7 @@ const DashboardLayout = ({ Component }) => {
     webpage: [
       {
         text: 'Create Webpage',
-        to: `/dashboard/${username}/webpage/new`,
+        to: `/dashboard/${username}/webpages/new`,
         icon: 'fa fa-plus-square',
       },
       {

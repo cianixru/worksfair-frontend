@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
-import { Form } from 'react-final-form';
+import { Form, Field } from 'react-final-form';
 import PropTypes from 'prop-types';
 
 import Tooltip from '../../atoms/Tooltip';
@@ -76,6 +77,27 @@ const CreateWebpageForm = ({
                 />
               </div>
             </div>
+            <div className="field">
+              <h5>
+                Colour
+                <Tooltip message={tooltipMessage.colour} />
+              </h5>
+              <div className="field">
+                <div className="control">
+                  <div className="select is-danger">
+                    <Field name="colour" component="select">
+                      <option>Select Colour Theme</option>
+                      <option value="is-danger">❤️ Red</option>
+                      <option value="is-primary">💚 Green</option>
+                      <option value="is-info">💙 Blue</option>
+                      <option value="is-warning">🧡 Orange</option>
+                      <option value="is-dark">🖤 Black</option>
+                    </Field>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="control">
               <button
                 type="submit"
