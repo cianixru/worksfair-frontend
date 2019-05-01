@@ -1,0 +1,63 @@
+// eslint-disable-next-line import/prefer-default-export
+export const user = {
+  username: 'Theookafor2',
+  first_name: 'eod',
+  last_name: 'okafor',
+  email: 'theodorehope@andela.com',
+  facebook: null,
+  instagram: null,
+  twitter: null,
+  headline: null,
+  current_location: null,
+  role: 'admin',
+  confirmed_account: false,
+  verified_account: false,
+  reset_token: null,
+  image_url: null,
+  created_at: '2019-03-10T08:48:42.942532Z',
+  modified_at: '2019-03-10T08:48:42.942544Z',
+  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9',
+};
+
+export const webpage = {
+  owner: {
+    id: 1,
+    username: 'theowa',
+    first_name: 'theo',
+    last_name: 'IO',
+    email: 'theo.iowa@yahoo.com',
+    facebook: null,
+    instagram: null,
+    twitter: null,
+    headline: null,
+    current_location: null,
+    role: 'admin',
+    confirmed_account: false,
+    verified_account: false,
+    reset_token: null,
+    image_url: 'https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png',
+    created_at: '2019-04-25T09:07:08.209916Z',
+    modified_at: '2019-04-25T09:07:08.209930Z'
+  },
+  title: 'Happiness',
+  sub_domain_name: 'happiness',
+  description: 'Happiness truly lives here. We just happy',
+  keywords: 'passion, software, engineering, technology, worksfair',
+  country: 'Nigeria',
+  state: 'Lagos',
+  city: 'Okota',
+  area: 'Omagba Phase 1, Phase 2, Abatete',
+  address: 'No 7 Obinna Uzor Street, Canal Estate',
+  phone: null,
+  email: null,
+  website: null,
+  featured_images: [
+    'https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png',
+    'https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png'
+  ],
+  is_active: true,
+  logo: null,
+  colour: 'is-dark',
+  created_at: '2019-04-28T18:39:25.174272Z',
+  updated_at: '2019-05-01T12:18:49.669633Z'
+};

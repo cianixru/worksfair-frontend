@@ -12,7 +12,7 @@ afterEach(cleanup);
 
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({});
+const mockStore = store({ auth: { currentUser: {} } });
 
 const Component = component => component;
 

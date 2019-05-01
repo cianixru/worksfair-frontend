@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Signup from '../components/Auth/Signup';
 import Signin from '../components/Auth/Signin';
@@ -19,5 +20,9 @@ class Auth extends React.Component {
     );
   }
 }
+
+Auth.propTypes = {
+  user: PropTypes.object,
+};
 
 export default withRouter(Auth);

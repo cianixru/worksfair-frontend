@@ -1,0 +1,98 @@
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 25px;
+    top: 9px;
+    vertical-align: top;
+    padding-left: 25px;
+    margin-left: 25px
+}
+
+.user-menu .user-name {
+    transition: .2s
+}
+
+.user-menu .user-name:after {
+    content: "\f107";
+    font-family: fontawesome;
+    transition: .2s;
+    transform: rotate(0);
+    display: inline-block;
+    margin-left: 6px;
+    color: #aaa
+}
+
+.user-menu.active .user-name:after,
+.user-menu:hover .user-name:after,
+.user-menu.active .user-name,
+.user-menu:hover .user-name {
+    color: #66676b
+}
+
+.user-menu.active .user-name:after {
+    transform: rotate(180deg)
+}
+
+.user-name span img {
+    width: 100%;
+    display: inline-block;
+    border-radius: 50%;
+    image-rendering: -webkit-optimize-contrast
+}
+
+.user-name span {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: -22px;
+}
+
+.user-menu ul {
+    text-align: left;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .12);
+    border-radius: 4px;
+    display: inline-block;
+    width: 180px;
+    font-size: 15px;
+    transform: translate3d(0, 15px, 0);
+    padding: 12px 10px;
+    box-sizing: border-box;
+    transition: .25s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 110
+}
+
+.user-menu ul li a {
+    padding: 6px 15px;
+    line-height: 22px;
+    display: inline-block;
+    color: #696969;
+    transition: .2s
+}
+
+.user-menu ul li a:hover {
+    color: #444
+}
+
+.user-menu ul li a i {
+    width: 20px;
+    position: relative;
+    display: inline-block
+}
+
+.user-menu.active ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+}

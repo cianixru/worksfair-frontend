@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test that the ImageSlide displays default pictures 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="carousel carousel-slider"
+          style="width: 100%;"
+        >
+          <button
+            class="control-arrow control-prev"
+            type="button"
+          />
+          <div
+            class="slider-wrapper axis-horizontal"
+          >
+            <ul
+              class="slider animated"
+              style="transform: translate3d(-50%,0,0); transition-duration: 350ms;"
+            >
+              <li
+                class="slide"
+                style="min-width: 40%;"
+              >
+                <figure
+                  class="image is-4by3"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-04.jpg"
+                  />
+                </figure>
+              </li>
+              <li
+                class="slide"
+                style="min-width: 40%;"
+              >
+                <figure
+                  class="image is-4by3"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-01.jpg"
+                  />
+                </figure>
+              </li>
+              <li
+                class="slide selected"
+                style="min-width: 40%;"
+              >
+                <figure
+                  class="image is-4by3"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-02.jpg"
+                  />
+                </figure>
+              </li>
+              <li
+                class="slide"
+                style="min-width: 40%;"
+              >
+                <figure
+                  class="image is-4by3"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-03.jpg"
+                  />
+                </figure>
+              </li>
+              <li
+                class="slide"
+                style="min-width: 40%;"
+              >
+                <figure
+                  class="image is-4by3"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-04.jpg"
+                  />
+                </figure>
+              </li>
+              <li
+                class="slide"
+                style="min-width: 40%;"
+              >
+                <figure
+                  class="image is-4by3"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-01.jpg"
+                  />
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="control-arrow control-next"
+            type="button"
+          />
+          <ul
+            class="control-dots"
+          >
+            <li
+              class="dot"
+              role="button"
+              tabindex="0"
+              value="0"
+            />
+            <li
+              class="dot selected"
+              role="button"
+              tabindex="0"
+              value="1"
+            />
+            <li
+              class="dot"
+              role="button"
+              tabindex="0"
+              value="2"
+            />
+            <li
+              class="dot"
+              role="button"
+              tabindex="0"
+              value="3"
+            />
+          </ul>
+          <p
+            class="carousel-status"
+          >
+            2 of 4
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="carousel carousel-slider"
+        style="width: 100%;"
+      >
+        <button
+          class="control-arrow control-prev"
+          type="button"
+        />
+        <div
+          class="slider-wrapper axis-horizontal"
+        >
+          <ul
+            class="slider animated"
+            style="transform: translate3d(-50%,0,0); transition-duration: 350ms;"
+          >
+            <li
+              class="slide"
+              style="min-width: 40%;"
+            >
+              <figure
+                class="image is-4by3"
+              >
+                <img
+                  alt="sample"
+                  src="sample-04.jpg"
+                />
+              </figure>
+            </li>
+            <li
+              class="slide"
+              style="min-width: 40%;"
+            >
+              <figure
+                class="image is-4by3"
+              >
+                <img
+                  alt="sample"
+                  src="sample-01.jpg"
+                />
+              </figure>
+            </li>
+            <li
+              class="slide selected"
+              style="min-width: 40%;"
+            >
+              <figure
+                class="image is-4by3"
+              >
+                <img
+                  alt="sample"
+                  src="sample-02.jpg"
+                />
+              </figure>
+            </li>
+            <li
+              class="slide"
+              style="min-width: 40%;"
+            >
+              <figure
+                class="image is-4by3"
+              >
+                <img
+                  alt="sample"
+                  src="sample-03.jpg"
+                />
+              </figure>
+            </li>
+            <li
+              class="slide"
+              style="min-width: 40%;"
+            >
+              <figure
+                class="image is-4by3"
+              >
+                <img
+                  alt="sample"
+                  src="sample-04.jpg"
+                />
+              </figure>
+            </li>
+            <li
+              class="slide"
+              style="min-width: 40%;"
+            >
+              <figure
+                class="image is-4by3"
+              >
+                <img
+                  alt="sample"
+                  src="sample-01.jpg"
+                />
+              </figure>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="control-arrow control-next"
+          type="button"
+        />
+        <ul
+          class="control-dots"
+        >
+          <li
+            class="dot"
+            role="button"
+            tabindex="0"
+            value="0"
+          />
+          <li
+            class="dot selected"
+            role="button"
+            tabindex="0"
+            value="1"
+          />
+          <li
+            class="dot"
+            role="button"
+            tabindex="0"
+            value="2"
+          />
+          <li
+            class="dot"
+            role="button"
+            tabindex="0"
+            value="3"
+          />
+        </ul>
+        <p
+          class="carousel-status"
+        >
+          2 of 4
+        </p>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

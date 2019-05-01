@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test that the WebpageNav displays 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        aria-label="main navigation"
+        class="navbar webnav"
+        data-testid="WebpageNavbar"
+        role="navigation"
+      >
+        <div
+          class="navbar-brand"
+        >
+          <a
+            class="navbar-item"
+            href="/home"
+          >
+            <h2
+              class="webpage-title"
+            >
+              <strong>
+                Happiness
+              </strong>
+            </h2>
+          </a>
+          <a
+            aria-expanded="false"
+            aria-label="menu"
+            class="navbar-burger burger"
+            data-target="navbarBasicExample"
+            href="/"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <div
+          class="navbar-menu"
+        >
+          <div
+            class="navbar-start"
+          >
+            <a
+              class="navbar-item"
+              href="/"
+            >
+              Go to Worksfair
+            </a>
+          </div>
+          <div
+            class="navbar-end"
+          >
+            <div
+              class="navbar-item"
+            >
+              <a
+                class="button is-outlined is-rounded"
+                href="/"
+              >
+                Create Webpage
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      aria-label="main navigation"
+      class="navbar webnav"
+      data-testid="WebpageNavbar"
+      role="navigation"
+    >
+      <div
+        class="navbar-brand"
+      >
+        <a
+          class="navbar-item"
+          href="/home"
+        >
+          <h2
+            class="webpage-title"
+          >
+            <strong>
+              Happiness
+            </strong>
+          </h2>
+        </a>
+        <a
+          aria-expanded="false"
+          aria-label="menu"
+          class="navbar-burger burger"
+          data-target="navbarBasicExample"
+          href="/"
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+        </a>
+      </div>
+      <div
+        class="navbar-menu"
+      >
+        <div
+          class="navbar-start"
+        >
+          <a
+            class="navbar-item"
+            href="/"
+          >
+            Go to Worksfair
+          </a>
+        </div>
+        <div
+          class="navbar-end"
+        >
+          <div
+            class="navbar-item"
+          >
+            <a
+              class="button is-outlined is-rounded"
+              href="/"
+            >
+              Create Webpage
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,0 +1,237 @@
+.webnav {
+    position: relative;
+    z-index: 999;
+    margin-bottom: 5px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .12);
+    font-size: 16px;
+}
+
+.webpage-title {
+    font-weight: 700;
+    margin: 0 50px;
+    font-size: 24px;
+}
+
+.colour-holder {
+    padding: 0 12px;
+    margin-right: 5px;
+}
+
+.webpage-hero {
+    margin-bottom: 50px;
+}
+
+.webpage-address {
+    font-size: 17px;
+    color: #888;
+    margin-top: 0;
+    display: inline-block
+}
+
+.webpage-address i {
+    margin-right: 5px
+}
+
+#titlebar.webpage-titlebar span a:hover {
+    color: #666
+}
+
+#titlebar.webpage-titlebar h1,
+#titlebar.webpage-titlebar h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 1px 0
+}
+
+
+.verified-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    color: #00ace6;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    top: 3px;
+    margin-left: 2px;
+    margin-right: 10px;
+}
+
+.verified-icon:before {
+    content: "\f058";
+    font-family: fontawesome;
+    position: relative;
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block
+}
+
+.verified-icon:after {
+    position: relative;
+    z-index: 9;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: #fff
+}
+
+.verified-badge {
+    background-color: #00ace6;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: help;
+    position: relative;
+    transition: .3s;
+    display: block;
+    margin-top: 30px;
+}
+
+.verified-badge i {
+    font-size: 22px;
+    padding: 0 4px 0 0;
+    position: relative;
+    top: 3px;
+}
+
+.verified-badge .tip-content {
+    transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+    max-width: auto;
+    top: auto;
+    bottom: 0
+}
+
+.verified-badge:hover {
+    border-radius: 4px 4px 0 0
+}
+
+.webpage-slider .item {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    height: 40vh;
+    min-height: 400px
+}
+
+.webpage-slider,
+.webpage-slider .item {
+    height: 40vh;
+    min-height: 400px
+}
+
+a.mfp-gallery {
+    cursor: zoom-in
+}
+
+.webpage-slider {
+    background-color: #fff
+}
+
+.webpage-slider .slick-next:hover,
+.webpage-slider .slick-prev:hover,
+.webpage-slider .slick-next,
+.webpage-slider .slick-prev {
+    background-color: rgba(20, 20, 20, .45);
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: .4s
+}
+
+.webpage-slider .slick-next:hover,
+.webpage-slider .slick-next {
+    right: 15%;
+    transform: translate(50px, -50%)
+}
+
+.webpage-slider .slick-prev:hover,
+.webpage-slider .slick-prev {
+    left: 15%;
+    transform: translate(-50px, -50%)
+}
+
+.webpage-slider:hover .slick-next {
+    transform: translate(60px, -50%)
+}
+
+.webpage-slider:hover .slick-prev {
+    transform: translate(-60px, -50%)
+}
+
+.webpage-slider .slick-next:hover:before,
+.webpage-slider .slick-prev:hover:before,
+.webpage-slider .slick-prev::before,
+.webpage-slider .slick-next::before {
+    font-size: 20px;
+    line-height: 60px;
+    position: relative;
+    color: #fff
+}
+
+.webpage-slider .slick-prev::before {
+    left: -1px
+}
+
+.webpage-slider .slick-next::before {
+    left: 1px
+}
+
+.webpage-slider .slick-next:hover {
+    transform: translate(64px, -50%)
+}
+
+.webpage-slider .slick-prev:hover {
+    transform: translate(-64px, -50%)
+}
+
+.webpage-slider .item.slick-slide:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: "";
+    background: #222;
+    z-index: 100;
+    visibility: visible;
+    opacity: .1;
+    transition: .3s ease-in-out
+}
+
+.webpage-slider .item.slick-slide:hover:before,
+.webpage-slider .slick-next,
+.webpage-slider .slick-prev {
+    opacity: 0;
+    visibility: hidden
+}
+
+.webpage-slider:hover .slick-next,
+.webpage-slider:hover .slick-prev {
+    opacity: 1;
+    visibility: visible
+}
+
+.webpage-slider .slick-next:hover,
+.webpage-slider .slick-prev:hover {
+    background-color: #66676b;
+    color: #fff
+}

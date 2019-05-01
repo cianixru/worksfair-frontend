@@ -11,7 +11,7 @@ afterEach(cleanup);
 
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({});
+const mockStore = store({ auth: { currentUser: {} } });
 
 describe('CreateWebpage.jsx', () => {
   test('Should display the CreateWebpage Component', () => {

@@ -1,0 +1,498 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webpage.jsx Should display the Webpage Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="hero is-medium is-dark"
+        >
+          <div
+            class="hero-body"
+          >
+            <div
+              class="container"
+            >
+              <h1
+                class="title"
+              >
+                Welcome to Happiness
+              </h1>
+              <h2
+                class="subtitle"
+              >
+                Happiness truly lives here. We just happy
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          class="webpage-hero"
+        >
+          <div>
+            <div
+              class="carousel carousel-slider"
+              style="width: 100%;"
+            >
+              <button
+                class="control-arrow control-prev"
+                type="button"
+              />
+              <div
+                class="slider-wrapper axis-horizontal"
+              >
+                <ul
+                  class="slider animated"
+                  style="transform: translate3d(-50%,0,0); transition-duration: 350ms;"
+                >
+                  <li
+                    class="slide selected"
+                    style="min-width: 40%;"
+                  >
+                    <figure
+                      class="image is-4by3"
+                    >
+                      <img
+                        alt="sample"
+                        src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                      />
+                    </figure>
+                  </li>
+                  <li
+                    class="slide"
+                    style="min-width: 40%;"
+                  >
+                    <figure
+                      class="image is-4by3"
+                    >
+                      <img
+                        alt="sample"
+                        src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                      />
+                    </figure>
+                  </li>
+                  <li
+                    class="slide selected"
+                    style="min-width: 40%;"
+                  >
+                    <figure
+                      class="image is-4by3"
+                    >
+                      <img
+                        alt="sample"
+                        src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                      />
+                    </figure>
+                  </li>
+                  <li
+                    class="slide"
+                    style="min-width: 40%;"
+                  >
+                    <figure
+                      class="image is-4by3"
+                    >
+                      <img
+                        alt="sample"
+                        src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                      />
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <button
+                class="control-arrow control-next"
+                type="button"
+              />
+              <ul
+                class="control-dots"
+              >
+                <li
+                  class="dot"
+                  role="button"
+                  tabindex="0"
+                  value="0"
+                />
+                <li
+                  class="dot selected"
+                  role="button"
+                  tabindex="0"
+                  value="1"
+                />
+              </ul>
+              <p
+                class="carousel-status"
+              >
+                2 of 2
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+        >
+          <div
+            class="columns is-desktop"
+          >
+            <div
+              class="column is-three-quarters"
+            >
+              <div
+                class="webpage-titlebar"
+                id="titlebar"
+              >
+                <div>
+                  <h2>
+                    Happiness
+                     
+                    <i
+                      class="verified-icon"
+                    />
+                    <span
+                      class="button is-rounded is-dark is-outlined"
+                    >
+                      passion
+                    </span>
+                  </h2>
+                  <span
+                    class="webpage-address"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-map-marker"
+                    />
+                    No 7 Obinna Uzor Street, Canal Estate, Okota, Lagos
+                  </span>
+                </div>
+                <div
+                  class="verified-badge"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-check-circle-o"
+                  />
+                  Verified Business
+                </div>
+              </div>
+            </div>
+            <div
+              class="column is-one-quarter"
+            >
+              <div
+                class="card"
+              >
+                <header
+                  class="card-header"
+                >
+                  <p
+                    class="card-header-title"
+                  >
+                    Webpage Owner
+                  </p>
+                </header>
+                <div
+                  class="card-content"
+                >
+                  <div
+                    class="media"
+                  >
+                    <div
+                      class="media-left"
+                    >
+                      <figure
+                        class="image is-48x48"
+                      >
+                        <img
+                          alt="avatar"
+                          class="is-rounded"
+                          src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="media-content content"
+                    >
+                      <a
+                        href="/"
+                      >
+                        theo IO
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="hero is-medium is-dark"
+      >
+        <div
+          class="hero-body"
+        >
+          <div
+            class="container"
+          >
+            <h1
+              class="title"
+            >
+              Welcome to Happiness
+            </h1>
+            <h2
+              class="subtitle"
+            >
+              Happiness truly lives here. We just happy
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div
+        class="webpage-hero"
+      >
+        <div>
+          <div
+            class="carousel carousel-slider"
+            style="width: 100%;"
+          >
+            <button
+              class="control-arrow control-prev"
+              type="button"
+            />
+            <div
+              class="slider-wrapper axis-horizontal"
+            >
+              <ul
+                class="slider animated"
+                style="transform: translate3d(-50%,0,0); transition-duration: 350ms;"
+              >
+                <li
+                  class="slide selected"
+                  style="min-width: 40%;"
+                >
+                  <figure
+                    class="image is-4by3"
+                  >
+                    <img
+                      alt="sample"
+                      src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                    />
+                  </figure>
+                </li>
+                <li
+                  class="slide"
+                  style="min-width: 40%;"
+                >
+                  <figure
+                    class="image is-4by3"
+                  >
+                    <img
+                      alt="sample"
+                      src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                    />
+                  </figure>
+                </li>
+                <li
+                  class="slide selected"
+                  style="min-width: 40%;"
+                >
+                  <figure
+                    class="image is-4by3"
+                  >
+                    <img
+                      alt="sample"
+                      src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                    />
+                  </figure>
+                </li>
+                <li
+                  class="slide"
+                  style="min-width: 40%;"
+                >
+                  <figure
+                    class="image is-4by3"
+                  >
+                    <img
+                      alt="sample"
+                      src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                    />
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="control-arrow control-next"
+              type="button"
+            />
+            <ul
+              class="control-dots"
+            >
+              <li
+                class="dot"
+                role="button"
+                tabindex="0"
+                value="0"
+              />
+              <li
+                class="dot selected"
+                role="button"
+                tabindex="0"
+                value="1"
+              />
+            </ul>
+            <p
+              class="carousel-status"
+            >
+              2 of 2
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container"
+      >
+        <div
+          class="columns is-desktop"
+        >
+          <div
+            class="column is-three-quarters"
+          >
+            <div
+              class="webpage-titlebar"
+              id="titlebar"
+            >
+              <div>
+                <h2>
+                  Happiness
+                   
+                  <i
+                    class="verified-icon"
+                  />
+                  <span
+                    class="button is-rounded is-dark is-outlined"
+                  >
+                    passion
+                  </span>
+                </h2>
+                <span
+                  class="webpage-address"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-map-marker"
+                  />
+                  No 7 Obinna Uzor Street, Canal Estate, Okota, Lagos
+                </span>
+              </div>
+              <div
+                class="verified-badge"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-check-circle-o"
+                />
+                Verified Business
+              </div>
+            </div>
+          </div>
+          <div
+            class="column is-one-quarter"
+          >
+            <div
+              class="card"
+            >
+              <header
+                class="card-header"
+              >
+                <p
+                  class="card-header-title"
+                >
+                  Webpage Owner
+                </p>
+              </header>
+              <div
+                class="card-content"
+              >
+                <div
+                  class="media"
+                >
+                  <div
+                    class="media-left"
+                  >
+                    <figure
+                      class="image is-48x48"
+                    >
+                      <img
+                        alt="avatar"
+                        class="is-rounded"
+                        src="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                      />
+                    </figure>
+                  </div>
+                  <div
+                    class="media-content content"
+                  >
+                    <a
+                      href="/"
+                    >
+                      theo IO
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

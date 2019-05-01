@@ -1,5 +1,12 @@
-import { AUTHENTICATED_USER, LOGOUT } from '../actions/auth';
+import {
+  AUTHENTICATED_USER,
+  LOGOUT,
+  GET_CURRENT_USER,
+  AUTHENTICATION_FAILED,
+} from '../actions/auth';
 import auth from '../utils/auth';
+import alert from '../components/utils/alert';
+import formatMessages from '../utils/helpers';
 
 const manageAuth = new auth();
 
@@ -14,6 +21,11 @@ export default (state = initialState, action) => {
     return { ...state, currentUser: action.data };
   case LOGOUT:
     return { ...state, currentUser: action.data };
+  case GET_CURRENT_USER:
+    return { ...state, currentUser: action.data };
+  case AUTHENTICATION_FAILED:
+    alert.error(formatMessages(action.data));
+    return { ...state, currentUser: null };
   default:
     return state;
   }

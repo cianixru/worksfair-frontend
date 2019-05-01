@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 
 import SignupForm from '../../forms/Auth/SignupForm';
 import { signup } from '../../actions/auth';
@@ -47,4 +46,4 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps,
-)(withRouter(Signup));
+)(Signup);

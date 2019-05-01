@@ -14,7 +14,7 @@ class CreateWebpageContainer extends Component {
       },
       {
         text: 'Create Webpage',
-        to: `/dashboard/${username}/webpage/new`,
+        to: `/dashboard/${username}/webpages/new`,
       },
     ];
     return (
