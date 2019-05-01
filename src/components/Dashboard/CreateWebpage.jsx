@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom';
 
 import avatar from '../../assets/worksfair-avatar.png';
 import CreateWebpageForm from '../../forms/Webpage/CreateWebpageForm';
@@ -26,7 +27,7 @@ class CreateWebpage extends Component {
    * @param { object } input
    */
   onSubmit = async (input) => {
-    const { actions } = this.props;
+    const { actions, history } = this.props;
     try {
       const response = await actions.createWebpage(input);
       if (response.type === CREATE_WEBPAGE_FAILED) {
@@ -37,6 +38,7 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         alert.success('Successfully created your webpage');
+        history.push(`/webpage/${response.data.sub_domain_name}`);
       }
     } catch (error) {
       alert.error(error.message);
@@ -102,6 +104,7 @@ CreateWebpage.propTypes = {
   links: PropTypes.object,
   actions: PropTypes.object,
   user: PropTypes.object,
+  history: PropTypes.object,
 };
 
 const mapStateToProps = ({ auth: { currentUser } }) => ({
@@ -117,7 +120,7 @@ const mapDispatchToProps = dispatch => ({
   ),
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
-)(CreateWebpage);
+)(CreateWebpage));

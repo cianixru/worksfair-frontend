@@ -122,3 +122,116 @@
 .verified-badge:hover {
     border-radius: 4px 4px 0 0
 }
+
+.webpage-slider .item {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    height: 40vh;
+    min-height: 400px
+}
+
+.webpage-slider,
+.webpage-slider .item {
+    height: 40vh;
+    min-height: 400px
+}
+
+a.mfp-gallery {
+    cursor: zoom-in
+}
+
+.webpage-slider {
+    background-color: #fff
+}
+
+.webpage-slider .slick-next:hover,
+.webpage-slider .slick-prev:hover,
+.webpage-slider .slick-next,
+.webpage-slider .slick-prev {
+    background-color: rgba(20, 20, 20, .45);
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: .4s
+}
+
+.webpage-slider .slick-next:hover,
+.webpage-slider .slick-next {
+    right: 15%;
+    transform: translate(50px, -50%)
+}
+
+.webpage-slider .slick-prev:hover,
+.webpage-slider .slick-prev {
+    left: 15%;
+    transform: translate(-50px, -50%)
+}
+
+.webpage-slider:hover .slick-next {
+    transform: translate(60px, -50%)
+}
+
+.webpage-slider:hover .slick-prev {
+    transform: translate(-60px, -50%)
+}
+
+.webpage-slider .slick-next:hover:before,
+.webpage-slider .slick-prev:hover:before,
+.webpage-slider .slick-prev::before,
+.webpage-slider .slick-next::before {
+    font-size: 20px;
+    line-height: 60px;
+    position: relative;
+    color: #fff
+}
+
+.webpage-slider .slick-prev::before {
+    left: -1px
+}
+
+.webpage-slider .slick-next::before {
+    left: 1px
+}
+
+.webpage-slider .slick-next:hover {
+    transform: translate(64px, -50%)
+}
+
+.webpage-slider .slick-prev:hover {
+    transform: translate(-64px, -50%)
+}
+
+.webpage-slider .item.slick-slide:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: "";
+    background: #222;
+    z-index: 100;
+    visibility: visible;
+    opacity: .1;
+    transition: .3s ease-in-out
+}
+
+.webpage-slider .item.slick-slide:hover:before,
+.webpage-slider .slick-next,
+.webpage-slider .slick-prev {
+    opacity: 0;
+    visibility: hidden
+}
+
+.webpage-slider:hover .slick-next,
+.webpage-slider:hover .slick-prev {
+    opacity: 1;
+    visibility: visible
+}
+
+.webpage-slider .slick-next:hover,
+.webpage-slider .slick-prev:hover {
+    background-color: #66676b;
+    color: #fff
+}

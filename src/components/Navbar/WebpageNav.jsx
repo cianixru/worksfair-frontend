@@ -66,7 +66,7 @@ class WebpageNav extends Component {
                 className="button is-outlined is-rounded"
                 to="/"
               >
-                Create Website
+                Create Webpage
               </Link>
             </div>
           </div>

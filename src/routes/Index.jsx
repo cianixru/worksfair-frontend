@@ -35,7 +35,6 @@ class Routes extends Component {
   render() {
     const { currentUser, isLoading, webpage } = this.props;
     const url = window.location.pathname;
-    console.log(webpage);
     return (
       <div>
         <div className={isLoading ? 'spin-loader' : ''}>

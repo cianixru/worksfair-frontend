@@ -1,9 +1,15 @@
 import webpageReducer from './webpage';
-import { NEW_WEBPAGE } from '../actions/webpage';
+import {
+  NEW_WEBPAGE,
+  CREATE_WEBPAGE_FAILED,
+  GET_WEBPAGE_FAILED,
+  GET_WEBPAGE
+} from '../actions/webpage';
 import { webpage } from '../actions/webpage.test';
 
 const initialState = {
   newWebpage: {},
+  webpage: null,
 };
 
 describe('Create Webpage reducer test', () => {
@@ -36,6 +42,88 @@ describe('Create Webpage reducer test', () => {
         newWebpage: { webpage },
       },
       newWebpage: { webpage },
+    });
+  });
+  test('should handle Create Webpage failure', () => {
+    expect(
+      webpageReducer([], {
+        type: CREATE_WEBPAGE_FAILED,
+        error: 'Failure',
+      })
+    ).toEqual({
+      newWebpage: null,
+    });
+
+    expect(
+      webpageReducer([
+        {
+          newWebpage: { webpage },
+        }
+      ],
+      {
+        type: CREATE_WEBPAGE_FAILED,
+        data: null,
+      })
+    ).toEqual({
+      0: {
+        newWebpage: { webpage },
+      },
+      newWebpage: null,
+    });
+  });
+
+  test('should handle Get Webpage', () => {
+    expect(
+      webpageReducer([], {
+        type: GET_WEBPAGE,
+        data: { webpage },
+      })
+    ).toEqual({
+      webpage: { webpage },
+    });
+
+    expect(
+      webpageReducer([
+        {
+          webpage: { webpage },
+        }
+      ],
+      {
+        type: GET_WEBPAGE,
+        data: { webpage },
+      })
+    ).toEqual({
+      0: {
+        webpage: { webpage },
+      },
+      webpage: { webpage },
+    });
+  });
+  test('should handle Get Webpage failure', () => {
+    expect(
+      webpageReducer([], {
+        type: GET_WEBPAGE_FAILED,
+        error: 'failure',
+      })
+    ).toEqual({
+      webpage: null,
+    });
+
+    expect(
+      webpageReducer([
+        {
+          webpage: { webpage },
+        }
+      ],
+      {
+        type: GET_WEBPAGE_FAILED,
+        error: 'failure',
+      })
+    ).toEqual({
+      0: {
+        webpage: { webpage },
+      },
+      webpage: null,
     });
   });
 });

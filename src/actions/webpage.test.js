@@ -76,7 +76,7 @@ describe('Get Webpage action', () => {
   });
   test('should dispatch the credentials to the store after getWebpage',
     () => {
-      mock.onGet('/webpages/ideosynergy').reply(200, webpage);
+      mock.onGet('/webpages/ideosynergy/').reply(200, webpage);
       const expectedActions = [{
         type: GET_WEBPAGE,
         data: {
@@ -90,7 +90,7 @@ describe('Get Webpage action', () => {
     });
 
   test('should dispatch error to the store after get webpage fail', () => {
-    mock.onGet('/webpages/dfgahjkdsf').reply(404, {
+    mock.onGet('/webpages/dfgahjkdsf/').reply(404, {
       type: GET_WEBPAGE_FAILED,
       message: 'Request failed with status code 400',
     });

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import OwnerCard from '../components/Webpage/OwnerCard';
 import TitleBar from '../components/Webpage/TitleBar';
+import ImagesSlide from '../components/Webpage/ImagesSlide';
 
 class WebpageContainer extends Component {
   async componentDidMount() {
@@ -19,8 +20,8 @@ class WebpageContainer extends Component {
     return (
       webpage
       && <div>
-        <section
-          className={`hero is-medium webpage-hero ${webpage.colour}`}>
+        <div
+          className={`hero is-medium ${webpage.colour}`}>
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
@@ -31,7 +32,10 @@ class WebpageContainer extends Component {
               </h2>
             </div>
           </div>
-        </section>
+        </div>
+        <div className="webpage-hero">
+          <ImagesSlide webpage={webpage} />
+        </div>
         <div className="container">
           <div className="columns is-desktop">
             <div className="column is-three-quarters">
