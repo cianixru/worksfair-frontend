@@ -50,3 +50,28 @@ export const getWebpage = data => async (dispatch) => {
     });
   }
 };
+
+export const UPDATED_WEBPAGE = 'UPDATED_WEBPAGE';
+export const UPDATE_WEBPAGE_FAILED = 'UPDATE_WEBPAGE_FAILED';
+
+/**
+ * updates webpage data from the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const updateWebpage = data => async (dispatch) => {
+  try {
+    console.log(data);
+    const webpage = await api.patch(`/webpages/${data.subDomainName}/`, data);
+    return dispatch({
+      type: UPDATED_WEBPAGE,
+      data: webpage.data,
+    });
+  } catch (error) {
+    return dispatch({
+      type: UPDATE_WEBPAGE_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};

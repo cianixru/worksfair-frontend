@@ -105,7 +105,7 @@ const CreateWebpageForm = ({
                 className="button is-danger is-medium is-rounded"
                 data-testid="create-webpage"
               >
-                Save
+                Save & Continue
               </button>
             </div>
           </form>

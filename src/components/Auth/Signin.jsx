@@ -19,8 +19,7 @@ class Signin extends Component {
     try {
       await actions.isLoading();
       await actions.signin(data);
-      const { username } = user;
-      history.push(`/dashboard/${username}`);
+      history.push(`/dashboard/${user.username}`);
     } catch (err) {
       console.log(err);
     } finally {

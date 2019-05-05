@@ -33,7 +33,7 @@ class Routes extends Component {
   }
 
   render() {
-    const { currentUser, isLoading, webpage } = this.props;
+    const { currentUser, isLoading, webpage, actions: { getCurrentUser }, } = this.props;
     const url = window.location.pathname;
     return (
       <div>
@@ -55,7 +55,7 @@ class Routes extends Component {
           }
         </header>
         <AuthRoute />
-        <Dashboard />
+        <Dashboard getCurrentUser={getCurrentUser} />
         <Webpage getWebpage={this.getWebpage} />
       </div>
     );

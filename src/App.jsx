@@ -9,9 +9,7 @@ import store from './store';
 import 'bulma/css/bulma.min.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './styles/App.scss';
-import './styles/Navbar.scss';
-import './styles/Webpage.scss';
+import './styles/Index.scss';
 
 import Routes from './routes/Index';
 

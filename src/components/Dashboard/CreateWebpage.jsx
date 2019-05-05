@@ -1,17 +1,21 @@
-import React, { Component } from 'react';
+/* eslint-disable react/jsx-no-bind */
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
+import {
+  withRouter, NavLink, Link, BrowserRouter as Router, Route
+} from 'react-router-dom';
 
-import avatar from '../../assets/worksfair-avatar.png';
-import CreateWebpageForm from '../../forms/Webpage/CreateWebpageForm';
+import BasicInfo from './BasicInfo';
+import ContactInfo from './ContactInfo';
 import {
   createWebpage,
+  updateWebpage,
   CREATE_WEBPAGE_FAILED,
+  UPDATE_WEBPAGE_FAILED,
 } from '../../actions/webpage';
 import alert from '../utils/alert';
-import { toSentenceCase } from '../utils/helpers';
 
 class CreateWebpage extends Component {
   state = {
@@ -27,7 +31,7 @@ class CreateWebpage extends Component {
    * @param { object } input
    */
   onSubmit = async (input) => {
-    const { actions, history } = this.props;
+    const { actions, history, user } = this.props;
     try {
       const response = await actions.createWebpage(input);
       if (response.type === CREATE_WEBPAGE_FAILED) {
@@ -37,8 +41,8 @@ class CreateWebpage extends Component {
         });
         alert.error('Request Failed. Check for more details');
       } else {
-        alert.success('Successfully created your webpage');
-        history.push(`/webpage/${response.data.sub_domain_name}`);
+        alert.success('Successful. Keep going!');
+        history.push(`/dashboard/${user.username}/webpages/new/contact-info`);
       }
     } catch (error) {
       alert.error(error.message);
@@ -58,42 +62,112 @@ class CreateWebpage extends Component {
     });
   };
 
+  /**
+   * @description handles submit action for webpage updates
+   *
+   * @param { object } input
+   */
+  submitContactInfo = async (input) => {
+    const {
+      actions, history, webpage, user
+    } = this.props;
+    try {
+      input.subDomainName = webpage.sub_domain_name;
+      const response = await actions.updateWebpage(input);
+      if (response.type === UPDATE_WEBPAGE_FAILED) {
+        const { data } = response.response;
+        this.setState({
+          validationErrors: data,
+        });
+        alert.error('Request Failed. Check for more details');
+      } else {
+        alert.success('Successful. Keep going!');
+        history.push(`/dashboard/${user.username}/webpages/new/contact-info`);
+      }
+    } catch (error) {
+      alert.error(error.message);
+    }
+  };
+
   render() {
     const { validationErrors } = this.state;
-    const { user } = this.props;
+    const { user, username } = this.props;
     return (
       <div className="add-webpage-section">
         <div className="add-webpage-headline">
-          <h3 className="add-webpage-header">
-            <i className="fa fa-globe" aria-hidden="true" />
-            Basic Info
-          </h3>
+          <nav
+            className="pagination is-left"
+            role="navigation"
+            aria-label="pagination">
+            <Link to="/" className="pagination-next">Preview Your Webpage</Link>
+            <ul className="pagination-list">
+              <li>
+                <NavLink
+                  to={`/dashboard/${username}/webpages/new/basic-info`}
+                  activeClassName="is-current"
+                  className="pagination-link"
+                  aria-label="Basic Info">
+                  <i className="fa fa-globe" aria-hidden="true" />
+                    Basic Info
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/dashboard/${username}/webpages/new/contact-info`}
+                  activeClassName="is-current"
+                  className="pagination-link"
+                  aria-label="Goto Contact Info">
+                  <i className="fa fa-address-card-o" aria-hidden="true" />
+                    Contact Info
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/dashboard/${username}/webpages/new/gallery`}
+                  className="pagination-link"
+                  activeClassName="is-current"
+                  aria-label="Goto Gallery"
+                  aria-current="page" >
+                  <i className="fa fa-file-image-o" aria-hidden="true" />
+                    Gallery
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/dashboard/${username}/webpages/new/pricing`}
+                  className="pagination-link"
+                  activeClassName="is-current"
+                  aria-label="Goto Pricing">
+                  <i className="fa fa-money" aria-hidden="true" />
+                    Pricing
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div className="add-webpage-content">
-          <h5>Website Owner</h5>
-          <div className="media">
-            <div className="media-left">
-              <figure className="image is-32x32">
-                <img
-                  src={user && user.image_url ? user.image_url : avatar}
-                  alt="avatar"
-                  className="is-rounded"
-                />
-              </figure>
-            </div>
-            <div className="media-content">
-              { user
-                && `${toSentenceCase(user.first_name)} ${toSentenceCase(user.last_name)}`
-              }
-            </div>
-          </div>
-          <div className="add-webpage-form">
-            <CreateWebpageForm
-              onSubmit={this.onSubmit}
-              validationErrors={validationErrors}
-              handleErrorReset={this.handleErrorReset}
-            />
-          </div>
+          <Router>
+            <Fragment>
+              <Route
+                exact
+                path="/dashboard/:username/webpages/new/basic-info"
+                render={() => (<BasicInfo
+                  onSubmit={this.onSubmit}
+                  user={user}
+                  validationErrors={validationErrors}
+                  handleErrorReset={this.handleErrorReset} />)}
+              />
+              <Route
+                exact
+                path="/dashboard/:username/webpages/new/contact-info"
+                render={() => (<ContactInfo
+                  onSubmit={this.submitContactInfo}
+                  user={user}
+                  validationErrors={validationErrors}
+                  handleErrorReset={this.handleErrorReset} />)}
+              />
+            </Fragment>
+          </Router>
         </div>
       </div>
     );
@@ -105,16 +179,19 @@ CreateWebpage.propTypes = {
   actions: PropTypes.object,
   user: PropTypes.object,
   history: PropTypes.object,
+  webpage: PropTypes.object,
 };
 
-const mapStateToProps = ({ auth: { currentUser } }) => ({
+const mapStateToProps = ({ auth: { currentUser }, webpage }) => ({
   user: currentUser.user,
+  webpage: webpage.newWebpage,
 });
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
       createWebpage,
+      updateWebpage,
     },
     dispatch,
   ),

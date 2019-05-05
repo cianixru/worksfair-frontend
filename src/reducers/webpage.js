@@ -3,6 +3,8 @@ import {
   CREATE_WEBPAGE_FAILED,
   GET_WEBPAGE,
   GET_WEBPAGE_FAILED,
+  UPDATED_WEBPAGE,
+  UPDATE_WEBPAGE_FAILED,
 } from '../actions/webpage';
 
 const initialState = {
@@ -18,10 +20,10 @@ export default (state = initialState, action) => {
   case CREATE_WEBPAGE_FAILED:
     return { ...state, newWebpage: null };
 
-  case GET_WEBPAGE:
+  case GET_WEBPAGE || UPDATED_WEBPAGE:
     return { ...state, webpage: action.data };
 
-  case GET_WEBPAGE_FAILED:
+  case GET_WEBPAGE_FAILED || UPDATE_WEBPAGE_FAILED:
     return { ...state, webpage: null };
   default:
     return state;

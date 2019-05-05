@@ -25,7 +25,7 @@ class CreateWebpageContainer extends Component {
         >
           <Link to="/demo">View Sample Webpage</Link>
         </DashboardHeader>
-        <CreateWebpage />
+        <CreateWebpage username={username} />
       </div>
     );
   }

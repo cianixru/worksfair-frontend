@@ -11,6 +11,7 @@ const WebpageText = ({
   handleErrorReset,
   dataTestId,
   validate,
+  placeholder,
 }) => {
   const errorReset = () => handleErrorReset(name);
   return (
@@ -22,6 +23,7 @@ const WebpageText = ({
         data-testid={dataTestId}
         component="input"
         name={name}
+        placeholder={placeholder}
         // eslint-disable-next-line react/jsx-no-bind
         onFocus={errorReset}
       />
@@ -47,6 +49,7 @@ WebpageText.propTypes = {
   handleErrorReset: PropTypes.func,
   // eslint-disable-next-line react/forbid-prop-types
   validate: PropTypes.any,
+  placeholder: PropTypes.string,
 };
 
 export default WebpageText;
