@@ -1,4 +1,6 @@
-import api from '../utils/api';
+import axios from 'axios';
+
+import { baseURL } from '../utils/api';
 
 const apiToken = localStorage.getItem('token');
 
@@ -11,9 +13,14 @@ export const CREATE_WEBPAGE_FAILED = 'CREATE_WEBPAGE_FAILED';
  * @returns { func } dispatch
  */
 export const createWebpage = data => async (dispatch) => {
-  api.defaults.headers.common.Authorization = `Token ${apiToken}`;
   try {
-    const newWebpage = await api.post('/webpages/', data);
+    const newWebpage = await axios({
+      url: '/webpages/',
+      method: 'post',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
     return dispatch({
       type: NEW_WEBPAGE,
       data: newWebpage.data,
@@ -37,7 +44,13 @@ export const GET_WEBPAGE_FAILED = 'GET_WEBPAGE_FAILED';
  */
 export const getWebpage = data => async (dispatch) => {
   try {
-    const webpage = await api.get(`/webpages/${data}/`);
+    const webpage = await axios({
+      url: `/webpages/${data}/`,
+      method: 'get',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
     return dispatch({
       type: GET_WEBPAGE,
       data: webpage.data,
@@ -60,9 +73,14 @@ export const UPDATE_WEBPAGE_FAILED = 'UPDATE_WEBPAGE_FAILED';
  * @returns { func } dispatch
  */
 export const updateWebpage = data => async (dispatch) => {
-  api.defaults.headers.common.Authorization = `Token ${apiToken}`;
   try {
-    const webpage = await api.patch(`/webpages/${data.subDomainName}/`, data);
+    const webpage = await axios({
+      url: `/webpages/${data.subDomainName}/`,
+      method: 'patch',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
     return dispatch({
       type: UPDATED_WEBPAGE,
       data: webpage.data,

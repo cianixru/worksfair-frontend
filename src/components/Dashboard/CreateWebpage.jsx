@@ -217,6 +217,7 @@ CreateWebpage.propTypes = {
   user: PropTypes.object,
   history: PropTypes.object,
   webpage: PropTypes.object,
+  username: PropTypes.string,
 };
 
 const mapStateToProps = ({ auth: { currentUser }, webpage }) => ({

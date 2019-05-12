@@ -167,7 +167,7 @@ class ContactInfoForm extends Component {
                   type="submit"
                   disabled={pristine || invalid}
                   className="button is-danger is-medium is-rounded"
-                  data-testid="create-webpage"
+                  data-testid="update-contact"
                 >
                   Save & Continue
                 </button>

@@ -27,7 +27,7 @@ class ImageUploader extends Component {
    */
 
   handleUploadImages = (images) => {
-    const uploadedImages = {};
+    const newImages = {};
     const uploads = images.map((image) => {
       // our formdata
       const formData = new FormData();
@@ -51,15 +51,17 @@ class ImageUploader extends Component {
         config: { headers: { 'Content-Type': 'multipart/form-data' } }
       })
         .then((response) => {
-          uploadedImages[response.data.public_id] = response.data.secure_url;
+          newImages[response.data.public_id] = response.data.secure_url;
+          const { uploadedImages } = this.state;
           this.setState({
-            uploadedImages,
+            ...uploadedImages,
+            uploadedImages: newImages,
           });
         });
     });
 
     axios.all(uploads).then(() => {
-      console.log('Images have all being uploaded');
+      console.log('Images have all being uploaded to cloudinary');
     });
   }
 
@@ -89,8 +91,6 @@ class ImageUploader extends Component {
     formData.append('timestamp', timestamp);
     formData.append('signature', signature);
 
-    delete axios.defaults.headers.common.Authorization;
-
     return axios({
       method: 'post',
       url: REACT_APP_CLOUDINARY_DELETE_URL,
@@ -115,7 +115,6 @@ class ImageUploader extends Component {
   handleSubmit = async () => {
     const { uploadedImages } = this.state;
     const imagesUrl = Object.values(uploadedImages);
-    console.log('imagesUrl', imagesUrl);
 
     const images = {
       featured_images: imagesUrl,
@@ -165,7 +164,7 @@ class ImageUploader extends Component {
                   type="submit"
                   disabled={hasNoImages}
                   className="button is-danger is-medium is-rounded"
-                  data-testid="create-webpage"
+                  data-testid="save-featured-images"
                   onClick={this.handleSubmit}
                 >
                   Save & Continue
