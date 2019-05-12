@@ -12,6 +12,7 @@ export const signup = user => async (dispatch) => {
   try {
     user.email = email.toLowerCase();
     user.role = 'admin';
+    delete api.defaults.headers.common;
     const newUser = await api.post('/auth/register/', user);
     return dispatch({
       type: AUTHENTICATED_USER,

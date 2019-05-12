@@ -11,7 +11,10 @@ afterEach(cleanup);
 
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({ auth: { currentUser: {} } });
+const mockStore = store({
+  auth: { currentUser: {} },
+  webpage: { newWebpage: {} }
+});
 
 describe('CreateWebpage.jsx', () => {
   // const validationErrors = {

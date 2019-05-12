@@ -16,6 +16,7 @@ import {
   UPDATE_WEBPAGE_FAILED,
 } from '../../actions/webpage';
 import alert from '../utils/alert';
+import ImageUploader from './ImageUploader';
 
 class CreateWebpage extends Component {
   state = {
@@ -82,7 +83,34 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         alert.success('Successful. Keep going!');
-        history.push(`/dashboard/${user.username}/webpages/new/contact-info`);
+        history.push(`/dashboard/${user.username}/webpages/new/gallery`);
+      }
+    } catch (error) {
+      alert.error(error.message);
+    }
+  };
+
+  /**
+   * @description Handles the submission of the images
+   *
+   * @param { object } images
+   */
+  submitImages = async (images) => {
+    const {
+      actions, history, webpage, user
+    } = this.props;
+    try {
+      images.subDomainName = webpage.sub_domain_name;
+      const response = await actions.updateWebpage(images);
+      if (response.type === UPDATE_WEBPAGE_FAILED) {
+        const { data } = response.response;
+        this.setState({
+          validationErrors: data,
+        });
+        alert.error('Request Failed. Check for more details');
+      } else {
+        alert.success('Successful. Keep going!');
+        history.push(`/dashboard/${user.username}/webpages/new/pricing`);
       }
     } catch (error) {
       alert.error(error.message);
@@ -162,6 +190,15 @@ class CreateWebpage extends Component {
                 path="/dashboard/:username/webpages/new/contact-info"
                 render={() => (<ContactInfo
                   onSubmit={this.submitContactInfo}
+                  user={user}
+                  validationErrors={validationErrors}
+                  handleErrorReset={this.handleErrorReset} />)}
+              />
+              <Route
+                exact
+                path="/dashboard/:username/webpages/new/gallery"
+                render={() => (<ImageUploader
+                  onSubmit={this.submitImages}
                   user={user}
                   validationErrors={validationErrors}
                   handleErrorReset={this.handleErrorReset} />)}

@@ -1,7 +1,6 @@
 import api from '../utils/api';
 
 const apiToken = localStorage.getItem('token');
-api.defaults.headers.common.Authorization = `Token ${apiToken}`;
 
 export const NEW_WEBPAGE = 'NEW_WEBPAGE';
 export const CREATE_WEBPAGE_FAILED = 'CREATE_WEBPAGE_FAILED';
@@ -12,6 +11,7 @@ export const CREATE_WEBPAGE_FAILED = 'CREATE_WEBPAGE_FAILED';
  * @returns { func } dispatch
  */
 export const createWebpage = data => async (dispatch) => {
+  api.defaults.headers.common.Authorization = `Token ${apiToken}`;
   try {
     const newWebpage = await api.post('/webpages/', data);
     return dispatch({
@@ -60,8 +60,8 @@ export const UPDATE_WEBPAGE_FAILED = 'UPDATE_WEBPAGE_FAILED';
  * @returns { func } dispatch
  */
 export const updateWebpage = data => async (dispatch) => {
+  api.defaults.headers.common.Authorization = `Token ${apiToken}`;
   try {
-    console.log(data);
     const webpage = await api.patch(`/webpages/${data.subDomainName}/`, data);
     return dispatch({
       type: UPDATED_WEBPAGE,
