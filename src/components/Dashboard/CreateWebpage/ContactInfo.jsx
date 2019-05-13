@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import ContactInfoForm from '../../forms/Webpage/ContactInfoForm';
+import ContactInfoForm from '../../../forms/Webpage/ContactInfoForm';
 
 const ContactInfo = ({
   onSubmit, validationErrors, handleErrorReset,

@@ -7,8 +7,8 @@ import {
   withRouter, NavLink, Link, BrowserRouter as Router, Route
 } from 'react-router-dom';
 
-import BasicInfo from './BasicInfo';
-import ContactInfo from './ContactInfo';
+import BasicInfo from './CreateWebpage/BasicInfo';
+import ContactInfo from './CreateWebpage/ContactInfo';
 import {
   createWebpage,
   updateWebpage,
@@ -16,7 +16,7 @@ import {
   UPDATE_WEBPAGE_FAILED,
 } from '../../actions/webpage';
 import alert from '../utils/alert';
-import ImageUploader from './ImageUploader';
+import ImageUploader from './CreateWebpage/ImageUploader';
 
 class CreateWebpage extends Component {
   state = {

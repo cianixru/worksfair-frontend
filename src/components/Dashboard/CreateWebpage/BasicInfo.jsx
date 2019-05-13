@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import CreateWebpageForm from '../../forms/Webpage/CreateWebpageForm';
-import avatar from '../../assets/worksfair-avatar.png';
-import { toSentenceCase } from '../utils/helpers';
+import CreateWebpageForm from '../../../forms/Webpage/CreateWebpageForm';
+import avatar from '../../../assets/worksfair-avatar.png';
+import { toSentenceCase } from '../../utils/helpers';
 
 const BasicInfo = ({
   onSubmit, user, validationErrors, handleErrorReset,

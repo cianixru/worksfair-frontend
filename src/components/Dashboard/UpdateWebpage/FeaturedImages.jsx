@@ -13,9 +13,35 @@ const {
   REACT_APP_CLOUDINARY_AUTHORIZATION,
 } = process.env;
 
-class ImageUploader extends Component {
+class FeaturedImages extends Component {
   state={
+    selectedImages: [],
     uploadedImages: [],
+  }
+
+  /**
+   * @description Handles the selection of the images
+   *
+   * @param { Array } images
+   *
+   * @returns { Promise } axios API call
+   */
+
+  handleImagesSelection = (files) => {
+    const rawFiles = {};
+    const localFileURLs = files.map((file) => {
+      const localFileURL = URL.createObjectURL(file);
+      rawFiles[localFileURL] = file;
+      return localFileURL;
+    });
+
+    console.log(files, localFileURLs, rawFiles);
+    const { selectedImages } = this.state;
+    this.setState({
+      ...selectedImages,
+      selectedImages: localFileURLs,
+      rawFiles,
+    });
   }
 
   /**
@@ -123,17 +149,17 @@ class ImageUploader extends Component {
   }
 
   render() {
-    const { uploadedImages } = this.state;
+    const { uploadedImages, selectedImages } = this.state;
     const hasNoImages = uploadedImages.length <= 0;
 
     return (
       <Dropzone
-        onDrop={this.handleUploadImages}
+        onDrop={this.handleImagesSelection}
         multiple
         accept="image/*"
       >
         {({ getRootProps, getInputProps }) => {
-          const files = Object.keys(uploadedImages).map(publicId => (
+          const files = selectedImages.map(publicId => (
             <li key={publicId} className="notification column is-one-quarter">
               <button
                 className="delete"
@@ -141,7 +167,7 @@ class ImageUploader extends Component {
               />
               <figure className="image is-180x180">
                 <img
-                  src={uploadedImages[publicId]}
+                  src={publicId}
                   alt={publicId}
                 />
               </figure>
@@ -178,8 +204,8 @@ class ImageUploader extends Component {
   }
 }
 
-ImageUploader.propTypes = {
+FeaturedImages.propTypes = {
   onSubmit: PropTypes.func,
 };
 
-export default ImageUploader;
+export default FeaturedImages;
