@@ -68,3 +68,12 @@ body {
     margin: 0 auto;
     z-index: 100000;
 }
+
+.is-180x180 {
+    height: 180px;
+    width: 180px;
+}
+
+img {
+    object-fit: cover;
+}
