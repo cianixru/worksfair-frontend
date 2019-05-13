@@ -1,8 +1,8 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import MockAdapter from 'axios-mock-adapter';
+import axios from 'axios';
 
-import api from '../utils/api';
 import {
   NEW_WEBPAGE,
   createWebpage,
@@ -10,6 +10,9 @@ import {
   GET_WEBPAGE,
   GET_WEBPAGE_FAILED,
   getWebpage,
+  UPDATED_WEBPAGE,
+  UPDATE_WEBPAGE_FAILED,
+  updateWebpage,
 } from './webpage';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -19,11 +22,12 @@ export const webpage = {
   keywords: 'okafor, sanchez, goody, love',
   sub_domain_name: 'theookafor2',
   owner: 1,
+  subDomianName: 'ideosynergy',
 };
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const mock = new MockAdapter(api);
+const mock = new MockAdapter(axios);
 let store = mockStore({
   newWebpage: webpage,
 });
@@ -99,6 +103,37 @@ describe('Get Webpage action', () => {
       message: 'Request failed with status code 400',
     }];
     return store.dispatch(getWebpage('dfgahjkdsf'))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+describe('Update Webpage action', () => {
+  test.skip('should dispatch the credentials to the store after updateWebpage',
+    () => {
+      mock.onPatch('/webpages/ideosynergy/').replyOnce(200, webpage);
+      const expectedActions = [{
+        type: UPDATED_WEBPAGE,
+        data: {
+          ...webpage,
+        }
+      }];
+      return store.dispatch(updateWebpage(webpage))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after update webpage fail', () => {
+    mock.onPatch('/webpages/ideosynergy/').reply(400, {
+      type: UPDATE_WEBPAGE_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: UPDATE_WEBPAGE_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(updateWebpage({}))
       .then(() => {
         expect(store.getActions().type).toEqual(expectedActions.type);
       });

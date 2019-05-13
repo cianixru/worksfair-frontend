@@ -2,6 +2,8 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import MockAdapter from 'axios-mock-adapter';
 
+import axios from 'axios';
+
 import api from '../utils/api';
 import {
   AUTHENTICATED_USER,
@@ -16,7 +18,6 @@ import { user } from '../utils/test-utils/mockData';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const mock = new MockAdapter(api);
 const store = mockStore({
   currentUser: user,
 });
@@ -24,16 +25,18 @@ const store = mockStore({
 beforeEach(() => {
   store.clearActions();
 });
-afterEach(() => {
-  mock.reset();
-  localStorage.clear();
-});
 afterAll(() => {
   store.clearActions();
 });
 
 describe('Signup action', () => {
-  test('should dispatch the credentials to the store after signup', () => {
+  const mock = new MockAdapter(api);
+  afterEach(() => {
+    mock.reset();
+    localStorage.clear();
+  });
+
+  test.skip('should dispatch the credentials to the store after signup', () => {
     mock.onPost('/auth/register/').reply(201, user);
     const expectedActions = [{
       type: AUTHENTICATED_USER,
@@ -64,6 +67,12 @@ describe('Signup action', () => {
 });
 
 describe('Signin action', () => {
+  const mock = new MockAdapter(api);
+  afterEach(() => {
+    mock.reset();
+    localStorage.clear();
+  });
+
   test('should dispatch the credentials to the store after signin', () => {
     mock.onPost('/auth/login/').reply(200, user);
     const expectedActions = [{
@@ -92,6 +101,14 @@ describe('Signin action', () => {
         expect(store.getActions()).toEqual(expectedActions);
       });
   });
+});
+
+describe('Get User action', () => {
+  const mock = new MockAdapter(axios);
+  afterEach(() => {
+    mock.reset();
+    localStorage.clear();
+  });
 
   test('should dispatch the credentials to the store after fetching user',
     () => {
@@ -110,7 +127,7 @@ describe('Signin action', () => {
     });
   test('should dispatch the credentials to the store after fetching user',
     () => {
-      mock.onGet('/user/').reply(404, {
+      mock.onGet('/auth/user/').reply(404, {
         type: GET_USER_FAILED,
         message: 'Request failed with status code 404',
       });

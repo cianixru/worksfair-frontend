@@ -13,7 +13,7 @@
 
 .dashboard-nav {
   background-color: #2a2a2a;
-  display: block;
+  display: none;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, .12);
   z-index: 11;
   position: fixed;
@@ -692,4 +692,57 @@ h5 {
   transform: translate(-50%, 50%)
 }
 
+.drop-area, .dropzone {
+    box-sizing: border-box
+}
 
+.drop-area {
+    min-height: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.dropzone {
+    position: relative;
+    border: 2px dashed #d0d0d0;
+    border-radius: 3px;
+    background: #fcfcfc;
+    transition: all .3s linear;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    display: inline-block;
+    width: 100%
+}
+
+.dropzone:hover {
+    border: 2px dashed #59b02c;
+    background: #fff;
+    transition: all .35s linear
+}
+
+.dropzone:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .95), rgba(255, 255, 255, .9));
+    background-color: #59b02c;
+    opacity: 0;
+    z-index: 10;
+    transition: all .3s linear;
+    border-radius: 3px
+}
+
+.dropzone:hover:before {
+    opacity: .4
+}
+
+.notification {
+  overflow: hidden;
+  height: 180px;
+}
