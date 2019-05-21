@@ -12,11 +12,16 @@ import ContactInfo from './CreateWebpage/ContactInfo';
 import {
   createWebpage,
   updateWebpage,
+  createWebpageOffering,
   CREATE_WEBPAGE_FAILED,
   UPDATE_WEBPAGE_FAILED,
+  CREATE_OFFERING_FAILED,
 } from '../../actions/webpage';
 import alert from '../utils/alert';
 import ImageUploader from './CreateWebpage/ImageUploader';
+import Offerings from './CreateWebpage/Offerings';
+import { CloudinaryImageUploader } from '../utils/helpers';
+import { isLoading, isComplete } from '../../actions/loader';
 
 class CreateWebpage extends Component {
   state = {
@@ -25,7 +30,13 @@ class CreateWebpage extends Component {
       description: [],
       keywords: [],
     },
+    imageArray: null,
+    uploadedImage: null,
+    selectedOfferingImage: null,
+    offerings: [],
   }
+
+  offeringsFormRef = React.createRef();
 
   /**
    * @description handles submit action when the save button is clicked
@@ -117,8 +128,98 @@ class CreateWebpage extends Component {
     }
   };
 
+  /**
+   * @description handles the selection of an image
+   *
+   * @param { array } imageArray
+   */
+  handleOfferingImageSelection = (imageArray) => {
+    // convert the image file to object URL for preview
+    const localFileURL = URL.createObjectURL(imageArray[0]);
+    this.setState({
+      selectedImage: localFileURL,
+      imageArray,
+    });
+  }
+
+  /**
+   * @description Handles the reset of image on offering form
+   *
+   * @param { Array } images
+   */
+  resetOfferingImage = () => {
+    this.setState({
+      selectedImage: null,
+      imageArray: null,
+    });
+  }
+
+  /**
+   * @description Handles the submission of the offerings
+   *
+   * @param { object } input
+   */
+  submitOfferings = async (input) => {
+    const {
+      actions, webpage,
+    } = this.props;
+    const { imageArray, offerings } = this.state;
+    if (!imageArray) {
+      alert.error('You need to upload an image');
+    }
+    try {
+      input.subDomainName = webpage.sub_domain_name;
+
+      // Upload the image to cloudinary and get the response data
+      const imageData = await CloudinaryImageUploader(imageArray[0]);
+      input.image = imageData.data.secure_url;
+
+      // Send the input and the image URL from cloudinary to the DB
+      const response = await actions.createWebpageOffering(input);
+
+      if (response.type === CREATE_OFFERING_FAILED) {
+        const { data } = response.response;
+        this.setState({
+          validationErrors: data,
+        });
+        alert.error('Request Failed. Check for more details');
+      } else {
+        offerings.push(response.data);
+        alert.success('Successful. Go ahead and preview your webpage!');
+        this.setState({
+          offerings,
+        });
+
+        // Reset the form and the image preview for fresh input
+        this.offeringsFormRef.current.reset();
+        this.resetOfferingImage();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  /**
+   * @description Handles the submission of the offerings
+   *
+   * @param { object } input
+   */
+  handleSaveAndPreview = async () => {
+    const { webpage, actions } = this.props;
+    actions.isLoading();
+
+    // Make app wait for 3 seconds to simulate running background process
+    // good for user experience
+    setTimeout(() => {
+      actions.isComplete();
+      window.location.pathname = `webpage/${webpage.sub_domain_name
+        || 'naggy'}`;
+    }, 3000);
+  }
+
   render() {
-    const { validationErrors } = this.state;
+    const { validationErrors, offerings, selectedImage } = this.state;
+
     const { user, username } = this.props;
     return (
       <div className="add-webpage-section">
@@ -203,6 +304,22 @@ class CreateWebpage extends Component {
                   validationErrors={validationErrors}
                   handleErrorReset={this.handleErrorReset} />)}
               />
+              <Route
+                exact
+                path="/dashboard/:username/webpages/new/pricing"
+                render={() => (<Offerings
+                  onSubmit={this.submitOfferings}
+                  user={user}
+                  offerings={offerings}
+                  validationErrors={validationErrors}
+                  handleErrorReset={this.handleErrorReset}
+                  handleOfferingImageSelection={
+                    this.handleOfferingImageSelection}
+                  offeringsFormRef={this.offeringsFormRef}
+                  selectedImage={selectedImage}
+                  handleSaveAndPreview={this.handleSaveAndPreview}
+                />)}
+              />
             </Fragment>
           </Router>
         </div>
@@ -230,6 +347,9 @@ const mapDispatchToProps = dispatch => ({
     {
       createWebpage,
       updateWebpage,
+      createWebpageOffering,
+      isLoading,
+      isComplete,
     },
     dispatch,
   ),

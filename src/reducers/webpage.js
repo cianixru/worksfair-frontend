@@ -5,11 +5,14 @@ import {
   GET_WEBPAGE_FAILED,
   UPDATED_WEBPAGE,
   UPDATE_WEBPAGE_FAILED,
+  NEW_OFFERING,
+  CREATE_OFFERING_FAILED,
 } from '../actions/webpage';
 
 const initialState = {
   newWebpage: {},
   webpage: null,
+  offering: null,
 };
 
 export default (state = initialState, action) => {
@@ -25,6 +28,12 @@ export default (state = initialState, action) => {
 
   case GET_WEBPAGE_FAILED || UPDATE_WEBPAGE_FAILED:
     return { ...state, webpage: null };
+
+  case NEW_OFFERING:
+    return { ...state, offering: action.data };
+
+  case CREATE_OFFERING_FAILED:
+    return { ...state, offering: null };
   default:
     return state;
   }

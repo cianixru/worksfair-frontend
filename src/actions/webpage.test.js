@@ -13,6 +13,9 @@ import {
   UPDATED_WEBPAGE,
   UPDATE_WEBPAGE_FAILED,
   updateWebpage,
+  CREATE_OFFERING_FAILED,
+  NEW_OFFERING,
+  createWebpageOffering,
 } from './webpage';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -20,9 +23,9 @@ export const webpage = {
   title: 'Theookafor2',
   description: 'eod',
   keywords: 'okafor, sanchez, goody, love',
-  sub_domain_name: 'theookafor2',
+  sub_domain_name: 'ideosynergy',
   owner: 1,
-  subDomianName: 'ideosynergy',
+  subDomainName: 'ideosynergy',
 };
 
 const middlewares = [thunk];
@@ -109,7 +112,7 @@ describe('Get Webpage action', () => {
   });
 });
 describe('Update Webpage action', () => {
-  test.skip('should dispatch the credentials to the store after updateWebpage',
+  test('should dispatch the credentials to the store after updateWebpage',
     () => {
       mock.onPatch('/webpages/ideosynergy/').replyOnce(200, webpage);
       const expectedActions = [{
@@ -134,6 +137,38 @@ describe('Update Webpage action', () => {
       message: 'Request failed with status code 400',
     }];
     return store.dispatch(updateWebpage({}))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Create Offering action', () => {
+  test('should dispatch the credentials to the store after createOffering',
+    () => {
+      mock.onPost('/webpages/ideosynergy/offerings/').reply(201, webpage);
+      const expectedActions = [{
+        type: NEW_OFFERING,
+        data: {
+          ...webpage,
+        }
+      }];
+      return store.dispatch(createWebpageOffering(webpage))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after create webpage fail', () => {
+    mock.onPost('/webpages/ideosynergy/offerings/').reply(400, {
+      type: CREATE_OFFERING_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: CREATE_OFFERING_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(createWebpageOffering({}))
       .then(() => {
         expect(store.getActions().type).toEqual(expectedActions.type);
       });

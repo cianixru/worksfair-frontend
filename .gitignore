@@ -79,3 +79,6 @@ typings/
 .env.production.local
 
 npm-debug.log*
+
+# Cyress examples
+cypress/integration/examples

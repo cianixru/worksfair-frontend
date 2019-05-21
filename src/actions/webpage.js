@@ -93,3 +93,33 @@ export const updateWebpage = data => async (dispatch) => {
     });
   }
 };
+
+export const NEW_OFFERING = 'NEW_OFFERING';
+export const CREATE_OFFERING_FAILED = 'CREATE_OFFERING_FAILED';
+
+/**
+ * Sends new webpage data to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const createWebpageOffering = data => async (dispatch) => {
+  try {
+    const newOffering = await axios({
+      url: `/webpages/${data.subDomainName}/offerings/`,
+      method: 'post',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
+    return dispatch({
+      type: NEW_OFFERING,
+      data: newOffering.data,
+    });
+  } catch (error) {
+    return dispatch({
+      type: CREATE_OFFERING_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};

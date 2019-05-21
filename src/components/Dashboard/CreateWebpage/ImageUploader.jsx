@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
-import sha1 from 'sha1';
 import PropTypes from 'prop-types';
 
 
-const {
-  REACT_APP_CLOUDINARY_API_KEY,
-  REACT_APP_CLOUDINARY_PRESET_NAME,
-  REACT_APP_CLOUDINARY_UPLOAD_URL,
-  REACT_APP_CLOUDINARY_DELETE_URL,
-  REACT_APP_CLOUDINARY_AUTHORIZATION,
-} = process.env;
+import { CloudinaryImageUploader } from '../../utils/helpers';
 
 class ImageUploader extends Component {
   state={
@@ -46,43 +39,18 @@ class ImageUploader extends Component {
   }
 
   /**
-   * @description Handles the image upload to cloudinary
+   * @description Handles the response from cloudinary API call
    *
-   * @param { Array } images
-   *
-   * @returns { Promise } axios API call
+   * @param { array } images
    */
-
-  handleCloudinaryUpload = (images) => {
-    const newImages = [];
+  handleCloudinaryResponse = async (images) => {
+    const { uploadedImages } = this.state;
     const uploads = images.map((image) => {
-      // our formdata
-      const formData = new FormData();
-      formData.append('file', image);
-      formData.append(
-        'api_key',
-        REACT_APP_CLOUDINARY_API_KEY
-      );
-      formData.append(
-        'upload_preset',
-        REACT_APP_CLOUDINARY_PRESET_NAME
-      );
-      formData.append('timestamp', (Date.now()));
-
-      delete axios.defaults.headers.common.Authorization;
-
-      return axios({
-        method: 'post',
-        url: REACT_APP_CLOUDINARY_UPLOAD_URL,
-        data: formData,
-        config: { headers: { 'Content-Type': 'multipart/form-data' } }
-      })
-        .then((response) => {
-          newImages.push(response.data.secure_url);
-          const { uploadedImages } = this.state;
+      return CloudinaryImageUploader(image)
+        .then((imageData) => {
+          uploadedImages.push(imageData.data.secure_url);
           this.setState({
-            ...uploadedImages,
-            uploadedImages: newImages,
+            uploadedImages,
           });
         });
     });
@@ -102,6 +70,7 @@ class ImageUploader extends Component {
   handleRemoveImage = imageURL => () => {
     const { selectedImages } = this.state;
 
+    // find and remove the image from the selectedImages array
     selectedImages.splice(selectedImages.indexOf(imageURL), 1);
 
     this.setState({
@@ -120,7 +89,7 @@ class ImageUploader extends Component {
       return imagesToUpload.push(rawFiles[imageBlob]);
     });
 
-    await this.handleCloudinaryUpload(imagesToUpload);
+    await this.handleCloudinaryResponse(imagesToUpload);
 
     const images = {
       featured_images: uploadedImages,
@@ -139,16 +108,20 @@ class ImageUploader extends Component {
         accept="image/*"
       >
         {({ getRootProps, getInputProps }) => {
-          const files = selectedImages.map(publicId => (
-            <li key={publicId} className="notification column is-one-quarter">
+          const pictureList = selectedImages.map(localObjectURL => (
+            <li
+              key={localObjectURL}
+              className="notification column is-one-quarter"
+            >
               <button
                 className="delete"
-                onClick={this.handleRemoveImage(publicId)}
+                onClick={this.handleRemoveImage(localObjectURL)}
+                data-testid="delete-image"
               />
               <figure className="image is-180x180">
                 <img
-                  src={publicId}
-                  alt={publicId}
+                  src={localObjectURL}
+                  alt={localObjectURL}
                 />
               </figure>
             </li>
@@ -163,7 +136,7 @@ class ImageUploader extends Component {
                   <input {...getInputProps()} />
                   <p>Try dropping some files here, or click to select files to upload.</p>
                 </div>
-                <ul className="columns is-multiline ">{files}</ul>
+                <ul className="columns is-multiline ">{pictureList}</ul>
               </div>
               <div className="control">
                 <button

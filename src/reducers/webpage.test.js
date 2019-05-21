@@ -3,13 +3,16 @@ import {
   NEW_WEBPAGE,
   CREATE_WEBPAGE_FAILED,
   GET_WEBPAGE_FAILED,
-  GET_WEBPAGE
+  GET_WEBPAGE,
+  CREATE_OFFERING_FAILED,
+  NEW_OFFERING,
 } from '../actions/webpage';
 import { webpage } from '../actions/webpage.test';
 
 const initialState = {
   newWebpage: {},
   webpage: null,
+  offering: null,
 };
 
 describe('Create Webpage reducer test', () => {
@@ -124,6 +127,61 @@ describe('Create Webpage reducer test', () => {
         webpage: { webpage },
       },
       webpage: null,
+    });
+  });
+
+  test('should handle Create Offering', () => {
+    expect(
+      webpageReducer([], {
+        type: NEW_OFFERING,
+        data: { webpage },
+      })
+    ).toEqual({
+      offering: { webpage },
+    });
+
+    expect(
+      webpageReducer([
+        {
+          offering: { webpage },
+        }
+      ],
+      {
+        type: NEW_OFFERING,
+        data: { webpage },
+      })
+    ).toEqual({
+      0: {
+        offering: { webpage },
+      },
+      offering: { webpage },
+    });
+  });
+  test('should handle Create offering failure', () => {
+    expect(
+      webpageReducer([], {
+        type: CREATE_OFFERING_FAILED,
+        error: 'Failure',
+      })
+    ).toEqual({
+      offering: null,
+    });
+
+    expect(
+      webpageReducer([
+        {
+          offering: { webpage },
+        }
+      ],
+      {
+        type: CREATE_OFFERING_FAILED,
+        data: null,
+      })
+    ).toEqual({
+      0: {
+        offering: { webpage },
+      },
+      offering: null,
     });
   });
 });
