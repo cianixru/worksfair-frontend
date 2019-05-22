@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const TitleBar = ({ webpage }) => {
   return (
-    <div id="titlebar" className="webpage-titlebar">
+    <div id="titlebar" className="webpage-sections">
       <div>
         <h2>{ webpage.title } <i className="verified-icon" />
           <span

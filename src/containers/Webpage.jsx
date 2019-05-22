@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import OwnerCard from '../components/Webpage/OwnerCard';
 import TitleBar from '../components/Webpage/TitleBar';
 import ImagesSlide from '../components/Webpage/ImagesSlide';
+import OfferingItem from '../components/Dashboard/CreateWebpage/OfferingItem';
+import WebpageFooter from '../components/Webpage/Footer';
 
 class WebpageContainer extends Component {
   async componentDidMount() {
@@ -40,12 +42,19 @@ class WebpageContainer extends Component {
           <div className="columns is-desktop">
             <div className="column is-three-quarters">
               <TitleBar webpage={webpage} />
+              <div className="webpage-sections">
+                <h3 className="subtitle is-4 titles">Our Services/Products</h3>
+                <div className="webpage-offerings">
+                  <OfferingItem offerings={webpage.offerings} />
+                </div>
+              </div>
             </div>
             <div className="column is-one-quarter">
               <OwnerCard owner={webpage && webpage.owner}/>
             </div>
           </div>
         </div>
+        <WebpageFooter title={webpage.title} />
       </div>
     );
   }

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { addNaira } from '../../utils/helpers';
+
 const OfferingItem = ({
   offerings,
 }) => {
@@ -19,14 +21,14 @@ const OfferingItem = ({
                 className="offering-image"
               />
             </div>
-            <div className="column is-7">
-              <h4 className="title is-5 has-text-grey-darker">
+            <div className="column is-6">
+              <h4 className="subtitle is-5">
                 {offering.title}
               </h4>
               <p>{offering.description}</p>
             </div>
-            <div className="column is-1">
-              <p>{offering.price}</p>
+            <div className="column is-2">
+              {addNaira(offering.price)}
             </div>
           </div>
         ))

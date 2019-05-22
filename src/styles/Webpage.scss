@@ -32,12 +32,16 @@
     margin-right: 5px
 }
 
-#titlebar.webpage-titlebar span a:hover {
+.webpage-sections {
+    margin: 30px 0px;
+}
+
+.webpage-sections span a:hover {
     color: #666
 }
 
-#titlebar.webpage-titlebar h1,
-#titlebar.webpage-titlebar h2 {
+.webpage-sections h1,
+.webpage-sections h2 {
     font-size: 28px;
     line-height: 36px;
     margin: 1px 0
@@ -234,4 +238,18 @@ a.mfp-gallery {
 .webpage-slider .slick-prev:hover {
     background-color: #66676b;
     color: #fff
+}
+
+.webpage-offerings {
+    padding: 0.75em;
+}
+
+.titles {
+    margin-top: 70px;
+}
+
+.price {
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 400
 }

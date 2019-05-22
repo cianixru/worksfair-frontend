@@ -39,6 +39,40 @@ export const webpage = {
     created_at: '2019-04-25T09:07:08.209916Z',
     modified_at: '2019-04-25T09:07:08.209930Z'
   },
+  offerings: [
+    {
+      title: 'kamsi',
+      description: 'passion, software, engineering, technology, worksfair',
+      image: 'https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg',
+      price: 'FREE',
+      created_at: '2019-05-15T17:37:06.479115Z',
+      updated_at: '2019-05-15T17:37:06.479140Z'
+    },
+    {
+      title: 'Sissy',
+      description: 'passion, software, engineering, technology, worksfair',
+      image: 'https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg',
+      price: '',
+      created_at: '2019-05-15T17:35:00.329484Z',
+      updated_at: '2019-05-15T17:35:00.329604Z'
+    },
+    {
+      title: 'Atty',
+      description: 'worksfair will pay for you',
+      image: 'https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg',
+      price: 'FREE',
+      created_at: '2019-05-15T17:29:04.245897Z',
+      updated_at: '2019-05-15T17:40:32.493396Z'
+    },
+    {
+      title: 'Cheesy',
+      description: null,
+      image: 'https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg',
+      price: '',
+      created_at: '2019-05-15T05:49:37.499647Z',
+      updated_at: '2019-05-15T05:49:37.499668Z'
+    }
+  ],
   title: 'Happiness',
   sub_domain_name: 'happiness',
   description: 'Happiness truly lives here. We just happy',

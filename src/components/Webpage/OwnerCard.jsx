@@ -9,7 +9,7 @@ const OwnerCard = ({ owner }) => {
     <div className="card">
       <header className="card-header">
         <p className="card-header-title">
-            Webpage Owner
+          Webpage Creator
         </p>
       </header>
       <div className="card-content">

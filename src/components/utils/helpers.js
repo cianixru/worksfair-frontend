@@ -1,3 +1,4 @@
+import React from 'react';
 import axios from 'axios';
 
 const {
@@ -78,3 +79,10 @@ export const offerings = [
     updated_at: '2019-05-15T05:49:37.499668Z'
   }
 ];
+
+export const addNaira = (price) => {
+  const cost = parseInt(price, 10) === 0
+    ? <p className="is-size-6">Contact us for Price</p>
+    : (<p className="price">&#8358; {price}</p>);
+  return cost;
+};
