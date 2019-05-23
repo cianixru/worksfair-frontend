@@ -10,11 +10,11 @@ class CreateWebpageContainer extends Component {
     const navigation = [
       {
         text: 'Dashboard',
-        to: `/dashboard/${username}`,
+        to: `/dashboard/${username}/webpages`,
       },
       {
         text: 'Create Webpage',
-        to: `/dashboard/${username}/webpages/new`,
+        to: `/dashboard/${username}/webpages/new/basic-info`,
       },
     ];
     return (

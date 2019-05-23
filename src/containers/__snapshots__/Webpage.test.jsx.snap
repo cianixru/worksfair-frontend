@@ -166,7 +166,7 @@ Object {
                   </span>
                 </div>
                 <div
-                  class="verified-badge"
+                  class="has-background-dark verified-badge"
                 >
                   <i
                     aria-hidden="true"
@@ -186,9 +186,9 @@ Object {
                 <div
                   class="webpage-offerings"
                 >
-                  <div>
-                    <div
-                      class="columns card card-content"
+                  <ul>
+                    <li
+                      class="columns box"
                     >
                       <div
                         class="column is-4"
@@ -221,9 +221,9 @@ Object {
                           FREE
                         </p>
                       </div>
-                    </div>
-                    <div
-                      class="columns card card-content"
+                    </li>
+                    <li
+                      class="columns box"
                     >
                       <div
                         class="column is-4"
@@ -256,9 +256,9 @@ Object {
                           
                         </p>
                       </div>
-                    </div>
-                    <div
-                      class="columns card card-content"
+                    </li>
+                    <li
+                      class="columns box"
                     >
                       <div
                         class="column is-4"
@@ -291,9 +291,9 @@ Object {
                           FREE
                         </p>
                       </div>
-                    </div>
-                    <div
-                      class="columns card card-content"
+                    </li>
+                    <li
+                      class="columns box"
                     >
                       <div
                         class="column is-4"
@@ -324,8 +324,8 @@ Object {
                           
                         </p>
                       </div>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -577,7 +577,7 @@ Object {
                 </span>
               </div>
               <div
-                class="verified-badge"
+                class="has-background-dark verified-badge"
               >
                 <i
                   aria-hidden="true"
@@ -597,9 +597,9 @@ Object {
               <div
                 class="webpage-offerings"
               >
-                <div>
-                  <div
-                    class="columns card card-content"
+                <ul>
+                  <li
+                    class="columns box"
                   >
                     <div
                       class="column is-4"
@@ -632,9 +632,9 @@ Object {
                         FREE
                       </p>
                     </div>
-                  </div>
-                  <div
-                    class="columns card card-content"
+                  </li>
+                  <li
+                    class="columns box"
                   >
                     <div
                       class="column is-4"
@@ -667,9 +667,9 @@ Object {
                         
                       </p>
                     </div>
-                  </div>
-                  <div
-                    class="columns card card-content"
+                  </li>
+                  <li
+                    class="columns box"
                   >
                     <div
                       class="column is-4"
@@ -702,9 +702,9 @@ Object {
                         FREE
                       </p>
                     </div>
-                  </div>
-                  <div
-                    class="columns card card-content"
+                  </li>
+                  <li
+                    class="columns box"
                   >
                     <div
                       class="column is-4"
@@ -735,8 +735,8 @@ Object {
                         
                       </p>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

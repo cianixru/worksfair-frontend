@@ -5,9 +5,9 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        <div
-          class="columns card card-content"
+      <ul>
+        <li
+          class="columns box"
         >
           <div
             class="column is-4"
@@ -40,9 +40,9 @@ Object {
               FREE
             </p>
           </div>
-        </div>
-        <div
-          class="columns card card-content"
+        </li>
+        <li
+          class="columns box"
         >
           <div
             class="column is-4"
@@ -75,9 +75,9 @@ Object {
               
             </p>
           </div>
-        </div>
-        <div
-          class="columns card card-content"
+        </li>
+        <li
+          class="columns box"
         >
           <div
             class="column is-4"
@@ -110,9 +110,9 @@ Object {
               FREE
             </p>
           </div>
-        </div>
-        <div
-          class="columns card card-content"
+        </li>
+        <li
+          class="columns box"
         >
           <div
             class="column is-4"
@@ -143,14 +143,14 @@ Object {
               
             </p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </body>,
   "container": <div>
-    <div>
-      <div
-        class="columns card card-content"
+    <ul>
+      <li
+        class="columns box"
       >
         <div
           class="column is-4"
@@ -183,9 +183,9 @@ Object {
             FREE
           </p>
         </div>
-      </div>
-      <div
-        class="columns card card-content"
+      </li>
+      <li
+        class="columns box"
       >
         <div
           class="column is-4"
@@ -218,9 +218,9 @@ Object {
             
           </p>
         </div>
-      </div>
-      <div
-        class="columns card card-content"
+      </li>
+      <li
+        class="columns box"
       >
         <div
           class="column is-4"
@@ -253,9 +253,9 @@ Object {
             FREE
           </p>
         </div>
-      </div>
-      <div
-        class="columns card card-content"
+      </li>
+      <li
+        class="columns box"
       >
         <div
           class="column is-4"
@@ -286,8 +286,8 @@ Object {
             
           </p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

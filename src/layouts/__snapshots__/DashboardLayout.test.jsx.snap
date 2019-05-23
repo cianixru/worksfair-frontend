@@ -22,7 +22,7 @@ Object {
               >
                 <li>
                   <a
-                    href="/dashboard/null"
+                    href="/dashboard/null/webpages"
                   >
                     <i
                       aria-hidden="true"
@@ -37,7 +37,7 @@ Object {
               >
                 <li>
                   <a
-                    href="/dashboard/null/webpages/new"
+                    href="/dashboard/null/webpages/new/basic-info"
                   >
                     <i
                       aria-hidden="true"
@@ -48,7 +48,7 @@ Object {
                 </li>
                 <li>
                   <a
-                    href="/dashboard/null/webpages"
+                    href="/dashboard/null/webpages/list"
                   >
                     <i
                       aria-hidden="true"
@@ -128,14 +128,14 @@ Object {
                     </li>
                     <li>
                       <a
-                        href="/dashboard/null"
+                        href="/dashboard/null/webpages"
                       >
                         Dashboard
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/dashboard/null/webpages/new"
+                        href="/dashboard/null/webpages/new/basic-info"
                       >
                         Create Webpage
                       </a>
@@ -207,13 +207,13 @@ Object {
                       <a
                         aria-label="Goto Pricing"
                         class="pagination-link"
-                        href="/dashboard/null/webpages/new/pricing"
+                        href="/dashboard/null/webpages/new/offerings"
                       >
                         <i
                           aria-hidden="true"
                           class="fa fa-money"
                         />
-                        Pricing
+                        Offerings
                       </a>
                     </li>
                   </ul>
@@ -246,7 +246,7 @@ Object {
             >
               <li>
                 <a
-                  href="/dashboard/null"
+                  href="/dashboard/null/webpages"
                 >
                   <i
                     aria-hidden="true"
@@ -261,7 +261,7 @@ Object {
             >
               <li>
                 <a
-                  href="/dashboard/null/webpages/new"
+                  href="/dashboard/null/webpages/new/basic-info"
                 >
                   <i
                     aria-hidden="true"
@@ -272,7 +272,7 @@ Object {
               </li>
               <li>
                 <a
-                  href="/dashboard/null/webpages"
+                  href="/dashboard/null/webpages/list"
                 >
                   <i
                     aria-hidden="true"
@@ -352,14 +352,14 @@ Object {
                   </li>
                   <li>
                     <a
-                      href="/dashboard/null"
+                      href="/dashboard/null/webpages"
                     >
                       Dashboard
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/dashboard/null/webpages/new"
+                      href="/dashboard/null/webpages/new/basic-info"
                     >
                       Create Webpage
                     </a>
@@ -431,13 +431,13 @@ Object {
                     <a
                       aria-label="Goto Pricing"
                       class="pagination-link"
-                      href="/dashboard/null/webpages/new/pricing"
+                      href="/dashboard/null/webpages/new/offerings"
                     >
                       <i
                         aria-hidden="true"
                         class="fa fa-money"
                       />
-                      Pricing
+                      Offerings
                     </a>
                   </li>
                 </ul>

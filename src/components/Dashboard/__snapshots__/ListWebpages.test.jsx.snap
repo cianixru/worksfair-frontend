@@ -1,90 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test that the UserNavItem displays 1`] = `
+exports[`ListWebpages.jsx Should display the ListWebpages Component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="user-menu"
-      >
+      <div>
         <div
-          class="user-name "
+          class="tabs is-boxed"
         >
-          <span>
-            <img
-              alt="avatar"
-              src="worksfair-avatar.png"
-            />
-          </span>
-          Theo Okafor
+          <ul>
+            <li
+              class="is-active"
+            >
+              <a
+                href="/dashboard/undefined/webpages"
+              >
+                Active Webpages (
+                )
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+              >
+                Inactive Webpages
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <a
-              href="/dashboard/TheoOkafor"
-            >
-              <i
-                aria-hidden="true"
-                class="fa fa-tachometer"
-              />
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a
-              href="/logout"
-            >
-              <i
-                aria-hidden="true"
-                class="fa fa-power-off"
-              />
-              Logout
-            </a>
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <div
+                class="message is-warning"
+              >
+                <div
+                  class="message-body"
+                >
+                  <p
+                    class="is-size-5 margin-bottom-25"
+                  >
+                    You have no active webpages
+                  </p>
+                  <a
+                    class="button is-link is-outlined"
+                    href="/dashboard/undefined/webpages/new/basic-info"
+                  >
+                    Create a Webpage
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="user-menu"
-    >
+    <div>
       <div
-        class="user-name "
+        class="tabs is-boxed"
       >
-        <span>
-          <img
-            alt="avatar"
-            src="worksfair-avatar.png"
-          />
-        </span>
-        Theo Okafor
+        <ul>
+          <li
+            class="is-active"
+          >
+            <a
+              href="/dashboard/undefined/webpages"
+            >
+              Active Webpages (
+              )
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Inactive Webpages
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li>
-          <a
-            href="/dashboard/TheoOkafor"
-          >
-            <i
-              aria-hidden="true"
-              class="fa fa-tachometer"
-            />
-            Dashboard
-          </a>
-        </li>
-        <li>
-          <a
-            href="/logout"
-          >
-            <i
-              aria-hidden="true"
-              class="fa fa-power-off"
-            />
-            Logout
-          </a>
-        </li>
-      </ul>
+      <div>
+        <ul>
+          <li>
+            <div
+              class="message is-warning"
+            >
+              <div
+                class="message-body"
+              >
+                <p
+                  class="is-size-5 margin-bottom-25"
+                >
+                  You have no active webpages
+                </p>
+                <a
+                  class="button is-link is-outlined"
+                  href="/dashboard/undefined/webpages/new/basic-info"
+                >
+                  Create a Webpage
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>,
   "debug": [Function],

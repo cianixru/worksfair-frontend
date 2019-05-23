@@ -61,3 +61,55 @@ export const states = {
   Zamfara: ['Gusau'],
   FCT: ['Abuja'],
 };
+/**
+ * @description takes the colour variable stored and formats it for background
+ *
+ * @param { string}  colour
+ *
+ * @returns { string } output
+ */
+export const backgroundColourHelper = (colour) => {
+  const colours = {
+    'is-primary': 'has-background-primary',
+    'is-info': 'has-background-info',
+    'is-warning': 'has-background-warning',
+    'is-danger': 'has-background-danger',
+    'is-dark': 'has-background-dark',
+  };
+  const output = colour ? colours[colour] : 'has-background-link';
+  return output;
+};
+
+/**
+ * @description takes the colour variable stored and formats it for texts
+ *
+ * @param { string}  colour
+ *
+ * @returns { string } output
+ */
+export const textColourHelper = (colour) => {
+  const colours = {
+    'is-primary': 'has-text-primary',
+    'is-info': 'has-text-info',
+    'is-warning': 'has-text-warning',
+    'is-danger': 'has-text-danger',
+    'is-dark': 'has-text-dark',
+  };
+  const output = colour ? colours[colour] : 'has-text-grey';
+  return output;
+};
+
+/**
+ * @description evaluates the date for next update
+ *
+ * @param { string } lastUpdate
+ *
+ * @returns { string } date string
+ */
+export const getDateForNextUpdate = (lastUpdate) => {
+  const dateArray = lastUpdate.split('-');
+  const newMonth = parseInt(dateArray[1], 10) + 3;
+  dateArray[1] = newMonth;
+
+  return new Date(dateArray.join('-')).toDateString();
+};

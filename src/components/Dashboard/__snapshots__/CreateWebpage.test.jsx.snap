@@ -68,13 +68,13 @@ Object {
                 <a
                   aria-label="Goto Pricing"
                   class="pagination-link"
-                  href="/dashboard/undefined/webpages/new/pricing"
+                  href="/dashboard/undefined/webpages/new/offerings"
                 >
                   <i
                     aria-hidden="true"
                     class="fa fa-money"
                   />
-                  Pricing
+                  Offerings
                 </a>
               </li>
             </ul>
@@ -150,13 +150,13 @@ Object {
               <a
                 aria-label="Goto Pricing"
                 class="pagination-link"
-                href="/dashboard/undefined/webpages/new/pricing"
+                href="/dashboard/undefined/webpages/new/offerings"
               >
                 <i
                   aria-hidden="true"
                   class="fa fa-money"
                 />
-                Pricing
+                Offerings
               </a>
             </li>
           </ul>

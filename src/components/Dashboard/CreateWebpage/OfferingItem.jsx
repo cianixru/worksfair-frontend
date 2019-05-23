@@ -7,11 +7,11 @@ const OfferingItem = ({
   offerings,
 }) => {
   return (
-    <div>
+    <ul>
       { offerings.length > 0
         && offerings.map(offering => (
-          <div
-            className="columns card card-content"
+          <li
+            className="columns box"
             key={offering.title}
           >
             <div className="column is-4">
@@ -30,10 +30,10 @@ const OfferingItem = ({
             <div className="column is-2">
               {addNaira(offering.price)}
             </div>
-          </div>
+          </li>
         ))
       }
-    </div>
+    </ul>
   );
 };
 

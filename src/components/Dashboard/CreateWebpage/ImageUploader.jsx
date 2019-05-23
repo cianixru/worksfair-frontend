@@ -54,10 +54,7 @@ class ImageUploader extends Component {
           });
         });
     });
-
-    axios.all(uploads).then(() => {
-      console.log('Images have all being uploaded to cloudinary');
-    });
+    return uploads;
   }
 
   /**
@@ -89,12 +86,14 @@ class ImageUploader extends Component {
       return imagesToUpload.push(rawFiles[imageBlob]);
     });
 
-    await this.handleCloudinaryResponse(imagesToUpload);
-
-    const images = {
-      featured_images: uploadedImages,
-    };
-    await this.props.onSubmit(images);
+    const imagesData = await this.handleCloudinaryResponse(imagesToUpload);
+    axios.all(imagesData).then(() => {
+      const images = {
+        featured_images: uploadedImages,
+      };
+      this.props.onSubmit(images);
+      console.log('Images have all being uploaded to cloudinary');
+    });
   }
 
   render() {

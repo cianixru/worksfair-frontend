@@ -1,9 +1,10 @@
 // eslint-disable-next-line import/prefer-default-export
 export const user = {
-  username: 'Theookafor2',
-  first_name: 'eod',
-  last_name: 'okafor',
-  email: 'theodorehope@andela.com',
+  id: 1,
+  username: 'TheoOkafor',
+  first_name: 'Theo',
+  last_name: 'Okafor',
+  email: 'theo.io@yahoo.com',
   facebook: null,
   instagram: null,
   twitter: null,
@@ -14,8 +15,52 @@ export const user = {
   verified_account: false,
   reset_token: null,
   image_url: null,
-  created_at: '2019-03-10T08:48:42.942532Z',
-  modified_at: '2019-03-10T08:48:42.942544Z',
+  created_at: '2019-05-10T08:14:04.234303Z',
+  modified_at: '2019-05-10T08:14:04.234331Z',
+  webpages: [
+    {
+      offerings: [
+        {
+          title: 'Ideation',
+          description: 'We bring together a bunch of ideas and make them real',
+          image: 'https://res.cloudinary.com/worksfair/image/upload/v1558455879/dev/andela_r74oze.jpg',
+          price: '10000',
+          created_at: '2019-05-21T16:24:40.192718Z',
+          updated_at: '2019-05-21T16:24:40.192738Z'
+        },
+        {
+          title: 'Making Visions and Creating things',
+          description: 'We create a vision and imagination like no other in the business',
+          image: 'https://res.cloudinary.com/worksfair/image/upload/v1558455915/dev/achebe_eaw5lz.jpg',
+          price: '20000',
+          created_at: '2019-05-21T16:25:16.383141Z',
+          updated_at: '2019-05-21T16:25:16.383169Z'
+        }
+      ],
+      title: 'Ideosynergy LTD.',
+      sub_domain_name: 'ideosynergy-ltd',
+      description: 'We make ideas come alive in your business and life',
+      keywords: 'Ideas',
+      country: 'Nigeria',
+      state: 'Anambra',
+      city: 'Onitsha',
+      area: null,
+      address: '7, Ziks avenue',
+      phone: null,
+      email: null,
+      website: null,
+      featured_images: [
+        'https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg',
+        'https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/andela_klzfdp.jpg',
+        'https://res.cloudinary.com/worksfair/image/upload/v1558455847/dev/Andela-VI_xpg4q8.jpg'
+      ],
+      is_active: true,
+      logo: null,
+      colour: 'is-info',
+      created_at: '2019-05-21T16:23:45.843687Z',
+      updated_at: '2019-05-21T16:24:08.211501Z'
+    },
+  ],
   token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9',
 };
 

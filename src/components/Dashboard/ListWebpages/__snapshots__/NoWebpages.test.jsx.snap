@@ -1,91 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test that the UserNavItem displays 1`] = `
+exports[`NoWebpages.jsx Should display the NoWebpages Component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="user-menu"
-      >
+      <li>
         <div
-          class="user-name "
+          class="message is-warning"
         >
-          <span>
-            <img
-              alt="avatar"
-              src="worksfair-avatar.png"
-            />
-          </span>
-          Theo Okafor
+          <div
+            class="message-body"
+          >
+            <p
+              class="is-size-5 margin-bottom-25"
+            >
+              You have no active webpages
+            </p>
+            <a
+              class="button is-link is-outlined"
+              href="/dashboard/TheoOkafor/webpages/new/basic-info"
+            >
+              Create a Webpage
+            </a>
+          </div>
         </div>
-        <ul>
-          <li>
-            <a
-              href="/dashboard/TheoOkafor"
-            >
-              <i
-                aria-hidden="true"
-                class="fa fa-tachometer"
-              />
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a
-              href="/logout"
-            >
-              <i
-                aria-hidden="true"
-                class="fa fa-power-off"
-              />
-              Logout
-            </a>
-          </li>
-        </ul>
-      </div>
+      </li>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="user-menu"
-    >
+    <li>
       <div
-        class="user-name "
+        class="message is-warning"
       >
-        <span>
-          <img
-            alt="avatar"
-            src="worksfair-avatar.png"
-          />
-        </span>
-        Theo Okafor
+        <div
+          class="message-body"
+        >
+          <p
+            class="is-size-5 margin-bottom-25"
+          >
+            You have no active webpages
+          </p>
+          <a
+            class="button is-link is-outlined"
+            href="/dashboard/TheoOkafor/webpages/new/basic-info"
+          >
+            Create a Webpage
+          </a>
+        </div>
       </div>
-      <ul>
-        <li>
-          <a
-            href="/dashboard/TheoOkafor"
-          >
-            <i
-              aria-hidden="true"
-              class="fa fa-tachometer"
-            />
-            Dashboard
-          </a>
-        </li>
-        <li>
-          <a
-            href="/logout"
-          >
-            <i
-              aria-hidden="true"
-              class="fa fa-power-off"
-            />
-            Logout
-          </a>
-        </li>
-      </ul>
-    </div>
+    </li>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

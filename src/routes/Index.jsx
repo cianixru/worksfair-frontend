@@ -33,7 +33,12 @@ class Routes extends Component {
   }
 
   render() {
-    const { currentUser, isLoading, webpage, actions: { getCurrentUser }, } = this.props;
+    const {
+      currentUser,
+      isLoading,
+      webpage,
+      actions,
+    } = this.props;
     const url = window.location.pathname;
     return (
       <div>
@@ -48,6 +53,7 @@ class Routes extends Component {
         </div>
         <header>
           { url.includes('webpage') && !url.includes('webpages/new')
+            && !url.includes('webpages')
             ? <WebpageNav
               user={currentUser && currentUser.user}
               webpage={webpage && webpage} />
@@ -55,7 +61,7 @@ class Routes extends Component {
           }
         </header>
         <AuthRoute />
-        <Dashboard getCurrentUser={getCurrentUser} />
+        <Dashboard getCurrentUser={actions.getCurrentUser} />
         <Webpage getWebpage={this.getWebpage} />
       </div>
     );

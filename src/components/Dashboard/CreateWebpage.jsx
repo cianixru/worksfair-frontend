@@ -263,12 +263,12 @@ class CreateWebpage extends Component {
               </li>
               <li>
                 <NavLink
-                  to={`/dashboard/${username}/webpages/new/pricing`}
+                  to={`/dashboard/${username}/webpages/new/offerings`}
                   className="pagination-link"
                   activeClassName="is-current"
                   aria-label="Goto Pricing">
                   <i className="fa fa-money" aria-hidden="true" />
-                    Pricing
+                    Offerings
                 </NavLink>
               </li>
             </ul>
@@ -306,7 +306,7 @@ class CreateWebpage extends Component {
               />
               <Route
                 exact
-                path="/dashboard/:username/webpages/new/pricing"
+                path="/dashboard/:username/webpages/new/offerings"
                 render={() => (<Offerings
                   onSubmit={this.submitOfferings}
                   user={user}

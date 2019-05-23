@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { backgroundColourHelper } from '../../utils/helpers';
+
 const TitleBar = ({ webpage }) => {
   return (
     <div id="titlebar" className="webpage-sections">
@@ -19,7 +21,8 @@ const TitleBar = ({ webpage }) => {
         }
       </div>
 
-      <div className="verified-badge">
+      <div
+        className={`${backgroundColourHelper(webpage.colour)} verified-badge`}>
         <i className="fa fa-check-circle-o" aria-hidden="true" />
           Verified Business
       </div>

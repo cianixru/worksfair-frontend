@@ -9,7 +9,7 @@ Object {
         <div
           class="margin-bottom-25"
         >
-          <div />
+          <ul />
         </div>
         <div
           class="columns card card-content margin-bottom-25"
@@ -142,7 +142,7 @@ Object {
       <div
         class="margin-bottom-25"
       >
-        <div />
+        <ul />
       </div>
       <div
         class="columns card card-content margin-bottom-25"
