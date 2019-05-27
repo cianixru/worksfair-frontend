@@ -205,7 +205,7 @@ Object {
                     </li>
                     <li>
                       <a
-                        aria-label="Goto Pricing"
+                        aria-label="Goto Offerings"
                         class="pagination-link"
                         href="/dashboard/null/webpages/new/offerings"
                       >
@@ -429,7 +429,7 @@ Object {
                   </li>
                   <li>
                     <a
-                      aria-label="Goto Pricing"
+                      aria-label="Goto Offerings"
                       class="pagination-link"
                       href="/dashboard/null/webpages/new/offerings"
                     >

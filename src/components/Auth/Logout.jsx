@@ -9,6 +9,7 @@ import { logout } from '../../actions/auth';
 class Logout extends Component {
   componentDidMount() {
     this.props.actions.logout();
+    window.location.reload();
   }
 
   render() {

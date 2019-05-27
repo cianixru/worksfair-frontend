@@ -47,7 +47,7 @@ class Routes extends Component {
             && <Spinner
               className="spinner"
               name="three-bounce"
-              color="steelblue"
+              color="red"
             />
           }
         </div>

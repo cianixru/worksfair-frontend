@@ -53,7 +53,7 @@ describe('Sign up reducer test', () => {
         },
       })
     ).toEqual({
-      currentUser: null,
+      currentUser: {},
     });
 
     expect(
@@ -72,7 +72,7 @@ describe('Sign up reducer test', () => {
       0: {
         currentUser: { user },
       },
-      currentUser: null,
+      currentUser: {},
     });
   });
 

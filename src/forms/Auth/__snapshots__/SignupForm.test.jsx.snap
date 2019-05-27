@@ -20,6 +20,7 @@ Object {
               data-testid="firstName"
               name="first_name"
               placeholder="First Name"
+              required=""
               value=""
             />
             <span
@@ -30,6 +31,7 @@ Object {
               />
             </span>
           </div>
+          
         </div>
         <div
           class="field"
@@ -45,6 +47,7 @@ Object {
               data-testid="lastName"
               name="last_name"
               placeholder="Last Name (Surname)"
+              required=""
               value=""
             />
             <span
@@ -56,6 +59,34 @@ Object {
             </span>
           </div>
         </div>
+        
+        <div
+          class="field"
+        >
+          <label>
+            Username
+          </label>
+          <div
+            class="control has-icons-left"
+          >
+            <input
+              class="input is-medium"
+              data-testid="username"
+              name="username"
+              placeholder="Username"
+              required=""
+              value=""
+            />
+            <span
+              class="icon is-medium is-left"
+            >
+              <i
+                class="fa fa-user-o"
+              />
+            </span>
+          </div>
+        </div>
+        
         <div
           class="field"
         >
@@ -70,6 +101,7 @@ Object {
               data-testid="email"
               name="email"
               placeholder="Email"
+              required=""
               type="email"
               value=""
             />
@@ -82,6 +114,7 @@ Object {
             </span>
           </div>
         </div>
+        
         <div
           class="field"
         >
@@ -96,6 +129,7 @@ Object {
               data-testid="password"
               name="password"
               placeholder="Password"
+              required=""
               type="password"
               value=""
             />
@@ -108,6 +142,7 @@ Object {
             </span>
           </div>
         </div>
+        
         <div
           class="field"
         >
@@ -122,6 +157,7 @@ Object {
               data-testid="confirmPassword"
               name="confirm_password"
               placeholder="Repeat Password"
+              required=""
               type="password"
               value=""
             />
@@ -134,6 +170,7 @@ Object {
             </span>
           </div>
         </div>
+        
         <div
           class="field"
         >
@@ -174,6 +211,7 @@ Object {
             data-testid="firstName"
             name="first_name"
             placeholder="First Name"
+            required=""
             value=""
           />
           <span
@@ -184,6 +222,7 @@ Object {
             />
           </span>
         </div>
+        
       </div>
       <div
         class="field"
@@ -199,6 +238,7 @@ Object {
             data-testid="lastName"
             name="last_name"
             placeholder="Last Name (Surname)"
+            required=""
             value=""
           />
           <span
@@ -210,6 +250,34 @@ Object {
           </span>
         </div>
       </div>
+      
+      <div
+        class="field"
+      >
+        <label>
+          Username
+        </label>
+        <div
+          class="control has-icons-left"
+        >
+          <input
+            class="input is-medium"
+            data-testid="username"
+            name="username"
+            placeholder="Username"
+            required=""
+            value=""
+          />
+          <span
+            class="icon is-medium is-left"
+          >
+            <i
+              class="fa fa-user-o"
+            />
+          </span>
+        </div>
+      </div>
+      
       <div
         class="field"
       >
@@ -224,6 +292,7 @@ Object {
             data-testid="email"
             name="email"
             placeholder="Email"
+            required=""
             type="email"
             value=""
           />
@@ -236,6 +305,7 @@ Object {
           </span>
         </div>
       </div>
+      
       <div
         class="field"
       >
@@ -250,6 +320,7 @@ Object {
             data-testid="password"
             name="password"
             placeholder="Password"
+            required=""
             type="password"
             value=""
           />
@@ -262,6 +333,7 @@ Object {
           </span>
         </div>
       </div>
+      
       <div
         class="field"
       >
@@ -276,6 +348,7 @@ Object {
             data-testid="confirmPassword"
             name="confirm_password"
             placeholder="Repeat Password"
+            required=""
             type="password"
             value=""
           />
@@ -288,6 +361,7 @@ Object {
           </span>
         </div>
       </div>
+      
       <div
         class="field"
       >

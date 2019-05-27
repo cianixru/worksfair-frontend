@@ -14,7 +14,7 @@ const actions = {
 };
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({});
+const mockStore = store({ auth: { currentUser: {} } });
 
 describe('Signup.jsx', () => {
   test('renders correctly', () => {

@@ -17,7 +17,8 @@ class ListWebpages extends Component {
           <ul>
             <li className="is-active">
               <Link to={`/dashboard/${user && user.username}/webpages`}>
-                Active Webpages ({user && user.webpages.length})
+                Active Webpages ({
+                  (user && user.webpages) && user.webpages.length})
               </Link>
             </li>
             <li>
@@ -29,7 +30,7 @@ class ListWebpages extends Component {
         </div>
         <div>
           <ul>
-            { user && user.webpages.length > 0
+            { (user && user.webpages) && user.webpages.length > 0
               ? user.webpages.map((webpage) => {
                 const dayCreated = new Date(webpage.created_at).toDateString();
                 const nextUpdate = getDateForNextUpdate(webpage.updated_at);

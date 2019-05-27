@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
     return { ...state, currentUser: action.data };
   case AUTHENTICATION_FAILED:
     alert.error(formatMessages(action.data));
-    return { ...state, currentUser: null };
+    return { ...state, currentUser: {} };
   default:
     return state;
   }

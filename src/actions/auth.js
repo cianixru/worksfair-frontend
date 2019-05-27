@@ -19,11 +19,12 @@ export const signup = user => async (dispatch) => {
       data: newUser.data,
     });
   } catch (error) {
-    const message = process.env.NODE_ENV === 'test'
-      ? error.message : error.response.data.message;
+    const data = process.env.NODE_ENV === 'test'
+      ? error.message : error.response.data.user;
     return dispatch({
       type: AUTHENTICATION_FAILED,
-      message,
+      message: error.message,
+      data,
     });
   }
 };
@@ -52,7 +53,7 @@ export const signin = user => async (dispatch) => {
 export const LOGOUT = 'LOGOUT';
 export const logout = () => (dispatch) => {
   manageAuth.logout();
-  return dispatch({ type: LOGOUT, data: null });
+  return dispatch({ type: LOGOUT, data: {} });
 };
 
 export const GET_CURRENT_USER = 'GET_CURRENT_USER';

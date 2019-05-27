@@ -6,12 +6,23 @@ import SignupForm from './SignupForm';
 
 afterEach(cleanup);
 
+const validationErrors = {
+  first_name: '',
+  last_name: '',
+  username: '',
+  password: '',
+  email: '',
+  confirm_password: '',
+};
+
 describe('SignupForm.tsx', () => {
   const onSubmit = jest.fn();
   test('Test that the Signup form displays', () => {
     const component = render(
       <Router>
-        <SignupForm onSubmit={onSubmit} />
+        <SignupForm
+          onSubmit={onSubmit}
+          validationErrors={validationErrors} />
       </Router>
     );
     expect(component).toMatchSnapshot();
@@ -22,7 +33,8 @@ describe('SignupForm.tsx', () => {
     const { getByText } = render(
       <Router>
         <SignupForm
-          onSubmit={handleClick} />
+          onSubmit={handleClick}
+          validationErrors={validationErrors} />
       </Router>
     );
     const submitBtn = getByText('Signup');

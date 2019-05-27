@@ -58,6 +58,7 @@ describe('Signup action', () => {
     const expectedActions = [{
       type: AUTHENTICATION_FAILED,
       message: 'Cannot read property \'toLowerCase\' of undefined',
+      data: 'Cannot read property \'toLowerCase\' of undefined',
     }];
     return store.dispatch(signup({}))
       .then(() => {

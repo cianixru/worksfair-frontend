@@ -22,7 +22,7 @@ Object {
               type="file"
             />
             <p>
-              Try dropping some files here, or click to select files to upload.
+              Try dropping some pictures here, or click to select pictures to upload.
             </p>
           </div>
           <ul
@@ -62,7 +62,7 @@ Object {
             type="file"
           />
           <p>
-            Try dropping some files here, or click to select files to upload.
+            Try dropping some pictures here, or click to select pictures to upload.
           </p>
         </div>
         <ul

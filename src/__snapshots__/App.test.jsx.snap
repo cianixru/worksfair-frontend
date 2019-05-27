@@ -52,58 +52,102 @@ Object {
                   />
                 </a>
               </div>
+            </nav>
+          </header>
+          <div
+            class="layout-auth"
+          >
+            <div
+              class="columns is-mobile is-centered"
+            >
               <div
-                class="navbar-menu"
+                class="column is-one-third-desktop"
               >
-                <div
-                  class="navbar-start"
-                >
-                  <a
-                    class="navbar-item"
-                    href="/"
+                <div>
+                  <h3
+                    class="subtitle is-3"
                   >
-                    Home
-                  </a>
-                  <a
-                    class="navbar-item"
-                    href="/"
-                  >
-                    About
-                  </a>
-                </div>
-                <div
-                  class="navbar-end"
-                >
-                  <div
-                    class="navbar-item"
-                  >
+                    Log in
+                  </h3>
+                  <form>
                     <div
-                      class="buttons"
+                      class="field"
                     >
-                      <a
-                        class="button is-white"
-                        href="/login"
+                      <label>
+                        Email
+                      </label>
+                      <div
+                        class="control has-icons-left"
                       >
-                        Log in
-                      </a>
+                        <input
+                          class="input is-medium"
+                          data-testid="signin-email"
+                          name="email"
+                          placeholder="Email"
+                          type="email"
+                          value=""
+                        />
+                        <span
+                          class="icon is-medium is-left"
+                        >
+                          <i
+                            class="fa fa-envelope-o"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <label>
+                        Password
+                      </label>
+                      <div
+                        class="control has-icons-left"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="signin-password"
+                          name="password"
+                          placeholder="Password"
+                          type="password"
+                          value=""
+                        />
+                        <span
+                          class="icon is-medium is-left"
+                        >
+                          <i
+                            class="fa fa-lock"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      Don't have an account? 
                       <a
-                        class="button is-white"
                         href="/signup"
                       >
                         Sign up
                       </a>
-                      <a
-                        class="button is-danger is-outlined is-rounded"
-                        href="/"
-                      >
-                        Create Website
-                      </a>
                     </div>
-                  </div>
+                    <div
+                      class="control"
+                    >
+                      <button
+                        class="button is-danger is-medium is-rounded"
+                        disabled=""
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
-            </nav>
-          </header>
+            </div>
+          </div>
         </div>
         <div
           class="Toastify"
@@ -159,58 +203,102 @@ Object {
                 />
               </a>
             </div>
+          </nav>
+        </header>
+        <div
+          class="layout-auth"
+        >
+          <div
+            class="columns is-mobile is-centered"
+          >
             <div
-              class="navbar-menu"
+              class="column is-one-third-desktop"
             >
-              <div
-                class="navbar-start"
-              >
-                <a
-                  class="navbar-item"
-                  href="/"
+              <div>
+                <h3
+                  class="subtitle is-3"
                 >
-                  Home
-                </a>
-                <a
-                  class="navbar-item"
-                  href="/"
-                >
-                  About
-                </a>
-              </div>
-              <div
-                class="navbar-end"
-              >
-                <div
-                  class="navbar-item"
-                >
+                  Log in
+                </h3>
+                <form>
                   <div
-                    class="buttons"
+                    class="field"
                   >
-                    <a
-                      class="button is-white"
-                      href="/login"
+                    <label>
+                      Email
+                    </label>
+                    <div
+                      class="control has-icons-left"
                     >
-                      Log in
-                    </a>
+                      <input
+                        class="input is-medium"
+                        data-testid="signin-email"
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                        value=""
+                      />
+                      <span
+                        class="icon is-medium is-left"
+                      >
+                        <i
+                          class="fa fa-envelope-o"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <label>
+                      Password
+                    </label>
+                    <div
+                      class="control has-icons-left"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="signin-password"
+                        name="password"
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        class="icon is-medium is-left"
+                      >
+                        <i
+                          class="fa fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    Don't have an account? 
                     <a
-                      class="button is-white"
                       href="/signup"
                     >
                       Sign up
                     </a>
-                    <a
-                      class="button is-danger is-outlined is-rounded"
-                      href="/"
-                    >
-                      Create Website
-                    </a>
                   </div>
-                </div>
+                  <div
+                    class="control"
+                  >
+                    <button
+                      class="button is-danger is-medium is-rounded"
+                      disabled=""
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-          </nav>
-        </header>
+          </div>
+        </div>
       </div>
       <div
         class="Toastify"

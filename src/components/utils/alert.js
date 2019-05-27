@@ -15,7 +15,7 @@ class notify {
     toast.error(message, {
       hideProgressBar: false,
       transition: Slide,
-      autoClose: 4000,
+      autoClose: 6000,
       pauseOnHover: true,
       draggable: true,
     });

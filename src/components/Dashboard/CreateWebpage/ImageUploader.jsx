@@ -133,7 +133,7 @@ class ImageUploader extends Component {
                   {...getRootProps({ className: 'dropzone' })}
                 >
                   <input {...getInputProps()} />
-                  <p>Try dropping some files here, or click to select files to upload.</p>
+                  <p>Try dropping some pictures here, or click to select pictures to upload.</p>
                 </div>
                 <ul className="columns is-multiline ">{pictureList}</ul>
               </div>

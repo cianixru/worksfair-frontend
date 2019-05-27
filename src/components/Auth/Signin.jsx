@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import SigninForm from '../../forms/Auth/SigninForm';
-import { signin } from '../../actions/auth';
+import { signin, getCurrentUser, } from '../../actions/auth';
 import { isLoading, isComplete } from '../../actions/loader';
 
 class Signin extends Component {
@@ -15,13 +15,14 @@ class Signin extends Component {
    * @param {object} data
    */
   onSubmit = async (data) => {
-    const { actions, history, user } = this.props;
+    const { actions } = this.props;
     try {
       await actions.isLoading();
-      await actions.signin(data);
-      history.push(`/dashboard/${user.username}`);
-    } catch (err) {
-      console.log(err);
+      const response = await actions.signin(data);
+      window.location.pathname = `/dashboard/${
+        response.data.user.username}/webpages`;
+    } catch (error) {
+      console.log(error.message);
     } finally {
       await actions.isComplete();
     }
@@ -43,6 +44,7 @@ Signin.propTypes = {
   actions: PropTypes.object,
   history: PropTypes.object,
   user: PropTypes.object,
+  location: PropTypes.object,
 };
 
 const mapStateToProps = ({ auth: { currentUser } }) => ({
@@ -55,6 +57,7 @@ const mapDispatchToProps = dispatch => ({
       signin,
       isLoading,
       isComplete,
+      getCurrentUser,
     },
     dispatch,
   ),

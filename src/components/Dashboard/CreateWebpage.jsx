@@ -110,6 +110,7 @@ class CreateWebpage extends Component {
     const {
       actions, history, webpage, user
     } = this.props;
+    actions.isLoading();
     try {
       images.subDomainName = webpage.sub_domain_name;
       const response = await actions.updateWebpage(images);
@@ -121,10 +122,12 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         alert.success('Successful. Keep going!');
-        history.push(`/dashboard/${user.username}/webpages/new/pricing`);
+        history.push(`/dashboard/${user.username}/webpages/new/offerings`);
       }
     } catch (error) {
       alert.error(error.message);
+    } finally {
+      actions.isComplete();
     }
   };
 
@@ -163,6 +166,7 @@ class CreateWebpage extends Component {
     const {
       actions, webpage,
     } = this.props;
+    actions.isLoading();
     const { imageArray, offerings } = this.state;
     if (!imageArray) {
       alert.error('You need to upload an image');
@@ -196,6 +200,8 @@ class CreateWebpage extends Component {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      actions.isComplete();
     }
   };
 
@@ -266,7 +272,7 @@ class CreateWebpage extends Component {
                   to={`/dashboard/${username}/webpages/new/offerings`}
                   className="pagination-link"
                   activeClassName="is-current"
-                  aria-label="Goto Pricing">
+                  aria-label="Goto Offerings">
                   <i className="fa fa-money" aria-hidden="true" />
                     Offerings
                 </NavLink>
