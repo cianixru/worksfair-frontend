@@ -123,3 +123,17 @@ export const createWebpageOffering = data => async (dispatch) => {
     });
   }
 };
+
+export const GET_WEBPAGES = 'GET_WEBPAGES';
+/**
+ * Gets webpages from data
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const getWebpages = data => (dispatch) => {
+  console.log(data);
+  return dispatch({
+    type: GET_WEBPAGES,
+    data,
+  });
+};

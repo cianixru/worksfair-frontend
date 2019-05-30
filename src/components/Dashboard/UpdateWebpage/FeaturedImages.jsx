@@ -4,19 +4,25 @@ import axios from 'axios';
 import sha1 from 'sha1';
 import PropTypes from 'prop-types';
 
+import {
+  CloudinaryImageUploader,
+  extractCloudID,
+} from '../../utils/helpers';
 
 const {
   REACT_APP_CLOUDINARY_API_KEY,
   REACT_APP_CLOUDINARY_PRESET_NAME,
-  REACT_APP_CLOUDINARY_UPLOAD_URL,
   REACT_APP_CLOUDINARY_DELETE_URL,
   REACT_APP_CLOUDINARY_AUTHORIZATION,
 } = process.env;
-
 class FeaturedImages extends Component {
   state={
+    existingImages: (this.props.webpage
+      && this.props.webpage.featured_images) || [],
     selectedImages: [],
-    uploadedImages: [],
+    uploadedImages: (this.props.webpage
+      && this.props.webpage.featured_images) || [],
+    rawFiles: {},
   }
 
   /**
@@ -35,7 +41,7 @@ class FeaturedImages extends Component {
       return localFileURL;
     });
 
-    console.log(files, localFileURLs, rawFiles);
+    // console.log(files, localFileURLs, rawFiles);
     const { selectedImages } = this.state;
     this.setState({
       ...selectedImages,
@@ -45,19 +51,61 @@ class FeaturedImages extends Component {
   }
 
   /**
-   * @description Handles the upload image of the image
+   * @description Handles the response from cloudinary API call
    *
-   * @param { Array } images
+   * @param { array } images
+   */
+  handleCloudinaryResponse = async (images) => {
+    const { uploadedImages } = this.state;
+    const uploads = images.map((image) => {
+      return CloudinaryImageUploader(image)
+        .then((imageData) => {
+          uploadedImages.push(imageData.data.secure_url);
+          this.setState({
+            uploadedImages,
+          });
+        });
+    });
+    return uploads;
+  }
+
+  /**
+   * @description Handles the removal of uploaded image from preview
+   *
+   * @param { string } imageURL
    *
    * @returns { Promise } axios API call
    */
+  handleRemoveImage = imageURL => () => {
+    const { selectedImages } = this.state;
 
-  handleUploadImages = (images) => {
-    const newImages = {};
-    const uploads = images.map((image) => {
+    // find and remove the image from the selectedImages array
+    selectedImages.splice(selectedImages.indexOf(imageURL), 1);
+
+    this.setState({
+      selectedImages,
+    });
+  }
+
+  /**
+   * @description Handles the removal of uploaded image from cloud
+   * and from the preview
+   *
+   * @param { string } imageCloudURL
+   *
+   * @returns { Promise } axios API call
+   */
+  handleRemoveImagefromCloud = imageCloudURL => () => {
+    this.props.isLoading();
+    try {
+      const imagePublicID = extractCloudID(imageCloudURL);
       // our formdata
+      const timestamp = Date.now();
+      const signature = sha1(`public_id=${imagePublicID}&timestamp=${
+        timestamp.toString()}${REACT_APP_CLOUDINARY_AUTHORIZATION}`);
+
       const formData = new FormData();
-      formData.append('file', image);
+      formData.append('public_id', imagePublicID);
       formData.append(
         'api_key',
         REACT_APP_CLOUDINARY_API_KEY
@@ -66,91 +114,65 @@ class FeaturedImages extends Component {
         'upload_preset',
         REACT_APP_CLOUDINARY_PRESET_NAME
       );
-      formData.append('timestamp', (Date.now()));
-
-      delete axios.defaults.headers.common.Authorization;
+      formData.append('timestamp', timestamp);
+      formData.append('signature', signature);
 
       return axios({
         method: 'post',
-        url: REACT_APP_CLOUDINARY_UPLOAD_URL,
+        url: REACT_APP_CLOUDINARY_DELETE_URL,
         data: formData,
         config: { headers: { 'Content-Type': 'multipart/form-data' } }
       })
         .then((response) => {
-          newImages[response.data.public_id] = response.data.secure_url;
-          const { uploadedImages } = this.state;
-          this.setState({
-            ...uploadedImages,
-            uploadedImages: newImages,
-          });
+          if (response.data.result === 'ok') {
+            const { uploadedImages } = this.state;
+            // remove the image from the state
+            uploadedImages.splice(uploadedImages.indexOf(imageCloudURL), 1);
+            this.props.onSubmit({
+              featured_images: uploadedImages,
+            })
+              .then(() => {
+                this.setState({
+                  existingImages: uploadedImages,
+                  uploadedImages,
+                });
+              });
+          }
         });
-    });
-
-    axios.all(uploads).then(() => {
-      console.log('Images have all being uploaded to cloudinary');
-    });
-  }
-
-  /**
-   * @description Handles the removal of uploaded image from preview
-   *
-   * @param { string } imagePublicID
-   *
-   * @returns { Promise } axios API call
-   */
-  handleRemoveImage = imagePublicID => () => {
-    // our formdata
-    const timestamp = Date.now();
-    const signature = sha1(`public_id=${imagePublicID}&timestamp=${
-      timestamp.toString()}${REACT_APP_CLOUDINARY_AUTHORIZATION}`);
-
-    const formData = new FormData();
-    formData.append('public_id', imagePublicID);
-    formData.append(
-      'api_key',
-      REACT_APP_CLOUDINARY_API_KEY
-    );
-    formData.append(
-      'upload_preset',
-      REACT_APP_CLOUDINARY_PRESET_NAME
-    );
-    formData.append('timestamp', timestamp);
-    formData.append('signature', signature);
-
-    return axios({
-      method: 'post',
-      url: REACT_APP_CLOUDINARY_DELETE_URL,
-      data: formData,
-      config: { headers: { 'Content-Type': 'multipart/form-data' } }
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          const { uploadedImages } = this.state;
-          delete uploadedImages[imagePublicID];
-
-          this.setState({
-            uploadedImages,
-          });
-        }
-      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      this.props.isComplete();
+    }
   }
 
   /**
    * @description sends the cloudinary urls to the DB
    */
   handleSubmit = async () => {
-    const { uploadedImages } = this.state;
-    const imagesUrl = Object.values(uploadedImages);
+    const { uploadedImages, selectedImages, rawFiles } = this.state;
 
-    const images = {
-      featured_images: imagesUrl,
-    };
-    await this.props.onSubmit(images);
+    const imagesToUpload = [];
+    selectedImages.map((imageBlob) => {
+      return imagesToUpload.push(rawFiles[imageBlob]);
+    });
+
+    const imagesData = await this.handleCloudinaryResponse(imagesToUpload);
+    axios.all(imagesData).then(() => {
+      const images = {
+        featured_images: uploadedImages,
+      };
+      this.props.onSubmit(images);
+      this.setState({
+        selectedImages: [],
+      });
+      console.log('Images have all being uploaded to cloudinary');
+    });
   }
 
   render() {
-    const { uploadedImages, selectedImages } = this.state;
-    const hasNoImages = uploadedImages.length <= 0;
+    const { selectedImages, existingImages } = this.state;
+    const hasNoImages = selectedImages.length <= 0;
 
     return (
       <Dropzone
@@ -159,16 +181,41 @@ class FeaturedImages extends Component {
         accept="image/*"
       >
         {({ getRootProps, getInputProps }) => {
-          const files = selectedImages.map(publicId => (
-            <li key={publicId} className="notification column is-one-quarter">
+          // The list of existing pictures from the DB
+          const existingPictureList = existingImages.map((imageCloudURL, index) => (
+            <li
+              key={`${imageCloudURL}${index}`}
+              className="notification column is-one-quarter"
+            >
               <button
                 className="delete"
-                onClick={this.handleRemoveImage(publicId)}
+                onClick={this.handleRemoveImagefromCloud(imageCloudURL)}
+                data-testid="delete-image"
               />
               <figure className="image is-180x180">
                 <img
-                  src={publicId}
-                  alt={publicId}
+                  src={imageCloudURL}
+                  alt={imageCloudURL}
+                />
+              </figure>
+            </li>
+          ));
+
+          // The list of newly selected images
+          const pictureList = selectedImages.map((localObjectURL, index) => (
+            <li
+              key={`${localObjectURL}${index}`}
+              className="notification column is-one-quarter"
+            >
+              <button
+                className="delete"
+                onClick={this.handleRemoveImage(localObjectURL)}
+                data-testid="delete-image"
+              />
+              <figure className="image is-180x180">
+                <img
+                  src={localObjectURL}
+                  alt={localObjectURL}
                 />
               </figure>
             </li>
@@ -181,9 +228,12 @@ class FeaturedImages extends Component {
                   {...getRootProps({ className: 'dropzone' })}
                 >
                   <input {...getInputProps()} />
-                  <p>Try dropping some files here, or click to select files to upload.</p>
+                  <p>Try dropping some pictures here, or click to select pictures to upload.</p>
                 </div>
-                <ul className="columns is-multiline ">{files}</ul>
+                <ul className="columns is-multiline ">
+                  {existingPictureList}
+                  {pictureList}
+                </ul>
               </div>
               <div className="control">
                 <button
@@ -206,6 +256,9 @@ class FeaturedImages extends Component {
 
 FeaturedImages.propTypes = {
   onSubmit: PropTypes.func,
+  webpage: PropTypes.object,
+  isLoading: PropTypes.func,
+  isComplete: PropTypes.func,
 };
 
 export default FeaturedImages;

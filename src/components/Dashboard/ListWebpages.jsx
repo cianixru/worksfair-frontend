@@ -11,6 +11,7 @@ import NoWebpages from './ListWebpages/NoWebpages';
 class ListWebpages extends Component {
   render() {
     const { user } = this.props;
+    const username = user && user.username;
     return (
       <div>
         <div className="tabs is-boxed">
@@ -36,7 +37,7 @@ class ListWebpages extends Component {
                 const nextUpdate = getDateForNextUpdate(webpage.updated_at);
 
                 const itemProps = {
-                  nextUpdate, dayCreated, webpage, sampleImage,
+                  nextUpdate, dayCreated, webpage, sampleImage, username
                 };
                 return (
                   <WebpageItem key={webpage.sub_domain_name} {...itemProps} />

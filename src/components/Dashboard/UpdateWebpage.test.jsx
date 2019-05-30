@@ -5,24 +5,29 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import ListWebpages from './ListWebpages';
-import { user, webpage } from '../../utils/test-utils/mockData';
+import UpdateWebpage from './UpdateWebpage';
 
 afterEach(cleanup);
 
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
 const mockStore = store({
-  auth: { currentUser: { user, } },
-  webpage: { newWebpage: webpage }
+  auth: { currentUser: {} },
+  webpage: { newWebpage: {} }
 });
 
-describe('ListWebpages.jsx', () => {
-  test('Should display the ListWebpages Component', () => {
+describe('UpdateWebpage.jsx', () => {
+  // const validationErrors = {
+  //   title: [
+  //     'Title must be present',
+  //   ]
+  // };
+
+  test('Should display the UpdateWebpage Component', () => {
     const component = render(
       <Provider store={mockStore}>
         <Router>
-          <ListWebpages user={user} />
+          <UpdateWebpage />
         </Router>
       </Provider>
     );

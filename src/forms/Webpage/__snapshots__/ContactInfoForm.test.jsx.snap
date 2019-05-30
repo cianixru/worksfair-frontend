@@ -1,0 +1,880 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactInfoForm.tsx Test that the ContactInfo form displays 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form>
+        <div
+          class="field-body"
+        >
+          <div
+            class="field"
+          >
+            <h5>
+              State
+            </h5>
+            <div
+              class="control"
+            >
+              <div
+                class="select is-fullwidth"
+              >
+                <select
+                  data-testid="business-state"
+                  name="state"
+                >
+                  <option>
+                    Select State
+                  </option>
+                  <option
+                    value="Abia"
+                  >
+                    Abia
+                  </option>
+                  <option
+                    value="Adamawa"
+                  >
+                    Adamawa
+                  </option>
+                  <option
+                    value="AkwaIbom"
+                  >
+                    AkwaIbom
+                  </option>
+                  <option
+                    value="Anambra"
+                  >
+                    Anambra
+                  </option>
+                  <option
+                    value="Bauchi"
+                  >
+                    Bauchi
+                  </option>
+                  <option
+                    value="Bayelsa"
+                  >
+                    Bayelsa
+                  </option>
+                  <option
+                    value="Benue"
+                  >
+                    Benue
+                  </option>
+                  <option
+                    value="Borno"
+                  >
+                    Borno
+                  </option>
+                  <option
+                    value="CrossRiver"
+                  >
+                    CrossRiver
+                  </option>
+                  <option
+                    value="Delta"
+                  >
+                    Delta
+                  </option>
+                  <option
+                    value="Ebonyi"
+                  >
+                    Ebonyi
+                  </option>
+                  <option
+                    value="Edo"
+                  >
+                    Edo
+                  </option>
+                  <option
+                    value="Ekiti"
+                  >
+                    Ekiti
+                  </option>
+                  <option
+                    value="Enugu"
+                  >
+                    Enugu
+                  </option>
+                  <option
+                    value="Gombe"
+                  >
+                    Gombe
+                  </option>
+                  <option
+                    value="Imo"
+                  >
+                    Imo
+                  </option>
+                  <option
+                    value="Jigawa"
+                  >
+                    Jigawa
+                  </option>
+                  <option
+                    value="Kaduna"
+                  >
+                    Kaduna
+                  </option>
+                  <option
+                    value="Kano"
+                  >
+                    Kano
+                  </option>
+                  <option
+                    value="Katsina"
+                  >
+                    Katsina
+                  </option>
+                  <option
+                    value="Kebbi"
+                  >
+                    Kebbi
+                  </option>
+                  <option
+                    value="Kogi"
+                  >
+                    Kogi
+                  </option>
+                  <option
+                    value="Kwara"
+                  >
+                    Kwara
+                  </option>
+                  <option
+                    value="Lagos"
+                  >
+                    Lagos
+                  </option>
+                  <option
+                    value="Nasarawa"
+                  >
+                    Nasarawa
+                  </option>
+                  <option
+                    value="Niger"
+                  >
+                    Niger
+                  </option>
+                  <option
+                    value="Ogun"
+                  >
+                    Ogun
+                  </option>
+                  <option
+                    value="Ondo"
+                  >
+                    Ondo
+                  </option>
+                  <option
+                    value="Osun"
+                  >
+                    Osun
+                  </option>
+                  <option
+                    value="Oyo"
+                  >
+                    Oyo
+                  </option>
+                  <option
+                    value="Plateau"
+                  >
+                    Plateau
+                  </option>
+                  <option
+                    value="Rivers"
+                  >
+                    Rivers
+                  </option>
+                  <option
+                    value="Sokoto"
+                  >
+                    Sokoto
+                  </option>
+                  <option
+                    value="Taraba"
+                  >
+                    Taraba
+                  </option>
+                  <option
+                    value="Yobe"
+                  >
+                    Yobe
+                  </option>
+                  <option
+                    value="Zamfara"
+                  >
+                    Zamfara
+                  </option>
+                  <option
+                    value="FCT"
+                  >
+                    FCT
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div
+            class="field"
+          >
+            <h5>
+              Town
+            </h5>
+            <div
+              class="control"
+            >
+              <div
+                class="select is-fullwidth"
+              >
+                <select
+                  data-testid="business-town"
+                  name="city"
+                >
+                  <option>
+                    Select Town
+                  </option>
+                  <option
+                    value="Ikeja"
+                  >
+                    Ikeja
+                  </option>
+                  <option
+                    value="Lekki"
+                  >
+                    Lekki
+                  </option>
+                  <option
+                    value="Oshodi"
+                  >
+                    Oshodi
+                  </option>
+                  <option
+                    value="Ikoyi"
+                  >
+                    Ikoyi
+                  </option>
+                  <option
+                    value="Lagos-Island"
+                  >
+                    Lagos-Island
+                  </option>
+                  <option
+                    value="Badagry"
+                  >
+                    Badagry
+                  </option>
+                  <option
+                    value="Isolo"
+                  >
+                    Isolo
+                  </option>
+                  <option
+                    value="Mushin"
+                  >
+                    Mushin
+                  </option>
+                  <option
+                    value="Surulere"
+                  >
+                    Surulere
+                  </option>
+                  <option
+                    value="Yaba"
+                  >
+                    Yaba
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <h5>
+            Address
+          </h5>
+          <div
+            class="control"
+          >
+            <input
+              class="input is-medium"
+              data-testid="business-address"
+              name="address"
+              placeholder="Eg. No 12 ABC street, Zik Estate"
+              type="text"
+              value="No 7 Obinna Uzor Street, Canal Estate"
+            />
+            <span
+              class="input-error"
+            >
+              This field is required
+            </span>
+          </div>
+        </div>
+        <div
+          class="field-body"
+        >
+          <div
+            class="field"
+          >
+            <h5>
+              Business Phone number
+            </h5>
+            <div
+              class="control"
+            >
+              <input
+                class="input is-medium"
+                data-testid="business-phone"
+                name="phone"
+                placeholder="08123456789"
+                type="text"
+                value=""
+              />
+              <span
+                class="input-error"
+              >
+                This field is required
+              </span>
+            </div>
+          </div>
+          <div
+            class="field"
+          >
+            <h5>
+              Business Email
+            </h5>
+            <div
+              class="control"
+            >
+              <input
+                class="input is-medium"
+                data-testid="business-email"
+                name="email"
+                placeholder="abc@anywebsite.com"
+                type="text"
+                value=""
+              />
+              <span
+                class="input-error"
+              >
+                This field is required
+              </span>
+            </div>
+          </div>
+          <div
+            class="field"
+          >
+            <h5>
+              Business Website
+              <span
+                class="has-text-grey-light"
+              >
+                (if available)
+              </span>
+            </h5>
+            <div
+              class="control"
+            >
+              <input
+                class="input is-medium"
+                data-testid="business-website"
+                name="website"
+                placeholder="https://www.yourwebsite.com"
+                type="text"
+                value=""
+              />
+              <span
+                class="input-error"
+              >
+                This field is required
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="control"
+        >
+          <button
+            class="button is-danger is-medium is-rounded"
+            data-testid="update-contact"
+            disabled=""
+            type="submit"
+          >
+            Save & Continue
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form>
+      <div
+        class="field-body"
+      >
+        <div
+          class="field"
+        >
+          <h5>
+            State
+          </h5>
+          <div
+            class="control"
+          >
+            <div
+              class="select is-fullwidth"
+            >
+              <select
+                data-testid="business-state"
+                name="state"
+              >
+                <option>
+                  Select State
+                </option>
+                <option
+                  value="Abia"
+                >
+                  Abia
+                </option>
+                <option
+                  value="Adamawa"
+                >
+                  Adamawa
+                </option>
+                <option
+                  value="AkwaIbom"
+                >
+                  AkwaIbom
+                </option>
+                <option
+                  value="Anambra"
+                >
+                  Anambra
+                </option>
+                <option
+                  value="Bauchi"
+                >
+                  Bauchi
+                </option>
+                <option
+                  value="Bayelsa"
+                >
+                  Bayelsa
+                </option>
+                <option
+                  value="Benue"
+                >
+                  Benue
+                </option>
+                <option
+                  value="Borno"
+                >
+                  Borno
+                </option>
+                <option
+                  value="CrossRiver"
+                >
+                  CrossRiver
+                </option>
+                <option
+                  value="Delta"
+                >
+                  Delta
+                </option>
+                <option
+                  value="Ebonyi"
+                >
+                  Ebonyi
+                </option>
+                <option
+                  value="Edo"
+                >
+                  Edo
+                </option>
+                <option
+                  value="Ekiti"
+                >
+                  Ekiti
+                </option>
+                <option
+                  value="Enugu"
+                >
+                  Enugu
+                </option>
+                <option
+                  value="Gombe"
+                >
+                  Gombe
+                </option>
+                <option
+                  value="Imo"
+                >
+                  Imo
+                </option>
+                <option
+                  value="Jigawa"
+                >
+                  Jigawa
+                </option>
+                <option
+                  value="Kaduna"
+                >
+                  Kaduna
+                </option>
+                <option
+                  value="Kano"
+                >
+                  Kano
+                </option>
+                <option
+                  value="Katsina"
+                >
+                  Katsina
+                </option>
+                <option
+                  value="Kebbi"
+                >
+                  Kebbi
+                </option>
+                <option
+                  value="Kogi"
+                >
+                  Kogi
+                </option>
+                <option
+                  value="Kwara"
+                >
+                  Kwara
+                </option>
+                <option
+                  value="Lagos"
+                >
+                  Lagos
+                </option>
+                <option
+                  value="Nasarawa"
+                >
+                  Nasarawa
+                </option>
+                <option
+                  value="Niger"
+                >
+                  Niger
+                </option>
+                <option
+                  value="Ogun"
+                >
+                  Ogun
+                </option>
+                <option
+                  value="Ondo"
+                >
+                  Ondo
+                </option>
+                <option
+                  value="Osun"
+                >
+                  Osun
+                </option>
+                <option
+                  value="Oyo"
+                >
+                  Oyo
+                </option>
+                <option
+                  value="Plateau"
+                >
+                  Plateau
+                </option>
+                <option
+                  value="Rivers"
+                >
+                  Rivers
+                </option>
+                <option
+                  value="Sokoto"
+                >
+                  Sokoto
+                </option>
+                <option
+                  value="Taraba"
+                >
+                  Taraba
+                </option>
+                <option
+                  value="Yobe"
+                >
+                  Yobe
+                </option>
+                <option
+                  value="Zamfara"
+                >
+                  Zamfara
+                </option>
+                <option
+                  value="FCT"
+                >
+                  FCT
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <h5>
+            Town
+          </h5>
+          <div
+            class="control"
+          >
+            <div
+              class="select is-fullwidth"
+            >
+              <select
+                data-testid="business-town"
+                name="city"
+              >
+                <option>
+                  Select Town
+                </option>
+                <option
+                  value="Ikeja"
+                >
+                  Ikeja
+                </option>
+                <option
+                  value="Lekki"
+                >
+                  Lekki
+                </option>
+                <option
+                  value="Oshodi"
+                >
+                  Oshodi
+                </option>
+                <option
+                  value="Ikoyi"
+                >
+                  Ikoyi
+                </option>
+                <option
+                  value="Lagos-Island"
+                >
+                  Lagos-Island
+                </option>
+                <option
+                  value="Badagry"
+                >
+                  Badagry
+                </option>
+                <option
+                  value="Isolo"
+                >
+                  Isolo
+                </option>
+                <option
+                  value="Mushin"
+                >
+                  Mushin
+                </option>
+                <option
+                  value="Surulere"
+                >
+                  Surulere
+                </option>
+                <option
+                  value="Yaba"
+                >
+                  Yaba
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="field"
+      >
+        <h5>
+          Address
+        </h5>
+        <div
+          class="control"
+        >
+          <input
+            class="input is-medium"
+            data-testid="business-address"
+            name="address"
+            placeholder="Eg. No 12 ABC street, Zik Estate"
+            type="text"
+            value="No 7 Obinna Uzor Street, Canal Estate"
+          />
+          <span
+            class="input-error"
+          >
+            This field is required
+          </span>
+        </div>
+      </div>
+      <div
+        class="field-body"
+      >
+        <div
+          class="field"
+        >
+          <h5>
+            Business Phone number
+          </h5>
+          <div
+            class="control"
+          >
+            <input
+              class="input is-medium"
+              data-testid="business-phone"
+              name="phone"
+              placeholder="08123456789"
+              type="text"
+              value=""
+            />
+            <span
+              class="input-error"
+            >
+              This field is required
+            </span>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <h5>
+            Business Email
+          </h5>
+          <div
+            class="control"
+          >
+            <input
+              class="input is-medium"
+              data-testid="business-email"
+              name="email"
+              placeholder="abc@anywebsite.com"
+              type="text"
+              value=""
+            />
+            <span
+              class="input-error"
+            >
+              This field is required
+            </span>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <h5>
+            Business Website
+            <span
+              class="has-text-grey-light"
+            >
+              (if available)
+            </span>
+          </h5>
+          <div
+            class="control"
+          >
+            <input
+              class="input is-medium"
+              data-testid="business-website"
+              name="website"
+              placeholder="https://www.yourwebsite.com"
+              type="text"
+              value=""
+            />
+            <span
+              class="input-error"
+            >
+              This field is required
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="control"
+      >
+        <button
+          class="button is-danger is-medium is-rounded"
+          data-testid="update-contact"
+          disabled=""
+          type="submit"
+        >
+          Save & Continue
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

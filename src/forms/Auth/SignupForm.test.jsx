@@ -7,12 +7,12 @@ import SignupForm from './SignupForm';
 afterEach(cleanup);
 
 const validationErrors = {
-  first_name: '',
-  last_name: '',
-  username: '',
-  password: '',
-  email: '',
-  confirm_password: '',
+  first_name: ['This field is required'],
+  last_name: ['This field is required'],
+  username: ['This field is required'],
+  password: ['This field is required'],
+  email: ['This field is required'],
+  confirm_password: ['This field is required'],
 };
 
 describe('SignupForm.tsx', () => {

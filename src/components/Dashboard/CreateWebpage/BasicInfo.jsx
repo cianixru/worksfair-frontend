@@ -6,7 +6,7 @@ import avatar from '../../../assets/worksfair-avatar.png';
 import { toSentenceCase } from '../../utils/helpers';
 
 const BasicInfo = ({
-  onSubmit, user, validationErrors, handleErrorReset,
+  onSubmit, user, validationErrors, handleErrorReset, webpage,
 }) => {
   return (
     <Fragment>
@@ -27,11 +27,16 @@ const BasicInfo = ({
           }
         </div>
       </div>
+      {/* <div className="margin-top-20">
+        <h5>Webpage Subdomain name</h5>
+        <p>{webpage && webpage.sub_domain_name}</p>
+      </div> */}
       <div className="add-webpage-form">
         <CreateWebpageForm
           onSubmit={onSubmit}
           validationErrors={validationErrors}
           handleErrorReset={handleErrorReset}
+          webpage={webpage}
         />
       </div>
     </Fragment>
@@ -43,6 +48,7 @@ BasicInfo.propTypes = {
   user: PropTypes.object,
   validationErrors: PropTypes.object,
   handleErrorReset: PropTypes.func,
+  webpage: PropTypes.object,
 };
 
 export default BasicInfo;

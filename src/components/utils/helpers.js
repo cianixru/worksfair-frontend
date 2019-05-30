@@ -80,9 +80,31 @@ export const offerings = [
   }
 ];
 
+/**
+ * @description adds the naira sign to the price
+ *
+ * @param { number } price
+ *
+ * @returns { string }
+ */
 export const addNaira = (price) => {
   const cost = parseInt(price, 10) === 0
     ? <p className="is-size-6">Contact us for Price</p>
     : (<p className="price">&#8358; {price}</p>);
   return cost;
+};
+
+/**
+ * @description takes the cloudURL and extracts the cloudID from it
+ *
+ * @param { string } cloudURL
+ *
+ * @returns { string }
+ *
+ * @example 'https://res.cloudinary.com/.../achebe_jato7y.jpg' => achebe_jato7y
+ */
+export const extractCloudID = (cloudURL) => {
+  const brokenURLArray = cloudURL.split('/');
+  const id = brokenURLArray[brokenURLArray.length - 1].split('.')[0];
+  return `dev/${id}`;
 };

@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-
 import { textColourHelper } from '../../../utils/helpers';
 
 const WebpageItem = ({
-  nextUpdate, dayCreated, webpage, sampleImage
+  nextUpdate, dayCreated, username, webpage, sampleImage
 }) => (
   <li>
     <div className="media box">
@@ -44,7 +43,9 @@ const WebpageItem = ({
         </div>
       </div>
       <div>
-        <Link to="/" className="button is-white">
+        <Link
+          to={`/dashboard/${username}/webpages/edit/${webpage.sub_domain_name}`}
+          className="button is-white">
           <i className="fa fa-edit is-size-5 has-text-grey"/>
         </Link>
       </div>
@@ -57,6 +58,7 @@ WebpageItem.propTypes = {
   nextUpdate: PropTypes.string,
   dayCreated: PropTypes.string,
   sampleImage: PropTypes.string,
+  username: PropTypes.string,
 };
 
 export default WebpageItem;

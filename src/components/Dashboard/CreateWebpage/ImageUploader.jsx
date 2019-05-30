@@ -29,7 +29,6 @@ class ImageUploader extends Component {
       return localFileURL;
     });
 
-    // console.log(files, localFileURLs, rawFiles);
     const { selectedImages } = this.state;
     this.setState({
       ...selectedImages,

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import api, { baseURL } from '../utils/api';
 import auth from '../utils/auth';
+import { GET_WEBPAGES } from './webpage';
 
 const apiToken = localStorage.getItem('token');
 
@@ -35,6 +36,7 @@ export const signin = user => async (dispatch) => {
     user.email = email.toLowerCase();
 
     const returningUser = await api.post('/auth/login/', { user });
+
     return dispatch({
       type: AUTHENTICATED_USER,
       data: returningUser.data,

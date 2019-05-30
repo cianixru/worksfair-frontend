@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Form, Field } from 'react-final-form';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { toSentenceCase } from '../../components/utils/helpers';
 
 // @ts-check
 /**

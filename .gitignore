@@ -82,3 +82,5 @@ npm-debug.log*
 
 # Cyress examples
 cypress/integration/examples
+
+sandbox.txt

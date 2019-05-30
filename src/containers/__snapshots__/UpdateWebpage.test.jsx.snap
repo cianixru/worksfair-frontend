@@ -1,0 +1,1720 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateWebpage.jsx Should display the UpdateWebpage Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="dashboard-content"
+      >
+        <div
+          class="dashboard-titlebar"
+        >
+          <div
+            class="columns"
+          >
+            <div
+              class="column"
+            >
+              <h2>
+                Update Webpage
+              </h2>
+            </div>
+            <div
+              class="column"
+            />
+            <nav
+              aria-label="breadcrumbs"
+              class="column breadcrumb"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dashboard/null/webpages"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/edit/"
+                  >
+                    Update Webpage
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <div
+            class="box"
+          >
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="is-size-4"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-globe"
+                />
+                Basic Info
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <h5>
+                Website Owner
+              </h5>
+              <div
+                class="media"
+              >
+                <div
+                  class="media-left"
+                >
+                  <figure
+                    class="image is-32x32"
+                  >
+                    <img
+                      alt="avatar"
+                      class="is-rounded"
+                      src="worksfair-avatar.png"
+                    />
+                  </figure>
+                </div>
+                <div
+                  class="media-content"
+                />
+              </div>
+              <div
+                class="add-webpage-form"
+              >
+                <form>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Business Name
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Keep it short. It is also your Webpage title.
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-name"
+                        name="title"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Describe your business
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Your customers will see this message on webpage.
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="description"
+                        name="description"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Keywords
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Some search keywords relating to your business.It will help people to find your business.
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-keywords"
+                        name="keywords"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Colour
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          The colour theme for your webpage. the default is plain gray-scale
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="field"
+                    >
+                      <div
+                        class="control"
+                      >
+                        <div
+                          class="select is-danger"
+                        >
+                          <select
+                            name="colour"
+                          >
+                            <option>
+                              Select Colour Theme
+                            </option>
+                            <option
+                              value="is-danger"
+                            >
+                              ❤️ Red
+                            </option>
+                            <option
+                              value="is-primary"
+                            >
+                              💚 Green
+                            </option>
+                            <option
+                              value="is-info"
+                            >
+                              💙 Blue
+                            </option>
+                            <option
+                              value="is-warning"
+                            >
+                              🧡 Orange
+                            </option>
+                            <option
+                              value="is-dark"
+                            >
+                              🖤 Black
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="control"
+                  >
+                    <button
+                      class="button is-danger is-medium is-rounded"
+                      data-testid="create-webpage"
+                      disabled=""
+                      type="submit"
+                    >
+                      Save & Continue
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box"
+          >
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="is-size-4"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-address-card-o"
+                />
+                Contact Info
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <div
+                class="add-webpage-form"
+              >
+                <form>
+                  <div
+                    class="field-body"
+                  >
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        State
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <div
+                          class="select is-fullwidth"
+                        >
+                          <select
+                            data-testid="business-state"
+                            name="state"
+                          >
+                            <option>
+                              Select State
+                            </option>
+                            <option
+                              value="Abia"
+                            >
+                              Abia
+                            </option>
+                            <option
+                              value="Adamawa"
+                            >
+                              Adamawa
+                            </option>
+                            <option
+                              value="AkwaIbom"
+                            >
+                              AkwaIbom
+                            </option>
+                            <option
+                              value="Anambra"
+                            >
+                              Anambra
+                            </option>
+                            <option
+                              value="Bauchi"
+                            >
+                              Bauchi
+                            </option>
+                            <option
+                              value="Bayelsa"
+                            >
+                              Bayelsa
+                            </option>
+                            <option
+                              value="Benue"
+                            >
+                              Benue
+                            </option>
+                            <option
+                              value="Borno"
+                            >
+                              Borno
+                            </option>
+                            <option
+                              value="CrossRiver"
+                            >
+                              CrossRiver
+                            </option>
+                            <option
+                              value="Delta"
+                            >
+                              Delta
+                            </option>
+                            <option
+                              value="Ebonyi"
+                            >
+                              Ebonyi
+                            </option>
+                            <option
+                              value="Edo"
+                            >
+                              Edo
+                            </option>
+                            <option
+                              value="Ekiti"
+                            >
+                              Ekiti
+                            </option>
+                            <option
+                              value="Enugu"
+                            >
+                              Enugu
+                            </option>
+                            <option
+                              value="Gombe"
+                            >
+                              Gombe
+                            </option>
+                            <option
+                              value="Imo"
+                            >
+                              Imo
+                            </option>
+                            <option
+                              value="Jigawa"
+                            >
+                              Jigawa
+                            </option>
+                            <option
+                              value="Kaduna"
+                            >
+                              Kaduna
+                            </option>
+                            <option
+                              value="Kano"
+                            >
+                              Kano
+                            </option>
+                            <option
+                              value="Katsina"
+                            >
+                              Katsina
+                            </option>
+                            <option
+                              value="Kebbi"
+                            >
+                              Kebbi
+                            </option>
+                            <option
+                              value="Kogi"
+                            >
+                              Kogi
+                            </option>
+                            <option
+                              value="Kwara"
+                            >
+                              Kwara
+                            </option>
+                            <option
+                              value="Lagos"
+                            >
+                              Lagos
+                            </option>
+                            <option
+                              value="Nasarawa"
+                            >
+                              Nasarawa
+                            </option>
+                            <option
+                              value="Niger"
+                            >
+                              Niger
+                            </option>
+                            <option
+                              value="Ogun"
+                            >
+                              Ogun
+                            </option>
+                            <option
+                              value="Ondo"
+                            >
+                              Ondo
+                            </option>
+                            <option
+                              value="Osun"
+                            >
+                              Osun
+                            </option>
+                            <option
+                              value="Oyo"
+                            >
+                              Oyo
+                            </option>
+                            <option
+                              value="Plateau"
+                            >
+                              Plateau
+                            </option>
+                            <option
+                              value="Rivers"
+                            >
+                              Rivers
+                            </option>
+                            <option
+                              value="Sokoto"
+                            >
+                              Sokoto
+                            </option>
+                            <option
+                              value="Taraba"
+                            >
+                              Taraba
+                            </option>
+                            <option
+                              value="Yobe"
+                            >
+                              Yobe
+                            </option>
+                            <option
+                              value="Zamfara"
+                            >
+                              Zamfara
+                            </option>
+                            <option
+                              value="FCT"
+                            >
+                              FCT
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Town
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <div
+                          class="select is-fullwidth"
+                        >
+                          <select
+                            data-testid="business-town"
+                            name="city"
+                          >
+                            <option>
+                              Select Town
+                            </option>
+                            
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Address
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-address"
+                        name="address"
+                        placeholder="Eg. No 12 ABC street, Zik Estate"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field-body"
+                  >
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Business Phone number
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="business-phone"
+                          name="phone"
+                          placeholder="08123456789"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Business Email
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="business-email"
+                          name="email"
+                          placeholder="abc@anywebsite.com"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <h5>
+                        Business Website
+                        <span
+                          class="has-text-grey-light"
+                        >
+                          (if available)
+                        </span>
+                      </h5>
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="business-website"
+                          name="website"
+                          placeholder="https://www.yourwebsite.com"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="control"
+                  >
+                    <button
+                      class="button is-danger is-medium is-rounded"
+                      data-testid="update-contact"
+                      disabled=""
+                      type="submit"
+                    >
+                      Save & Continue
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box"
+          >
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="is-size-4"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-file-image-o"
+                />
+                Gallery
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <div>
+                <div
+                  class="drop-area"
+                >
+                  <div
+                    class="dropzone"
+                    tabindex="0"
+                  >
+                    <input
+                      accept="image/*"
+                      autocomplete="off"
+                      multiple=""
+                      style="display: none;"
+                      tabindex="-1"
+                      type="file"
+                    />
+                    <p>
+                      Try dropping some pictures here, or click to select pictures to upload.
+                    </p>
+                  </div>
+                  <ul
+                    class="columns is-multiline "
+                  />
+                </div>
+                <div
+                  class="control"
+                >
+                  <button
+                    class="button is-danger is-medium is-rounded"
+                    data-testid="save-featured-images"
+                    disabled=""
+                    type="submit"
+                  >
+                    Save & Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box"
+          >
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="is-size-4"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-money"
+                />
+                Offerings
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <div>
+                <div
+                  class="margin-bottom-25"
+                >
+                  <ul />
+                </div>
+                <div
+                  class="columns card card-content margin-bottom-25"
+                >
+                  <div
+                    class="column is-one-third"
+                  >
+                    <div
+                      class="image-upload-box"
+                    >
+                      <img
+                        alt=""
+                        class="offering-image"
+                        src="sample-02.jpg"
+                      />
+                      <div
+                        class="change-image-btn"
+                      >
+                        <div
+                          class="imageUpload"
+                          tabindex="0"
+                        >
+                          <span>
+                            <i
+                              class="fa fa-upload"
+                            />
+                             Upload Pic
+                          </span>
+                          <input
+                            accept="image/*"
+                            autocomplete="off"
+                            style="display: none;"
+                            tabindex="-1"
+                            type="file"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <form>
+                      <div
+                        class="field"
+                      >
+                        <div
+                          class="control"
+                        >
+                          <input
+                            class="input is-medium"
+                            data-testid="offering-name"
+                            name="title"
+                            placeholder="Name of item"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="field"
+                      >
+                        <div
+                          class="control"
+                        >
+                          <input
+                            class="input is-medium"
+                            data-testid="offering-description"
+                            name="description"
+                            placeholder="Describe this item"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="field"
+                      >
+                        <div
+                          class="control"
+                        >
+                          <input
+                            class="input is-medium"
+                            data-testid="offering-price"
+                            name="price"
+                            placeholder="Price"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="control buttons are-medium"
+                      >
+                        <button
+                          class="button is-light"
+                          data-testid="add-offering"
+                          disabled=""
+                          type="submit"
+                        >
+                          Add Item
+                        </button>
+                        <button
+                          class="button"
+                          disabled=""
+                          type="button"
+                        >
+                          Reset
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div
+                  class="control"
+                >
+                  <button
+                    class="button is-medium is-danger is-rounded"
+                    data-testid="save-and-preview"
+                    type="submit"
+                  >
+                    Save & Preview Webpage
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="dashboard-content"
+    >
+      <div
+        class="dashboard-titlebar"
+      >
+        <div
+          class="columns"
+        >
+          <div
+            class="column"
+          >
+            <h2>
+              Update Webpage
+            </h2>
+          </div>
+          <div
+            class="column"
+          />
+          <nav
+            aria-label="breadcrumbs"
+            class="column breadcrumb"
+          >
+            <ul>
+              <li>
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/null/webpages"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/edit/"
+                >
+                  Update Webpage
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <div
+          class="box"
+        >
+          <div
+            class="add-webpage-headline"
+          >
+            <h3
+              class="is-size-4"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-globe"
+              />
+              Basic Info
+            </h3>
+          </div>
+          <div
+            class="add-webpage-content"
+          >
+            <h5>
+              Website Owner
+            </h5>
+            <div
+              class="media"
+            >
+              <div
+                class="media-left"
+              >
+                <figure
+                  class="image is-32x32"
+                >
+                  <img
+                    alt="avatar"
+                    class="is-rounded"
+                    src="worksfair-avatar.png"
+                  />
+                </figure>
+              </div>
+              <div
+                class="media-content"
+              />
+            </div>
+            <div
+              class="add-webpage-form"
+            >
+              <form>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Business Name
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        Keep it short. It is also your Webpage title.
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="business-name"
+                      name="title"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Describe your business
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        Your customers will see this message on webpage.
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="description"
+                      name="description"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Keywords
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        Some search keywords relating to your business.It will help people to find your business.
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="business-keywords"
+                      name="keywords"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Colour
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        The colour theme for your webpage. the default is plain gray-scale
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="field"
+                  >
+                    <div
+                      class="control"
+                    >
+                      <div
+                        class="select is-danger"
+                      >
+                        <select
+                          name="colour"
+                        >
+                          <option>
+                            Select Colour Theme
+                          </option>
+                          <option
+                            value="is-danger"
+                          >
+                            ❤️ Red
+                          </option>
+                          <option
+                            value="is-primary"
+                          >
+                            💚 Green
+                          </option>
+                          <option
+                            value="is-info"
+                          >
+                            💙 Blue
+                          </option>
+                          <option
+                            value="is-warning"
+                          >
+                            🧡 Orange
+                          </option>
+                          <option
+                            value="is-dark"
+                          >
+                            🖤 Black
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="control"
+                >
+                  <button
+                    class="button is-danger is-medium is-rounded"
+                    data-testid="create-webpage"
+                    disabled=""
+                    type="submit"
+                  >
+                    Save & Continue
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box"
+        >
+          <div
+            class="add-webpage-headline"
+          >
+            <h3
+              class="is-size-4"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-address-card-o"
+              />
+              Contact Info
+            </h3>
+          </div>
+          <div
+            class="add-webpage-content"
+          >
+            <div
+              class="add-webpage-form"
+            >
+              <form>
+                <div
+                  class="field-body"
+                >
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      State
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <div
+                        class="select is-fullwidth"
+                      >
+                        <select
+                          data-testid="business-state"
+                          name="state"
+                        >
+                          <option>
+                            Select State
+                          </option>
+                          <option
+                            value="Abia"
+                          >
+                            Abia
+                          </option>
+                          <option
+                            value="Adamawa"
+                          >
+                            Adamawa
+                          </option>
+                          <option
+                            value="AkwaIbom"
+                          >
+                            AkwaIbom
+                          </option>
+                          <option
+                            value="Anambra"
+                          >
+                            Anambra
+                          </option>
+                          <option
+                            value="Bauchi"
+                          >
+                            Bauchi
+                          </option>
+                          <option
+                            value="Bayelsa"
+                          >
+                            Bayelsa
+                          </option>
+                          <option
+                            value="Benue"
+                          >
+                            Benue
+                          </option>
+                          <option
+                            value="Borno"
+                          >
+                            Borno
+                          </option>
+                          <option
+                            value="CrossRiver"
+                          >
+                            CrossRiver
+                          </option>
+                          <option
+                            value="Delta"
+                          >
+                            Delta
+                          </option>
+                          <option
+                            value="Ebonyi"
+                          >
+                            Ebonyi
+                          </option>
+                          <option
+                            value="Edo"
+                          >
+                            Edo
+                          </option>
+                          <option
+                            value="Ekiti"
+                          >
+                            Ekiti
+                          </option>
+                          <option
+                            value="Enugu"
+                          >
+                            Enugu
+                          </option>
+                          <option
+                            value="Gombe"
+                          >
+                            Gombe
+                          </option>
+                          <option
+                            value="Imo"
+                          >
+                            Imo
+                          </option>
+                          <option
+                            value="Jigawa"
+                          >
+                            Jigawa
+                          </option>
+                          <option
+                            value="Kaduna"
+                          >
+                            Kaduna
+                          </option>
+                          <option
+                            value="Kano"
+                          >
+                            Kano
+                          </option>
+                          <option
+                            value="Katsina"
+                          >
+                            Katsina
+                          </option>
+                          <option
+                            value="Kebbi"
+                          >
+                            Kebbi
+                          </option>
+                          <option
+                            value="Kogi"
+                          >
+                            Kogi
+                          </option>
+                          <option
+                            value="Kwara"
+                          >
+                            Kwara
+                          </option>
+                          <option
+                            value="Lagos"
+                          >
+                            Lagos
+                          </option>
+                          <option
+                            value="Nasarawa"
+                          >
+                            Nasarawa
+                          </option>
+                          <option
+                            value="Niger"
+                          >
+                            Niger
+                          </option>
+                          <option
+                            value="Ogun"
+                          >
+                            Ogun
+                          </option>
+                          <option
+                            value="Ondo"
+                          >
+                            Ondo
+                          </option>
+                          <option
+                            value="Osun"
+                          >
+                            Osun
+                          </option>
+                          <option
+                            value="Oyo"
+                          >
+                            Oyo
+                          </option>
+                          <option
+                            value="Plateau"
+                          >
+                            Plateau
+                          </option>
+                          <option
+                            value="Rivers"
+                          >
+                            Rivers
+                          </option>
+                          <option
+                            value="Sokoto"
+                          >
+                            Sokoto
+                          </option>
+                          <option
+                            value="Taraba"
+                          >
+                            Taraba
+                          </option>
+                          <option
+                            value="Yobe"
+                          >
+                            Yobe
+                          </option>
+                          <option
+                            value="Zamfara"
+                          >
+                            Zamfara
+                          </option>
+                          <option
+                            value="FCT"
+                          >
+                            FCT
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Town
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <div
+                        class="select is-fullwidth"
+                      >
+                        <select
+                          data-testid="business-town"
+                          name="city"
+                        >
+                          <option>
+                            Select Town
+                          </option>
+                          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Address
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="business-address"
+                      name="address"
+                      placeholder="Eg. No 12 ABC street, Zik Estate"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field-body"
+                >
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Business Phone number
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-phone"
+                        name="phone"
+                        placeholder="08123456789"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Business Email
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-email"
+                        name="email"
+                        placeholder="abc@anywebsite.com"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Business Website
+                      <span
+                        class="has-text-grey-light"
+                      >
+                        (if available)
+                      </span>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="business-website"
+                        name="website"
+                        placeholder="https://www.yourwebsite.com"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="control"
+                >
+                  <button
+                    class="button is-danger is-medium is-rounded"
+                    data-testid="update-contact"
+                    disabled=""
+                    type="submit"
+                  >
+                    Save & Continue
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box"
+        >
+          <div
+            class="add-webpage-headline"
+          >
+            <h3
+              class="is-size-4"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-file-image-o"
+              />
+              Gallery
+            </h3>
+          </div>
+          <div
+            class="add-webpage-content"
+          >
+            <div>
+              <div
+                class="drop-area"
+              >
+                <div
+                  class="dropzone"
+                  tabindex="0"
+                >
+                  <input
+                    accept="image/*"
+                    autocomplete="off"
+                    multiple=""
+                    style="display: none;"
+                    tabindex="-1"
+                    type="file"
+                  />
+                  <p>
+                    Try dropping some pictures here, or click to select pictures to upload.
+                  </p>
+                </div>
+                <ul
+                  class="columns is-multiline "
+                />
+              </div>
+              <div
+                class="control"
+              >
+                <button
+                  class="button is-danger is-medium is-rounded"
+                  data-testid="save-featured-images"
+                  disabled=""
+                  type="submit"
+                >
+                  Save & Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box"
+        >
+          <div
+            class="add-webpage-headline"
+          >
+            <h3
+              class="is-size-4"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-money"
+              />
+              Offerings
+            </h3>
+          </div>
+          <div
+            class="add-webpage-content"
+          >
+            <div>
+              <div
+                class="margin-bottom-25"
+              >
+                <ul />
+              </div>
+              <div
+                class="columns card card-content margin-bottom-25"
+              >
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="image-upload-box"
+                  >
+                    <img
+                      alt=""
+                      class="offering-image"
+                      src="sample-02.jpg"
+                    />
+                    <div
+                      class="change-image-btn"
+                    >
+                      <div
+                        class="imageUpload"
+                        tabindex="0"
+                      >
+                        <span>
+                          <i
+                            class="fa fa-upload"
+                          />
+                           Upload Pic
+                        </span>
+                        <input
+                          accept="image/*"
+                          autocomplete="off"
+                          style="display: none;"
+                          tabindex="-1"
+                          type="file"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="column"
+                >
+                  <form>
+                    <div
+                      class="field"
+                    >
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="offering-name"
+                          name="title"
+                          placeholder="Name of item"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="offering-description"
+                          name="description"
+                          placeholder="Describe this item"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="field"
+                    >
+                      <div
+                        class="control"
+                      >
+                        <input
+                          class="input is-medium"
+                          data-testid="offering-price"
+                          name="price"
+                          placeholder="Price"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="control buttons are-medium"
+                    >
+                      <button
+                        class="button is-light"
+                        data-testid="add-offering"
+                        disabled=""
+                        type="submit"
+                      >
+                        Add Item
+                      </button>
+                      <button
+                        class="button"
+                        disabled=""
+                        type="button"
+                      >
+                        Reset
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div
+                class="control"
+              >
+                <button
+                  class="button is-medium is-danger is-rounded"
+                  data-testid="save-and-preview"
+                  type="submit"
+                >
+                  Save & Preview Webpage
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

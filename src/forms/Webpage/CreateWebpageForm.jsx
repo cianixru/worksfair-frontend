@@ -18,13 +18,21 @@ const CreateWebpageForm = ({
   validate,
   validationErrors,
   handleErrorReset,
+  webpage,
 }) => {
   return (
     <Form
       onSubmit={onSubmit}
       validate={validate}
+      initialValues={webpage}
       // eslint-disable-next-line react/jsx-no-bind
-      render={({ handleSubmit, pristine, invalid }) => {
+      render={({
+        handleSubmit,
+        pristine,
+        invalid,
+        submitSucceeded,
+        submitting,
+      }) => {
         return (
           <form onSubmit={handleSubmit}>
             <div className="field">
@@ -40,6 +48,7 @@ const CreateWebpageForm = ({
                   dataTestId="business-name"
                   validationErrors={validationErrors}
                   handleErrorReset={handleErrorReset}
+                  defaultValue={webpage && webpage.title}
                 />
               </div>
             </div>
@@ -57,6 +66,7 @@ const CreateWebpageForm = ({
                   dataTestId="description"
                   validationErrors={validationErrors}
                   handleErrorReset={handleErrorReset}
+                  defaultValue={webpage && webpage.description}
                 />
               </div>
             </div>
@@ -74,6 +84,7 @@ const CreateWebpageForm = ({
                   dataTestId="business-keywords"
                   validationErrors={validationErrors}
                   handleErrorReset={handleErrorReset}
+                  defaultValue={webpage && webpage.keywords}
                 />
               </div>
             </div>
@@ -85,7 +96,10 @@ const CreateWebpageForm = ({
               <div className="field">
                 <div className="control">
                   <div className="select is-danger">
-                    <Field name="colour" component="select">
+                    <Field
+                      name="colour"
+                      component="select"
+                    >
                       <option>Select Colour Theme</option>
                       <option value="is-danger">❤️ Red</option>
                       <option value="is-primary">💚 Green</option>
@@ -101,7 +115,7 @@ const CreateWebpageForm = ({
             <div className="control">
               <button
                 type="submit"
-                disabled={pristine || invalid}
+                disabled={pristine || invalid || submitSucceeded || submitting}
                 className="button is-danger is-medium is-rounded"
                 data-testid="create-webpage"
               >
@@ -120,6 +134,7 @@ CreateWebpageForm.propTypes = {
   validate: PropTypes.func,
   validationErrors: PropTypes.object,
   handleErrorReset: PropTypes.func,
+  webpage: PropTypes.object,
 };
 
 export default CreateWebpageForm;

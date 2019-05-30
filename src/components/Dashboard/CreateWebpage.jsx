@@ -84,6 +84,9 @@ class CreateWebpage extends Component {
       actions, history, webpage, user
     } = this.props;
     try {
+      if (!webpage.sub_domain_name) {
+        window.location.pathname = `/dashboard/${user.username}/webpages`;
+      }
       input.subDomainName = webpage.sub_domain_name;
       const response = await actions.updateWebpage(input);
       if (response.type === UPDATE_WEBPAGE_FAILED) {
@@ -112,6 +115,9 @@ class CreateWebpage extends Component {
     } = this.props;
     actions.isLoading();
     try {
+      if (!webpage.sub_domain_name) {
+        window.location.pathname = `/dashboard/${user.username}/webpages`;
+      }
       images.subDomainName = webpage.sub_domain_name;
       const response = await actions.updateWebpage(images);
       if (response.type === UPDATE_WEBPAGE_FAILED) {
@@ -172,6 +178,9 @@ class CreateWebpage extends Component {
       alert.error('You need to upload an image');
     }
     try {
+      if (!webpage.sub_domain_name) {
+        window.location.pathname = `/dashboard/${user.username}/webpages`;
+      }
       input.subDomainName = webpage.sub_domain_name;
 
       // Upload the image to cloudinary and get the response data

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 import CreateWebpage from '../containers/CreateWebpage';
 import ListWebpages from '../containers/ListWebpages';
+import UpdateWebpage from '../containers/UpdateWebpage';
 import { composeDashboardLayout } from '../layouts/index';
 
 const composeLayout = Component => composeDashboardLayout(Component);
@@ -46,6 +47,9 @@ class Dashboard extends React.Component {
                 exact
                 path="/dashboard/:username/webpages/new/offerings"
                 component={composeLayout(CreateWebpage)} />
+              <Route
+                path="/dashboard/:username/webpages/edit/:subDomainName"
+                component={composeLayout(UpdateWebpage)} />
               <Route
                 exact
                 path="/dashboard/:username/webpages"

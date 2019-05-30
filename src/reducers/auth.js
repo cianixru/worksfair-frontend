@@ -7,6 +7,7 @@ import {
 import auth from '../utils/auth';
 import alert from '../components/utils/alert';
 import formatMessages from '../utils/helpers';
+import { getWebpages } from '../actions/webpage';
 
 const manageAuth = new auth();
 
@@ -22,6 +23,7 @@ export default (state = initialState, action) => {
   case LOGOUT:
     return { ...state, currentUser: action.data };
   case GET_CURRENT_USER:
+    getWebpages(action.data.user.webpages);
     return { ...state, currentUser: action.data };
   case AUTHENTICATION_FAILED:
     alert.error(formatMessages(action.data));

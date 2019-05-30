@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ContactInfoForm from '../../../forms/Webpage/ContactInfoForm';
 
 const ContactInfo = ({
-  onSubmit, validationErrors, handleErrorReset,
+  onSubmit, validationErrors, handleErrorReset, webpage,
 }) => {
   return (
     <Fragment>
@@ -12,7 +12,8 @@ const ContactInfo = ({
         <ContactInfoForm
           onSubmit={onSubmit}
           validationErrors={validationErrors}
-          handleErrorReset={handleErrorReset} />
+          handleErrorReset={handleErrorReset}
+          webpage={webpage} />
       </div>
     </Fragment>
   );
@@ -23,6 +24,7 @@ ContactInfo.propTypes = {
   user: PropTypes.object,
   validationErrors: PropTypes.object,
   handleErrorReset: PropTypes.func,
+  webpage: PropTypes.object,
 };
 
 export default ContactInfo;

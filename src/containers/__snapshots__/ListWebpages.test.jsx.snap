@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListWebpages.jsx Should display the ListWebpages Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="dashboard-content"
+      >
+        <div
+          class="dashboard-titlebar"
+        >
+          <div
+            class="columns"
+          >
+            <div
+              class="column"
+            >
+              <h2>
+                How far, null!
+              </h2>
+            </div>
+            <div
+              class="column"
+            />
+            <nav
+              aria-label="breadcrumbs"
+              class="column breadcrumb"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dashboard/null/webpages"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <div
+            class="tabs is-boxed"
+          >
+            <ul>
+              <li
+                class="is-active"
+              >
+                <a
+                  href="/dashboard/undefined/webpages"
+                >
+                  Active Webpages (
+                  )
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                >
+                  Inactive Webpages
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <div
+                  class="message is-warning"
+                >
+                  <div
+                    class="message-body"
+                  >
+                    <p
+                      class="is-size-5 margin-bottom-25"
+                    >
+                      You have no active webpages
+                    </p>
+                    <a
+                      class="button is-link is-outlined"
+                      href="/dashboard/undefined/webpages/new/basic-info"
+                    >
+                      Create a Webpage
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="dashboard-content"
+    >
+      <div
+        class="dashboard-titlebar"
+      >
+        <div
+          class="columns"
+        >
+          <div
+            class="column"
+          >
+            <h2>
+              How far, null!
+            </h2>
+          </div>
+          <div
+            class="column"
+          />
+          <nav
+            aria-label="breadcrumbs"
+            class="column breadcrumb"
+          >
+            <ul>
+              <li>
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/null/webpages"
+                >
+                  Dashboard
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <div
+          class="tabs is-boxed"
+        >
+          <ul>
+            <li
+              class="is-active"
+            >
+              <a
+                href="/dashboard/undefined/webpages"
+              >
+                Active Webpages (
+                )
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+              >
+                Inactive Webpages
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <div
+                class="message is-warning"
+              >
+                <div
+                  class="message-body"
+                >
+                  <p
+                    class="is-size-5 margin-bottom-25"
+                  >
+                    You have no active webpages
+                  </p>
+                  <a
+                    class="button is-link is-outlined"
+                    href="/dashboard/undefined/webpages/new/basic-info"
+                  >
+                    Create a Webpage
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

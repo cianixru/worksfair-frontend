@@ -14,12 +14,13 @@ const Offerings = ({
   offeringsFormRef,
   selectedImage,
   handleSaveAndPreview,
+  webpage,
 }) => {
   return (
     <div>
       <div className="margin-bottom-25">
         <OfferingItems
-          offerings={offerings}
+          offerings={(webpage && webpage.offerings) || offerings}
         />
       </div>
       <div className="columns card card-content margin-bottom-25">
@@ -63,6 +64,7 @@ Offerings.propTypes = {
   offeringsFormRef: PropTypes.object,
   selectedImage: PropTypes.string,
   handleSaveAndPreview: PropTypes.func,
+  webpage: PropTypes.object,
 };
 
 export default Offerings;
