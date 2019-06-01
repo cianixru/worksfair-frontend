@@ -11,24 +11,26 @@ const OfferingItem = ({
       { offerings.length > 0
         && offerings.map(offering => (
           <li
-            className="columns box"
+            className="media box"
             key={offering.title}
           >
-            <div className="column is-4">
-              <img
-                src={offering.image}
-                alt=""
-                className="offering-image"
-              />
+            <div className="media-left">
+              <figure className="image is-180x180">
+                <img
+                  src={offering.image}
+                  alt=""
+                  className="offering-image"
+                />
+              </figure>
             </div>
-            <div className="column is-6">
-              <h4 className="subtitle is-5">
+            <div className="media-content">
+              <h4 className="title is-5">
                 {offering.title}
               </h4>
               <p>{offering.description}</p>
-            </div>
-            <div className="column is-2">
-              {addNaira(offering.price)}
+              <div className="">
+                {addNaira(offering.price)}
+              </div>
             </div>
           </li>
         ))
