@@ -85,7 +85,12 @@ class CreateWebpage extends Component {
     } = this.props;
     try {
       if (!webpage.sub_domain_name) {
-        window.location.pathname = `/dashboard/${user.username}/webpages`;
+        alert.error(
+          'An error occured. Don\'t worry you can continue from where you stopped'
+        );
+        setTimeout(() => {
+          window.location.pathname = `/dashboard/${user.username}/webpages`;
+        }, 4000);
       }
       input.subDomainName = webpage.sub_domain_name;
       const response = await actions.updateWebpage(input);
@@ -113,11 +118,7 @@ class CreateWebpage extends Component {
     const {
       actions, history, webpage, user
     } = this.props;
-    actions.isLoading();
     try {
-      if (!webpage.sub_domain_name) {
-        window.location.pathname = `/dashboard/${user.username}/webpages`;
-      }
       images.subDomainName = webpage.sub_domain_name;
       const response = await actions.updateWebpage(images);
       if (response.type === UPDATE_WEBPAGE_FAILED) {
@@ -132,8 +133,6 @@ class CreateWebpage extends Component {
       }
     } catch (error) {
       alert.error(error.message);
-    } finally {
-      actions.isComplete();
     }
   };
 
@@ -169,18 +168,24 @@ class CreateWebpage extends Component {
    * @param { object } input
    */
   submitOfferings = async (input) => {
+    const { imageArray, offerings } = this.state;
     const {
       actions, webpage,
     } = this.props;
+
+    if (!webpage.sub_domain_name) {
+      alert.error(
+        'An error occured. Don\'t worry you can continue from where you stopped'
+      );
+      setTimeout(() => {
+        window.location.pathname = `/dashboard/${user.username}/webpages`;
+      }, 4000);
+    }
     actions.isLoading();
-    const { imageArray, offerings } = this.state;
     if (!imageArray) {
       alert.error('You need to upload an image');
     }
     try {
-      if (!webpage.sub_domain_name) {
-        window.location.pathname = `/dashboard/${user.username}/webpages`;
-      }
       input.subDomainName = webpage.sub_domain_name;
 
       // Upload the image to cloudinary and get the response data
@@ -220,22 +225,50 @@ class CreateWebpage extends Component {
    * @param { object } input
    */
   handleSaveAndPreview = async () => {
-    const { webpage, actions } = this.props;
-    actions.isLoading();
+    const { webpage, actions, user } = this.props;
 
+    if (!webpage.sub_domain_name) {
+      alert.error(
+        'An error occured. Don\'t worry you can continue from where you stopped'
+      );
+      setTimeout(() => {
+        window.location.pathname = `/dashboard/${user.username}/webpages`;
+      }, 4000);
+    }
+
+    actions.isLoading();
     // Make app wait for 3 seconds to simulate running background process
     // good for user experience
     setTimeout(() => {
       actions.isComplete();
-      window.location.pathname = `webpage/${webpage.sub_domain_name
-        || 'naggy'}`;
+      window.location.pathname = `webpage/${webpage.sub_domain_name}`;
     }, 3000);
+  }
+
+  /**
+   * @description disables the Navlink conditionally
+   *
+   * @param { object } event DOM event
+   */
+  handleNavlinkClick = (event) => {
+    const { webpage } = this.props;
+
+    if (!webpage.sub_domain_name) {
+      event.preventDefault();
+    }
   }
 
   render() {
     const { validationErrors, offerings, selectedImage } = this.state;
 
-    const { user, username } = this.props;
+    const {
+      user, username, webpage, actions,
+    } = this.props;
+    const others = {
+      isComplete: actions.isComplete,
+      isLoading: actions.isLoading,
+      webpage,
+    };
     return (
       <div className="add-webpage-section">
         <div className="add-webpage-headline">
@@ -247,6 +280,7 @@ class CreateWebpage extends Component {
             <ul className="pagination-list">
               <li>
                 <NavLink
+                  onClick={this.handleNavlinkClick}
                   to={`/dashboard/${username}/webpages/new/basic-info`}
                   activeClassName="is-current"
                   className="pagination-link"
@@ -257,6 +291,7 @@ class CreateWebpage extends Component {
               </li>
               <li>
                 <NavLink
+                  onClick={this.handleNavlinkClick}
                   to={`/dashboard/${username}/webpages/new/contact-info`}
                   activeClassName="is-current"
                   className="pagination-link"
@@ -267,6 +302,7 @@ class CreateWebpage extends Component {
               </li>
               <li>
                 <NavLink
+                  onClick={this.handleNavlinkClick}
                   to={`/dashboard/${username}/webpages/new/gallery`}
                   className="pagination-link"
                   activeClassName="is-current"
@@ -278,6 +314,7 @@ class CreateWebpage extends Component {
               </li>
               <li>
                 <NavLink
+                  onClick={this.handleNavlinkClick}
                   to={`/dashboard/${username}/webpages/new/offerings`}
                   className="pagination-link"
                   activeClassName="is-current"
@@ -317,7 +354,9 @@ class CreateWebpage extends Component {
                   onSubmit={this.submitImages}
                   user={user}
                   validationErrors={validationErrors}
-                  handleErrorReset={this.handleErrorReset} />)}
+                  handleErrorReset={this.handleErrorReset}
+                  {...others}
+                />)}
               />
               <Route
                 exact

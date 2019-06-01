@@ -40,8 +40,10 @@ class CreateWebpage extends Component {
    */
   onSubmit = async (input) => {
     const {
-      actions, match
+      actions, match,
     } = this.props;
+
+    actions.isLoading();
     try {
       input.subDomainName = match.params.subDomainName;
       Object.keys(input).map((elem) => {
@@ -63,6 +65,8 @@ class CreateWebpage extends Component {
       }
     } catch (error) {
       alert.error(error.message);
+    } finally {
+      actions.isComplete();
     }
   }
 
@@ -88,6 +92,8 @@ class CreateWebpage extends Component {
     const {
       actions, match
     } = this.props;
+
+    actions.isLoading();
     try {
       images.subDomainName = match.params.subDomainName;
       const response = await actions.updateWebpage(images);
@@ -102,6 +108,8 @@ class CreateWebpage extends Component {
       }
     } catch (error) {
       alert.error(error.message);
+    } finally {
+      actions.isComplete();
     }
   };
 
@@ -140,11 +148,12 @@ class CreateWebpage extends Component {
     const {
       actions, match,
     } = this.props;
-    actions.isLoading();
     const { imageArray, offerings } = this.state;
     if (!imageArray) {
       alert.error('You need to upload an image');
     }
+
+    actions.isLoading();
     try {
       input.subDomainName = match.params.subDomainName;
 
@@ -185,15 +194,14 @@ class CreateWebpage extends Component {
    * @param { object } input
    */
   handleSaveAndPreview = async () => {
-    const { webpage, actions } = this.props;
+    const { match, actions } = this.props;
     actions.isLoading();
 
     // Make app wait for 3 seconds to simulate running background process
     // good for user experience
     setTimeout(() => {
       actions.isComplete();
-      window.location.pathname = `webpage/${webpage.sub_domain_name
-        || 'naggy'}`;
+      window.location.pathname = `webpage/${match.params.subDomainName}`;
     }, 3000);
   }
 

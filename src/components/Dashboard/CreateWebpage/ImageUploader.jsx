@@ -3,7 +3,7 @@ import Dropzone from 'react-dropzone';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-
+import alert from '../../utils/alert';
 import { CloudinaryImageUploader } from '../../utils/helpers';
 
 class ImageUploader extends Component {
@@ -79,7 +79,20 @@ class ImageUploader extends Component {
    */
   handleSubmit = async () => {
     const { uploadedImages, selectedImages, rawFiles } = this.state;
+    const {
+      isLoading, isComplete, webpage, user,
+    } = this.props;
 
+    if (!webpage.sub_domain_name) {
+      alert.error(
+        'An error occured. Don\'t worry you can continue from where you stopped'
+      );
+      setTimeout(() => {
+        window.location.pathname = `/dashboard/${user.username}/webpages`;
+      }, 4000);
+    }
+
+    isLoading();
     const imagesToUpload = [];
     selectedImages.map((imageBlob) => {
       return imagesToUpload.push(rawFiles[imageBlob]);
@@ -91,6 +104,7 @@ class ImageUploader extends Component {
         featured_images: uploadedImages,
       };
       this.props.onSubmit(images);
+      isComplete();
       console.log('Images have all being uploaded to cloudinary');
     });
   }
@@ -157,6 +171,10 @@ class ImageUploader extends Component {
 
 ImageUploader.propTypes = {
   onSubmit: PropTypes.func,
+  isLoading: PropTypes.func,
+  isComplete: PropTypes.func,
+  webpage: PropTypes.object,
+  user: PropTypes.object,
 };
 
 export default ImageUploader;

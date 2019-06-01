@@ -48,7 +48,7 @@ Object {
                 </li>
                 <li>
                   <a
-                    href="/dashboard/null/webpages/list"
+                    href="/dashboard/null/webpages"
                   >
                     <i
                       aria-hidden="true"
@@ -272,7 +272,7 @@ Object {
               </li>
               <li>
                 <a
-                  href="/dashboard/null/webpages/list"
+                  href="/dashboard/null/webpages"
                 >
                   <i
                     aria-hidden="true"

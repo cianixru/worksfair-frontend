@@ -151,7 +151,9 @@ class FeaturedImages extends Component {
    */
   handleSubmit = async () => {
     const { uploadedImages, selectedImages, rawFiles } = this.state;
+    const { isComplete, isLoading } = this.props;
 
+    isLoading();
     const imagesToUpload = [];
     selectedImages.map((imageBlob) => {
       return imagesToUpload.push(rawFiles[imageBlob]);
@@ -166,6 +168,7 @@ class FeaturedImages extends Component {
       this.setState({
         selectedImages: [],
       });
+      isComplete();
       console.log('Images have all being uploaded to cloudinary');
     });
   }

@@ -7,7 +7,7 @@ Object {
     <div>
       <div>
         <div
-          class="hero is-medium is-dark"
+          class="hero is-large is-dark"
         >
           <div
             class="hero-body"
@@ -16,12 +16,12 @@ Object {
               class="container"
             >
               <h1
-                class="title"
+                class="title is-1"
               >
                 Welcome to Happiness
               </h1>
               <h2
-                class="subtitle"
+                class="subtitle is-3"
               >
                 Happiness truly lives here. We just happy
               </h2>
@@ -175,159 +175,6 @@ Object {
                   Verified Business
                 </div>
               </div>
-              <div
-                class="webpage-sections"
-              >
-                <h3
-                  class="subtitle is-4 titles"
-                >
-                  Our Services/Products
-                </h3>
-                <div
-                  class="webpage-offerings"
-                >
-                  <ul>
-                    <li
-                      class="columns box"
-                    >
-                      <div
-                        class="column is-4"
-                      >
-                        <img
-                          alt=""
-                          class="offering-image"
-                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                        />
-                      </div>
-                      <div
-                        class="column is-6"
-                      >
-                        <h4
-                          class="subtitle is-5"
-                        >
-                          kamsi
-                        </h4>
-                        <p>
-                          passion, software, engineering, technology, worksfair
-                        </p>
-                      </div>
-                      <div
-                        class="column is-2"
-                      >
-                        <p
-                          class="price"
-                        >
-                          ₦ 
-                          FREE
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      class="columns box"
-                    >
-                      <div
-                        class="column is-4"
-                      >
-                        <img
-                          alt=""
-                          class="offering-image"
-                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                        />
-                      </div>
-                      <div
-                        class="column is-6"
-                      >
-                        <h4
-                          class="subtitle is-5"
-                        >
-                          Sissy
-                        </h4>
-                        <p>
-                          passion, software, engineering, technology, worksfair
-                        </p>
-                      </div>
-                      <div
-                        class="column is-2"
-                      >
-                        <p
-                          class="price"
-                        >
-                          ₦ 
-                          
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      class="columns box"
-                    >
-                      <div
-                        class="column is-4"
-                      >
-                        <img
-                          alt=""
-                          class="offering-image"
-                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                        />
-                      </div>
-                      <div
-                        class="column is-6"
-                      >
-                        <h4
-                          class="subtitle is-5"
-                        >
-                          Atty
-                        </h4>
-                        <p>
-                          worksfair will pay for you
-                        </p>
-                      </div>
-                      <div
-                        class="column is-2"
-                      >
-                        <p
-                          class="price"
-                        >
-                          ₦ 
-                          FREE
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      class="columns box"
-                    >
-                      <div
-                        class="column is-4"
-                      >
-                        <img
-                          alt=""
-                          class="offering-image"
-                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                        />
-                      </div>
-                      <div
-                        class="column is-6"
-                      >
-                        <h4
-                          class="subtitle is-5"
-                        >
-                          Cheesy
-                        </h4>
-                        <p />
-                      </div>
-                      <div
-                        class="column is-2"
-                      >
-                        <p
-                          class="price"
-                        >
-                          ₦ 
-                          
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
             <div
               class="column is-one-quarter"
@@ -378,6 +225,221 @@ Object {
             </div>
           </div>
         </div>
+        <div
+          class="offering-sections"
+          style="background-image: url(gray-marble-abstract.jpg); background-repeat: no-repeat; background-size: cover;"
+        >
+          <div
+            class="section-content box has-background-white-ter"
+          >
+            <h3
+              class="title is-4 titles has-text-grey"
+            >
+              Our Services/Products
+            </h3>
+            <div
+              class="webpage-offerings"
+            >
+              <ul
+                class="columns"
+              >
+                <div
+                  class="column is-6"
+                >
+                  <li
+                    class="box"
+                  >
+                    <div
+                      class="columns is-desktop"
+                    >
+                      <div
+                        class="column"
+                      >
+                        <figure
+                          class="image is-180x180"
+                        >
+                          <img
+                            alt=""
+                            class="offering-image"
+                            src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                          />
+                        </figure>
+                      </div>
+                      <div
+                        class="column"
+                      >
+                        <h4
+                          class="title is-5"
+                        >
+                          kamsi
+                        </h4>
+                        <p>
+                          passion, software, engineering, technology, worksfair
+                        </p>
+                        <div
+                          class="tag is-dark is-large"
+                        >
+                          <p
+                            class="price"
+                          >
+                            ₦ 
+                            FREE
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="column is-6"
+                >
+                  <li
+                    class="box"
+                  >
+                    <div
+                      class="columns is-desktop"
+                    >
+                      <div
+                        class="column"
+                      >
+                        <figure
+                          class="image is-180x180"
+                        >
+                          <img
+                            alt=""
+                            class="offering-image"
+                            src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                          />
+                        </figure>
+                      </div>
+                      <div
+                        class="column"
+                      >
+                        <h4
+                          class="title is-5"
+                        >
+                          Sissy
+                        </h4>
+                        <p>
+                          passion, software, engineering, technology, worksfair
+                        </p>
+                        <div
+                          class="tag is-dark is-large"
+                        >
+                          <p
+                            class="price"
+                          >
+                            ₦ 
+                            
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+              </ul>
+              <ul
+                class="columns"
+              >
+                <div
+                  class="column is-6"
+                >
+                  <li
+                    class="box"
+                  >
+                    <div
+                      class="columns is-desktop"
+                    >
+                      <div
+                        class="column"
+                      >
+                        <figure
+                          class="image is-180x180"
+                        >
+                          <img
+                            alt=""
+                            class="offering-image"
+                            src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                          />
+                        </figure>
+                      </div>
+                      <div
+                        class="column"
+                      >
+                        <h4
+                          class="title is-5"
+                        >
+                          Atty
+                        </h4>
+                        <p>
+                          worksfair will pay for you
+                        </p>
+                        <div
+                          class="tag is-dark is-large"
+                        >
+                          <p
+                            class="price"
+                          >
+                            ₦ 
+                            FREE
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="column is-6"
+                >
+                  <li
+                    class="box"
+                  >
+                    <div
+                      class="columns is-desktop"
+                    >
+                      <div
+                        class="column"
+                      >
+                        <figure
+                          class="image is-180x180"
+                        >
+                          <img
+                            alt=""
+                            class="offering-image"
+                            src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                          />
+                        </figure>
+                      </div>
+                      <div
+                        class="column"
+                      >
+                        <h4
+                          class="title is-5"
+                        >
+                          Cheesy
+                        </h4>
+                        <p />
+                        <div
+                          class="tag is-dark is-large"
+                        >
+                          <p
+                            class="price"
+                          >
+                            ₦ 
+                            
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+              </ul>
+              <ul
+                class="columns"
+              />
+            </div>
+          </div>
+        </div>
         <footer
           class="columns footer has-text-centered"
         >
@@ -418,7 +480,7 @@ Object {
   "container": <div>
     <div>
       <div
-        class="hero is-medium is-dark"
+        class="hero is-large is-dark"
       >
         <div
           class="hero-body"
@@ -427,12 +489,12 @@ Object {
             class="container"
           >
             <h1
-              class="title"
+              class="title is-1"
             >
               Welcome to Happiness
             </h1>
             <h2
-              class="subtitle"
+              class="subtitle is-3"
             >
               Happiness truly lives here. We just happy
             </h2>
@@ -586,159 +648,6 @@ Object {
                 Verified Business
               </div>
             </div>
-            <div
-              class="webpage-sections"
-            >
-              <h3
-                class="subtitle is-4 titles"
-              >
-                Our Services/Products
-              </h3>
-              <div
-                class="webpage-offerings"
-              >
-                <ul>
-                  <li
-                    class="columns box"
-                  >
-                    <div
-                      class="column is-4"
-                    >
-                      <img
-                        alt=""
-                        class="offering-image"
-                        src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                      />
-                    </div>
-                    <div
-                      class="column is-6"
-                    >
-                      <h4
-                        class="subtitle is-5"
-                      >
-                        kamsi
-                      </h4>
-                      <p>
-                        passion, software, engineering, technology, worksfair
-                      </p>
-                    </div>
-                    <div
-                      class="column is-2"
-                    >
-                      <p
-                        class="price"
-                      >
-                        ₦ 
-                        FREE
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    class="columns box"
-                  >
-                    <div
-                      class="column is-4"
-                    >
-                      <img
-                        alt=""
-                        class="offering-image"
-                        src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                      />
-                    </div>
-                    <div
-                      class="column is-6"
-                    >
-                      <h4
-                        class="subtitle is-5"
-                      >
-                        Sissy
-                      </h4>
-                      <p>
-                        passion, software, engineering, technology, worksfair
-                      </p>
-                    </div>
-                    <div
-                      class="column is-2"
-                    >
-                      <p
-                        class="price"
-                      >
-                        ₦ 
-                        
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    class="columns box"
-                  >
-                    <div
-                      class="column is-4"
-                    >
-                      <img
-                        alt=""
-                        class="offering-image"
-                        src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                      />
-                    </div>
-                    <div
-                      class="column is-6"
-                    >
-                      <h4
-                        class="subtitle is-5"
-                      >
-                        Atty
-                      </h4>
-                      <p>
-                        worksfair will pay for you
-                      </p>
-                    </div>
-                    <div
-                      class="column is-2"
-                    >
-                      <p
-                        class="price"
-                      >
-                        ₦ 
-                        FREE
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    class="columns box"
-                  >
-                    <div
-                      class="column is-4"
-                    >
-                      <img
-                        alt=""
-                        class="offering-image"
-                        src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
-                      />
-                    </div>
-                    <div
-                      class="column is-6"
-                    >
-                      <h4
-                        class="subtitle is-5"
-                      >
-                        Cheesy
-                      </h4>
-                      <p />
-                    </div>
-                    <div
-                      class="column is-2"
-                    >
-                      <p
-                        class="price"
-                      >
-                        ₦ 
-                        
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div
             class="column is-one-quarter"
@@ -786,6 +695,221 @@ Object {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="offering-sections"
+        style="background-image: url(gray-marble-abstract.jpg); background-repeat: no-repeat; background-size: cover;"
+      >
+        <div
+          class="section-content box has-background-white-ter"
+        >
+          <h3
+            class="title is-4 titles has-text-grey"
+          >
+            Our Services/Products
+          </h3>
+          <div
+            class="webpage-offerings"
+          >
+            <ul
+              class="columns"
+            >
+              <div
+                class="column is-6"
+              >
+                <li
+                  class="box"
+                >
+                  <div
+                    class="columns is-desktop"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <figure
+                        class="image is-180x180"
+                      >
+                        <img
+                          alt=""
+                          class="offering-image"
+                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column"
+                    >
+                      <h4
+                        class="title is-5"
+                      >
+                        kamsi
+                      </h4>
+                      <p>
+                        passion, software, engineering, technology, worksfair
+                      </p>
+                      <div
+                        class="tag is-dark is-large"
+                      >
+                        <p
+                          class="price"
+                        >
+                          ₦ 
+                          FREE
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div
+                class="column is-6"
+              >
+                <li
+                  class="box"
+                >
+                  <div
+                    class="columns is-desktop"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <figure
+                        class="image is-180x180"
+                      >
+                        <img
+                          alt=""
+                          class="offering-image"
+                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column"
+                    >
+                      <h4
+                        class="title is-5"
+                      >
+                        Sissy
+                      </h4>
+                      <p>
+                        passion, software, engineering, technology, worksfair
+                      </p>
+                      <div
+                        class="tag is-dark is-large"
+                      >
+                        <p
+                          class="price"
+                        >
+                          ₦ 
+                          
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </ul>
+            <ul
+              class="columns"
+            >
+              <div
+                class="column is-6"
+              >
+                <li
+                  class="box"
+                >
+                  <div
+                    class="columns is-desktop"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <figure
+                        class="image is-180x180"
+                      >
+                        <img
+                          alt=""
+                          class="offering-image"
+                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column"
+                    >
+                      <h4
+                        class="title is-5"
+                      >
+                        Atty
+                      </h4>
+                      <p>
+                        worksfair will pay for you
+                      </p>
+                      <div
+                        class="tag is-dark is-large"
+                      >
+                        <p
+                          class="price"
+                        >
+                          ₦ 
+                          FREE
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div
+                class="column is-6"
+              >
+                <li
+                  class="box"
+                >
+                  <div
+                    class="columns is-desktop"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <figure
+                        class="image is-180x180"
+                      >
+                        <img
+                          alt=""
+                          class="offering-image"
+                          src="https://res.cloudinary.com/worksfair/image/upload/v1557767623/dev/Andela-VI_gfqg0d.jpg"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column"
+                    >
+                      <h4
+                        class="title is-5"
+                      >
+                        Cheesy
+                      </h4>
+                      <p />
+                      <div
+                        class="tag is-dark is-large"
+                      >
+                        <p
+                          class="price"
+                        >
+                          ₦ 
+                          
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </ul>
+            <ul
+              class="columns"
+            />
           </div>
         </div>
       </div>

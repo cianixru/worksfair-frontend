@@ -47,7 +47,7 @@ const Offerings = ({
           data-testid="save-and-preview"
           onClick={handleSaveAndPreview}
         >
-          Save & Preview Webpage
+          Preview Webpage
         </button>
       </div>
     </div>
