@@ -56,7 +56,7 @@ Object {
         </div>
         <div>
           <div
-            class="box"
+            class="box has-background-light"
           >
             <div
               class="add-webpage-headline"
@@ -259,7 +259,7 @@ Object {
             </div>
           </div>
           <div
-            class="box"
+            class="box has-background-light"
           >
             <div
               class="add-webpage-headline"
@@ -619,7 +619,7 @@ Object {
             </div>
           </div>
           <div
-            class="box"
+            class="box has-background-light"
           >
             <div
               class="add-webpage-headline"
@@ -677,7 +677,7 @@ Object {
             </div>
           </div>
           <div
-            class="box"
+            class="box has-background-light"
           >
             <div
               class="add-webpage-headline"
@@ -702,7 +702,7 @@ Object {
                   <ul />
                 </div>
                 <div
-                  class="columns card card-content margin-bottom-25"
+                  class="columns box margin-bottom-25"
                 >
                   <div
                     class="column is-one-third"
@@ -804,7 +804,6 @@ Object {
                         </button>
                         <button
                           class="button"
-                          disabled=""
                           type="button"
                         >
                           Reset
@@ -821,7 +820,7 @@ Object {
                     data-testid="save-and-preview"
                     type="submit"
                   >
-                    Save & Preview Webpage
+                    Preview Webpage
                   </button>
                 </div>
               </div>
@@ -883,7 +882,7 @@ Object {
       </div>
       <div>
         <div
-          class="box"
+          class="box has-background-light"
         >
           <div
             class="add-webpage-headline"
@@ -1086,7 +1085,7 @@ Object {
           </div>
         </div>
         <div
-          class="box"
+          class="box has-background-light"
         >
           <div
             class="add-webpage-headline"
@@ -1446,7 +1445,7 @@ Object {
           </div>
         </div>
         <div
-          class="box"
+          class="box has-background-light"
         >
           <div
             class="add-webpage-headline"
@@ -1504,7 +1503,7 @@ Object {
           </div>
         </div>
         <div
-          class="box"
+          class="box has-background-light"
         >
           <div
             class="add-webpage-headline"
@@ -1529,7 +1528,7 @@ Object {
                 <ul />
               </div>
               <div
-                class="columns card card-content margin-bottom-25"
+                class="columns box margin-bottom-25"
               >
                 <div
                   class="column is-one-third"
@@ -1631,7 +1630,6 @@ Object {
                       </button>
                       <button
                         class="button"
-                        disabled=""
                         type="button"
                       >
                         Reset
@@ -1648,7 +1646,7 @@ Object {
                   data-testid="save-and-preview"
                   type="submit"
                 >
-                  Save & Preview Webpage
+                  Preview Webpage
                 </button>
               </div>
             </div>

@@ -1,3 +1,9 @@
+import { colourConstants } from './constants';
+
+const {
+  black, blue, green, red, orange,
+} = colourConstants;
+
 /**
  * @description formats the error response messages
  * @param { object } data
@@ -70,11 +76,11 @@ export const states = {
  */
 export const backgroundColourHelper = (colour) => {
   const colours = {
-    'is-primary': 'has-background-primary',
-    'is-info': 'has-background-info',
-    'is-warning': 'has-background-warning',
-    'is-danger': 'has-background-danger',
-    'is-dark': 'has-background-dark',
+    [green]: 'has-background-primary',
+    [blue]: 'has-background-info',
+    [orange]: 'has-background-warning',
+    [red]: 'has-background-danger',
+    [black]: 'has-background-dark',
   };
   const output = colour ? colours[colour] : 'has-background-link';
   return output;
@@ -89,11 +95,11 @@ export const backgroundColourHelper = (colour) => {
  */
 export const textColourHelper = (colour) => {
   const colours = {
-    'is-primary': 'has-text-primary',
-    'is-info': 'has-text-info',
-    'is-warning': 'has-text-warning',
-    'is-danger': 'has-text-danger',
-    'is-dark': 'has-text-dark',
+    [green]: 'has-text-primary',
+    [blue]: 'has-text-info',
+    [orange]: 'has-text-warning',
+    [red]: 'has-text-danger',
+    [black]: 'has-text-dark',
   };
   const output = colour ? colours[colour] : 'has-text-grey';
   return output;

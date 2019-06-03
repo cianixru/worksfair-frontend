@@ -21,7 +21,7 @@ const DashboardLayout = ({ Component }) => {
       },
       {
         text: 'Your Webpages',
-        to: `/dashboard/${username}/webpages/list`,
+        to: `/dashboard/${username}/webpages`,
         icon: 'fa fa-th-list',
       },
     ],

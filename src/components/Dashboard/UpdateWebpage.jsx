@@ -10,21 +10,40 @@ import ContactInfo from './CreateWebpage/ContactInfo';
 import {
   updateWebpage,
   createWebpageOffering,
+  updateOffering,
+  deleteOffering,
+  UPDATE_OFFERING_FAILED,
   UPDATE_WEBPAGE_FAILED,
   CREATE_OFFERING_FAILED,
+  DELETE_OFFERING_FAILED,
 } from '../../actions/webpage';
 import alert from '../utils/alert';
 import FeaturedImages from './UpdateWebpage/FeaturedImages';
 import Offerings from './CreateWebpage/Offerings';
-import { CloudinaryImageUploader } from '../utils/helpers';
+import {
+  cloudinaryImageUploader,
+  cloudinaryImageRemover,
+} from '../utils/helpers';
 import { isLoading, isComplete } from '../../actions/loader';
 
-class CreateWebpage extends Component {
+class UpdateWebpage extends Component {
+  static propTypes = {
+    links: PropTypes.object,
+    actions: PropTypes.object,
+    user: PropTypes.object,
+    history: PropTypes.object,
+    webpage: PropTypes.object,
+    match: PropTypes.object,
+    username: PropTypes.string,
+  }
+
   state = {
     validationErrors: {
       title: [],
       description: [],
       keywords: [],
+      price: [],
+      image: [],
     },
     imageArray: null,
     uploadedImage: null,
@@ -40,8 +59,10 @@ class CreateWebpage extends Component {
    */
   onSubmit = async (input) => {
     const {
-      actions, match
+      actions, match,
     } = this.props;
+
+    actions.isLoading();
     try {
       input.subDomainName = match.params.subDomainName;
       Object.keys(input).map((elem) => {
@@ -63,6 +84,8 @@ class CreateWebpage extends Component {
       }
     } catch (error) {
       alert.error(error.message);
+    } finally {
+      actions.isComplete();
     }
   }
 
@@ -88,6 +111,8 @@ class CreateWebpage extends Component {
     const {
       actions, match
     } = this.props;
+
+    actions.isLoading();
     try {
       images.subDomainName = match.params.subDomainName;
       const response = await actions.updateWebpage(images);
@@ -102,6 +127,8 @@ class CreateWebpage extends Component {
       }
     } catch (error) {
       alert.error(error.message);
+    } finally {
+      actions.isComplete();
     }
   };
 
@@ -140,16 +167,17 @@ class CreateWebpage extends Component {
     const {
       actions, match,
     } = this.props;
-    actions.isLoading();
     const { imageArray, offerings } = this.state;
     if (!imageArray) {
       alert.error('You need to upload an image');
     }
+
+    actions.isLoading();
     try {
       input.subDomainName = match.params.subDomainName;
 
       // Upload the image to cloudinary and get the response data
-      const imageData = await CloudinaryImageUploader(imageArray[0]);
+      const imageData = await cloudinaryImageUploader(imageArray[0]);
       input.image = imageData.data.secure_url;
 
       // Send the input and the image URL from cloudinary to the DB
@@ -163,7 +191,7 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         offerings.push(response.data);
-        alert.success('Successful. Go ahead and preview your webpage!');
+        alert.success('Successful! Go ahead and preview your webpage.');
         this.setState({
           offerings,
         });
@@ -185,16 +213,85 @@ class CreateWebpage extends Component {
    * @param { object } input
    */
   handleSaveAndPreview = async () => {
-    const { webpage, actions } = this.props;
+    const { match, actions } = this.props;
     actions.isLoading();
 
     // Make app wait for 3 seconds to simulate running background process
     // good for user experience
     setTimeout(() => {
       actions.isComplete();
-      window.location.pathname = `webpage/${webpage.sub_domain_name
-        || 'naggy'}`;
+      window.location.pathname = `webpage/${match.params.subDomainName}`;
     }, 3000);
+  }
+
+  /**
+   * @description handles submit action when the save button is clicked
+   * @param { object } input
+   */
+  onUpdateOffering = async (input) => {
+    const {
+      actions, match,
+    } = this.props;
+    const { imageArray } = this.state;
+
+    actions.isLoading();
+    try {
+      input.subDomainName = match.params.subDomainName;
+
+      // Upload the image to cloudinary and get the response data
+      if (imageArray && imageArray.length > 0) {
+        const imageData = await cloudinaryImageUploader(imageArray[0]);
+        input.image = imageData.data.secure_url;
+      }
+
+      // Send the input and the image URL from cloudinary to the DB
+      const response = await actions.updateOffering(input);
+      if (response.type === UPDATE_OFFERING_FAILED) {
+        const { data } = response.response;
+        this.setState({
+          validationErrors: data,
+        });
+        alert.error('Request Failed. Check for more details');
+      } else {
+        alert.success('Successfully updated!');
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      actions.isComplete();
+      window.location.reload();
+    }
+  }
+
+  /**
+   * @description handles submit action when the save button is clicked
+   * @param { object } input
+   */
+  onDeleteOffering = async (input) => {
+    const {
+      actions, match,
+    } = this.props;
+
+    actions.isLoading();
+    try {
+      await cloudinaryImageRemover(input.image);
+      input.subDomainName = match.params.subDomainName;
+
+      // Send the input and the image URL from cloudinary to the DB
+      const response = await actions.deleteOffering(input);
+      if (response.type === DELETE_OFFERING_FAILED) {
+        const { data } = response.response;
+
+        alert.error(`Request Failed. ${data}`);
+      } else {
+        alert.success('Successfully deleted!');
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      actions.isComplete();
+      window.location.reload();
+    }
   }
 
   render() {
@@ -209,7 +306,7 @@ class CreateWebpage extends Component {
 
     return (
       <div>
-        <div className="box">
+        <div className="box has-background-light">
           <div className="add-webpage-headline">
             <h3 className="is-size-4">
               <i className="fa fa-globe" aria-hidden="true" />
@@ -226,7 +323,7 @@ class CreateWebpage extends Component {
             />
           </div>
         </div>
-        <div className="box">
+        <div className="box has-background-light">
           <div className="add-webpage-headline">
             <h3 className="is-size-4">
               <i className="fa fa-address-card-o" aria-hidden="true" />
@@ -243,7 +340,7 @@ class CreateWebpage extends Component {
             />
           </div>
         </div>
-        <div className="box">
+        <div className="box has-background-light">
           <div className="add-webpage-headline">
             <h3 className="is-size-4">
               <i className="fa fa-file-image-o" aria-hidden="true" />
@@ -262,7 +359,7 @@ class CreateWebpage extends Component {
             />
           </div>
         </div>
-        <div className="box">
+        <div className="box has-background-light">
           <div className="add-webpage-headline">
             <h3 className="is-size-4">
               <i className="fa fa-money" aria-hidden="true" />
@@ -282,6 +379,8 @@ class CreateWebpage extends Component {
               selectedImage={selectedImage}
               handleSaveAndPreview={this.handleSaveAndPreview}
               webpage={currentWebpage}
+              onUpdateOffering={this.onUpdateOffering}
+              handleDelete={this.onDeleteOffering}
             />
           </div>
         </div>
@@ -289,16 +388,6 @@ class CreateWebpage extends Component {
     );
   }
 }
-
-CreateWebpage.propTypes = {
-  links: PropTypes.object,
-  actions: PropTypes.object,
-  user: PropTypes.object,
-  history: PropTypes.object,
-  webpage: PropTypes.object,
-  match: PropTypes.object,
-  username: PropTypes.string,
-};
 
 const mapStateToProps = ({ auth: { currentUser } }) => ({
   user: currentUser.user,
@@ -309,6 +398,8 @@ const mapDispatchToProps = dispatch => ({
     {
       updateWebpage,
       createWebpageOffering,
+      updateOffering,
+      deleteOffering,
       isLoading,
       isComplete,
     },
@@ -319,4 +410,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
-)(CreateWebpage));
+)(UpdateWebpage));

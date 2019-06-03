@@ -15,15 +15,24 @@ const Offerings = ({
   selectedImage,
   handleSaveAndPreview,
   webpage,
+  onUpdateOffering,
+  handleDelete,
 }) => {
   return (
     <div>
       <div className="margin-bottom-25">
         <OfferingItems
           offerings={(webpage && webpage.offerings) || offerings}
+          validationErrors={validationErrors}
+          handleErrorReset={handleErrorReset}
+          handleOfferingImageSelection={handleOfferingImageSelection}
+          selectedImage={selectedImage}
+          onSubmit={onUpdateOffering}
+          colour={webpage && webpage.colour}
+          handleDelete={handleDelete}
         />
       </div>
-      <div className="columns card card-content margin-bottom-25">
+      <div className="columns box margin-bottom-25">
         <div className="column is-one-third">
           <ImageUpload
             handleOfferingImageSelection={handleOfferingImageSelection}
@@ -47,7 +56,7 @@ const Offerings = ({
           data-testid="save-and-preview"
           onClick={handleSaveAndPreview}
         >
-          Save & Preview Webpage
+          Preview Webpage
         </button>
       </div>
     </div>
@@ -56,6 +65,7 @@ const Offerings = ({
 
 Offerings.propTypes = {
   onSubmit: PropTypes.func,
+  onUpdateOffering: PropTypes.func,
   user: PropTypes.object,
   validationErrors: PropTypes.object,
   handleErrorReset: PropTypes.func,
@@ -64,6 +74,7 @@ Offerings.propTypes = {
   offeringsFormRef: PropTypes.object,
   selectedImage: PropTypes.string,
   handleSaveAndPreview: PropTypes.func,
+  handleDelete: PropTypes.func,
   webpage: PropTypes.object,
 };
 

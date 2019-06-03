@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
-import sha1 from 'sha1';
 import PropTypes from 'prop-types';
 
 import {
-  CloudinaryImageUploader,
-  extractCloudID,
+  cloudinaryImageUploader,
+  cloudinaryImageRemover,
 } from '../../utils/helpers';
 
-const {
-  REACT_APP_CLOUDINARY_API_KEY,
-  REACT_APP_CLOUDINARY_PRESET_NAME,
-  REACT_APP_CLOUDINARY_DELETE_URL,
-  REACT_APP_CLOUDINARY_AUTHORIZATION,
-} = process.env;
 class FeaturedImages extends Component {
   state={
     existingImages: (this.props.webpage
@@ -58,7 +51,7 @@ class FeaturedImages extends Component {
   handleCloudinaryResponse = async (images) => {
     const { uploadedImages } = this.state;
     const uploads = images.map((image) => {
-      return CloudinaryImageUploader(image)
+      return cloudinaryImageUploader(image)
         .then((imageData) => {
           uploadedImages.push(imageData.data.secure_url);
           this.setState({
@@ -98,31 +91,7 @@ class FeaturedImages extends Component {
   handleRemoveImagefromCloud = imageCloudURL => () => {
     this.props.isLoading();
     try {
-      const imagePublicID = extractCloudID(imageCloudURL);
-      // our formdata
-      const timestamp = Date.now();
-      const signature = sha1(`public_id=${imagePublicID}&timestamp=${
-        timestamp.toString()}${REACT_APP_CLOUDINARY_AUTHORIZATION}`);
-
-      const formData = new FormData();
-      formData.append('public_id', imagePublicID);
-      formData.append(
-        'api_key',
-        REACT_APP_CLOUDINARY_API_KEY
-      );
-      formData.append(
-        'upload_preset',
-        REACT_APP_CLOUDINARY_PRESET_NAME
-      );
-      formData.append('timestamp', timestamp);
-      formData.append('signature', signature);
-
-      return axios({
-        method: 'post',
-        url: REACT_APP_CLOUDINARY_DELETE_URL,
-        data: formData,
-        config: { headers: { 'Content-Type': 'multipart/form-data' } }
-      })
+      cloudinaryImageRemover(imageCloudURL)
         .then((response) => {
           if (response.data.result === 'ok') {
             const { uploadedImages } = this.state;
@@ -151,7 +120,9 @@ class FeaturedImages extends Component {
    */
   handleSubmit = async () => {
     const { uploadedImages, selectedImages, rawFiles } = this.state;
+    const { isComplete, isLoading } = this.props;
 
+    isLoading();
     const imagesToUpload = [];
     selectedImages.map((imageBlob) => {
       return imagesToUpload.push(rawFiles[imageBlob]);
@@ -166,6 +137,7 @@ class FeaturedImages extends Component {
       this.setState({
         selectedImages: [],
       });
+      isComplete();
       console.log('Images have all being uploaded to cloudinary');
     });
   }

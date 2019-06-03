@@ -17,17 +17,22 @@ const OfferingsForm = ({
   validationErrors,
   handleErrorReset,
   offeringsFormRef,
+  offering,
+  handleEditToggle,
 }) => {
   return (
     <Form
       onSubmit={onSubmit}
       validate={validate}
+      initialValues={offering && offering}
       // eslint-disable-next-line react/jsx-no-bind
       render={({
         handleSubmit, form, pristine, submitting, invalid
       }) => {
         return (
-          <form onSubmit={handleSubmit} ref={offeringsFormRef} >
+          <form
+            onSubmit={handleSubmit}
+            ref={offeringsFormRef && offeringsFormRef} >
             <div className="field">
               <div className="control">
                 <WebpageText
@@ -77,15 +82,14 @@ const OfferingsForm = ({
                 className="button is-light"
                 data-testid="add-offering"
               >
-                Add Item
+                { handleEditToggle ? 'Save' : 'Add Item' }
               </button>
               <button
                 type="button"
-                onClick={form.reset}
+                onClick={handleEditToggle || form.reset}
                 className="button"
-                disabled={submitting || pristine}
               >
-                Reset
+                { handleEditToggle ? 'Cancel' : 'Reset' }
               </button>
             </div>
           </form>
@@ -100,7 +104,9 @@ OfferingsForm.propTypes = {
   validate: PropTypes.func,
   validationErrors: PropTypes.object,
   handleErrorReset: PropTypes.func,
+  handleEditToggle: PropTypes.func,
   offeringsFormRef: PropTypes.object,
+  offering: PropTypes.object,
 };
 
 export default OfferingsForm;

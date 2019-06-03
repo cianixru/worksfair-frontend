@@ -16,7 +16,14 @@ import {
   CREATE_OFFERING_FAILED,
   NEW_OFFERING,
   createWebpageOffering,
+  UPDATED_OFFERING,
+  updateOffering,
+  UPDATE_OFFERING_FAILED,
+  deleteOffering,
+  DELETE_OFFERING,
+  DELETE_OFFERING_FAILED,
 } from './webpage';
+import { offering } from '../utils/test-utils/mockData';
 
 // eslint-disable-next-line import/prefer-default-export
 export const webpage = {
@@ -159,13 +166,74 @@ describe('Create Offering action', () => {
         });
     });
 
-  test('should dispatch error to the store after create webpage fail', () => {
+  test('should dispatch error to the store after create offering fail', () => {
     mock.onPost('/webpages/ideosynergy/offerings/').reply(400, {
       type: CREATE_OFFERING_FAILED,
       message: 'Request failed with status code 400',
     });
     const expectedActions = [{
       type: CREATE_OFFERING_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(createWebpageOffering({}))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Update Offering action', () => {
+  test('should dispatch the credentials to the store after updateOffering',
+    () => {
+      mock.onPatch('/webpages/ideosynergy/offerings/1').reply(200, offering);
+      const expectedActions = [{
+        type: UPDATED_OFFERING,
+        data: {
+          ...offering,
+        }
+      }];
+      return store.dispatch(updateOffering(offering))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after update offering fail', () => {
+    mock.onPatch('/webpages/ideosynergy/offerings/1').reply(400, {
+      type: UPDATE_OFFERING_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: UPDATE_OFFERING_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(createWebpageOffering({}))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Delete Offering action', () => {
+  test('should dispatch the credentials to the store after deleteOffering',
+    () => {
+      mock.onDelete('/webpages/ideosynergy/offerings/1').reply(204, null);
+      const expectedActions = [{
+        type: DELETE_OFFERING,
+      }];
+      return store.dispatch(deleteOffering(offering))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after delete webpage fail', () => {
+    mock.onDelete('/webpages/ideosynergy/offerings/1').reply(400, {
+      type: DELETE_OFFERING_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: DELETE_OFFERING_FAILED,
       message: 'Request failed with status code 400',
     }];
     return store.dispatch(createWebpageOffering({}))

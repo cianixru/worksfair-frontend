@@ -7,6 +7,7 @@ import sampleImage from '../../assets/sample-02.jpg';
 const ImageUpload = ({
   selectedImage,
   handleOfferingImageSelection,
+  offering,
 }) => {
   /**
    * @description Handles the selection of an image
@@ -20,7 +21,7 @@ const ImageUpload = ({
   return (
     <div className="image-upload-box">
       <img
-        src={selectedImage || sampleImage}
+        src={selectedImage || (offering && offering.image) || sampleImage}
         alt=""
         className="offering-image" />
       <div className="change-image-btn">
@@ -46,6 +47,7 @@ const ImageUpload = ({
 ImageUpload.propTypes = {
   handleOfferingImageSelection: PropTypes.func,
   selectedImage: PropTypes.string,
+  offering: PropTypes.object,
 };
 
 export default ImageUpload;

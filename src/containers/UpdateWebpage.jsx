@@ -7,8 +7,6 @@ import DashboardHeader from '../components/Dashboard/DashboardHeader';
 class UpdateWebpageContainer extends Component {
   render() {
     const username = localStorage.getItem('username');
-    const { match } = this.props;
-    console.log(match);
     const navigation = [
       {
         text: 'Dashboard',

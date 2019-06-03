@@ -140,3 +140,14 @@ export const webpage = {
   created_at: '2019-04-28T18:39:25.174272Z',
   updated_at: '2019-05-01T12:18:49.669633Z'
 };
+
+export const offering = {
+  id: 1,
+  title: 'Making Visions and Creating things',
+  description: 'We create a vision and imaginatiohe business',
+  image: 'https://res.cloudinary.com/v1558455915/dev/achebe_eaw5lz.jpg',
+  price: '20000',
+  created_at: '2019-05-21T16:25:16.383141Z',
+  updated_at: '2019-05-21T16:25:16.383169Z',
+  subDomainName: 'ideosynergy',
+};

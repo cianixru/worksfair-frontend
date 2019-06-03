@@ -35,6 +35,9 @@ describe('Webpage.jsx', () => {
       </Provider>
     );
     expect(component).toBeDefined();
-    expect(component).toMatchSnapshot();
+    expect(component.getByText('Happiness')).toBeDefined();
+    expect(component.getByText('Welcome to Happiness')).toBeDefined();
+    expect(component.getByText('Webpage Creator')).toBeDefined();
+    expect(component.getByText('Our Services/Products')).toBeDefined();
   });
 });

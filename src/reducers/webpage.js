@@ -7,7 +7,8 @@ import {
   UPDATE_WEBPAGE_FAILED,
   NEW_OFFERING,
   CREATE_OFFERING_FAILED,
-  GET_WEBPAGES,
+  UPDATED_OFFERING,
+  UPDATE_OFFERING_FAILED,
 } from '../actions/webpage';
 
 const initialState = {
@@ -35,8 +36,13 @@ export default (state = initialState, action) => {
 
   case CREATE_OFFERING_FAILED:
     return { ...state, offering: null };
-  case GET_WEBPAGES:
-    return { ...state, webpages: action.data };
+
+  case UPDATE_OFFERING_FAILED:
+    return { ...state, offering: null };
+
+  case UPDATED_OFFERING:
+    return { ...state, offering: action.data };
+
   default:
     return state;
   }

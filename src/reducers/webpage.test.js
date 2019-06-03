@@ -6,8 +6,11 @@ import {
   GET_WEBPAGE,
   CREATE_OFFERING_FAILED,
   NEW_OFFERING,
+  UPDATED_OFFERING,
+  UPDATE_OFFERING_FAILED,
 } from '../actions/webpage';
 import { webpage } from '../actions/webpage.test';
+import { offering } from '../utils/test-utils/mockData';
 
 const initialState = {
   newWebpage: {},
@@ -180,6 +183,60 @@ describe('Create Webpage reducer test', () => {
     ).toEqual({
       0: {
         offering: { webpage },
+      },
+      offering: null,
+    });
+  });
+  test('should handle Update Offering', () => {
+    expect(
+      webpageReducer([], {
+        type: UPDATED_OFFERING,
+        data: { offering },
+      })
+    ).toEqual({
+      offering: { offering },
+    });
+
+    expect(
+      webpageReducer([
+        {
+          offering: { offering },
+        }
+      ],
+      {
+        type: NEW_OFFERING,
+        data: { offering },
+      })
+    ).toEqual({
+      0: {
+        offering: { offering },
+      },
+      offering: { offering },
+    });
+  });
+  test('should handle Create offering failure', () => {
+    expect(
+      webpageReducer([], {
+        type: UPDATE_OFFERING_FAILED,
+        error: 'Failure',
+      })
+    ).toEqual({
+      offering: null,
+    });
+
+    expect(
+      webpageReducer([
+        {
+          offering: { offering },
+        }
+      ],
+      {
+        type: UPDATE_OFFERING_FAILED,
+        data: null,
+      })
+    ).toEqual({
+      0: {
+        offering: { offering },
       },
       offering: null,
     });

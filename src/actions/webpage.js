@@ -98,7 +98,7 @@ export const NEW_OFFERING = 'NEW_OFFERING';
 export const CREATE_OFFERING_FAILED = 'CREATE_OFFERING_FAILED';
 
 /**
- * Sends new webpage data to the backend
+ * Sends request for a new offering data to the backend
  * @param { object } data
  * @returns { func } dispatch
  */
@@ -131,9 +131,65 @@ export const GET_WEBPAGES = 'GET_WEBPAGES';
  * @returns { func } dispatch
  */
 export const getWebpages = data => (dispatch) => {
-  console.log(data);
   return dispatch({
     type: GET_WEBPAGES,
     data,
   });
+};
+
+export const UPDATED_OFFERING = 'UPDATED_OFFERING';
+export const UPDATE_OFFERING_FAILED = 'UPDATE_OFFERING_FAILED';
+/**
+ * Sends request for updating an offering to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const updateOffering = data => async (dispatch) => {
+  try {
+    const updatedOffering = await axios({
+      url: `/webpages/${data.subDomainName}/offerings/${data.id}`,
+      method: 'patch',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
+    return dispatch({
+      type: UPDATED_OFFERING,
+      data: updatedOffering.data,
+    });
+  } catch (error) {
+    return dispatch({
+      type: UPDATE_OFFERING_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};
+
+export const DELETE_OFFERING = 'DELETE_OFFERING';
+export const DELETE_OFFERING_FAILED = 'DELETE_OFFERING_FAILED';
+/**
+ * Sends request for updating an offering to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const deleteOffering = data => async (dispatch) => {
+  try {
+    await axios({
+      url: `/webpages/${data.subDomainName}/offerings/${data.id}`,
+      method: 'delete',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
+    return dispatch({
+      type: DELETE_OFFERING,
+    });
+  } catch (error) {
+    return dispatch({
+      type: DELETE_OFFERING_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
 };
