@@ -4,15 +4,25 @@ import PropTypes from 'prop-types';
 
 class WebpageNav extends Component {
   componentDidMount() {
+    const navBurger = this.navBurger.current;
+    navBurger.addEventListener('click', this.toggleNavbar);
     window.addEventListener('scroll', this.scrollHandler);
   }
 
   componentWillUnmount() {
+    const navBurger = this.navBurger.current;
+    navBurger.removeEventListener('click', this.toggleNavbar);
     window.removeEventListener('scroll', this.scrollHandler);
   }
 
+   navBurger = React.createRef()
+
+   navBar = React.createRef()
+
+   navMenu = React.createRef()
+
   scrollHandler = (event) => {
-    const { navbar } = this.refs;
+    const navbar = this.navBar.current;
     const { pageYOffset } = event.currentTarget;
     if (pageYOffset >= 70) {
       navbar.className = 'navbar is-fixed-top';
@@ -21,30 +31,42 @@ class WebpageNav extends Component {
     }
   }
 
+  toggleNavbar = (event) => {
+    event.preventDefault();
+
+    const navMenu = this.navMenu.current;
+    navMenu.classList.toggle('is-active');
+  }
+
   render() {
-    const { webpage } = this.props;
+    const { webpage, location } = this.props;
+
     return (
-      <nav className="navbar webnav"
+      <nav
+        className="navbar webnav"
         role="navigation"
         aria-label="main navigation"
-        ref="navbar"
         data-testid="WebpageNavbar"
+        ref={this.navBar}
       >
         <div className="navbar-brand">
-          <Link className="navbar-item" to="/home">
+          <a
+            className="navbar-item"
+            href={`${location.pathname}#home`}>
             { webpage && webpage.logo
               ? <img src={webpage.logo} width="112" height="28" alt="logo" />
               : <h2 className="webpage-title">
                 <strong>{ webpage && webpage.title }</strong>
               </h2>
             }
-          </Link>
+          </a>
 
           <a role="button"
             className="navbar-burger burger"
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
+            ref={this.navBurger}
             href="/">
 
             <span aria-hidden="true" />
@@ -53,20 +75,38 @@ class WebpageNav extends Component {
           </a>
         </div>
 
-        <div className="navbar-menu">
+        <div
+          className="navbar-menu"
+          ref={this.navMenu}>
           <div className="navbar-start">
-            <Link className="navbar-item" to="/">
-                Go to Worksfair
-            </Link>
+            <a
+              className="navbar-item is-tab"
+              href={`${location.pathname}#home`}>
+              Home
+            </a>
+            <a
+              className="navbar-item is-tab"
+              href={`${location.pathname}#about`}>
+              About
+            </a>
+            <a
+              className="navbar-item is-tab"
+              href={`${location.pathname}#contact`}>
+              Contact
+            </a>
+            <a
+              className="navbar-item is-tab"
+              href={`${location.pathname}#offerings`}>
+              Services/Products
+            </a>
           </div>
-
           <div className="navbar-end">
             <div className="navbar-item">
               <Link
                 className="button is-outlined is-rounded"
                 to="/"
               >
-                Create Webpage
+                Create Free Webpage
               </Link>
             </div>
           </div>
@@ -79,6 +119,7 @@ class WebpageNav extends Component {
 WebpageNav.propTypes = {
   user: PropTypes.object,
   webpage: PropTypes.object,
+  location: PropTypes.object,
 };
 
 export default withRouter(WebpageNav);

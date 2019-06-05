@@ -40,11 +40,11 @@ const DashboardLayout = ({ Component }) => {
   };
 
   return (
-    <div className="columns dashboard-layout">
+    <div className="columns is-desktop dashboard-layout">
       <div className="column is-one-quarter-desktop">
         <SideNav links={links} />
       </div>
-      <div className="column is-three-quarters-desktop" >
+      <div className="column is-three-quarter-desktop" >
         <Component />
       </div>
     </div>

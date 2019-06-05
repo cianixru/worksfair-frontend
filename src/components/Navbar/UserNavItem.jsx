@@ -7,8 +7,8 @@ import avatar from '../../assets/worksfair-avatar.png';
 
 const UserNavItem = ({ user, links }) => {
   return (
-    <div className="user-menu">
-      <div className="user-name ">
+    <div className="navbar-item has-dropdown is-hoverable">
+      <div className="user-name navbar-link">
         <span>
           <img
             src={user.image_url ? user.image_url : avatar}
@@ -16,14 +16,16 @@ const UserNavItem = ({ user, links }) => {
         </span>
         {`${user.first_name} ${user.last_name}`}
       </div>
-      <ul>
+      <ul className="navbar-dropdown">
         {links.map(link => (
           <li
             key={link.text}
-            className={link.class}
           >
-            <NavLink to={resolve(link.to)} activeClassName="active">
-              <i className={link.icon} aria-hidden="true" />
+            <NavLink
+              to={resolve(link.to)}
+              activeClassName="active"
+              className={link.class}
+            >
               {link.text}
             </NavLink>
           </li>

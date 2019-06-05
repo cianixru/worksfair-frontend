@@ -16,7 +16,7 @@ Object {
         >
           <a
             class="navbar-item"
-            href="/home"
+            href="/#home"
           >
             <h2
               class="webpage-title"
@@ -52,10 +52,28 @@ Object {
             class="navbar-start"
           >
             <a
-              class="navbar-item"
-              href="/"
+              class="navbar-item is-tab"
+              href="/#home"
             >
-              Go to Worksfair
+              Home
+            </a>
+            <a
+              class="navbar-item is-tab"
+              href="/#about"
+            >
+              About
+            </a>
+            <a
+              class="navbar-item is-tab"
+              href="/#contact"
+            >
+              Contact
+            </a>
+            <a
+              class="navbar-item is-tab"
+              href="/#offerings"
+            >
+              Services/Products
             </a>
           </div>
           <div
@@ -68,7 +86,7 @@ Object {
                 class="button is-outlined is-rounded"
                 href="/"
               >
-                Create Webpage
+                Create Free Webpage
               </a>
             </div>
           </div>
@@ -88,7 +106,7 @@ Object {
       >
         <a
           class="navbar-item"
-          href="/home"
+          href="/#home"
         >
           <h2
             class="webpage-title"
@@ -124,10 +142,28 @@ Object {
           class="navbar-start"
         >
           <a
-            class="navbar-item"
-            href="/"
+            class="navbar-item is-tab"
+            href="/#home"
           >
-            Go to Worksfair
+            Home
+          </a>
+          <a
+            class="navbar-item is-tab"
+            href="/#about"
+          >
+            About
+          </a>
+          <a
+            class="navbar-item is-tab"
+            href="/#contact"
+          >
+            Contact
+          </a>
+          <a
+            class="navbar-item is-tab"
+            href="/#offerings"
+          >
+            Services/Products
           </a>
         </div>
         <div
@@ -140,7 +176,7 @@ Object {
               class="button is-outlined is-rounded"
               href="/"
             >
-              Create Webpage
+              Create Free Webpage
             </a>
           </div>
         </div>

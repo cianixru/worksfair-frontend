@@ -5,6 +5,100 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <div>
+        <button
+          class="button is-medium is-fullwidth is-dark dashboard-button"
+        >
+          <span
+            class="icon"
+          >
+            <i
+              class="fa fa-navicon"
+            />
+          </span>
+          <span>
+            Dashboard Navigation
+          </span>
+        </button>
+        <div
+          class="dashboard-nav"
+        >
+          <div
+            class="dashboard-nav-inner"
+          >
+            <ul
+              data-submenu-title="Main"
+            >
+              <li>
+                <a
+                  href="/dashboard/theo"
+                >
+                  <i
+                    aria-hidden="true"
+                  />
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/theo/webpage/new"
+                >
+                  <i
+                    aria-hidden="true"
+                  />
+                  Create Webpage
+                </a>
+              </li>
+            </ul>
+            <ul
+              data-submenu-title="Webpages"
+            >
+              <li>
+                <a
+                  href="/dashboard/theo/webpage/new"
+                >
+                  <i
+                    aria-hidden="true"
+                  />
+                  Create Webpage
+                </a>
+              </li>
+            </ul>
+            <ul
+              data-submenu-title="Settings"
+            >
+              <li>
+                <a
+                  href="/dashboard/theo/webpage/new"
+                >
+                  <i
+                    aria-hidden="true"
+                  />
+                  Create Webpage
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <button
+        class="button is-medium is-fullwidth is-dark dashboard-button"
+      >
+        <span
+          class="icon"
+        >
+          <i
+            class="fa fa-navicon"
+          />
+        </span>
+        <span>
+          Dashboard Navigation
+        </span>
+      </button>
       <div
         class="dashboard-nav"
       >
@@ -64,68 +158,6 @@ Object {
             </li>
           </ul>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="dashboard-nav"
-    >
-      <div
-        class="dashboard-nav-inner"
-      >
-        <ul
-          data-submenu-title="Main"
-        >
-          <li>
-            <a
-              href="/dashboard/theo"
-            >
-              <i
-                aria-hidden="true"
-              />
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a
-              href="/dashboard/theo/webpage/new"
-            >
-              <i
-                aria-hidden="true"
-              />
-              Create Webpage
-            </a>
-          </li>
-        </ul>
-        <ul
-          data-submenu-title="Webpages"
-        >
-          <li>
-            <a
-              href="/dashboard/theo/webpage/new"
-            >
-              <i
-                aria-hidden="true"
-              />
-              Create Webpage
-            </a>
-          </li>
-        </ul>
-        <ul
-          data-submenu-title="Settings"
-        >
-          <li>
-            <a
-              href="/dashboard/theo/webpage/new"
-            >
-              <i
-                aria-hidden="true"
-              />
-              Create Webpage
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>,

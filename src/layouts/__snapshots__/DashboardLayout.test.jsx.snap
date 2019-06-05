@@ -6,89 +6,105 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="columns dashboard-layout"
+        class="columns is-desktop dashboard-layout"
       >
         <div
           class="column is-one-quarter-desktop"
         >
-          <div
-            class="dashboard-nav"
-          >
-            <div
-              class="dashboard-nav-inner"
+          <div>
+            <button
+              class="button is-medium is-fullwidth is-dark dashboard-button"
             >
-              <ul
-                data-submenu-title="Main"
+              <span
+                class="icon"
               >
-                <li>
-                  <a
-                    href="/dashboard/null/webpages"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-tachometer"
-                    />
-                    Dashboard
-                  </a>
-                </li>
-              </ul>
-              <ul
-                data-submenu-title="Webpages"
+                <i
+                  class="fa fa-navicon"
+                />
+              </span>
+              <span>
+                Dashboard Navigation
+              </span>
+            </button>
+            <div
+              class="dashboard-nav"
+            >
+              <div
+                class="dashboard-nav-inner"
               >
-                <li>
-                  <a
-                    href="/dashboard/null/webpages/new/basic-info"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-plus-square"
-                    />
-                    Create Webpage
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/dashboard/null/webpages"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-th-list"
-                    />
-                    Your Webpages
-                  </a>
-                </li>
-              </ul>
-              <ul
-                data-submenu-title="Settings"
-              >
-                <li>
-                  <a
-                    href="/dashboard/null/profile"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-user"
-                    />
-                    Your Profile
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/logout"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-power-off"
-                    />
-                    Logout
-                  </a>
-                </li>
-              </ul>
+                <ul
+                  data-submenu-title="Main"
+                >
+                  <li>
+                    <a
+                      href="/dashboard/null/webpages"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-tachometer"
+                      />
+                      Dashboard
+                    </a>
+                  </li>
+                </ul>
+                <ul
+                  data-submenu-title="Webpages"
+                >
+                  <li>
+                    <a
+                      href="/dashboard/null/webpages/new/basic-info"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-plus-square"
+                      />
+                      Create Webpage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/dashboard/null/webpages"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-th-list"
+                      />
+                      Your Webpages
+                    </a>
+                  </li>
+                </ul>
+                <ul
+                  data-submenu-title="Settings"
+                >
+                  <li>
+                    <a
+                      href="/dashboard/null/profile"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-user"
+                      />
+                      Your Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/logout"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-power-off"
+                      />
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="column is-three-quarters-desktop"
+          class="column is-three-quarter-desktop"
         >
           <div
             class="dashboard-content"
@@ -230,89 +246,105 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="columns dashboard-layout"
+      class="columns is-desktop dashboard-layout"
     >
       <div
         class="column is-one-quarter-desktop"
       >
-        <div
-          class="dashboard-nav"
-        >
-          <div
-            class="dashboard-nav-inner"
+        <div>
+          <button
+            class="button is-medium is-fullwidth is-dark dashboard-button"
           >
-            <ul
-              data-submenu-title="Main"
+            <span
+              class="icon"
             >
-              <li>
-                <a
-                  href="/dashboard/null/webpages"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa fa-tachometer"
-                  />
-                  Dashboard
-                </a>
-              </li>
-            </ul>
-            <ul
-              data-submenu-title="Webpages"
+              <i
+                class="fa fa-navicon"
+              />
+            </span>
+            <span>
+              Dashboard Navigation
+            </span>
+          </button>
+          <div
+            class="dashboard-nav"
+          >
+            <div
+              class="dashboard-nav-inner"
             >
-              <li>
-                <a
-                  href="/dashboard/null/webpages/new/basic-info"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa fa-plus-square"
-                  />
-                  Create Webpage
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/dashboard/null/webpages"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa fa-th-list"
-                  />
-                  Your Webpages
-                </a>
-              </li>
-            </ul>
-            <ul
-              data-submenu-title="Settings"
-            >
-              <li>
-                <a
-                  href="/dashboard/null/profile"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa fa-user"
-                  />
-                  Your Profile
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/logout"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="fa fa-power-off"
-                  />
-                  Logout
-                </a>
-              </li>
-            </ul>
+              <ul
+                data-submenu-title="Main"
+              >
+                <li>
+                  <a
+                    href="/dashboard/null/webpages"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-tachometer"
+                    />
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+              <ul
+                data-submenu-title="Webpages"
+              >
+                <li>
+                  <a
+                    href="/dashboard/null/webpages/new/basic-info"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-plus-square"
+                    />
+                    Create Webpage
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dashboard/null/webpages"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-th-list"
+                    />
+                    Your Webpages
+                  </a>
+                </li>
+              </ul>
+              <ul
+                data-submenu-title="Settings"
+              >
+                <li>
+                  <a
+                    href="/dashboard/null/profile"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-user"
+                    />
+                    Your Profile
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/logout"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-power-off"
+                    />
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="column is-three-quarters-desktop"
+        class="column is-three-quarter-desktop"
       >
         <div
           class="dashboard-content"

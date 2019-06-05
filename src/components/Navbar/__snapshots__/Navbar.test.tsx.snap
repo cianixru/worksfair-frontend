@@ -88,7 +88,7 @@ Object {
                   class="button is-danger is-outlined is-rounded"
                   href="/"
                 >
-                  Create Website
+                  Create Free Webpage
                 </a>
               </div>
             </div>
@@ -181,7 +181,7 @@ Object {
                 class="button is-danger is-outlined is-rounded"
                 href="/"
               >
-                Create Website
+                Create Free Webpage
               </a>
             </div>
           </div>
@@ -339,7 +339,7 @@ Object {
                   class="button is-danger is-outlined is-rounded"
                   href="/"
                 >
-                  Create Website
+                  Create Free Webpage
                 </a>
               </div>
             </div>
@@ -413,10 +413,10 @@ Object {
               class="navbar-item"
             >
               <div
-                class="user-menu"
+                class="navbar-item has-dropdown is-hoverable"
               >
                 <div
-                  class="user-name "
+                  class="user-name navbar-link"
                 >
                   <span>
                     <img
@@ -426,26 +426,22 @@ Object {
                   </span>
                   Theo Okafor
                 </div>
-                <ul>
+                <ul
+                  class="navbar-dropdown"
+                >
                   <li>
                     <a
-                      href="/dashboard/TheoOkafor"
+                      class="navbar-item"
+                      href="/dashboard/TheoOkafor/webpages"
                     >
-                      <i
-                        aria-hidden="true"
-                        class="fa fa-tachometer"
-                      />
                       Dashboard
                     </a>
                   </li>
                   <li>
                     <a
+                      class="navbar-item"
                       href="/logout"
                     >
-                      <i
-                        aria-hidden="true"
-                        class="fa fa-power-off"
-                      />
                       Logout
                     </a>
                   </li>
@@ -523,10 +519,10 @@ Object {
             class="navbar-item"
           >
             <div
-              class="user-menu"
+              class="navbar-item has-dropdown is-hoverable"
             >
               <div
-                class="user-name "
+                class="user-name navbar-link"
               >
                 <span>
                   <img
@@ -536,26 +532,22 @@ Object {
                 </span>
                 Theo Okafor
               </div>
-              <ul>
+              <ul
+                class="navbar-dropdown"
+              >
                 <li>
                   <a
-                    href="/dashboard/TheoOkafor"
+                    class="navbar-item"
+                    href="/dashboard/TheoOkafor/webpages"
                   >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-tachometer"
-                    />
                     Dashboard
                   </a>
                 </li>
                 <li>
                   <a
+                    class="navbar-item"
                     href="/logout"
                   >
-                    <i
-                      aria-hidden="true"
-                      class="fa fa-power-off"
-                    />
                     Logout
                   </a>
                 </li>

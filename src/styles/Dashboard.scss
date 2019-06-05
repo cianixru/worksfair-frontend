@@ -20,8 +20,7 @@
   position: fixed;
   min-height: 100vh;
   overflow: auto;
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 345px;
 }
 
 @media(max-width:991px) {
@@ -206,6 +205,23 @@
   color: #fff;
   border-color: #66676b;
   background-color: rgba(255, 255, 255, .05)
+}
+
+.dashboard-button {
+  display: none;
+}
+
+@media(max-width:1024px) {
+  .dashboard-nav {
+    display: none;
+  }
+  .dashboard-button {
+    display: inline-block;
+  }
+}
+
+.active-nav {
+  display: inline-block;
 }
 
 #dashboard #titlebar {

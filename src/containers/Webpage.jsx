@@ -53,7 +53,9 @@ class WebpageContainer extends Component {
       webpage
       && <div>
         <div
-          className={`hero is-large ${webpage.colour}`}>
+          className={`hero is-large ${webpage.colour}`}
+          id="home"
+        >
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-1">
@@ -65,7 +67,10 @@ class WebpageContainer extends Component {
             </div>
           </div>
         </div>
-        <div className="hero is-large">
+        <div className="webpage-hero">
+          <ImagesSlide webpage={webpage} />
+        </div>
+        <div className="hero is-large" id="about">
           <div className="hero-body webpage-sections">
             {
               this.renderDetailItems(0, 3)
@@ -75,10 +80,7 @@ class WebpageContainer extends Component {
             } */}
           </div>
         </div>
-        <div className="webpage-hero">
-          <ImagesSlide webpage={webpage} />
-        </div>
-        <div className="container">
+        <div className="container" id="contact">
           <div className="columns is-desktop">
             <div className="column is-three-quarters">
               <TitleBar webpage={webpage} />
@@ -98,7 +100,10 @@ class WebpageContainer extends Component {
             backgroundSize: 'cover',
           }}
         >
-          <div className="section-content box has-background-white-ter">
+          <div
+            className="section-content box has-background-white-ter"
+            id="offerings"
+          >
             <h3 className="title is-4 titles has-text-grey">
               Our Services/Products
             </h3>

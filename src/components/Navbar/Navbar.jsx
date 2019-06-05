@@ -7,15 +7,25 @@ import UserNavItem from './UserNavItem';
 
 class Navbar extends Component {
   componentDidMount() {
+    const navBurger = this.navBurger.current;
+    navBurger.addEventListener('click', this.toggleNavbar);
     window.addEventListener('scroll', this.scrollHandler);
   }
 
   componentWillUnmount() {
+    const navBurger = this.navBurger.current;
+    navBurger.removeEventListener('click', this.toggleNavbar);
     window.removeEventListener('scroll', this.scrollHandler);
   }
 
+  navBurger = React.createRef()
+
+  navBar = React.createRef()
+
+  navMenu = React.createRef()
+
   scrollHandler = (event) => {
-    const { navbar } = this.refs;
+    const navbar = this.navBar.current;
     const { pageYOffset } = event.currentTarget;
     if (pageYOffset >= 70) {
       navbar.className = 'navbar is-fixed-top';
@@ -24,18 +34,27 @@ class Navbar extends Component {
     }
   }
 
+  toggleNavbar = (event) => {
+    event.preventDefault();
+
+    const navMenu = this.navMenu.current;
+    const navBurger = this.navBurger.current;
+    navMenu.classList.toggle('is-active');
+    navBurger.classList.toggle('is-active');
+  }
+
   render() {
     const { user } = this.props;
     const links = [
       {
         text: 'Dashboard',
-        to: `/dashboard/${user && user.username}`,
-        icon: 'fa fa-tachometer',
+        to: `/dashboard/${user && user.username}/webpages`,
+        class: 'navbar-item',
       },
       {
         text: 'Logout',
         to: '/logout',
-        icon: 'fa fa-power-off',
+        class: 'navbar-item',
       },
     ];
 
@@ -43,7 +62,7 @@ class Navbar extends Component {
       <nav className="navbar"
         role="navigation"
         aria-label="main navigation"
-        ref="navbar"
+        ref={this.navBar}
         data-testid=""
       >
         <div className="navbar-brand">
@@ -56,6 +75,7 @@ class Navbar extends Component {
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
+            ref={this.navBurger}
             href="/">
 
             <span aria-hidden="true" />
@@ -68,7 +88,9 @@ class Navbar extends Component {
           window.location.pathname === '/signup'
             || window.location.pathname === '/login'
             ? null
-            : (<div className="navbar-menu">
+            : (<div
+              className="navbar-menu"
+              ref={this.navMenu}>
               <div className="navbar-start">
                 <Link className="navbar-item" to="/">
                   Home
@@ -97,7 +119,7 @@ class Navbar extends Component {
                         className="button is-danger is-outlined is-rounded"
                         to="/"
                       >
-                        Create Website
+                        Create Free Webpage
                       </Link>
                     </div>
                   }
