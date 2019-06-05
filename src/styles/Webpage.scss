@@ -253,11 +253,14 @@ a.mfp-gallery {
     font-weight: 400
 }
 
-.offering-sections {
+.webpage-sections {
     box-sizing: border-box;
     padding: 3% 6.25% 5% 6.25%;
 }
 
-.section-content {
-
+.detail-content {
+    border-left: 30px solid;
+    border-bottom: 15px solid;
+    padding: 15px;
+    border-radius: 2px;
 }

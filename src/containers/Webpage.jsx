@@ -5,10 +5,16 @@ import OwnerCard from '../components/Webpage/OwnerCard';
 import TitleBar from '../components/Webpage/TitleBar';
 import ImagesSlide from '../components/Webpage/ImagesSlide';
 import OfferingItem from '../components/Webpage/OfferingItem';
+import DetailItem from '../components/Webpage/Details';
 import WebpageFooter from '../components/Webpage/Footer';
 import getBackgroundImage from '../assets/background/backgroundImages';
+import { colourShadesOf } from '../utils/helpers';
 
 class WebpageContainer extends Component {
+  state = {
+    colourArray: [],
+  }
+
   async componentDidMount() {
     try {
       const { match, getWebpage } = this.props;
@@ -26,6 +32,19 @@ class WebpageContainer extends Component {
       colour={webpage.colour}
       offerings={offerings}
     />);
+  }
+
+  renderDetailItems = (start, end) => {
+    const { webpage } = this.props;
+    const colourArray = colourShadesOf(webpage.colour).slice(start, end);
+
+    webpage.details.map((detail, index) => {
+      detail.colour = colourArray[index];
+      return detail;
+    });
+    const details = webpage.details.slice(start, end);
+
+    return (<DetailItem details={details} />);
   }
 
   render() {
@@ -46,6 +65,16 @@ class WebpageContainer extends Component {
             </div>
           </div>
         </div>
+        <div className="hero is-large">
+          <div className="hero-body webpage-sections">
+            {
+              this.renderDetailItems(0, 3)
+            }
+            {/* {
+              this.renderDetailItems(3, 5)
+            } */}
+          </div>
+        </div>
         <div className="webpage-hero">
           <ImagesSlide webpage={webpage} />
         </div>
@@ -60,7 +89,7 @@ class WebpageContainer extends Component {
           </div>
         </div>
         <div
-          className="offering-sections"
+          className="webpage-sections"
           style={{
             backgroundImage: `url(${
               webpage && getBackgroundImage(webpage.colour)
@@ -70,7 +99,9 @@ class WebpageContainer extends Component {
           }}
         >
           <div className="section-content box has-background-white-ter">
-            <h3 className="title is-4 titles has-text-grey">Our Services/Products</h3>
+            <h3 className="title is-4 titles has-text-grey">
+              Our Services/Products
+            </h3>
             <div className="webpage-offerings">
               {
                 this.renderOfferingItems(0, 2)

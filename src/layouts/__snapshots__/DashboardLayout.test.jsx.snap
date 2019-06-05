@@ -213,7 +213,7 @@ Object {
                           aria-hidden="true"
                           class="fa fa-money"
                         />
-                        Offerings
+                        Products/Services (Offerings)
                       </a>
                     </li>
                   </ul>
@@ -437,7 +437,7 @@ Object {
                         aria-hidden="true"
                         class="fa fa-money"
                       />
-                      Offerings
+                      Products/Services (Offerings)
                     </a>
                   </li>
                 </ul>

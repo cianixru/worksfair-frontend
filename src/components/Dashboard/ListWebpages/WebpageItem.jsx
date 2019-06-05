@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { textColourHelper } from '../../../utils/helpers';
+import IconButton from '../../../atoms/IconButton';
 
 const WebpageItem = ({
   nextUpdate, dayCreated, username, webpage, sampleImage
 }) => (
   <li>
-    <div className="media box">
-      <div className="media-left">
+    <div className="columns box">
+      <div className="column is-3">
         <figure className="image is-180x180">
           <img
             src={(webpage.featured_images && webpage.featured_images[0])
@@ -17,7 +18,7 @@ const WebpageItem = ({
             alt="sample" />
         </figure>
       </div>
-      <div className="media-content">
+      <div className="column is-7">
         <div className="content">
           <h3>
             <Link
@@ -42,12 +43,17 @@ const WebpageItem = ({
           </h6>
         </div>
       </div>
-      <div>
+      <div className="column is-2 is-mobile">
         <Link
           to={`/dashboard/${username}/webpages/edit/${webpage.sub_domain_name}`}
           className="button is-white">
           <i className="fa fa-edit is-size-5 has-text-grey"/>
         </Link>
+        <IconButton
+          icon="fa fa-archive"
+          colour="has-text-grey-light"
+          // handleClick={handleClick}
+        />
       </div>
     </div>
   </li>

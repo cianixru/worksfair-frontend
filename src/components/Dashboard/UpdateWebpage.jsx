@@ -25,6 +25,8 @@ import {
   cloudinaryImageRemover,
 } from '../utils/helpers';
 import { isLoading, isComplete } from '../../actions/loader';
+import { getCurrentUser } from '../../actions/auth';
+import Details from './UpdateWebpage/Details';
 
 class UpdateWebpage extends Component {
   static propTypes = {
@@ -80,6 +82,7 @@ class UpdateWebpage extends Component {
         });
         alert.error('Request Failed. Check for more details');
       } else {
+        await actions.getCurrentUser();
         alert.success('Successful! Scroll Down to update others.');
       }
     } catch (error) {
@@ -199,6 +202,7 @@ class UpdateWebpage extends Component {
         // Reset the form and the image preview for fresh input
         this.offeringsFormRef.current.reset();
         this.resetOfferingImage();
+        await actions.getCurrentUser();
       }
     } catch (error) {
       console.log(error);
@@ -258,8 +262,8 @@ class UpdateWebpage extends Component {
     } catch (error) {
       console.log(error);
     } finally {
+      await actions.getCurrentUser();
       actions.isComplete();
-      window.location.reload();
     }
   }
 
@@ -289,8 +293,8 @@ class UpdateWebpage extends Component {
     } catch (error) {
       console.log(error);
     } finally {
+      await actions.getCurrentUser();
       actions.isComplete();
-      window.location.reload();
     }
   }
 
@@ -320,6 +324,26 @@ class UpdateWebpage extends Component {
               validationErrors={validationErrors}
               handleErrorReset={this.handleErrorReset}
               webpage={currentWebpage}
+            />
+          </div>
+        </div>
+        <div className="box has-background-light">
+          <div className="add-webpage-headline">
+            <h3 className="is-size-4">
+              <i className="fa fa-info" aria-hidden="true" />
+              Details
+            </h3>
+          </div>
+          <div className="add-webpage-content">
+            <Details
+              onSubmit={this.submitOfferings}
+              user={user}
+              offerings={offerings}
+              validationErrors={validationErrors}
+              handleErrorReset={this.handleErrorReset}
+              webpage={currentWebpage}
+              onUpdateOffering={this.onUpdateOffering}
+              handleDelete={this.onDeleteOffering}
             />
           </div>
         </div>
@@ -363,7 +387,7 @@ class UpdateWebpage extends Component {
           <div className="add-webpage-headline">
             <h3 className="is-size-4">
               <i className="fa fa-money" aria-hidden="true" />
-              Offerings
+              Products/Services (Offerings)
             </h3>
           </div>
           <div className="add-webpage-content">
@@ -402,6 +426,7 @@ const mapDispatchToProps = dispatch => ({
       deleteOffering,
       isLoading,
       isComplete,
+      getCurrentUser,
     },
     dispatch,
   ),

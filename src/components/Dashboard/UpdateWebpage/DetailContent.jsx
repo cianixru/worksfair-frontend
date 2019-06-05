@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
-import { addNairaSign } from '../../utils/helpers';
-import OfferingsForm from '../../../forms/Webpage/OfferingsForm';
+import DetailsForm from '../../../forms/Webpage/DetailsForm';
 
-import ImageUpload from '../../utils/ImageUpload';
 import EditIconButton from '../../../atoms/EditIconButton';
 import DeleteIconButton from '../../../atoms/DeleteIconButton';
 import Modal from '../../Modal/Modal';
 
-class OfferingContent extends Component {
+class DetailContent extends Component {
   static propTypes = {
-    offering: PropTypes.object,
+    detail: PropTypes.object,
     match: PropTypes.object,
     actions: PropTypes.object,
     validationErrors: PropTypes.object,
     handleErrorReset: PropTypes.func,
-    handleOfferingImageSelection: PropTypes.func,
-    selectedImage: PropTypes.string,
     onSubmit: PropTypes.func,
     handleDelete: PropTypes.func,
     colour: PropTypes.string,
@@ -44,21 +40,15 @@ class OfferingContent extends Component {
   }
 
   handleDeleteClick = async () => {
-    const {
-      image, id
-    } = this.props.offering;
     const input = {
-      image,
-      id,
+      id: this.props.detail.id,
     };
     await this.props.handleDelete(input);
   }
 
   render() {
     const {
-      offering,
-      handleOfferingImageSelection,
-      selectedImage,
+      detail,
       onSubmit,
       validationErrors,
       handleErrorReset,
@@ -70,46 +60,23 @@ class OfferingContent extends Component {
         ? <li
           className="box"
         >
-          <div className="columns margin-bottom-25">
-            <div className="column is-one-third">
-              <ImageUpload
-                handleOfferingImageSelection={handleOfferingImageSelection}
-                selectedImage={selectedImage}
-                offering={offering}
-              />
-            </div>
-            <div className="column">
-              <OfferingsForm
-                onSubmit={onSubmit}
-                validationErrors={validationErrors}
-                handleErrorReset={handleErrorReset}
-                handleEditToggle={this.handleEditToggle}
-                offering={offering}
-              />
-            </div>
-          </div>
+          <DetailsForm
+            onSubmit={onSubmit}
+            validationErrors={validationErrors}
+            handleErrorReset={handleErrorReset}
+            handleEditToggle={this.handleEditToggle}
+            detail={detail}
+          />
         </li>
         : <div>
           <li
             className="columns box"
           >
-            <div className="column is-3">
-              <figure className="image is-180x180">
-                <img
-                  src={offering.image}
-                  alt=""
-                  className="offering-image"
-                />
-              </figure>
-            </div>
-            <div className="column is-7">
+            <div className="column is-10">
               <h4 className="title is-5">
-                {offering.title}
+                {detail.title}
               </h4>
-              <p>{offering.description}</p>
-              <div className="">
-                {addNairaSign(offering.price)}
-              </div>
+              <p>{detail.description}</p>
             </div>
             <div className="column is-2">
               <EditIconButton
@@ -127,7 +94,7 @@ class OfferingContent extends Component {
             <article className="modal-card is-medium">
               <div className="modal-card-head ">
                 <p className="modal-card-title">
-                  Deleting <b>{offering.title}</b>...
+                  Deleting <b>{detail.title}</b>...
                 </p>
                 <button
                   className="delete is-medium"
@@ -136,20 +103,21 @@ class OfferingContent extends Component {
                 />
               </div>
               <div className="modal-card-body">
-                <p>Are you sure you want to delete this item?</p>
+                <p>Are you sure you want to delete this content?</p>
               </div>
               <div className="modal-card-foot">
                 <button
                   className="button is-danger"
+                  data-testid="delete-confirm"
                   onClick={this.handleDeleteClick}
                 >
-                Yes, delete "<i>{offering.title}</i>"
+                  Yes, delete "<i>{detail.title}</i>"
                 </button>
                 <button
                   className="button"
                   onClick={this.handleDeleteToggle}
                 >
-                Cancel
+                  Cancel
                 </button>
               </div>
             </article>
@@ -159,4 +127,4 @@ class OfferingContent extends Component {
   }
 }
 
-export default withRouter(OfferingContent);
+export default withRouter(DetailContent);

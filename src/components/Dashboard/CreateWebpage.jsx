@@ -320,7 +320,7 @@ class CreateWebpage extends Component {
                   activeClassName="is-current"
                   aria-label="Goto Offerings">
                   <i className="fa fa-money" aria-hidden="true" />
-                    Offerings
+                  Products/Services (Offerings)
                 </NavLink>
               </li>
             </ul>

@@ -19,6 +19,26 @@ export const user = {
   modified_at: '2019-05-10T08:14:04.234331Z',
   webpages: [
     {
+      details: [
+        {
+          title: 'kamsi',
+          description: 'passion, software, engineering, technology, worksfair',
+          created_at: '2019-05-15T17:37:06.479115Z',
+          updated_at: '2019-05-15T17:37:06.479140Z'
+        },
+        {
+          title: 'Sissy',
+          description: 'passion, software, engineering, technology, worksfair',
+          created_at: '2019-05-15T17:35:00.329484Z',
+          updated_at: '2019-05-15T17:35:00.329604Z'
+        },
+        {
+          title: 'Atty',
+          description: 'worksfair will pay for you',
+          created_at: '2019-05-15T17:29:04.245897Z',
+          updated_at: '2019-05-15T17:40:32.493396Z'
+        },
+      ],
       offerings: [
         {
           title: 'Ideation',
@@ -84,6 +104,26 @@ export const webpage = {
     created_at: '2019-04-25T09:07:08.209916Z',
     modified_at: '2019-04-25T09:07:08.209930Z'
   },
+  details: [
+    {
+      title: 'kamsi',
+      description: 'passion, software, engineering, technology, worksfair',
+      created_at: '2019-05-15T17:37:06.479115Z',
+      updated_at: '2019-05-15T17:37:06.479140Z'
+    },
+    {
+      title: 'Sissy',
+      description: 'passion, software, engineering, technology, worksfair',
+      created_at: '2019-05-15T17:35:00.329484Z',
+      updated_at: '2019-05-15T17:35:00.329604Z'
+    },
+    {
+      title: 'Atty',
+      description: 'worksfair will pay for you',
+      created_at: '2019-05-15T17:29:04.245897Z',
+      updated_at: '2019-05-15T17:40:32.493396Z'
+    },
+  ],
   offerings: [
     {
       title: 'kamsi',

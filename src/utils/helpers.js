@@ -119,3 +119,52 @@ export const getDateForNextUpdate = (lastUpdate) => {
 
   return new Date(dateArray.join('-')).toDateString();
 };
+
+/**
+ * @description take a colour variable name and returns the shades
+ *
+ * @param { string } colourName
+ *
+ * @returns { Array } an array of the colour shades
+ */
+export const colourShadesOf = (colourName) => {
+  const colourShades = {
+    'is-primary': [
+      '#e5fffb',
+      '#80ffec',
+      '#00d1b2',
+      '#1affdd',
+      '#00e6c3',
+    ],
+    'is-info': [
+      '#e7f4fd',
+      '#89caf6',
+      '#59b5f2',
+      '#2aa0ef',
+      '#1087d5',
+    ],
+    'is-warning': [
+      '#fffae5',
+      '#fff0b3',
+      '#ffe580',
+      '#ffd11a',
+      '#e6b700',
+    ],
+    'is-danger': [
+      '#ffe5eb',
+      '#ffb3c2',
+      '#ff8099',
+      '#ff0537',
+      '#e6002e',
+    ],
+    'is-dark': [
+      '#eee',
+      '#d9d9d9',
+      '#bfbfbf',
+      '#7a7a7a',
+      '#595959',
+    ],
+  };
+  const value = colourName ? colourShades[colourName] : colourShades['is-dark'];
+  return value;
+};

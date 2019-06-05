@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details.jsx should should display form correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div>
+          <ul>
+            <div>
+              <li
+                class="columns box"
+              >
+                <div
+                  class="column is-10"
+                >
+                  <h4
+                    class="title is-5"
+                  >
+                    Our Vision
+                  </h4>
+                  <p>
+                    To deliver quality technology that will improve lives.
+                  </p>
+                  <span
+                    class="is-8 has-text-danger"
+                  >
+                    [This is a sample]
+                  </span>
+                </div>
+                <div
+                  class="column is-2"
+                />
+              </li>
+            </div>
+          </ul>
+        </div>
+        <br />
+        <div
+          class="box"
+        >
+          <form>
+            <div
+              class="field"
+            >
+              <h5>
+                Title
+                <i
+                  class="tip"
+                >
+                  <div
+                    class="tip-content"
+                  >
+                    The title of this content (Eg. Our Vision)
+                  </div>
+                </i>
+              </h5>
+              <div
+                class="control"
+              >
+                <input
+                  class="input is-medium"
+                  data-testid="detail-title"
+                  name="title"
+                  placeholder="Eg. Our Vision"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="field"
+            >
+              <h5>
+                Description
+                <i
+                  class="tip"
+                >
+                  <div
+                    class="tip-content"
+                  >
+                    Describe this content (Eg. To bring digital creativity to ready hands)
+                  </div>
+                </i>
+              </h5>
+              <div
+                class="control"
+              >
+                <div>
+                  <textarea
+                    class="textarea is-normal"
+                    name="description"
+                    placeholder="Describe this content (Eg. To bring digital creativity to ready hands)"
+                    rows="3"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="control buttons are-medium"
+            >
+              <button
+                class="button is-light"
+                data-testid="add-offering"
+                disabled=""
+                type="submit"
+              >
+                Add Content
+              </button>
+              <button
+                class="button"
+                data-testid="add-detail"
+                type="button"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div>
+        <ul>
+          <div>
+            <li
+              class="columns box"
+            >
+              <div
+                class="column is-10"
+              >
+                <h4
+                  class="title is-5"
+                >
+                  Our Vision
+                </h4>
+                <p>
+                  To deliver quality technology that will improve lives.
+                </p>
+                <span
+                  class="is-8 has-text-danger"
+                >
+                  [This is a sample]
+                </span>
+              </div>
+              <div
+                class="column is-2"
+              />
+            </li>
+          </div>
+        </ul>
+      </div>
+      <br />
+      <div
+        class="box"
+      >
+        <form>
+          <div
+            class="field"
+          >
+            <h5>
+              Title
+              <i
+                class="tip"
+              >
+                <div
+                  class="tip-content"
+                >
+                  The title of this content (Eg. Our Vision)
+                </div>
+              </i>
+            </h5>
+            <div
+              class="control"
+            >
+              <input
+                class="input is-medium"
+                data-testid="detail-title"
+                name="title"
+                placeholder="Eg. Our Vision"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="field"
+          >
+            <h5>
+              Description
+              <i
+                class="tip"
+              >
+                <div
+                  class="tip-content"
+                >
+                  Describe this content (Eg. To bring digital creativity to ready hands)
+                </div>
+              </i>
+            </h5>
+            <div
+              class="control"
+            >
+              <div>
+                <textarea
+                  class="textarea is-normal"
+                  name="description"
+                  placeholder="Describe this content (Eg. To bring digital creativity to ready hands)"
+                  rows="3"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="control buttons are-medium"
+          >
+            <button
+              class="button is-light"
+              data-testid="add-offering"
+              disabled=""
+              type="submit"
+            >
+              Add Content
+            </button>
+            <button
+              class="button"
+              data-testid="add-detail"
+              type="button"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

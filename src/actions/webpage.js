@@ -169,7 +169,7 @@ export const updateOffering = data => async (dispatch) => {
 export const DELETE_OFFERING = 'DELETE_OFFERING';
 export const DELETE_OFFERING_FAILED = 'DELETE_OFFERING_FAILED';
 /**
- * Sends request for updating an offering to the backend
+ * Sends request for deleting an offering to the backend
  * @param { object } data
  * @returns { func } dispatch
  */
@@ -188,6 +188,93 @@ export const deleteOffering = data => async (dispatch) => {
   } catch (error) {
     return dispatch({
       type: DELETE_OFFERING_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};
+
+export const NEW_DETAIL = 'NEW_DETAIL';
+export const CREATE_DETAIL_FAILED = 'CREATE_DETAIL_FAILED';
+
+/**
+ * Sends request for a new detail data to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const createWebpageDetails = data => async (dispatch) => {
+  try {
+    const newDetail = await axios({
+      url: `/webpages/${data.subDomainName}/details/`,
+      method: 'post',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
+    return dispatch({
+      type: NEW_DETAIL,
+      data: newDetail.data,
+    });
+  } catch (error) {
+    return dispatch({
+      type: CREATE_DETAIL_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};
+
+export const UPDATED_DETAIL = 'UPDATED_DETAIL';
+export const UPDATE_DETAIL_FAILED = 'UPDATE_DETAIL_FAILED';
+/**
+ * Sends request for updating an detail to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const updateDetail = data => async (dispatch) => {
+  try {
+    const updatedDetail = await axios({
+      url: `/webpages/${data.subDomainName}/details/${data.id}`,
+      method: 'patch',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
+    return dispatch({
+      type: UPDATED_DETAIL,
+      data: updatedDetail.data,
+    });
+  } catch (error) {
+    return dispatch({
+      type: UPDATE_DETAIL_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};
+
+export const DELETE_DETAIL = 'DELETE_DETAIL';
+export const DELETE_DETAIL_FAILED = 'DELETE_DETAIL_FAILED';
+/**
+ * Sends request for deleting an detail to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const deleteDetail = data => async (dispatch) => {
+  try {
+    await axios({
+      url: `/webpages/${data.subDomainName}/details/${data.id}`,
+      method: 'delete',
+      data,
+      baseURL,
+      headers: { Authorization: `Token ${apiToken}` },
+    });
+    return dispatch({
+      type: DELETE_DETAIL,
+    });
+  } catch (error) {
+    return dispatch({
+      type: DELETE_DETAIL_FAILED,
       message: error.message,
       response: error.response,
     });

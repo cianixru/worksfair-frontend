@@ -220,6 +220,141 @@ Object {
             >
               <i
                 aria-hidden="true"
+                class="fa fa-info"
+              />
+              Details
+            </h3>
+          </div>
+          <div
+            class="add-webpage-content"
+          >
+            <div>
+              <div>
+                <ul>
+                  <div>
+                    <li
+                      class="columns box"
+                    >
+                      <div
+                        class="column is-10"
+                      >
+                        <h4
+                          class="title is-5"
+                        >
+                          Our Vision
+                        </h4>
+                        <p>
+                          To deliver quality technology that will improve lives.
+                        </p>
+                        <span
+                          class="is-8 has-text-danger"
+                        >
+                          [This is a sample]
+                        </span>
+                      </div>
+                      <div
+                        class="column is-2"
+                      />
+                    </li>
+                  </div>
+                </ul>
+              </div>
+              <br />
+              <div
+                class="box"
+              >
+                <form>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Title
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          The title of this content (Eg. Our Vision)
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <input
+                        class="input is-medium"
+                        data-testid="detail-title"
+                        name="title"
+                        placeholder="Eg. Our Vision"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="field"
+                  >
+                    <h5>
+                      Description
+                      <i
+                        class="tip"
+                      >
+                        <div
+                          class="tip-content"
+                        >
+                          Describe this content (Eg. To bring digital creativity to ready hands)
+                        </div>
+                      </i>
+                    </h5>
+                    <div
+                      class="control"
+                    >
+                      <div>
+                        <textarea
+                          class="textarea is-normal"
+                          name="description"
+                          placeholder="Describe this content (Eg. To bring digital creativity to ready hands)"
+                          rows="3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="control buttons are-medium"
+                  >
+                    <button
+                      class="button is-light"
+                      data-testid="add-offering"
+                      disabled=""
+                      type="submit"
+                    >
+                      Add Content
+                    </button>
+                    <button
+                      class="button"
+                      data-testid="add-detail"
+                      type="button"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box has-background-light"
+        >
+          <div
+            class="add-webpage-headline"
+          >
+            <h3
+              class="is-size-4"
+            >
+              <i
+                aria-hidden="true"
                 class="fa fa-address-card-o"
               />
               Contact Info
@@ -640,7 +775,7 @@ Object {
                 aria-hidden="true"
                 class="fa fa-money"
               />
-              Offerings
+              Products/Services (Offerings)
             </h3>
           </div>
           <div
@@ -982,6 +1117,141 @@ Object {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="box has-background-light"
+      >
+        <div
+          class="add-webpage-headline"
+        >
+          <h3
+            class="is-size-4"
+          >
+            <i
+              aria-hidden="true"
+              class="fa fa-info"
+            />
+            Details
+          </h3>
+        </div>
+        <div
+          class="add-webpage-content"
+        >
+          <div>
+            <div>
+              <ul>
+                <div>
+                  <li
+                    class="columns box"
+                  >
+                    <div
+                      class="column is-10"
+                    >
+                      <h4
+                        class="title is-5"
+                      >
+                        Our Vision
+                      </h4>
+                      <p>
+                        To deliver quality technology that will improve lives.
+                      </p>
+                      <span
+                        class="is-8 has-text-danger"
+                      >
+                        [This is a sample]
+                      </span>
+                    </div>
+                    <div
+                      class="column is-2"
+                    />
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <br />
+            <div
+              class="box"
+            >
+              <form>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Title
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        The title of this content (Eg. Our Vision)
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="detail-title"
+                      name="title"
+                      placeholder="Eg. Our Vision"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Description
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        Describe this content (Eg. To bring digital creativity to ready hands)
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <div>
+                      <textarea
+                        class="textarea is-normal"
+                        name="description"
+                        placeholder="Describe this content (Eg. To bring digital creativity to ready hands)"
+                        rows="3"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="control buttons are-medium"
+                >
+                  <button
+                    class="button is-light"
+                    data-testid="add-offering"
+                    disabled=""
+                    type="submit"
+                  >
+                    Add Content
+                  </button>
+                  <button
+                    class="button"
+                    data-testid="add-detail"
+                    type="button"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -1416,7 +1686,7 @@ Object {
               aria-hidden="true"
               class="fa fa-money"
             />
-            Offerings
+            Products/Services (Offerings)
           </h3>
         </div>
         <div

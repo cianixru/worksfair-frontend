@@ -34,10 +34,10 @@ Object {
           <ul>
             <li>
               <div
-                class="media box"
+                class="columns box"
               >
                 <div
-                  class="media-left"
+                  class="column is-3"
                 >
                   <figure
                     class="image is-180x180"
@@ -49,7 +49,7 @@ Object {
                   </figure>
                 </div>
                 <div
-                  class="media-content"
+                  class="column is-7"
                 >
                   <div
                     class="content"
@@ -95,7 +95,9 @@ Object {
                     </h6>
                   </div>
                 </div>
-                <div>
+                <div
+                  class="column is-2 is-mobile"
+                >
                   <a
                     class="button is-white"
                     href="/dashboard/TheoOkafor/webpages/edit/ideosynergy-ltd"
@@ -104,6 +106,13 @@ Object {
                       class="fa fa-edit is-size-5 has-text-grey"
                     />
                   </a>
+                  <button
+                    class="button is-white"
+                  >
+                    <i
+                      class="fa fa-archive is-size-5 has-text-grey-light"
+                    />
+                  </button>
                 </div>
               </div>
             </li>
@@ -142,10 +151,10 @@ Object {
         <ul>
           <li>
             <div
-              class="media box"
+              class="columns box"
             >
               <div
-                class="media-left"
+                class="column is-3"
               >
                 <figure
                   class="image is-180x180"
@@ -157,7 +166,7 @@ Object {
                 </figure>
               </div>
               <div
-                class="media-content"
+                class="column is-7"
               >
                 <div
                   class="content"
@@ -203,7 +212,9 @@ Object {
                   </h6>
                 </div>
               </div>
-              <div>
+              <div
+                class="column is-2 is-mobile"
+              >
                 <a
                   class="button is-white"
                   href="/dashboard/TheoOkafor/webpages/edit/ideosynergy-ltd"
@@ -212,6 +223,13 @@ Object {
                     class="fa fa-edit is-size-5 has-text-grey"
                   />
                 </a>
+                <button
+                  class="button is-white"
+                >
+                  <i
+                    class="fa fa-archive is-size-5 has-text-grey-light"
+                  />
+                </button>
               </div>
             </div>
           </li>
