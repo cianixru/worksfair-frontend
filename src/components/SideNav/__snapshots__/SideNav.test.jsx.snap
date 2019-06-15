@@ -6,20 +6,24 @@ Object {
   "baseElement": <body>
     <div>
       <div>
-        <button
-          class="button is-medium is-fullwidth is-dark dashboard-button"
+        <div
+          class="dashboard-button"
         >
-          <span
-            class="icon"
+          <button
+            class="button is-medium is-fullwidth is-dark"
           >
-            <i
-              class="fa fa-navicon"
-            />
-          </span>
-          <span>
-            Dashboard Navigation
-          </span>
-        </button>
+            <span
+              class="icon"
+            >
+              <i
+                class="fa fa-navicon"
+              />
+            </span>
+            <span>
+              Dashboard Navigation
+            </span>
+          </button>
+        </div>
         <div
           class="dashboard-nav"
         >
@@ -85,20 +89,24 @@ Object {
   </body>,
   "container": <div>
     <div>
-      <button
-        class="button is-medium is-fullwidth is-dark dashboard-button"
+      <div
+        class="dashboard-button"
       >
-        <span
-          class="icon"
+        <button
+          class="button is-medium is-fullwidth is-dark"
         >
-          <i
-            class="fa fa-navicon"
-          />
-        </span>
-        <span>
-          Dashboard Navigation
-        </span>
-      </button>
+          <span
+            class="icon"
+          >
+            <i
+              class="fa fa-navicon"
+            />
+          </span>
+          <span>
+            Dashboard Navigation
+          </span>
+        </button>
+      </div>
       <div
         class="dashboard-nav"
       >

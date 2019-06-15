@@ -49,7 +49,6 @@ export const getWebpage = data => async (dispatch) => {
       method: 'get',
       data,
       baseURL,
-      headers: { Authorization: `Token ${apiToken}` },
     });
     return dispatch({
       type: GET_WEBPAGE,

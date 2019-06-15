@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.jsx Should display the Home Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="main-search-container dark-overlay"
+      >
+        <div
+          class="main-search-inner"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="columns"
+            >
+              <div
+                class="is-12"
+              >
+                <h2>
+                  Find Businesses and Services Near You.
+                </h2>
+                <h4>
+                  Discover top-ranked businesses and services that are ready to serve your needs.
+                </h4>
+                <form>
+                  <div
+                    class="main-search-input"
+                  >
+                    <div
+                      class="main-search-input-item"
+                    >
+                      <input
+                        class="input"
+                        name="keywords"
+                        placeholder="What do you need?"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="main-search-input-item location"
+                    >
+                      <input
+                        class="input"
+                        name="location"
+                        placeholder="Which city or town?"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <button
+                      class="button is-info is-rounded"
+                      disabled=""
+                    >
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="video-container"
+        >
+          <video
+            autoplay=""
+            loop=""
+            poster="main-search-video-poster.jpg"
+          >
+            <source
+              src="main-search-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="main-search-container dark-overlay"
+    >
+      <div
+        class="main-search-inner"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="columns"
+          >
+            <div
+              class="is-12"
+            >
+              <h2>
+                Find Businesses and Services Near You.
+              </h2>
+              <h4>
+                Discover top-ranked businesses and services that are ready to serve your needs.
+              </h4>
+              <form>
+                <div
+                  class="main-search-input"
+                >
+                  <div
+                    class="main-search-input-item"
+                  >
+                    <input
+                      class="input"
+                      name="keywords"
+                      placeholder="What do you need?"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="main-search-input-item location"
+                  >
+                    <input
+                      class="input"
+                      name="location"
+                      placeholder="Which city or town?"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <button
+                    class="button is-info is-rounded"
+                    disabled=""
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="video-container"
+      >
+        <video
+          autoplay=""
+          loop=""
+          poster="main-search-video-poster.jpg"
+        >
+          <source
+            src="main-search-video.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

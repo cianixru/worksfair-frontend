@@ -18,12 +18,12 @@ class Dashboard extends React.Component {
 
   render() {
     const token = localStorage.getItem('token');
-    const isNotAuthenticatedAndNotLoginNorSignup = !token
-      && this.props.location.pathname !== '/login'
-      && this.props.location.pathname !== '/signup';
+    const { pathname } = this.props.location;
+    const isNotAuthenticatedAndDashboard = !token
+      && pathname.includes('/dashboard');
     return (
       <Switch>
-        { isNotAuthenticatedAndNotLoginNorSignup
+        { isNotAuthenticatedAndDashboard
           ? <Redirect
             to={{
               pathname: '/login',

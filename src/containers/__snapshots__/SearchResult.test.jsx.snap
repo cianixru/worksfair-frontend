@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResult.jsx Should display the SearchResult Component with results 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="section"
+      >
+        <div
+          class="container margin-bottom-25"
+        >
+          <form>
+            <div
+              class="main-search-input"
+            >
+              <div
+                class="main-search-input-item"
+              >
+                <input
+                  class="input"
+                  name="keywords"
+                  placeholder="What do you need?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="main-search-input-item location"
+              >
+                <input
+                  class="input"
+                  name="location"
+                  placeholder="Which city or town?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <button
+                class="button is-info is-rounded"
+                disabled=""
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="container"
+        >
+          <ul>
+            <li>
+              <div
+                class="columns box"
+              >
+                <div
+                  class="column is-3"
+                >
+                  <figure
+                    class="image is-180x180"
+                  >
+                    <img
+                      alt="sample"
+                      src="sample-01.jpg"
+                    />
+                  </figure>
+                </div>
+                <div
+                  class="column is-7"
+                >
+                  <div
+                    class="content"
+                  >
+                    <h3>
+                      <a
+                        class="has-text-grey"
+                        href="/webpage/ideosynergy"
+                      >
+                        Theookafor2
+                      </a>
+                    </h3>
+                    <p>
+                      eod
+                    </p>
+                    <p
+                      class="is-size-6"
+                    >
+                      undefined, 
+                      <strong>
+                        undefined, undefined 
+                      </strong>
+                    </p>
+                  </div>
+                  <div>
+                    <h6
+                      class="is-size-7"
+                    >
+                      <strong>
+                        Added to Worksfair on:
+                      </strong>
+                      <span
+                        class="has-text-black"
+                      >
+                         
+                        Invalid Date
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="section"
+    >
+      <div
+        class="container margin-bottom-25"
+      >
+        <form>
+          <div
+            class="main-search-input"
+          >
+            <div
+              class="main-search-input-item"
+            >
+              <input
+                class="input"
+                name="keywords"
+                placeholder="What do you need?"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="main-search-input-item location"
+            >
+              <input
+                class="input"
+                name="location"
+                placeholder="Which city or town?"
+                type="text"
+                value=""
+              />
+            </div>
+            <button
+              class="button is-info is-rounded"
+              disabled=""
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        class="container"
+      >
+        <ul>
+          <li>
+            <div
+              class="columns box"
+            >
+              <div
+                class="column is-3"
+              >
+                <figure
+                  class="image is-180x180"
+                >
+                  <img
+                    alt="sample"
+                    src="sample-01.jpg"
+                  />
+                </figure>
+              </div>
+              <div
+                class="column is-7"
+              >
+                <div
+                  class="content"
+                >
+                  <h3>
+                    <a
+                      class="has-text-grey"
+                      href="/webpage/ideosynergy"
+                    >
+                      Theookafor2
+                    </a>
+                  </h3>
+                  <p>
+                    eod
+                  </p>
+                  <p
+                    class="is-size-6"
+                  >
+                    undefined, 
+                    <strong>
+                      undefined, undefined 
+                    </strong>
+                  </p>
+                </div>
+                <div>
+                  <h6
+                    class="is-size-7"
+                  >
+                    <strong>
+                      Added to Worksfair on:
+                    </strong>
+                    <span
+                      class="has-text-black"
+                    >
+                       
+                      Invalid Date
+                    </span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`SearchResult.jsx Should display the SearchResult with no results 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="section"
+      >
+        <div
+          class="container margin-bottom-25"
+        >
+          <form>
+            <div
+              class="main-search-input"
+            >
+              <div
+                class="main-search-input-item"
+              >
+                <input
+                  class="input"
+                  name="keywords"
+                  placeholder="What do you need?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="main-search-input-item location"
+              >
+                <input
+                  class="input"
+                  name="location"
+                  placeholder="Which city or town?"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <button
+                class="button is-info is-rounded"
+                disabled=""
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="container"
+        >
+          <ul>
+            <li>
+              <div
+                class="message is-warning"
+              >
+                <div
+                  class="message-body"
+                >
+                  <p
+                    class="is-size-5 margin-bottom-25"
+                  >
+                    Sorry, we could not find a webpage matching your description.
+                  </p>
+                  <p
+                    class="has-text-info"
+                  >
+                    Perhaps you can try better keywords
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="section"
+    >
+      <div
+        class="container margin-bottom-25"
+      >
+        <form>
+          <div
+            class="main-search-input"
+          >
+            <div
+              class="main-search-input-item"
+            >
+              <input
+                class="input"
+                name="keywords"
+                placeholder="What do you need?"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="main-search-input-item location"
+            >
+              <input
+                class="input"
+                name="location"
+                placeholder="Which city or town?"
+                type="text"
+                value=""
+              />
+            </div>
+            <button
+              class="button is-info is-rounded"
+              disabled=""
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        class="container"
+      >
+        <ul>
+          <li>
+            <div
+              class="message is-warning"
+            >
+              <div
+                class="message-body"
+              >
+                <p
+                  class="is-size-5 margin-bottom-25"
+                >
+                  Sorry, we could not find a webpage matching your description.
+                </p>
+                <p
+                  class="has-text-info"
+                >
+                  Perhaps you can try better keywords
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -52,100 +52,130 @@ Object {
                   />
                 </a>
               </div>
-            </nav>
-          </header>
-          <div
-            class="layout-auth"
-          >
-            <div
-              class="columns is-mobile is-centered"
-            >
               <div
-                class="column is-one-third-desktop"
+                class="navbar-menu"
               >
-                <div>
-                  <h3
-                    class="subtitle is-3"
+                <div
+                  class="navbar-start"
+                >
+                  <a
+                    class="navbar-item"
+                    href="/"
                   >
-                    Log in
-                  </h3>
-                  <form>
+                    Home
+                  </a>
+                  <a
+                    class="navbar-item"
+                    href="/"
+                  >
+                    About
+                  </a>
+                </div>
+                <div
+                  class="navbar-end"
+                >
+                  <div
+                    class="navbar-item"
+                  >
                     <div
-                      class="field"
+                      class="buttons"
                     >
-                      <label>
-                        Email
-                      </label>
-                      <div
-                        class="control has-icons-left"
-                      >
-                        <input
-                          class="input is-medium"
-                          data-testid="signin-email"
-                          name="email"
-                          placeholder="Email"
-                          type="email"
-                          value=""
-                        />
-                        <span
-                          class="icon is-medium is-left"
-                        >
-                          <i
-                            class="fa fa-envelope-o"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="field"
-                    >
-                      <label>
-                        Password
-                      </label>
-                      <div
-                        class="control has-icons-left"
-                      >
-                        <input
-                          class="input is-medium"
-                          data-testid="signin-password"
-                          name="password"
-                          placeholder="Password"
-                          type="password"
-                          value=""
-                        />
-                        <span
-                          class="icon is-medium is-left"
-                        >
-                          <i
-                            class="fa fa-lock"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="field"
-                    >
-                      Don't have an account? 
                       <a
+                        class="button is-white"
+                        href="/login"
+                      >
+                        Log in
+                      </a>
+                      <a
+                        class="button is-white"
                         href="/signup"
                       >
                         Sign up
                       </a>
-                    </div>
-                    <div
-                      class="control"
-                    >
-                      <button
-                        class="button is-danger is-medium is-rounded"
-                        disabled=""
-                        type="submit"
+                      <a
+                        class="button is-danger is-outlined is-rounded"
+                        href="/"
                       >
-                        Login
-                      </button>
+                        Create Free Webpage
+                      </a>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
+            </nav>
+          </header>
+          <div
+            class="main-search-container dark-overlay"
+          >
+            <div
+              class="main-search-inner"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="columns"
+                >
+                  <div
+                    class="is-12"
+                  >
+                    <h2>
+                      Find Businesses and Services Near You.
+                    </h2>
+                    <h4>
+                      Discover top-ranked businesses and services that are ready to serve your needs.
+                    </h4>
+                    <form>
+                      <div
+                        class="main-search-input"
+                      >
+                        <div
+                          class="main-search-input-item"
+                        >
+                          <input
+                            class="input"
+                            name="keywords"
+                            placeholder="What do you need?"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div
+                          class="main-search-input-item location"
+                        >
+                          <input
+                            class="input"
+                            name="location"
+                            placeholder="Which city or town?"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <button
+                          class="button is-info is-rounded"
+                          disabled=""
+                        >
+                          Search
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="video-container"
+            >
+              <video
+                autoplay=""
+                loop=""
+                poster="main-search-video-poster.jpg"
+              >
+                <source
+                  src="main-search-video.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </div>
         </div>
@@ -203,100 +233,130 @@ Object {
                 />
               </a>
             </div>
-          </nav>
-        </header>
-        <div
-          class="layout-auth"
-        >
-          <div
-            class="columns is-mobile is-centered"
-          >
             <div
-              class="column is-one-third-desktop"
+              class="navbar-menu"
             >
-              <div>
-                <h3
-                  class="subtitle is-3"
+              <div
+                class="navbar-start"
+              >
+                <a
+                  class="navbar-item"
+                  href="/"
                 >
-                  Log in
-                </h3>
-                <form>
+                  Home
+                </a>
+                <a
+                  class="navbar-item"
+                  href="/"
+                >
+                  About
+                </a>
+              </div>
+              <div
+                class="navbar-end"
+              >
+                <div
+                  class="navbar-item"
+                >
                   <div
-                    class="field"
+                    class="buttons"
                   >
-                    <label>
-                      Email
-                    </label>
-                    <div
-                      class="control has-icons-left"
-                    >
-                      <input
-                        class="input is-medium"
-                        data-testid="signin-email"
-                        name="email"
-                        placeholder="Email"
-                        type="email"
-                        value=""
-                      />
-                      <span
-                        class="icon is-medium is-left"
-                      >
-                        <i
-                          class="fa fa-envelope-o"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="field"
-                  >
-                    <label>
-                      Password
-                    </label>
-                    <div
-                      class="control has-icons-left"
-                    >
-                      <input
-                        class="input is-medium"
-                        data-testid="signin-password"
-                        name="password"
-                        placeholder="Password"
-                        type="password"
-                        value=""
-                      />
-                      <span
-                        class="icon is-medium is-left"
-                      >
-                        <i
-                          class="fa fa-lock"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="field"
-                  >
-                    Don't have an account? 
                     <a
+                      class="button is-white"
+                      href="/login"
+                    >
+                      Log in
+                    </a>
+                    <a
+                      class="button is-white"
                       href="/signup"
                     >
                       Sign up
                     </a>
-                  </div>
-                  <div
-                    class="control"
-                  >
-                    <button
-                      class="button is-danger is-medium is-rounded"
-                      disabled=""
-                      type="submit"
+                    <a
+                      class="button is-danger is-outlined is-rounded"
+                      href="/"
                     >
-                      Login
-                    </button>
+                      Create Free Webpage
+                    </a>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+          </nav>
+        </header>
+        <div
+          class="main-search-container dark-overlay"
+        >
+          <div
+            class="main-search-inner"
+          >
+            <div
+              class="container"
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="is-12"
+                >
+                  <h2>
+                    Find Businesses and Services Near You.
+                  </h2>
+                  <h4>
+                    Discover top-ranked businesses and services that are ready to serve your needs.
+                  </h4>
+                  <form>
+                    <div
+                      class="main-search-input"
+                    >
+                      <div
+                        class="main-search-input-item"
+                      >
+                        <input
+                          class="input"
+                          name="keywords"
+                          placeholder="What do you need?"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="main-search-input-item location"
+                      >
+                        <input
+                          class="input"
+                          name="location"
+                          placeholder="Which city or town?"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                      <button
+                        class="button is-info is-rounded"
+                        disabled=""
+                      >
+                        Search
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="video-container"
+          >
+            <video
+              autoplay=""
+              loop=""
+              poster="main-search-video-poster.jpg"
+            >
+              <source
+                src="main-search-video.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </div>

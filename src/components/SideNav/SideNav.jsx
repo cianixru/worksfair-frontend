@@ -22,15 +22,21 @@ class SideNav extends Component {
     } = this.props;
     return (
       <div>
-        <button
-          className="button is-medium is-fullwidth is-dark dashboard-button"
-          onClick={this.toggleDashNav}>
-          <span className="icon">
-            <i className="fa fa-navicon" />
-          </span>
-          <span>Dashboard Navigation</span>
-        </button>
-        <div className="dashboard-nav" ref={this.dashNav}>
+        <div className="dashboard-button">
+          <button
+            className="button is-medium is-fullwidth is-dark"
+            onClick={this.toggleDashNav}>
+            <span className="icon">
+              <i className="fa fa-navicon" />
+            </span>
+            <span>Dashboard Navigation</span>
+          </button>
+        </div>
+        <div
+          className="dashboard-nav"
+          ref={this.dashNav}
+          // style={{ display }}
+        >
           <div className="dashboard-nav-inner">
             <ul data-submenu-title="Main">
               {main.map(link => (

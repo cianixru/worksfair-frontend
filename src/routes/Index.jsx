@@ -12,6 +12,7 @@ import { getCurrentUser } from '../actions/auth';
 import { getWebpage } from '../actions/webpage';
 import Webpage from './Webpage';
 import WebpageNav from '../components/Navbar/WebpageNav';
+import PublicRoutes from './Public';
 
 class Routes extends Component {
   async componentDidMount() {
@@ -63,6 +64,7 @@ class Routes extends Component {
         <AuthRoute />
         <Dashboard getCurrentUser={actions.getCurrentUser} />
         <Webpage getWebpage={this.getWebpage} />
+        <PublicRoutes />
       </div>
     );
   }

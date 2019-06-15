@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import UpdateWebpage from '../components/Dashboard/UpdateWebpage';
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
@@ -14,7 +15,7 @@ class UpdateWebpageContainer extends Component {
       },
       {
         text: 'Update Webpage',
-        to: '/edit/',
+        to: this.props.location.pathname,
       },
     ];
     return (
@@ -30,7 +31,7 @@ class UpdateWebpageContainer extends Component {
 }
 
 UpdateWebpageContainer.propTypes = {
-  match: PropTypes.object,
+  location: PropTypes.object,
 };
 
-export default UpdateWebpageContainer;
+export default withRouter(UpdateWebpageContainer);

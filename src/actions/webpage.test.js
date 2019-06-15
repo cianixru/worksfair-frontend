@@ -24,6 +24,7 @@ import {
   DELETE_OFFERING_FAILED,
 } from './webpage';
 import { offering } from '../utils/test-utils/mockData';
+import { SEARCH_RESULT, search, SEARCH_FAILED } from './public';
 
 // eslint-disable-next-line import/prefer-default-export
 export const webpage = {
@@ -237,6 +238,42 @@ describe('Delete Offering action', () => {
       message: 'Request failed with status code 400',
     }];
     return store.dispatch(createWebpageOffering({}))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Search Webpages action', () => {
+  const data = {
+    keywords: 'mirage',
+    location: 'kigali',
+  };
+
+  test('should dispatch the results to the store after search',
+    () => {
+      mock.onGet(`/search/?query=${data.keywords}&location=${data.location}`)
+        .reply(200, [webpage]);
+      const expectedActions = [{
+        type: SEARCH_RESULT,
+        data: [webpage]
+      }];
+      return store.dispatch(search(data))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after search fail', () => {
+    mock.onGet('/search/?query=&location=').reply(404, {
+      type: SEARCH_FAILED,
+      message: 'Request failed with status code 404',
+    });
+    const expectedActions = [{
+      type: SEARCH_FAILED,
+      message: 'Request failed with status code 404',
+    }];
+    return store.dispatch(search({}))
       .then(() => {
         expect(store.getActions().type).toEqual(expectedActions.type);
       });

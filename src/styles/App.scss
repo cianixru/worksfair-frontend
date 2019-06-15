@@ -82,3 +82,8 @@ body {
 img {
     object-fit: cover;
 }
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
