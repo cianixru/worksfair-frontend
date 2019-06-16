@@ -23,8 +23,15 @@ import {
   DELETE_OFFERING,
   DELETE_OFFERING_FAILED,
 } from './webpage';
-import { offering } from '../utils/test-utils/mockData';
-import { SEARCH_RESULT, search, SEARCH_FAILED } from './public';
+import { offering, user } from '../utils/test-utils/mockData';
+import {
+  SEARCH_RESULT,
+  search,
+  SEARCH_FAILED,
+  RETURNED_USER,
+  getUser,
+  GET_USER_FAILED
+} from './public';
 
 // eslint-disable-next-line import/prefer-default-export
 export const webpage = {
@@ -274,6 +281,41 @@ describe('Search Webpages action', () => {
       message: 'Request failed with status code 404',
     }];
     return store.dispatch(search({}))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Get User action', () => {
+  const data = {
+    username: 'mirage',
+  };
+
+  test('should dispatch the results to the store after search',
+    () => {
+      mock.onGet(`/user/${data.username}/`)
+        .reply(200, user);
+      const expectedActions = [{
+        type: RETURNED_USER,
+        data: user
+      }];
+      return store.dispatch(getUser(data))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after search fail', () => {
+    mock.onPost('/user/TheoOkafor').reply(404, {
+      type: GET_USER_FAILED,
+      message: 'Request failed with status code 404',
+    });
+    const expectedActions = [{
+      type: GET_USER_FAILED,
+      message: 'Request failed with status code 404',
+    }];
+    return store.dispatch(getUser(data))
       .then(() => {
         expect(store.getActions().type).toEqual(expectedActions.type);
       });

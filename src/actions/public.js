@@ -29,3 +29,31 @@ export const search = data => async (dispatch) => {
     });
   }
 };
+
+
+export const RETURNED_USER = 'RETURNED_USER';
+export const GET_USER_FAILED = 'GET_USER_FAILED';
+/**
+ * Sends a get user request to the backend
+ * @param { object } data
+ * @returns { func } dispatch
+ */
+export const getUser = data => async (dispatch) => {
+  try {
+    const userData = await axios({
+      url: `/user/${data.username}/`,
+      method: 'get',
+      baseURL,
+    });
+    return dispatch({
+      type: RETURNED_USER,
+      data: userData.data,
+    });
+  } catch (error) {
+    return dispatch({
+      type: GET_USER_FAILED,
+      message: error.message,
+      response: error.response,
+    });
+  }
+};

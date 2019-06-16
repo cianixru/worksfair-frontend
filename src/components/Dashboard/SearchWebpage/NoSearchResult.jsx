@@ -6,7 +6,7 @@ const NoWebpages = () => (
     <div className="message is-warning">
       <div className="message-body">
         <p className="is-size-5 margin-bottom-25">
-          Sorry, we could not find a webpage matching your description.
+          Sorry, we could not find any business matching your description.
         </p>
         <p className="has-text-info">
             Perhaps you can try better keywords

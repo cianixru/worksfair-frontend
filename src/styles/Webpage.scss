@@ -259,8 +259,21 @@ a.mfp-gallery {
 }
 
 .detail-content {
+    padding: 15px;
+    padding-top: 20%;
+    overflow: hidden;
+}
+.detail {
+    height: 30vh;
+    width: 25vw;
     border-left: 30px solid;
     border-bottom: 15px solid;
-    padding: 15px;
     border-radius: 2px;
+}
+@media(max-width:991px) {
+    .detail {
+        height: 100%;
+        width: 80vw;
+        margin-bottom: 45px;
+    }
 }

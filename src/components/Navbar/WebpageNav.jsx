@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import SocialIcon from '../../atoms/SocialIcon';
 
 class WebpageNav extends Component {
   componentDidMount() {
@@ -109,6 +110,38 @@ class WebpageNav extends Component {
                 Create Free Webpage
               </Link>
             </div>
+            { webpage && <div className="level is-mobile">
+              <div className="level-left">
+                {
+                  webpage.facebook
+                    && <a
+                      href={webpage.facebook}
+                      className="level-item"
+                    >
+                      <SocialIcon icon="fa fa-facebook" />
+                    </a>
+                }
+                {
+                  webpage.twitter
+                    && <a
+                      href={webpage.twitter}
+                      className="level-item"
+                    >
+                      <SocialIcon icon="fa fa-twitter" />
+                    </a>
+                }
+                {
+                  webpage.instagram
+                    && <a
+                      href={webpage.instagram}
+                      className="level-item"
+                    >
+                      <SocialIcon icon="fa fa-instagram" />
+                    </a>
+                }
+              </div>
+            </div>
+            }
           </div>
         </div>
       </nav>

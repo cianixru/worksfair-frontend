@@ -10,14 +10,14 @@ const WebpageItem = ({
   <li>
     <div className="columns box">
       <div className="column is-3">
-        <figure className="image is-180x180">
+        <figure className="image is-150x150">
           <img
             src={(webpage.featured_images && webpage.featured_images[0])
               || sampleImage}
             alt="sample" />
         </figure>
       </div>
-      <div className="column is-7">
+      <div className="column is-9">
         <div className="content">
           <h3>
             <Link

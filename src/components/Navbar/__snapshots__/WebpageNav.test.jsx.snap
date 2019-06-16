@@ -89,6 +89,13 @@ Object {
                 Create Free Webpage
               </a>
             </div>
+            <div
+              class="level is-mobile"
+            >
+              <div
+                class="level-left"
+              />
+            </div>
           </div>
         </div>
       </nav>
@@ -178,6 +185,13 @@ Object {
             >
               Create Free Webpage
             </a>
+          </div>
+          <div
+            class="level is-mobile"
+          >
+            <div
+              class="level-left"
+            />
           </div>
         </div>
       </div>

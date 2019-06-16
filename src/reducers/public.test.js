@@ -1,8 +1,15 @@
-import { SEARCH_RESULT, SEARCH_FAILED } from '../actions/public';
+import {
+  SEARCH_RESULT,
+  SEARCH_FAILED,
+  RETURNED_USER,
+  GET_USER_FAILED
+} from '../actions/public';
 import searchReducer from './public';
 import { webpage } from '../actions/webpage.test';
+import { user } from '../utils/test-utils/mockData';
 
 const initialState = {
+  user: null,
   webpages: null,
 };
 
@@ -63,6 +70,67 @@ describe('Search reducer test', () => {
         webpages: [webpage],
       },
       webpages: null,
+    });
+  });
+});
+
+describe('user reducer test', () => {
+  test('should return the initial state', () => {
+    expect(searchReducer(undefined, {})).toEqual(initialState);
+  });
+
+  test('should handle Succesful getUser', () => {
+    expect(
+      searchReducer([], {
+        type: RETURNED_USER,
+        data: user,
+      })
+    ).toEqual({
+      user,
+    });
+
+    expect(
+      searchReducer([
+        {
+          user,
+        }
+      ],
+      {
+        type: RETURNED_USER,
+        data: user,
+      })
+    ).toEqual({
+      0: {
+        user,
+      },
+      user,
+    });
+  });
+  test('should handle search failure', () => {
+    expect(
+      searchReducer([], {
+        type: GET_USER_FAILED,
+        error: 'Failure',
+      })
+    ).toEqual({
+      user: null,
+    });
+
+    expect(
+      searchReducer([
+        {
+          user,
+        }
+      ],
+      {
+        type: GET_USER_FAILED,
+        data: null,
+      })
+    ).toEqual({
+      0: {
+        user,
+      },
+      user: null,
     });
   });
 });

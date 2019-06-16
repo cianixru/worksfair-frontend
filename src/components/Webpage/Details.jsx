@@ -31,7 +31,7 @@ const DetailItems = ({
                     {detail.title}
                   </h4>
                   <div
-                    className="detail-content has-text-grey"
+                    className="detail has-text-grey"
                     style={{
                       borderLeft: '30px solid',
                       borderBottom: '15px solid',
@@ -40,7 +40,7 @@ const DetailItems = ({
                       }`,
                     }}
                   >
-                    <p>{detail.description}</p>
+                    <p className="detail-content">{detail.description}</p>
                   </div>
                 </div>
               </div>
