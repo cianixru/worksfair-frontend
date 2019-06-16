@@ -7,4 +7,9 @@ export const tooltipMessage = {
   colour: 'The colour theme for your webpage. the default is plain gray-scale',
   detailsDescription: 'Describe this content (Eg. To bring digital creativity to ready hands)',
   detailsTitle: 'The title of this content (Eg. Our Vision)',
+  headline: 'Describe yourself professionally',
+  facebook: 'The link to your FACEBOOK page/profile',
+  twitter: 'The link to your TWITTER page/profile',
+  instagram: 'The link to your INSTAGRAM page/profile',
+  headlineExample: 'Eg. An astute social media marketter with 3 years experience in SEO',
 };

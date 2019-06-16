@@ -12,6 +12,7 @@ const WebpageText = ({
   dataTestId,
   validate,
   placeholder,
+  disabled
 }) => {
   const errorReset = () => handleErrorReset(name);
   return (
@@ -26,6 +27,7 @@ const WebpageText = ({
         placeholder={placeholder}
         // eslint-disable-next-line react/jsx-no-bind
         onFocus={errorReset}
+        disabled={disabled}
       />
       { validationErrors[name]
         && validationErrors[name].map((error) => {

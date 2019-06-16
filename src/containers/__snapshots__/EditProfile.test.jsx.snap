@@ -1,0 +1,706 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditProfile.jsx Should display the EditProfile Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="dashboard-content"
+      >
+        <div
+          class="dashboard-titlebar"
+        >
+          <div
+            class="columns"
+          >
+            <div
+              class="column"
+            >
+              <h2>
+                Your Profile
+              </h2>
+            </div>
+            <div
+              class="column"
+            />
+            <nav
+              aria-label="breadcrumbs"
+              class="column breadcrumb"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dashboard/null/webpages"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dashboard/null/profile"
+                  >
+                    Your Profile
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <div
+            class="box"
+          >
+            <form>
+              <div
+                class="add-webpage-headline"
+              >
+                <h3
+                  class="is-size-4"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-user-o"
+                  />
+                  Bio
+                </h3>
+              </div>
+              <div
+                class="add-webpage-content"
+              >
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Email
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="email"
+                      disabled=""
+                      name="email"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Username
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="username"
+                      disabled=""
+                      name="username"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    First Name
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="first-name"
+                      name="first_name"
+                      placeholder="Eg. Tony"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Last Name
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="last-name"
+                      name="last_name"
+                      placeholder="Eg. Elumelu"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Location
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="current_location"
+                      name="current_location"
+                      placeholder="Lagos, Nigeria"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Headline
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        Describe yourself professionally
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <div>
+                      <textarea
+                        class="textarea is-medium"
+                        name="headline"
+                        placeholder="Eg. An astute social media marketter with 3 years experience in SEO"
+                        rows="2"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="add-webpage-headline"
+              >
+                <h3
+                  class="is-size-4"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-globe"
+                  />
+                  Social Media
+                </h3>
+              </div>
+              <div
+                class="add-webpage-content"
+              >
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Facebook Link
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        The link to your FACEBOOK page/profile
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="facebook"
+                      name="facebook"
+                      placeholder="Eg. https://www.facebook.com/tony.elumelu"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Twitter Link
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        The link to your TWITTER page/profile
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="twitter"
+                      name="twitter"
+                      placeholder="Eg. https://www.twitter.com/segun.arinze"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="field"
+                >
+                  <h5>
+                    Instagram Link
+                    <i
+                      class="tip"
+                    >
+                      <div
+                        class="tip-content"
+                      >
+                        The link to your INSTAGRAM page/profile
+                      </div>
+                    </i>
+                  </h5>
+                  <div
+                    class="control"
+                  >
+                    <input
+                      class="input is-medium"
+                      data-testid="instagram"
+                      name="instagram"
+                      placeholder="Eg. https://www.instagram.com/billy_jean"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="control buttons"
+              >
+                <button
+                  class="button is-info is-medium is-rounded"
+                  data-testid="update-profile"
+                  disabled=""
+                  type="submit"
+                >
+                  Save
+                </button>
+                <button
+                  class="button is-info is-medium is-rounded is-outlined"
+                  data-testid="view profile"
+                >
+                  View Profile
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="dashboard-content"
+    >
+      <div
+        class="dashboard-titlebar"
+      >
+        <div
+          class="columns"
+        >
+          <div
+            class="column"
+          >
+            <h2>
+              Your Profile
+            </h2>
+          </div>
+          <div
+            class="column"
+          />
+          <nav
+            aria-label="breadcrumbs"
+            class="column breadcrumb"
+          >
+            <ul>
+              <li>
+                <a
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/null/webpages"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/dashboard/null/profile"
+                >
+                  Your Profile
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <div
+          class="box"
+        >
+          <form>
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="is-size-4"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-user-o"
+                />
+                Bio
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <div
+                class="field"
+              >
+                <h5>
+                  Email
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="email"
+                    disabled=""
+                    name="email"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Username
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="username"
+                    disabled=""
+                    name="username"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  First Name
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="first-name"
+                    name="first_name"
+                    placeholder="Eg. Tony"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Last Name
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="last-name"
+                    name="last_name"
+                    placeholder="Eg. Elumelu"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Location
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="current_location"
+                    name="current_location"
+                    placeholder="Lagos, Nigeria"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Headline
+                  <i
+                    class="tip"
+                  >
+                    <div
+                      class="tip-content"
+                    >
+                      Describe yourself professionally
+                    </div>
+                  </i>
+                </h5>
+                <div
+                  class="control"
+                >
+                  <div>
+                    <textarea
+                      class="textarea is-medium"
+                      name="headline"
+                      placeholder="Eg. An astute social media marketter with 3 years experience in SEO"
+                      rows="2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="add-webpage-headline"
+            >
+              <h3
+                class="is-size-4"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fa fa-globe"
+                />
+                Social Media
+              </h3>
+            </div>
+            <div
+              class="add-webpage-content"
+            >
+              <div
+                class="field"
+              >
+                <h5>
+                  Facebook Link
+                  <i
+                    class="tip"
+                  >
+                    <div
+                      class="tip-content"
+                    >
+                      The link to your FACEBOOK page/profile
+                    </div>
+                  </i>
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="facebook"
+                    name="facebook"
+                    placeholder="Eg. https://www.facebook.com/tony.elumelu"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Twitter Link
+                  <i
+                    class="tip"
+                  >
+                    <div
+                      class="tip-content"
+                    >
+                      The link to your TWITTER page/profile
+                    </div>
+                  </i>
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="twitter"
+                    name="twitter"
+                    placeholder="Eg. https://www.twitter.com/segun.arinze"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="field"
+              >
+                <h5>
+                  Instagram Link
+                  <i
+                    class="tip"
+                  >
+                    <div
+                      class="tip-content"
+                    >
+                      The link to your INSTAGRAM page/profile
+                    </div>
+                  </i>
+                </h5>
+                <div
+                  class="control"
+                >
+                  <input
+                    class="input is-medium"
+                    data-testid="instagram"
+                    name="instagram"
+                    placeholder="Eg. https://www.instagram.com/billy_jean"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="control buttons"
+            >
+              <button
+                class="button is-info is-medium is-rounded"
+                data-testid="update-profile"
+                disabled=""
+                type="submit"
+              >
+                Save
+              </button>
+              <button
+                class="button is-info is-medium is-rounded is-outlined"
+                data-testid="view profile"
+              >
+                View Profile
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

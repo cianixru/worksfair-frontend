@@ -8,6 +8,7 @@ import CreateWebpage from '../containers/CreateWebpage';
 import ListWebpages from '../containers/ListWebpages';
 import UpdateWebpage from '../containers/UpdateWebpage';
 import { composeDashboardLayout } from '../layouts/index';
+import EditProfile from '../containers/EditProfile';
 
 const composeLayout = Component => composeDashboardLayout(Component);
 
@@ -54,6 +55,10 @@ class Dashboard extends React.Component {
                 exact
                 path="/dashboard/:username/webpages"
                 component={composeLayout(ListWebpages)} />
+              <Route
+                exact
+                path="/dashboard/:username/profile"
+                component={composeLayout(EditProfile)} />
             </Fragment>)
         }
       </Switch>
