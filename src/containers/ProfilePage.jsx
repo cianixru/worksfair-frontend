@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import { getUser } from '../actions/public';
 import { isLoading, isComplete } from '../actions/loader';
 import UserProfile from '../components/Dashboard/UserProfile';
+import Footer from '../components/Footer/Footer';
 
 class ProfilePage extends Component {
   static propTypes = {
@@ -35,9 +36,12 @@ class ProfilePage extends Component {
     const { user } = this.props;
 
     return (
-      <section className="section">
-        { user && <UserProfile user={user} />}
-      </section>
+      <Fragment>
+        <section className="section">
+          { user && <UserProfile user={user} />}
+        </section>
+        <Footer />
+      </Fragment>
     );
   }
 }

@@ -95,7 +95,7 @@ const CreateWebpageForm = ({
               </h5>
               <div className="field">
                 <div className="control">
-                  <div className="select is-danger">
+                  <div className="select is-link">
                     <Field
                       name="colour"
                       component="select"
@@ -116,7 +116,7 @@ const CreateWebpageForm = ({
               <button
                 type="submit"
                 disabled={pristine || invalid || submitSucceeded || submitting}
-                className="button is-danger is-medium is-rounded"
+                className="button is-link is-medium is-rounded"
                 data-testid="create-webpage"
               >
                 Save & Continue

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import ListWebpages from '../components/Dashboard/ListWebpages';
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
+import Footer from '../components/Footer/Footer';
 
 class ListWebpagesContainer extends Component {
   render() {
@@ -13,13 +14,16 @@ class ListWebpagesContainer extends Component {
       },
     ];
     return (
-      <div className="dashboard-content">
-        <DashboardHeader
-          title={`How far, ${username}!`}
-          navigation={navigation}
-        />
-        <ListWebpages />
-      </div>
+      <Fragment>
+        <div className="dashboard-content">
+          <DashboardHeader
+            title={`How far, ${username}!`}
+            navigation={navigation}
+          />
+          <ListWebpages />
+        </div>
+        <Footer />
+      </Fragment>
     );
   }
 }

@@ -304,7 +304,7 @@ Object {
                 class="control buttons"
               >
                 <button
-                  class="button is-info is-medium is-rounded"
+                  class="button is-link is-medium is-rounded"
                   data-testid="update-profile"
                   disabled=""
                   type="submit"
@@ -312,7 +312,7 @@ Object {
                   Save
                 </button>
                 <button
-                  class="button is-info is-medium is-rounded is-outlined"
+                  class="button is-link is-medium is-rounded is-outlined"
                   data-testid="view profile"
                 >
                   View Profile
@@ -322,6 +322,17 @@ Object {
           </div>
         </div>
       </div>
+      <footer
+        class="footer "
+      >
+        <div
+          class="content has-text-centered"
+        >
+          Copyright 
+          2019
+           Worksfair. All Rights Reserved.
+        </div>
+      </footer>
     </div>
   </body>,
   "container": <div>
@@ -624,7 +635,7 @@ Object {
               class="control buttons"
             >
               <button
-                class="button is-info is-medium is-rounded"
+                class="button is-link is-medium is-rounded"
                 data-testid="update-profile"
                 disabled=""
                 type="submit"
@@ -632,7 +643,7 @@ Object {
                 Save
               </button>
               <button
-                class="button is-info is-medium is-rounded is-outlined"
+                class="button is-link is-medium is-rounded is-outlined"
                 data-testid="view profile"
               >
                 View Profile
@@ -642,6 +653,17 @@ Object {
         </div>
       </div>
     </div>
+    <footer
+      class="footer "
+    >
+      <div
+        class="content has-text-centered"
+      >
+        Copyright 
+        2019
+         Worksfair. All Rights Reserved.
+      </div>
+    </footer>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

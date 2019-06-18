@@ -202,7 +202,7 @@ const SignupForm = ({ onSubmit, validate, validationErrors }) => {
               disabled={pristine || invalid}
               // eslint-disable-next-line react/jsx-no-bind
               onClick={invalid ? () => { } : handleSubmit}
-              className="button is-danger is-medium is-rounded"
+              className="button is-link is-medium is-rounded"
             >
               Signup
             </button>

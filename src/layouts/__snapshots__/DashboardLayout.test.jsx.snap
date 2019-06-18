@@ -62,7 +62,7 @@ Object {
                         aria-hidden="true"
                         class="fa fa-plus-square"
                       />
-                      Create Webpage
+                      Create Business Webpage
                     </a>
                   </li>
                   <li>
@@ -128,7 +128,7 @@ Object {
                   <a
                     href="/demo"
                   >
-                    View Sample Webpage
+                    View Sample Business Webpage
                   </a>
                 </div>
                 <div
@@ -175,12 +175,6 @@ Object {
                   class="pagination is-left"
                   role="navigation"
                 >
-                  <a
-                    class="pagination-next"
-                    href="/"
-                  >
-                    Preview Your Webpage
-                  </a>
                   <ul
                     class="pagination-list"
                   >
@@ -243,6 +237,17 @@ Object {
                 class="add-webpage-content"
               />
             </div>
+            <footer
+              class="footer "
+            >
+              <div
+                class="content has-text-centered"
+              >
+                Copyright 
+                2019
+                 Worksfair. All Rights Reserved.
+              </div>
+            </footer>
           </div>
         </div>
       </div>
@@ -306,7 +311,7 @@ Object {
                       aria-hidden="true"
                       class="fa fa-plus-square"
                     />
-                    Create Webpage
+                    Create Business Webpage
                   </a>
                 </li>
                 <li>
@@ -372,7 +377,7 @@ Object {
                 <a
                   href="/demo"
                 >
-                  View Sample Webpage
+                  View Sample Business Webpage
                 </a>
               </div>
               <div
@@ -419,12 +424,6 @@ Object {
                 class="pagination is-left"
                 role="navigation"
               >
-                <a
-                  class="pagination-next"
-                  href="/"
-                >
-                  Preview Your Webpage
-                </a>
                 <ul
                   class="pagination-list"
                 >
@@ -487,6 +486,17 @@ Object {
               class="add-webpage-content"
             />
           </div>
+          <footer
+            class="footer "
+          >
+            <div
+              class="content has-text-centered"
+            >
+              Copyright 
+              2019
+               Worksfair. All Rights Reserved.
+            </div>
+          </footer>
         </div>
       </div>
     </div>

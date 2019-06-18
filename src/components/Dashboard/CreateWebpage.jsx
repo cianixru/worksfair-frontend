@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
-  withRouter, NavLink, Link, BrowserRouter as Router, Route
+  withRouter, NavLink, BrowserRouter as Router, Route
 } from 'react-router-dom';
 
 import BasicInfo from './CreateWebpage/BasicInfo';
@@ -276,7 +276,7 @@ class CreateWebpage extends Component {
             className="pagination is-left"
             role="navigation"
             aria-label="pagination">
-            <Link to="/" className="pagination-next">Preview Your Webpage</Link>
+            {/* <Link to="/" className="pagination-next">Preview Your Webpage</Link> */}
             <ul className="pagination-list">
               <li>
                 <NavLink

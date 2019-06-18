@@ -85,7 +85,7 @@ Object {
                   Sign up
                 </a>
                 <a
-                  class="button is-danger is-outlined is-rounded"
+                  class="button is-link is-outlined is-rounded"
                   href="/"
                 >
                   Create Free Webpage
@@ -178,7 +178,7 @@ Object {
                 Sign up
               </a>
               <a
-                class="button is-danger is-outlined is-rounded"
+                class="button is-link is-outlined is-rounded"
                 href="/"
               >
                 Create Free Webpage
@@ -336,7 +336,7 @@ Object {
                   Sign up
                 </a>
                 <a
-                  class="button is-danger is-outlined is-rounded"
+                  class="button is-link is-outlined is-rounded"
                   href="/"
                 >
                   Create Free Webpage

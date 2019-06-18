@@ -79,6 +79,17 @@ Object {
           </video>
         </div>
       </div>
+      <footer
+        class="footer "
+      >
+        <div
+          class="content has-text-centered"
+        >
+          Copyright 
+          2019
+           Worksfair. All Rights Reserved.
+        </div>
+      </footer>
     </div>
   </body>,
   "container": <div>
@@ -156,6 +167,17 @@ Object {
         </video>
       </div>
     </div>
+    <footer
+      class="footer "
+    >
+      <div
+        class="content has-text-centered"
+      >
+        Copyright 
+        2019
+         Worksfair. All Rights Reserved.
+      </div>
+    </footer>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

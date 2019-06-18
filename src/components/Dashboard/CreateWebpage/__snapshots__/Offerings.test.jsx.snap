@@ -126,7 +126,7 @@ Object {
           class="control"
         >
           <button
-            class="button is-medium is-danger is-rounded"
+            class="button is-medium is-link is-outlined is-rounded"
             data-testid="save-and-preview"
             type="submit"
           >
@@ -258,7 +258,7 @@ Object {
         class="control"
       >
         <button
-          class="button is-medium is-danger is-rounded"
+          class="button is-medium is-link is-outlined is-rounded"
           data-testid="save-and-preview"
           type="submit"
         >

@@ -155,7 +155,7 @@ Object {
                       class="control"
                     >
                       <div
-                        class="select is-danger"
+                        class="select is-link"
                       >
                         <select
                           name="colour"
@@ -197,7 +197,7 @@ Object {
                   class="control"
                 >
                   <button
-                    class="button is-danger is-medium is-rounded"
+                    class="button is-link is-medium is-rounded"
                     data-testid="create-webpage"
                     disabled=""
                     type="submit"
@@ -692,7 +692,7 @@ Object {
                   class="control"
                 >
                   <button
-                    class="button is-danger is-medium is-rounded"
+                    class="button is-link is-medium is-rounded"
                     data-testid="update-contact"
                     disabled=""
                     type="submit"
@@ -751,7 +751,7 @@ Object {
                 class="control"
               >
                 <button
-                  class="button is-danger is-medium is-rounded"
+                  class="button is-link is-medium is-rounded"
                   data-testid="save-featured-images"
                   disabled=""
                   type="submit"
@@ -902,7 +902,7 @@ Object {
                 class="control"
               >
                 <button
-                  class="button is-medium is-danger is-rounded"
+                  class="button is-medium is-link is-outlined is-rounded"
                   data-testid="save-and-preview"
                   type="submit"
                 >
@@ -1066,7 +1066,7 @@ Object {
                     class="control"
                   >
                     <div
-                      class="select is-danger"
+                      class="select is-link"
                     >
                       <select
                         name="colour"
@@ -1108,7 +1108,7 @@ Object {
                 class="control"
               >
                 <button
-                  class="button is-danger is-medium is-rounded"
+                  class="button is-link is-medium is-rounded"
                   data-testid="create-webpage"
                   disabled=""
                   type="submit"
@@ -1603,7 +1603,7 @@ Object {
                 class="control"
               >
                 <button
-                  class="button is-danger is-medium is-rounded"
+                  class="button is-link is-medium is-rounded"
                   data-testid="update-contact"
                   disabled=""
                   type="submit"
@@ -1662,7 +1662,7 @@ Object {
               class="control"
             >
               <button
-                class="button is-danger is-medium is-rounded"
+                class="button is-link is-medium is-rounded"
                 data-testid="save-featured-images"
                 disabled=""
                 type="submit"
@@ -1813,7 +1813,7 @@ Object {
               class="control"
             >
               <button
-                class="button is-medium is-danger is-rounded"
+                class="button is-medium is-link is-outlined is-rounded"
                 data-testid="save-and-preview"
                 type="submit"
               >

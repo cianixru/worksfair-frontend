@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -10,6 +10,7 @@ import { updateProfile, UPDATE_PROFILE_FAILED } from '../actions/user';
 import { isLoading, isComplete } from '../actions/loader';
 import { getCurrentUser } from '../actions/auth';
 import alert from '../components/utils/alert';
+import Footer from '../components/Footer/Footer';
 
 class EditProfile extends Component {
   static propTypes = {
@@ -103,23 +104,26 @@ class EditProfile extends Component {
       },
     ];
     return (
-      <div className="dashboard-content">
-        <DashboardHeader
-          title="Your Profile"
-          navigation={navigation}
-        />
-        <div>
-          <div className="box">
-            <EditProfileForm
-              onSubmit={this.onSubmit}
-              user={user}
-              validationErrors={validationErrors}
-              handleErrorReset={this.handleErrorReset}
-              handleViewProfile={this.handleViewProfile}
-            />
+      <Fragment>
+        <div className="dashboard-content">
+          <DashboardHeader
+            title="Your Profile"
+            navigation={navigation}
+          />
+          <div>
+            <div className="box">
+              <EditProfileForm
+                onSubmit={this.onSubmit}
+                user={user}
+                validationErrors={validationErrors}
+                handleErrorReset={this.handleErrorReset}
+                handleViewProfile={this.handleViewProfile}
+              />
+            </div>
           </div>
         </div>
-      </div>
+        <Footer />
+      </Fragment>
     );
   }
 }

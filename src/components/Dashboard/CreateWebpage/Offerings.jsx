@@ -52,7 +52,7 @@ const Offerings = ({
         <button
           type="submit"
           // disabled={pristine || invalid}
-          className="button is-medium is-danger is-rounded"
+          className="button is-medium is-link is-outlined is-rounded"
           data-testid="save-and-preview"
           onClick={handleSaveAndPreview}
         >

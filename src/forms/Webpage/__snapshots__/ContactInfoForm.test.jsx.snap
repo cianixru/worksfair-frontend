@@ -400,7 +400,7 @@ Object {
           class="control"
         >
           <button
-            class="button is-danger is-medium is-rounded"
+            class="button is-link is-medium is-rounded"
             data-testid="update-contact"
             disabled=""
             type="submit"
@@ -807,7 +807,7 @@ Object {
         class="control"
       >
         <button
-          class="button is-danger is-medium is-rounded"
+          class="button is-link is-medium is-rounded"
           data-testid="update-contact"
           disabled=""
           type="submit"

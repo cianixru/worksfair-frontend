@@ -211,7 +211,7 @@ class FeaturedImages extends Component {
                 <button
                   type="submit"
                   disabled={hasNoImages}
-                  className="button is-danger is-medium is-rounded"
+                  className="button is-link is-medium is-rounded"
                   data-testid="save-featured-images"
                   onClick={this.handleSubmit}
                 >

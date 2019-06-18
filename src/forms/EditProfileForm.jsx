@@ -225,13 +225,13 @@ const EditProfileForm = ({
               <button
                 type="submit"
                 disabled={pristine || invalid || submitSucceeded || submitting}
-                className="button is-info is-medium is-rounded"
+                className="button is-link is-medium is-rounded"
                 data-testid="update-profile"
               >
                 Save
               </button>
               <button
-                className="button is-info is-medium is-rounded is-outlined"
+                className="button is-link is-medium is-rounded is-outlined"
                 data-testid="view profile"
                 onClick={handleViewProfile}
               >

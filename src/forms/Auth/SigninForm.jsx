@@ -60,7 +60,7 @@ const SigninForm = ({ onSubmit, validate, }) => {
               <button
                 type="submit"
                 disabled={pristine || invalid}
-                className="button is-danger is-medium is-rounded"
+                className="button is-link is-medium is-rounded"
               >
                 Login
               </button>

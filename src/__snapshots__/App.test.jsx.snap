@@ -93,7 +93,7 @@ Object {
                         Sign up
                       </a>
                       <a
-                        class="button is-danger is-outlined is-rounded"
+                        class="button is-link is-outlined is-rounded"
                         href="/"
                       >
                         Create Free Webpage
@@ -178,6 +178,17 @@ Object {
               </video>
             </div>
           </div>
+          <footer
+            class="footer "
+          >
+            <div
+              class="content has-text-centered"
+            >
+              Copyright 
+              2019
+               Worksfair. All Rights Reserved.
+            </div>
+          </footer>
         </div>
         <div
           class="Toastify"
@@ -274,7 +285,7 @@ Object {
                       Sign up
                     </a>
                     <a
-                      class="button is-danger is-outlined is-rounded"
+                      class="button is-link is-outlined is-rounded"
                       href="/"
                     >
                       Create Free Webpage
@@ -359,6 +370,17 @@ Object {
             </video>
           </div>
         </div>
+        <footer
+          class="footer "
+        >
+          <div
+            class="content has-text-centered"
+          >
+            Copyright 
+            2019
+             Worksfair. All Rights Reserved.
+          </div>
+        </footer>
       </div>
       <div
         class="Toastify"

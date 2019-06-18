@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import UpdateWebpage from '../components/Dashboard/UpdateWebpage';
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
+import Footer from '../components/Footer/Footer';
 
 class UpdateWebpageContainer extends Component {
   render() {
@@ -19,13 +20,16 @@ class UpdateWebpageContainer extends Component {
       },
     ];
     return (
-      <div className="dashboard-content">
-        <DashboardHeader
-          title="Update Webpage"
-          navigation={navigation}
-        />
-        <UpdateWebpage username={username} />
-      </div>
+      <Fragment>
+        <div className="dashboard-content">
+          <DashboardHeader
+            title="Update Webpage"
+            navigation={navigation}
+          />
+          <UpdateWebpage username={username} />
+        </div>
+        <Footer />
+      </Fragment>
     );
   }
 }

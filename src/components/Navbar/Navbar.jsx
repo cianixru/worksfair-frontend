@@ -27,7 +27,7 @@ class Navbar extends Component {
   scrollHandler = (event) => {
     const navbar = this.navBar.current;
     const { pageYOffset } = event.currentTarget;
-    if (pageYOffset >= 70) {
+    if (pageYOffset >= 100) {
       navbar.className = 'navbar is-fixed-top';
     } else {
       navbar.className = 'navbar';
@@ -116,7 +116,7 @@ class Navbar extends Component {
                         Sign up
                       </Link>
                       <Link
-                        className="button is-danger is-outlined is-rounded"
+                        className="button is-link is-outlined is-rounded"
                         to="/"
                       >
                         Create Free Webpage
