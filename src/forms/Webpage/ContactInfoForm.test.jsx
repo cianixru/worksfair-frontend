@@ -16,7 +16,7 @@ const validationErrors = {
   website: ['This field is required'],
 };
 
-describe('ContactInfoForm.tsx', () => {
+describe('ContactInfoForm.jsx', () => {
   const onSubmit = jest.fn();
   test('Test that the ContactInfo form displays', () => {
     const component = render(

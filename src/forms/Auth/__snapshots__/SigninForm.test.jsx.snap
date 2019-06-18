@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SigninForm.tsx Test that the Signin form displays 1`] = `
+exports[`SigninForm.jsx Test that the Signin form displays 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

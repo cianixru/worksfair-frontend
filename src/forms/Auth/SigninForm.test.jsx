@@ -7,7 +7,7 @@ import SigninForm from './SigninForm';
 
 afterEach(cleanup);
 
-describe('SigninForm.tsx', () => {
+describe('SigninForm.jsx', () => {
   const onSubmit = jest.fn();
   test('Test that the Signin form displays', () => {
     const component = render(

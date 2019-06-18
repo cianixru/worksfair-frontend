@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import Tooltip from '../atoms/Tooltip';
 import { tooltipMessage } from '../utils/messages';
+import { toSentenceCase } from '../components/utils/helpers';
 import WebpageText from '../atoms/WebpageText';
 
 // @ts-check
@@ -147,7 +148,7 @@ const EditProfileForm = ({
                             && validationErrors[input.name].map((error) => {
                               return (
                                 <span className="input-error" key={error}>
-                                  {toSentenceCase(error)}
+                                  { toSentenceCase (error)}
                                 </span>
                               );
                             })

@@ -15,7 +15,7 @@ const validationErrors = {
   confirm_password: ['This field is required'],
 };
 
-describe('SignupForm.tsx', () => {
+describe('SignupForm.jsx', () => {
   const onSubmit = jest.fn();
   test('Test that the Signup form displays', () => {
     const component = render(

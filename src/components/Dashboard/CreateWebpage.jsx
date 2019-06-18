@@ -170,7 +170,7 @@ class CreateWebpage extends Component {
   submitOfferings = async (input) => {
     const { imageArray, offerings } = this.state;
     const {
-      actions, webpage,
+      actions, webpage, user
     } = this.props;
 
     if (!webpage.sub_domain_name) {

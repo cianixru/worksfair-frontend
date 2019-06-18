@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContactInfoForm.tsx Test that the ContactInfo form displays 1`] = `
+exports[`ContactInfoForm.jsx Test that the ContactInfo form displays 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
