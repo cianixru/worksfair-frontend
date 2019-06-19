@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
 import EditProfileForm from '../forms/EditProfileForm';
@@ -106,6 +107,9 @@ class EditProfile extends Component {
     return (
       <Fragment>
         <div className="dashboard-content">
+          <Helmet>
+            <title>Your Profile - Worksfair</title>
+          </Helmet>
           <DashboardHeader
             title="Your Profile"
             navigation={navigation}

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import UpdateWebpage from '../components/Dashboard/UpdateWebpage';
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
@@ -21,6 +22,9 @@ class UpdateWebpageContainer extends Component {
     ];
     return (
       <Fragment>
+        <Helmet>
+          <title>Update Webpage</title>
+        </Helmet>
         <div className="dashboard-content">
           <DashboardHeader
             title="Update Webpage"

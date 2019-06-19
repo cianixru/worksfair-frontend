@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import { getUser } from '../actions/public';
 import { isLoading, isComplete } from '../actions/loader';
@@ -37,6 +38,11 @@ class ProfilePage extends Component {
 
     return (
       <Fragment>
+        { user &&
+          <Helmet>
+            <title>{`${user.first_name} ${user.last_name}`} - Worksfair</title>
+          </Helmet>
+        }
         <section className="section">
           { user && <UserProfile user={user} />}
         </section>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet';
 
 import
 WebpageItem from '../components/Dashboard/SearchWebpage/SearchWebpageItem';
@@ -65,6 +65,9 @@ class SearchResultContainer extends Component {
     };
     return (
       <section className="section">
+        <Helmet>
+          <title>Search - Worksfair</title>
+        </Helmet>
         <div className="container margin-bottom-25">
           <SearchForm
             onSubmit={this.onSearch}

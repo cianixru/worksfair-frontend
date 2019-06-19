@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import SigninForm from '../../forms/Auth/SigninForm';
 import { signin, getCurrentUser, } from '../../actions/auth';
@@ -31,6 +32,9 @@ class Signin extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Sign in - Worksfair</title>
+        </Helmet>
         <h3 className="subtitle is-3">Log in</h3>
         <SigninForm
           onSubmit={this.onSubmit}

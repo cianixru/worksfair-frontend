@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+
 import OwnerCard from '../components/Webpage/OwnerCard';
 import TitleBar from '../components/Webpage/TitleBar';
 import ImagesSlide from '../components/Webpage/ImagesSlide';
@@ -52,6 +54,11 @@ class WebpageContainer extends Component {
     return (
       webpage
       && <div>
+        <Helmet>
+          <title>{webpage.title}</title>
+          <meta name="description" content={webpage.description} />
+          <meta name="keywords" content={webpage.keywords} />
+        </Helmet>
         <div
           className={`hero is-large ${webpage.colour}`}
           id="home"
@@ -86,7 +93,10 @@ class WebpageContainer extends Component {
               <TitleBar webpage={webpage} />
             </div>
             <div className="column is-one-quarter">
-              <OwnerCard owner={webpage && webpage.owner}/>
+              <OwnerCard
+                owner={webpage && webpage.owner}
+                colour={webpage && webpage.colour}
+                />
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ class ListWebpages extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="#">
                 Inactive Webpages
               </Link>
             </li>

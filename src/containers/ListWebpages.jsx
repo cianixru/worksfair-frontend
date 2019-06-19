@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 
 import ListWebpages from '../components/Dashboard/ListWebpages';
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
@@ -15,6 +16,9 @@ class ListWebpagesContainer extends Component {
     ];
     return (
       <Fragment>
+        <Helmet>
+          <title>Dashboard - Worksfair</title>
+        </Helmet>
         <div className="dashboard-content">
           <DashboardHeader
             title={`How far, ${username}!`}

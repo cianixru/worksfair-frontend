@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import SignupForm from '../../forms/Auth/SignupForm';
 import { signup, AUTHENTICATION_FAILED } from '../../actions/auth';
@@ -44,6 +45,9 @@ class Signup extends Component {
     const { validationErrors } = this.state;
     return (
       <div>
+        <Helmet>
+          <title>Sign up - Worksfair</title>
+        </Helmet>
         <h3 className="subtitle is-3">Sign up</h3>
         <SignupForm
           onSubmit={this.onSubmit}

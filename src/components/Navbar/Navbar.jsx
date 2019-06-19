@@ -117,9 +117,9 @@ class Navbar extends Component {
                       </Link>
                       <Link
                         className="button is-link is-outlined is-rounded"
-                        to="/"
+                        to="/login"
                       >
-                        Create Free Webpage
+                        Add Your Business for Free
                       </Link>
                     </div>
                   }

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import video from '../assets/main-search-video.mp4';
 import background from '../assets/main-search-video-poster.jpg';
@@ -23,6 +24,9 @@ class HomeContainer extends Component {
   render() {
     return (
       <Fragment>
+        <Helmet>
+          <title>Home - Worksfair</title>
+        </Helmet>
         <div className="main-search-container dark-overlay">
           <div className="main-search-inner">
             <div className="container">

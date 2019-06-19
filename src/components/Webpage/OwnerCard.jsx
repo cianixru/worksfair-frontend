@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import avatar from '../../assets/worksfair-avatar.png';
+import avatar from '../../assets/worksfair-avatar1.png';
 
-const OwnerCard = ({ owner }) => {
+const OwnerCard = ({ owner, colour }) => {
   return (
     <div className="card">
       <header className="card-header">
         <p className="card-header-title">
-          Webpage Creator
+          About the Creator
         </p>
       </header>
       <div className="card-content">
@@ -27,12 +27,16 @@ const OwnerCard = ({ owner }) => {
             </figure>
           </div>
           <div className="media-content content">
-            <Link to="/">
+            <Link to={`/profile/${owner.username}`}>
               { owner
-                && `${owner.first_name} ${owner.last_name}`
+                && `${owner.first_name} ${owner.last_name} `
               }
             </Link>
+          <p className="is-size-7">@{owner.username}</p>
           </div>
+        </div>
+        <div className="message is-info">
+          <p className="message-body">{owner.headline}</p>
         </div>
       </div>
     </div>
@@ -40,7 +44,8 @@ const OwnerCard = ({ owner }) => {
 };
 
 OwnerCard.propTypes = {
-  owner: PropTypes.object
+  owner: PropTypes.object,
+  colour: PropTypes.string,
 };
 
 export default OwnerCard;

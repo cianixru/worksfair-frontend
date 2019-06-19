@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import CreateWebpage from '../components/Dashboard/CreateWebpage';
 import DashboardHeader from '../components/Dashboard/DashboardHeader';
@@ -20,6 +21,9 @@ class CreateWebpageContainer extends Component {
     ];
     return (
       <div className="dashboard-content">
+        <Helmet>
+          <title>Create Webpage - Worksfair</title>
+        </Helmet>
         <DashboardHeader
           title="Create Webpage"
           navigation={navigation}
