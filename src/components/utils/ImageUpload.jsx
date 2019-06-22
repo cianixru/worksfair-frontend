@@ -2,8 +2,7 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
 
-import sampleImage from '../../assets/sample-02.jpg';
-
+const sampleImage = 'https://imgplaceholder.com/320x240?text=ADD+A+PICTURE&font-size=32&font-family=impact';
 const ImageUpload = ({
   selectedImage,
   handleOfferingImageSelection,

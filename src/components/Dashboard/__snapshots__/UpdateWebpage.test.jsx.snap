@@ -799,7 +799,7 @@ Object {
                     <img
                       alt=""
                       class="offering-image"
-                      src="sample-02.jpg"
+                      src="https://imgplaceholder.com/320x240?text=ADD+A+PICTURE&font-size=32&font-family=impact"
                     />
                     <div
                       class="change-image-btn"
@@ -1710,7 +1710,7 @@ Object {
                   <img
                     alt=""
                     class="offering-image"
-                    src="sample-02.jpg"
+                    src="https://imgplaceholder.com/320x240?text=ADD+A+PICTURE&font-size=32&font-family=impact"
                   />
                   <div
                     class="change-image-btn"

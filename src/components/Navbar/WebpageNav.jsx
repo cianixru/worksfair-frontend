@@ -107,7 +107,7 @@ class WebpageNav extends Component {
                 className="button is-outlined is-rounded"
                 to="/"
               >
-                Create Free Webpage
+                Go to Worksfair
               </Link>
             </div>
             { webpage && <div className="level is-mobile">

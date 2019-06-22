@@ -78,35 +78,40 @@ class ImageUploader extends Component {
    * @description sends the cloudinary urls to the DB
    */
   handleSubmit = async () => {
-    const { uploadedImages, selectedImages, rawFiles } = this.state;
-    const {
-      isLoading, isComplete, webpage, user,
-    } = this.props;
+    try{
+      const { uploadedImages, selectedImages, rawFiles } = this.state;
+      const {
+        isLoading, isComplete, webpage, user,
+      } = this.props;
 
-    if (!webpage.sub_domain_name) {
-      alert.error(
-        'An error occured. Don\'t worry you can continue from where you stopped'
-      );
-      setTimeout(() => {
-        window.location.pathname = `/dashboard/${user.username}/webpages`;
-      }, 4000);
+      if (!webpage.sub_domain_name) {
+        alert.error(
+          'An error occured. Don\'t worry you can continue from where you stopped'
+        );
+        setTimeout(() => {
+          window.location.pathname = `/dashboard/${user.username}/webpages`;
+        }, 4000);
+      }
+
+      isLoading();
+      const imagesToUpload = [];
+      // Filter images that are left to be uploaded using the blob key
+      selectedImages.map((imageBlob) => {
+        return imagesToUpload.push(rawFiles[imageBlob]);
+      });
+
+      const imagesData = await this.handleCloudinaryResponse(imagesToUpload);
+      axios.all(imagesData).then(() => {
+        const images = {
+          featured_images: uploadedImages,
+        };
+        this.props.onSubmit(images);
+        isComplete();
+        console.log('Images have all being uploaded to cloudinary');
+      });
+    } catch (error) {
+      console.log(error);
     }
-
-    isLoading();
-    const imagesToUpload = [];
-    selectedImages.map((imageBlob) => {
-      return imagesToUpload.push(rawFiles[imageBlob]);
-    });
-
-    const imagesData = await this.handleCloudinaryResponse(imagesToUpload);
-    axios.all(imagesData).then(() => {
-      const images = {
-        featured_images: uploadedImages,
-      };
-      this.props.onSubmit(images);
-      isComplete();
-      console.log('Images have all being uploaded to cloudinary');
-    });
   }
 
   render() {

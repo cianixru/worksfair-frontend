@@ -131,6 +131,7 @@ class UpdateWebpage extends Component {
     } catch (error) {
       alert.error(error.message);
     } finally {
+      await actions.getCurrentUser();
       actions.isComplete();
     }
   };
@@ -172,7 +173,7 @@ class UpdateWebpage extends Component {
     } = this.props;
     const { imageArray, offerings } = this.state;
     if (!imageArray) {
-      alert.error('You need to upload an image');
+      alert.error('You need to upload a picture');
     }
 
     actions.isLoading();
@@ -207,6 +208,7 @@ class UpdateWebpage extends Component {
     } catch (error) {
       console.log(error);
     } finally {
+      await actions.getCurrentUser();
       actions.isComplete();
     }
   };

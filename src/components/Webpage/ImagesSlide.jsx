@@ -39,7 +39,9 @@ const ImagesSlide = ({ webpage }) => {
         : defaultImages.map((image) => {
           return (
             <figure className="image is-4by3" key={image}>
-              <img src={image} alt="sample" />
+              <img
+                src="https://imgplaceholder.com/576x432/131111?text=PICTURE+COMING+SOON&font-size=24"
+                alt="coming soon" />
             </figure>
           );
         })

@@ -25,13 +25,15 @@ button {
 
 body {
     font-size: 16px;
+    min-height: 100%;
+    width: 100%;
 }
 
 .footer {
     position: relative;
     width: 100%;
     bottom: 0em;
-    left: 0em;  
+    left: 0em;
     padding-bottom: 3em;
 }
 
