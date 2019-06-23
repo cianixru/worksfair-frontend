@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Spinner from 'react-spinkit';
 
-import AuthRoute from './Auth';
+import authRoutes from './Auth';
 import Navbar from '../components/Navbar/Navbar';
-import Dashboard from './Dashboard';
+import dashboardRoutes from './Dashboard';
 import { getCurrentUser } from '../actions/auth';
-import { getWebpage } from '../actions/webpage';
-import Webpage from './Webpage';
+import Webpage from '../containers/Webpage';
 import WebpageNav from '../components/Navbar/WebpageNav';
-import PublicRoutes from './Public';
+import publicRoutes from './Public';
 
 class Routes extends Component {
   async componentDidMount() {
@@ -24,23 +23,24 @@ class Routes extends Component {
     }
   }
 
-  getWebpage = async (name) => {
-    try {
-      const { actions } = this.props;
-      await actions.getWebpage(name);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   render() {
     const {
       currentUser,
       isLoading,
       webpage,
-      actions,
     } = this.props;
+    const token = localStorage.getItem('token');
+    const { pathname } = this.props.location;
+    const isNotAuthenticatedAndDashboard = !token
+      && pathname.includes('/dashboard');
+
     const url = window.location.pathname;
+    const dashRoutes = isNotAuthenticatedAndDashboard? [] : dashboardRoutes;
+    const routes = [
+      ...authRoutes,
+      ...dashRoutes,
+      ...publicRoutes
+    ];
     return (
       <div>
         <div className={isLoading ? 'spin-loader' : ''}>
@@ -60,11 +60,21 @@ class Routes extends Component {
               webpage={webpage && webpage} />
             : <Navbar user={currentUser && currentUser.user} />
           }
+        
         </header>
-        <AuthRoute />
-        <Dashboard getCurrentUser={actions.getCurrentUser} />
-        <Webpage getWebpage={this.getWebpage} />
-        <PublicRoutes />
+        <Switch>
+          <Route exact path="/webpage/:subDomainName"
+            // eslint-disable-next-line react/jsx-no-bind
+            render={(props) => {
+              return (<Webpage {...props} />);
+            }}
+          />
+          {
+            routes.map((route, key) => (
+              <Route key={route.path+key} {...route} />
+            ))
+          }
+        </Switch>
       </div>
     );
   }
@@ -90,8 +100,7 @@ const mapStateToProps = ({ auth, loader, webpage, }) => ({
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      getCurrentUser,
-      getWebpage,
+      getCurrentUser
     },
     dispatch,
   ),

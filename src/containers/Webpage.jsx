@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { bindActionCreators } from 'redux';
 
 import OwnerCard from '../components/Webpage/OwnerCard';
 import TitleBar from '../components/Webpage/TitleBar';
@@ -11,6 +12,7 @@ import DetailItem from '../components/Webpage/Details';
 import WebpageFooter from '../components/Webpage/Footer';
 import getBackgroundImage from '../assets/background/backgroundImages';
 import { colourShadesOf } from '../utils/helpers';
+import { getWebpage } from '../actions/webpage';
 
 class WebpageContainer extends Component {
   state = {
@@ -19,8 +21,8 @@ class WebpageContainer extends Component {
 
   async componentDidMount() {
     try {
-      const { match, getWebpage } = this.props;
-      await getWebpage(match.params.subDomainName);
+      const { match, actions } = this.props;
+      await actions.getWebpage(match.params.subDomainName);
     } catch (error) {
       console.log(error);
     }
@@ -151,7 +153,16 @@ const mapStateToProps = ({ webpage, loader, }) => ({
   isLoading: loader.isLoading,
 });
 
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    {
+      getWebpage,
+    },
+    dispatch,
+  ),
+});
+
 export default connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(WebpageContainer);

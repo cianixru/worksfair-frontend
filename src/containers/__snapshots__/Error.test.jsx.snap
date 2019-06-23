@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound.jsx Should display the NotFound Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="hero is-large has-background-light"
+      >
+        <div
+          class="hero-body"
+        >
+          <div
+            class="container columns"
+          >
+            <div
+              class="column is-1"
+            />
+            <div
+              class="column is-7"
+            >
+              <h1
+                class="has-text-extra-large"
+              >
+                404
+              </h1>
+              <p
+                class="has-text-large"
+              >
+                We are sorry about this.
+              </p>
+              <p
+                class="is-size-5"
+              >
+                The page you are looking for is not here.
+              </p>
+              <p
+                class="margin-top-25"
+              >
+                <a
+                  class="button is-info is-medium"
+                  href="/"
+                >
+                  Go Home
+                </a>
+              </p>
+            </div>
+            <div
+              class="column is-3 has-text-extra-large"
+            >
+              <img
+                alt="404-compass"
+                src="404-compass.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="footer "
+      >
+        <div
+          class="content has-text-centered"
+        >
+          Copyright 
+          2019
+           Worksfair. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="hero is-large has-background-light"
+    >
+      <div
+        class="hero-body"
+      >
+        <div
+          class="container columns"
+        >
+          <div
+            class="column is-1"
+          />
+          <div
+            class="column is-7"
+          >
+            <h1
+              class="has-text-extra-large"
+            >
+              404
+            </h1>
+            <p
+              class="has-text-large"
+            >
+              We are sorry about this.
+            </p>
+            <p
+              class="is-size-5"
+            >
+              The page you are looking for is not here.
+            </p>
+            <p
+              class="margin-top-25"
+            >
+              <a
+                class="button is-info is-medium"
+                href="/"
+              >
+                Go Home
+              </a>
+            </p>
+          </div>
+          <div
+            class="column is-3 has-text-extra-large"
+          >
+            <img
+              alt="404-compass"
+              src="404-compass.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="footer "
+    >
+      <div
+        class="content has-text-centered"
+      >
+        Copyright 
+        2019
+         Worksfair. All Rights Reserved.
+      </div>
+    </footer>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ServerError.jsx Should display the ServerError Component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="hero is-large has-background-light"
+      >
+        <div
+          class="hero-body"
+        >
+          <div
+            class="container columns"
+          >
+            <div
+              class="column is-1"
+            />
+            <div
+              class="column is-7"
+            >
+              <h1
+                class="has-text-extra-large"
+              >
+                500
+              </h1>
+              <p
+                class="has-text-large"
+              >
+                We are sorry about this.
+              </p>
+              <p
+                class="is-size-5"
+              >
+                An error occurred on our server, please bear with us.
+              </p>
+              <p
+                class="margin-top-25"
+              >
+                <a
+                  class="button is-info is-medium"
+                  href="/"
+                >
+                  Go Home
+                </a>
+              </p>
+            </div>
+            <div
+              class="column is-3 has-text-extra-large"
+            >
+              <img
+                alt="404-compass"
+                src="404-compass.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="footer "
+      >
+        <div
+          class="content has-text-centered"
+        >
+          Copyright 
+          2019
+           Worksfair. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="hero is-large has-background-light"
+    >
+      <div
+        class="hero-body"
+      >
+        <div
+          class="container columns"
+        >
+          <div
+            class="column is-1"
+          />
+          <div
+            class="column is-7"
+          >
+            <h1
+              class="has-text-extra-large"
+            >
+              500
+            </h1>
+            <p
+              class="has-text-large"
+            >
+              We are sorry about this.
+            </p>
+            <p
+              class="is-size-5"
+            >
+              An error occurred on our server, please bear with us.
+            </p>
+            <p
+              class="margin-top-25"
+            >
+              <a
+                class="button is-info is-medium"
+                href="/"
+              >
+                Go Home
+              </a>
+            </p>
+          </div>
+          <div
+            class="column is-3 has-text-extra-large"
+          >
+            <img
+              alt="404-compass"
+              src="404-compass.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="footer "
+    >
+      <div
+        class="content has-text-centered"
+      >
+        Copyright 
+        2019
+         Worksfair. All Rights Reserved.
+      </div>
+    </footer>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

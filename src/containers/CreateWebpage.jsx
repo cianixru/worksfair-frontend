@@ -28,7 +28,7 @@ class CreateWebpageContainer extends Component {
           title="Create Webpage"
           navigation={navigation}
         >
-          <Link to="/demo">View Sample Business Webpage</Link>
+          <Link to="/webpage/ideosynergy-inc">View Sample Business Webpage</Link>
         </DashboardHeader>
         <CreateWebpage username={username} />
         <Footer/>

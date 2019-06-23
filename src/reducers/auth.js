@@ -8,6 +8,7 @@ import auth from '../utils/auth';
 import alert from '../components/utils/alert';
 import formatMessages from '../utils/helpers';
 import { getWebpages } from '../actions/webpage';
+import { interceptorError } from '../utils/api';
 
 const manageAuth = new auth();
 
@@ -16,6 +17,7 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+  interceptorError(action);
   switch (action.type) {
   case AUTHENTICATED_USER:
     manageAuth.setLocalStorage(action.data.user);
