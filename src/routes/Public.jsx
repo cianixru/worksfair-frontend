@@ -3,6 +3,9 @@ import SearchResult from '../containers/SearchResult';
 import ProfilePage from '../containers/ProfilePage';
 import NotFound from '../containers/NotFound';
 import ServerError from '../containers/ServerError';
+import Description from '../containers/Description';
+import Terms from '../containers/Terms';
+import Privacy from '../containers/Privacy';
 
 const publicRoutes = [
   {
@@ -19,6 +22,21 @@ const publicRoutes = [
     exact: true,
     path: '/search',
     component: SearchResult,
+  },
+  {
+    exact: true,
+    path: '/description',
+    component: Description,
+  },
+  {
+    exact: true,
+    path: '/terms-of-service',
+    component: Terms,
+  },
+  {
+    exact: true,
+    path: '/privacy-policy',
+    component: Privacy,
   },
   {
     exact: true,

@@ -86,7 +86,7 @@ Object {
                 </a>
                 <a
                   class="button is-link is-outlined is-rounded"
-                  href="/login"
+                  href="/description"
                 >
                   Add Your Business for Free
                 </a>
@@ -179,7 +179,7 @@ Object {
               </a>
               <a
                 class="button is-link is-outlined is-rounded"
-                href="/login"
+                href="/description"
               >
                 Add Your Business for Free
               </a>
@@ -337,7 +337,7 @@ Object {
                 </a>
                 <a
                   class="button is-link is-outlined is-rounded"
-                  href="/login"
+                  href="/description"
                 >
                   Add Your Business for Free
                 </a>

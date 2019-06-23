@@ -9,7 +9,6 @@ import
 WebpageItem from '../components/Dashboard/SearchWebpage/SearchWebpageItem';
 import
 NoSearchResults from '../components/Dashboard/SearchWebpage/NoSearchResult';
-import sampleImage from '../assets/sample-01.jpg';
 import { search } from '../actions/public';
 import SearchForm from '../forms/Public/SearchForm';
 import { isLoading, isComplete } from '../actions/loader';
@@ -63,6 +62,8 @@ class SearchResultContainer extends Component {
       keywords: params.get('query'),
       location: params.get('location'),
     };
+    const sampleImage = "https://imgplaceholder.com/320x240/131111?text=PICTURE+COMING+SOON&font-size=24"
+
     return (
       <section className="section">
         <Helmet>

@@ -62,7 +62,7 @@ Object {
                   >
                     <img
                       alt="sample"
-                      src="sample-01.jpg"
+                      src="https://imgplaceholder.com/320x240/131111?text=PICTURE+COMING+SOON&font-size=24"
                     />
                   </figure>
                 </div>
@@ -173,7 +173,7 @@ Object {
                 >
                   <img
                     alt="sample"
-                    src="sample-01.jpg"
+                    src="https://imgplaceholder.com/320x240/131111?text=PICTURE+COMING+SOON&font-size=24"
                   />
                 </figure>
               </div>

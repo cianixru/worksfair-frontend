@@ -3,11 +3,11 @@ import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import sampleImage from '../../assets/sample-02.jpg';
 import { getDateForNextUpdate } from '../../utils/helpers';
 import WebpageItem from './ListWebpages/WebpageItem';
 import NoWebpages from './ListWebpages/NoWebpages';
 
+const sampleImage = "https://imgplaceholder.com/320x240/131111?text=ADD+A+PICTURE&font-size=24";
 class ListWebpages extends Component {
   render() {
     const { user } = this.props;
