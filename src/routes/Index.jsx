@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { withRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Spinner from 'react-spinkit';
@@ -8,21 +7,11 @@ import Spinner from 'react-spinkit';
 import authRoutes from './Auth';
 import Navbar from '../components/Navbar/Navbar';
 import dashboardRoutes from './Dashboard';
-import { getCurrentUser } from '../actions/auth';
 import Webpage from '../containers/Webpage';
 import WebpageNav from '../components/Navbar/WebpageNav';
 import publicRoutes from './Public';
 
 class Routes extends Component {
-  async componentDidMount() {
-    try {
-      const { actions } = this.props;
-      await actions.getCurrentUser();
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   render() {
     const {
       currentUser,
@@ -81,7 +70,6 @@ class Routes extends Component {
 }
 
 Routes.propTypes = {
-  actions: PropTypes.object,
   currentUser: PropTypes.object,
   isLoading: PropTypes.bool,
   webpage: PropTypes.object,
@@ -97,16 +85,7 @@ const mapStateToProps = ({ auth, loader, webpage, }) => ({
   webpage: webpage.webpage,
 });
 
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(
-    {
-      getCurrentUser
-    },
-    dispatch,
-  ),
-});
-
 export default withRouter(connect(
   mapStateToProps,
-  mapDispatchToProps,
+  null,
 )(Routes));
