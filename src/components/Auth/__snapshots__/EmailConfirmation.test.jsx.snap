@@ -1,29 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SocialIcon.jsx renders correctly 1`] = `
+exports[`EmailConfirmation.jsx renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <span
-        class="icon is-small margin-right-7"
+      <div
+        class="message-body"
       >
-        <i
-          aria-hidden="true"
-          class="fa fa-facebook is-size-5 has-text-info"
-        />
-      </span>
+        <div>
+          <div>
+            <span
+              class="icon is-normal"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-exclamation-triangle is-size-3 has-text-warning "
+              />
+            </span>
+          </div>
+          <p
+            class="is-size-4"
+          >
+            You have not confirmed your account
+          </p>
+          <p
+            class="is-size-6"
+          >
+            Your account needs to be confirmed for you to use worksfair. Find the confirmation email in your inbox.
+          </p>
+          <p
+            class="margin-top-25"
+          >
+            <button
+              class="button is-info is-outlined"
+            >
+              Resend Email
+            </button>
+          </p>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <span
-      class="icon is-small margin-right-7"
+    <div
+      class="message-body"
     >
-      <i
-        aria-hidden="true"
-        class="fa fa-facebook is-size-5 has-text-info"
-      />
-    </span>
+      <div>
+        <div>
+          <span
+            class="icon is-normal"
+          >
+            <i
+              aria-hidden="true"
+              class="fa fa-exclamation-triangle is-size-3 has-text-warning "
+            />
+          </span>
+        </div>
+        <p
+          class="is-size-4"
+        >
+          You have not confirmed your account
+        </p>
+        <p
+          class="is-size-6"
+        >
+          Your account needs to be confirmed for you to use worksfair. Find the confirmation email in your inbox.
+        </p>
+        <p
+          class="margin-top-25"
+        >
+          <button
+            class="button is-info is-outlined"
+          >
+            Resend Email
+          </button>
+        </p>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

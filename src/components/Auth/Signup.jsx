@@ -32,7 +32,11 @@ class Signup extends Component {
         alert.error('Signup failed. Check for more details');
       } else {
         alert.success('Successfully Signed up!');
-        history.push(`/dashboard/${response.data.user.username}/webpages`);
+
+        history.push({
+          pathname: `/dashboard/${response.data.user.username}/webpages`,
+          state: { previousLocation: 'signup' }
+        });
       }
     } catch (error) {
       console.log(error);

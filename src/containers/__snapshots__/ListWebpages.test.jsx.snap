@@ -46,6 +46,45 @@ Object {
               </ul>
             </nav>
           </div>
+          <div
+            class="message is-warning"
+          >
+            <div
+              class="message-body"
+            >
+              <div>
+                <div>
+                  <span
+                    class="icon is-normal"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-exclamation-triangle is-size-3 has-text-warning "
+                    />
+                  </span>
+                </div>
+                <p
+                  class="is-size-4"
+                >
+                  You have not confirmed your account
+                </p>
+                <p
+                  class="is-size-6"
+                >
+                  Your account needs to be confirmed for you to use worksfair. Find the confirmation email in your inbox.
+                </p>
+                <p
+                  class="margin-top-25"
+                >
+                  <button
+                    class="button is-info is-outlined"
+                  >
+                    Resend Email
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <div
@@ -56,9 +95,10 @@ Object {
                 class="is-active"
               >
                 <a
-                  href="/dashboard/undefined/webpages"
+                  href="/dashboard/TheoOkafor/webpages"
                 >
                   Active Webpages (
+                  1
                   )
                 </a>
               </li>
@@ -75,22 +115,85 @@ Object {
             <ul>
               <li>
                 <div
-                  class="message is-warning"
+                  class="columns box"
                 >
                   <div
-                    class="message-body"
+                    class="column is-3"
                   >
-                    <p
-                      class="is-size-5 margin-bottom-25"
+                    <figure
+                      class="image is-180x180"
                     >
-                      You have no active webpages
-                    </p>
+                      <img
+                        alt="sample"
+                        src="https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
+                      />
+                    </figure>
+                  </div>
+                  <div
+                    class="column is-7"
+                  >
+                    <div
+                      class="content"
+                    >
+                      <h3>
+                        <a
+                          class="has-text-info"
+                          href="/webpage/ideosynergy-ltd"
+                        >
+                          Ideosynergy LTD.
+                        </a>
+                      </h3>
+                      <span>
+                        7, Ziks avenue, Onitsha, Anambra
+                      </span>
+                    </div>
+                    <div>
+                      <h6
+                        class="is-size-7"
+                      >
+                        <strong>
+                          Day Created:
+                        </strong>
+                        <span
+                          class="has-text-black"
+                        >
+                           
+                          Tue May 21 2019
+                        </span>
+                      </h6>
+                      <h6
+                        class="is-size-7"
+                      >
+                        <strong>
+                          Due For Update:
+                        </strong>
+                        <span
+                          class="has-text-warning"
+                        >
+                           
+                          Invalid Date
+                        </span>
+                      </h6>
+                    </div>
+                  </div>
+                  <div
+                    class="column is-2 is-mobile"
+                  >
                     <a
-                      class="button is-link is-outlined"
-                      href="/dashboard/undefined/webpages/new/basic-info"
+                      class="button is-white"
+                      href="/dashboard/TheoOkafor/webpages/edit/ideosynergy-ltd"
                     >
-                      Create a Webpage
+                      <i
+                        class="fa fa-edit is-size-5 has-text-grey"
+                      />
                     </a>
+                    <button
+                      class="button is-white"
+                    >
+                      <i
+                        class="fa fa-archive is-size-5 has-text-grey-light"
+                      />
+                    </button>
                   </div>
                 </div>
               </li>
@@ -153,6 +256,45 @@ Object {
             </ul>
           </nav>
         </div>
+        <div
+          class="message is-warning"
+        >
+          <div
+            class="message-body"
+          >
+            <div>
+              <div>
+                <span
+                  class="icon is-normal"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="fa fa-exclamation-triangle is-size-3 has-text-warning "
+                  />
+                </span>
+              </div>
+              <p
+                class="is-size-4"
+              >
+                You have not confirmed your account
+              </p>
+              <p
+                class="is-size-6"
+              >
+                Your account needs to be confirmed for you to use worksfair. Find the confirmation email in your inbox.
+              </p>
+              <p
+                class="margin-top-25"
+              >
+                <button
+                  class="button is-info is-outlined"
+                >
+                  Resend Email
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <div
@@ -163,9 +305,10 @@ Object {
               class="is-active"
             >
               <a
-                href="/dashboard/undefined/webpages"
+                href="/dashboard/TheoOkafor/webpages"
               >
                 Active Webpages (
+                1
                 )
               </a>
             </li>
@@ -182,22 +325,85 @@ Object {
           <ul>
             <li>
               <div
-                class="message is-warning"
+                class="columns box"
               >
                 <div
-                  class="message-body"
+                  class="column is-3"
                 >
-                  <p
-                    class="is-size-5 margin-bottom-25"
+                  <figure
+                    class="image is-180x180"
                   >
-                    You have no active webpages
-                  </p>
+                    <img
+                      alt="sample"
+                      src="https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
+                    />
+                  </figure>
+                </div>
+                <div
+                  class="column is-7"
+                >
+                  <div
+                    class="content"
+                  >
+                    <h3>
+                      <a
+                        class="has-text-info"
+                        href="/webpage/ideosynergy-ltd"
+                      >
+                        Ideosynergy LTD.
+                      </a>
+                    </h3>
+                    <span>
+                      7, Ziks avenue, Onitsha, Anambra
+                    </span>
+                  </div>
+                  <div>
+                    <h6
+                      class="is-size-7"
+                    >
+                      <strong>
+                        Day Created:
+                      </strong>
+                      <span
+                        class="has-text-black"
+                      >
+                         
+                        Tue May 21 2019
+                      </span>
+                    </h6>
+                    <h6
+                      class="is-size-7"
+                    >
+                      <strong>
+                        Due For Update:
+                      </strong>
+                      <span
+                        class="has-text-warning"
+                      >
+                         
+                        Invalid Date
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+                <div
+                  class="column is-2 is-mobile"
+                >
                   <a
-                    class="button is-link is-outlined"
-                    href="/dashboard/undefined/webpages/new/basic-info"
+                    class="button is-white"
+                    href="/dashboard/TheoOkafor/webpages/edit/ideosynergy-ltd"
                   >
-                    Create a Webpage
+                    <i
+                      class="fa fa-edit is-size-5 has-text-grey"
+                    />
                   </a>
+                  <button
+                    class="button is-white"
+                  >
+                    <i
+                      class="fa fa-archive is-size-5 has-text-grey-light"
+                    />
+                  </button>
                 </div>
               </div>
             </li>

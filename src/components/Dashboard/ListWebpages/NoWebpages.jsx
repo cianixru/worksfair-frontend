@@ -2,26 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const NoWebpages = ({ username }) => (
+const NoWebpages = ({ user }) => (
   <li>
     <div className="message is-warning">
       <div className="message-body">
-        <p className="is-size-5 margin-bottom-25">
+        <p className="is-size-5">
           You have no active webpages
         </p>
-        <Link
-          to={`/dashboard/${username}/webpages/new/basic-info`}
-          className="button is-link is-outlined"
-        >
-          Create a Webpage
-        </Link>
+        { user.confirmed_account &&
+          <Link
+            to={`/dashboard/${user.username}/webpages/new/basic-info`}
+            className="button is-link is-outlined  margin-top-25">
+            Create a Webpage
+          </Link>
+        }
       </div>
     </div>
   </li>
 );
 
 NoWebpages.propTypes = {
-  username: PropTypes.string,
+  user: PropTypes.object,
 };
 
 export default NoWebpages;

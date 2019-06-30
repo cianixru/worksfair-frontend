@@ -1,14 +1,49 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
 import { getDateForNextUpdate } from '../../utils/helpers';
 import WebpageItem from './ListWebpages/WebpageItem';
 import NoWebpages from './ListWebpages/NoWebpages';
+import {
+  getCurrentUser,
+  confirmAccount,
+  CONFIRM_USER,
+} from '../../actions/auth';
+import alert from '../utils/alert';
 
 const sampleImage = "https://imgplaceholder.com/320x240/131111?text=ADD+A+PICTURE&font-size=24";
 class ListWebpages extends Component {
+  async componentDidMount() {
+    const { actions, location, user } = this.props;
+    try {
+      const params = new URLSearchParams(location.search);
+      const token = params.get('token');
+      if (token){
+        const response = await actions.confirmAccount({
+          token,
+        });
+        if (response.type === CONFIRM_USER) {
+          if (response.data.message === 'Your account has already been activated.') {
+            alert.info(response.data.message);
+          } else {
+            alert.success(response.data.message);
+          }
+        } else {
+          alert.error(response.data.message);
+        }
+        setTimeout(() => (
+          window.location.replace(`/dashboard/${user.username}/webpages`)
+        ), 3000);
+      }
+      await actions.getCurrentUser();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   render() {
     const { user } = this.props;
     const username = user && user.username;
@@ -43,7 +78,7 @@ class ListWebpages extends Component {
                   <WebpageItem key={webpage.sub_domain_name} {...itemProps} />
                 );
               })
-              : <NoWebpages username={user && user.username} />
+              : <NoWebpages user={user && user} />
             }
           </ul>
         </div>
@@ -60,7 +95,17 @@ const mapStateToProps = ({ auth: { currentUser } }) => ({
   user: currentUser.user,
 });
 
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    {
+      getCurrentUser,
+      confirmAccount,
+    },
+    dispatch,
+  ),
+});
+
 export default withRouter(connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(ListWebpages));

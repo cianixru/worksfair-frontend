@@ -6,12 +6,16 @@ import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import DashboardHeader from './DashboardHeader';
+import { user } from '../../utils/test-utils/mockData';
 
 afterEach(cleanup);
 
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({});
+const mockStore = store({
+  auth: { currentUser: {user} },
+  webpage: { newWebpage: {} }
+});
 
 describe('DashboardHeader.jsx', () => {
   test('Should display the DashboardHeader Component', () => {

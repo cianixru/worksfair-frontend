@@ -10,7 +10,7 @@ const TitleBar = ({ webpage }) => {
         <h2>{ webpage.title } <i className="verified-icon" />
           <span
             className={`button is-rounded ${webpage.colour} is-outlined`}>
-            { webpage.keywords.split(',')[0] }
+            { webpage.keywords && webpage.keywords.split(',')[0] }
           </span>
         </h2>
         { webpage.address

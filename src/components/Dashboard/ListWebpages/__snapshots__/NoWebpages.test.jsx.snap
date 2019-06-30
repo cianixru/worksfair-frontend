@@ -13,16 +13,10 @@ Object {
             class="message-body"
           >
             <p
-              class="is-size-5 margin-bottom-25"
+              class="is-size-5"
             >
               You have no active webpages
             </p>
-            <a
-              class="button is-link is-outlined"
-              href="/dashboard/TheoOkafor/webpages/new/basic-info"
-            >
-              Create a Webpage
-            </a>
           </div>
         </div>
       </li>
@@ -37,16 +31,10 @@ Object {
           class="message-body"
         >
           <p
-            class="is-size-5 margin-bottom-25"
+            class="is-size-5"
           >
             You have no active webpages
           </p>
-          <a
-            class="button is-link is-outlined"
-            href="/dashboard/TheoOkafor/webpages/new/basic-info"
-          >
-            Create a Webpage
-          </a>
         </div>
       </div>
     </li>

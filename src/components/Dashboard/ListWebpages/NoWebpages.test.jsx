@@ -10,7 +10,10 @@ describe('NoWebpages.jsx', () => {
   test('Should display the NoWebpages Component', () => {
     const component = render(
       <Router>
-        <NoWebpages username="TheoOkafor" />
+        <NoWebpages user={{
+          username: "TheoOkafor",
+          confirmed_account: false
+        }} />
       </Router>
     );
     expect(component).toBeDefined();

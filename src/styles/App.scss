@@ -23,17 +23,17 @@ button {
     text-transform: none;
 }
 
-body {
+body, .dashboard-container, .main-container {
     font-size: 16px;
-    min-height: 100%;
+    min-height: 80vh;
     width: 100%;
 }
 
 .footer {
     position: relative;
     width: 100%;
-    bottom: 0em;
-    left: 0em;
+    bottom: 0px;
+    left: 0px;
     padding-bottom: 3em;
 }
 

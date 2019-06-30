@@ -108,7 +108,7 @@ Object {
           </div>
         </div>
         <div
-          class="column is-three-quarter-desktop"
+          class="column is-three-quarter-desktop dashboard-container"
         >
           <div
             class="dashboard-content"
@@ -357,7 +357,7 @@ Object {
         </div>
       </div>
       <div
-        class="column is-three-quarter-desktop"
+        class="column is-three-quarter-desktop dashboard-container"
       >
         <div
           class="dashboard-content"

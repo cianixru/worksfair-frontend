@@ -8,199 +8,6 @@ Object {
       <div
         class="App"
       >
-        <div>
-          <div
-            class=""
-          />
-          <header>
-            <nav
-              aria-label="main navigation"
-              class="navbar"
-              data-testid=""
-              role="navigation"
-            >
-              <div
-                class="navbar-brand"
-              >
-                <a
-                  class="navbar-item"
-                  href="/home"
-                >
-                  <img
-                    alt="logo"
-                    height="28"
-                    src="logo.png"
-                    width="112"
-                  />
-                </a>
-                <a
-                  aria-expanded="false"
-                  aria-label="menu"
-                  class="navbar-burger burger"
-                  data-target="navbarBasicExample"
-                  href="/"
-                  role="button"
-                >
-                  <span
-                    aria-hidden="true"
-                  />
-                  <span
-                    aria-hidden="true"
-                  />
-                  <span
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-              <div
-                class="navbar-menu"
-              >
-                <div
-                  class="navbar-start"
-                >
-                  <a
-                    class="navbar-item"
-                    href="/"
-                  >
-                    Home
-                  </a>
-                  <a
-                    class="navbar-item"
-                    href="/"
-                  >
-                    About
-                  </a>
-                </div>
-                <div
-                  class="navbar-end"
-                >
-                  <div
-                    class="navbar-item"
-                  >
-                    <div
-                      class="buttons"
-                    >
-                      <a
-                        class="button is-white"
-                        href="/login"
-                      >
-                        Log in
-                      </a>
-                      <a
-                        class="button is-white"
-                        href="/signup"
-                      >
-                        Sign up
-                      </a>
-                      <a
-                        class="button is-link is-outlined is-rounded"
-                        href="/description"
-                      >
-                        Add Your Business for Free
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </header>
-          <div
-            class="main-search-container dark-overlay"
-          >
-            <div
-              class="main-search-inner"
-            >
-              <div
-                class="container"
-              >
-                <div
-                  class="columns"
-                >
-                  <div
-                    class="is-12"
-                  >
-                    <h2>
-                      Find Businesses and Services Near You.
-                    </h2>
-                    <h4>
-                      Discover top-ranked businesses and services that are ready to serve your needs.
-                    </h4>
-                    <form>
-                      <div
-                        class="main-search-input"
-                      >
-                        <div
-                          class="main-search-input-item"
-                        >
-                          <input
-                            class="input"
-                            name="keywords"
-                            placeholder="What do you need?"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                        <div
-                          class="main-search-input-item location"
-                        >
-                          <input
-                            class="input"
-                            name="location"
-                            placeholder="Which city or town?"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                        <button
-                          class="button is-info is-rounded"
-                          disabled=""
-                        >
-                          Search
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="video-container"
-            >
-              <video
-                autoplay=""
-                loop=""
-                poster="main-search-video-poster.jpg"
-              >
-                <source
-                  src="main-search-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <footer
-            class="footer "
-          >
-            <div
-              class="content has-text-centered"
-            >
-              Copyright 
-              2019
-               Worksfair. All Rights Reserved.
-            </div>
-          </footer>
-        </div>
-        <div
-          class="Toastify"
-        />
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="App"
-    >
-      <div>
         <div
           class=""
         />
@@ -381,7 +188,196 @@ Object {
              Worksfair. All Rights Reserved.
           </div>
         </footer>
+        <div
+          class="Toastify"
+        />
       </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <div
+        class=""
+      />
+      <header>
+        <nav
+          aria-label="main navigation"
+          class="navbar"
+          data-testid=""
+          role="navigation"
+        >
+          <div
+            class="navbar-brand"
+          >
+            <a
+              class="navbar-item"
+              href="/home"
+            >
+              <img
+                alt="logo"
+                height="28"
+                src="logo.png"
+                width="112"
+              />
+            </a>
+            <a
+              aria-expanded="false"
+              aria-label="menu"
+              class="navbar-burger burger"
+              data-target="navbarBasicExample"
+              href="/"
+              role="button"
+            >
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+              <span
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+          <div
+            class="navbar-menu"
+          >
+            <div
+              class="navbar-start"
+            >
+              <a
+                class="navbar-item"
+                href="/"
+              >
+                Home
+              </a>
+              <a
+                class="navbar-item"
+                href="/"
+              >
+                About
+              </a>
+            </div>
+            <div
+              class="navbar-end"
+            >
+              <div
+                class="navbar-item"
+              >
+                <div
+                  class="buttons"
+                >
+                  <a
+                    class="button is-white"
+                    href="/login"
+                  >
+                    Log in
+                  </a>
+                  <a
+                    class="button is-white"
+                    href="/signup"
+                  >
+                    Sign up
+                  </a>
+                  <a
+                    class="button is-link is-outlined is-rounded"
+                    href="/description"
+                  >
+                    Add Your Business for Free
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div
+        class="main-search-container dark-overlay"
+      >
+        <div
+          class="main-search-inner"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="columns"
+            >
+              <div
+                class="is-12"
+              >
+                <h2>
+                  Find Businesses and Services Near You.
+                </h2>
+                <h4>
+                  Discover top-ranked businesses and services that are ready to serve your needs.
+                </h4>
+                <form>
+                  <div
+                    class="main-search-input"
+                  >
+                    <div
+                      class="main-search-input-item"
+                    >
+                      <input
+                        class="input"
+                        name="keywords"
+                        placeholder="What do you need?"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="main-search-input-item location"
+                    >
+                      <input
+                        class="input"
+                        name="location"
+                        placeholder="Which city or town?"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <button
+                      class="button is-info is-rounded"
+                      disabled=""
+                    >
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="video-container"
+        >
+          <video
+            autoplay=""
+            loop=""
+            poster="main-search-video-poster.jpg"
+          >
+            <source
+              src="main-search-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+      <footer
+        class="footer "
+      >
+        <div
+          class="content has-text-centered"
+        >
+          Copyright 
+          2019
+           Worksfair. All Rights Reserved.
+        </div>
+      </footer>
       <div
         class="Toastify"
       />

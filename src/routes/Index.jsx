@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -31,7 +31,7 @@ class Routes extends Component {
       ...publicRoutes
     ];
     return (
-      <div>
+      <Fragment>
         <div className={isLoading ? 'spin-loader' : ''}>
           { isLoading
             && <Spinner
@@ -64,7 +64,7 @@ class Routes extends Component {
             ))
           }
         </Switch>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -41,12 +41,10 @@ export const signin = user => async (dispatch) => {
       data: returningUser.data,
     });
   } catch (error) {
-    const data = process.env.NODE_ENV === 'test'
-      ? error.message : error.response.data.user;
     return dispatch({
       type: AUTHENTICATION_FAILED,
       message: error.message,
-      data,
+      data: error,
     });
   }
 };
@@ -74,6 +72,28 @@ export const getCurrentUser = () => async (dispatch) => {
   } catch (err) {
     return dispatch({
       type: GET_USER_FAILED,
+      message: err.message,
+    });
+  }
+};
+
+export const CONFIRM_USER = 'CONFIRM_USER';
+export const CONFIRM_USER_FAILED = 'CONFIRM_USER_FAILED';
+export const confirmAccount = ({ token }) => async (dispatch) => {
+  try {
+    const currentUser = await axios({
+      url: '/auth/activate/',
+      method: 'get',
+      baseURL,
+      headers: { Authorization: `Token ${token}` },
+    });
+    return dispatch({
+      type: CONFIRM_USER,
+      data: currentUser.data,
+    });
+  } catch (err) {
+    return dispatch({
+      type: CONFIRM_USER_FAILED,
       message: err.message,
     });
   }

@@ -7,7 +7,12 @@ const api = axios.create({
   baseURL,
 });
 
-export const interceptorError = (payload) => {
+api.interceptors.response.use(
+  response => response,
+  error => errorInterceptor(error),
+);
+
+export const errorInterceptor = (payload) => {
   if (payload && payload.response) {
     const { status } = payload.response;
     switch (status) {

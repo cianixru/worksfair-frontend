@@ -10,11 +10,14 @@ const {
  * @returns { string } errorMessage
  */
 export default (data) => {
-  const errors = Object.values(data);
-  const errorMessage = errors.reduce((error, arr) => {
-    return `${error} ${arr[0]}`;
-  }, '');
-  return errorMessage;
+  if (data) {
+    const errors = Object.values(data);
+    const errorMessage = errors.reduce((error, arr) => {
+      return `${error} ${arr[0]}`;
+    }, '');
+    return errorMessage;
+  }
+  return 'An error has occured. Please contact the admin for help.'
 };
 
 export const states = {

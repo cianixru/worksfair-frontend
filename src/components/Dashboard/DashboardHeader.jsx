@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import keygen from 'keygenerator';
+import { connect } from 'react-redux';
 
-const DashboardHeader = ({ title, navigation, children }) => {
+import EmailConfirmation from '../Auth/EmailConfirmation';
+
+const DashboardHeader = ({ title, navigation, children, location, user }) => {
+  const { state } = location;
   return (
     <div className="dashboard-titlebar">
       <div className="columns">
@@ -32,6 +36,11 @@ const DashboardHeader = ({ title, navigation, children }) => {
           </ul>
         </nav>
       </div>
+      { (user && !user.confirmed_account) &&
+        <div className="message is-warning">
+          <EmailConfirmation previousLocation={(state && state.previousLocation) || 'login'} />
+        </div>
+      }
     </div>
   );
 };
@@ -42,4 +51,11 @@ DashboardHeader.propTypes = {
   children: PropTypes.element,
 };
 
-export default DashboardHeader;
+const mapStateToProps = ({ auth: { currentUser } }) => ({
+  user: currentUser.user,
+});
+
+export default withRouter(connect(
+  mapStateToProps,
+  null,
+)(DashboardHeader));

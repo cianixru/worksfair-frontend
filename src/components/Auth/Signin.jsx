@@ -6,8 +6,9 @@ import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import SigninForm from '../../forms/Auth/SigninForm';
-import { signin, getCurrentUser, } from '../../actions/auth';
+import { signin, getCurrentUser, AUTHENTICATION_FAILED } from '../../actions/auth';
 import { isLoading, isComplete } from '../../actions/loader';
+import alert from '../utils/alert';
 
 class Signin extends Component {
   // ts-check
@@ -20,14 +21,22 @@ class Signin extends Component {
     try {
       await actions.isLoading();
       const response = await actions.signin(data);
-      window.location.pathname = `/dashboard/${
-        response.data.user.username}/webpages`;
+      if (response.type === AUTHENTICATION_FAILED) {
+        const { user } = response.data;
+        this.setState({
+          validationErrors: user,
+        });
+        alert.error('Login failed. Please check your credentials.');
+      } else {
+        window.location.pathname = `/dashboard/${
+          response.data.user.username}/webpages`;
+      }
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     } finally {
       await actions.isComplete();
     }
-  };
+  }
 
   render() {
     return (

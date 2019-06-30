@@ -5,28 +5,27 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import ListWebpages from './ListWebpages';
-import { user } from '../utils/test-utils/mockData';
+import EmailConfirmation from './EmailConfirmation';
+import { user } from '../../utils/test-utils/mockData';
 
 afterEach(cleanup);
 
+const actions = {
+  EmailConfirmation: jest.fn(),
+};
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
-const mockStore = store({
-  auth: { currentUser: {user} },
-  webpage: { newWebpage: {} }
-});
+const mockStore = store({ auth: { currentUser: { user } } });
 
-describe('ListWebpages.jsx', () => {
-  test('Should display the ListWebpages Component', () => {
+describe('EmailConfirmation.jsx', () => {
+  test('renders correctly', () => {
     const component = render(
       <Provider store={mockStore}>
         <Router>
-          <ListWebpages />
+          <EmailConfirmation previousLocation="login" />
         </Router>
       </Provider>
     );
-    expect(component).toBeDefined();
     expect(component).toMatchSnapshot();
   });
 });

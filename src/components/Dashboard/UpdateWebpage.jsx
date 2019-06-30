@@ -80,7 +80,10 @@ class UpdateWebpage extends Component {
         this.setState({
           validationErrors: data,
         });
-        alert.error('Request Failed. Check for more details');
+        const message = data.detail
+          ? data.detail
+          : 'Request Failed. Check for more details';
+        alert.error(message);
       } else {
         await actions.getCurrentUser();
         alert.success('Successful! Scroll Down to update others.');
@@ -124,7 +127,10 @@ class UpdateWebpage extends Component {
         this.setState({
           validationErrors: data,
         });
-        alert.error('Request Failed. Check for more details');
+        const message = data.detail
+          ? data.detail
+          : 'Request Failed. Check for more details';
+        alert.error(message);
       } else {
         alert.success('Successful. Keep going!');
       }
@@ -192,7 +198,10 @@ class UpdateWebpage extends Component {
         this.setState({
           validationErrors: data,
         });
-        alert.error('Request Failed. Check for more details');
+        const message = data.detail
+          ? data.detail
+          : 'Request Failed. Check for more details';
+        alert.error(message);
       } else {
         offerings.push(response.data);
         alert.success('Successful! Go ahead and preview your webpage.');
@@ -257,7 +266,10 @@ class UpdateWebpage extends Component {
         this.setState({
           validationErrors: data,
         });
-        alert.error('Request Failed. Check for more details');
+        const message = data.detail
+          ? data.detail
+          : 'Request Failed. Check for more details';
+        alert.error(message);
       } else {
         alert.success('Successfully updated!');
       }

@@ -95,11 +95,10 @@ describe('Signin action', () => {
     const expectedActions = [{
       type: AUTHENTICATION_FAILED,
       message: 'Cannot read property \'toLowerCase\' of undefined',
-      data: 'Cannot read property \'toLowerCase\' of undefined',
     }];
     return store.dispatch(signin({}))
       .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions().type).toEqual(expectedActions.type);
       });
   });
 });
