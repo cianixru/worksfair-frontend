@@ -6,9 +6,14 @@ import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import SignupForm from '../../forms/Auth/SignupForm';
-import { signup, AUTHENTICATION_FAILED } from '../../actions/auth';
+import {
+  setAuthenticatedUser,
+  AUTHENTICATION_FAILED,
+  AUTHENTICATED_USER,
+} from '../../actions/auth';
 import { isLoading, isComplete } from '../../actions/loader';
 import alert from '../utils/alert';
+import { baseURL } from '../../utils/api';
 
 class Signup extends Component {
   state = {
@@ -16,28 +21,70 @@ class Signup extends Component {
       first_name: [],
       last_name: [],
       email: [],
+      username: [],
     },
   }
+
+  /**
+   * @description handles the reset of the error detail
+   * @param { string } name
+   */
+  handleErrorReset = (name) => {
+    this.setState({
+      validationErrors: {
+        ...this.state.validationErrors,
+        [name]: [],
+      },
+    });
+  };
 
   onSubmit = async (details) => {
     const { actions, history } = this.props;
     try {
       await actions.isLoading();
-      const response = await actions.signup(details);
-      if (response.type === AUTHENTICATION_FAILED) {
-        const { user } = response.data;
-        this.setState({
-          validationErrors: user,
-        });
-        alert.error('Signup failed. Check for more details');
-      } else {
-        alert.success('Successfully Signed up!');
 
-        history.push({
-          pathname: `/dashboard/${response.data.user.username}/webpages`,
-          state: { previousLocation: 'signup' }
-        });
-      }
+      const url = `${baseURL}/auth/register/`;
+      details.email = details.email.toLowerCase();
+      details.role = 'admin';
+      let type = AUTHENTICATED_USER;
+      fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(details),
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      }).then(res => {
+        if (!res.ok) {
+          type = AUTHENTICATION_FAILED;
+          alert.error('Signup failed. Check for more details');
+        }
+        return res.json();
+      })
+      .then(response => {
+        if (type === AUTHENTICATION_FAILED) {
+          const { user } = response;
+          this.setState({
+            validationErrors: user,
+          });
+          if (user.non_field_errors) {
+            alert.info(user.non_field_errors[0]);
+          }
+        } else {
+          alert.success('Successfully Signed up!');
+  
+          history.push({
+            pathname: `/dashboard/${response.user.username}/webpages`,
+            state: { previousLocation: 'signup' }
+          });
+        }
+        const payload = {
+          type,
+          data: response,
+        };
+        actions.setAuthenticatedUser(payload);
+      })
+      .catch(error => console.error('Error:', error));
+
     } catch (error) {
       console.log(error);
     } finally {
@@ -56,6 +103,7 @@ class Signup extends Component {
         <SignupForm
           onSubmit={this.onSubmit}
           validationErrors={validationErrors}
+          handleErrorReset={this.handleErrorReset}
         />
       </div>
     );
@@ -76,7 +124,7 @@ const mapStateToProps = ({ auth: { currentUser } }) => ({
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      signup,
+      setAuthenticatedUser,
       isLoading,
       isComplete,
     },

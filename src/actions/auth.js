@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import api, { baseURL } from '../utils/api';
+import { baseURL } from '../utils/api';
 import auth from '../utils/auth';
 
 const apiToken = localStorage.getItem('token');
@@ -9,45 +9,10 @@ const manageAuth = new auth();
 
 export const AUTHENTICATED_USER = 'AUTHENTICATED_USER';
 export const AUTHENTICATION_FAILED = 'AUTHENTICATION_FAILED';
-export const signup = user => async (dispatch) => {
-  try {
-    user.email = user.email.toLowerCase();
-    user.role = 'admin';
-    const newUser = await api.post('/auth/register/', user);
-    return dispatch({
-      type: AUTHENTICATED_USER,
-      data: newUser.data,
-    });
-  } catch (error) {
-    const data = process.env.NODE_ENV === 'test'
-      ? error.message : error.response.data.user;
-    return dispatch({
-      type: AUTHENTICATION_FAILED,
-      message: error.message,
-      data,
-    });
-  }
-};
 
-export const signin = user => async (dispatch) => {
-  const { email } = user;
-  try {
-    user.email = email.toLowerCase();
-
-    const returningUser = await api.post('/auth/login/', { user });
-
-    return dispatch({
-      type: AUTHENTICATED_USER,
-      data: returningUser.data,
-    });
-  } catch (error) {
-    return dispatch({
-      type: AUTHENTICATION_FAILED,
-      message: error.message,
-      data: error,
-    });
-  }
-};
+export const setAuthenticatedUser = payload => dispatch => {
+  return dispatch(payload);
+}
 
 export const LOGOUT = 'LOGOUT';
 export const logout = () => (dispatch) => {

@@ -20,7 +20,7 @@ Object {
               data-testid="firstName"
               name="first_name"
               placeholder="First Name"
-              required=""
+              type="text"
               value=""
             />
             <span
@@ -51,7 +51,7 @@ Object {
               data-testid="lastName"
               name="last_name"
               placeholder="Last Name (Surname)"
-              required=""
+              type="text"
               value=""
             />
             <span
@@ -62,12 +62,12 @@ Object {
               />
             </span>
           </div>
+          <span
+            class="input-error"
+          >
+            This field is required
+          </span>
         </div>
-        <span
-          class="input-error"
-        >
-          This field is required
-        </span>
         <div
           class="field"
         >
@@ -82,7 +82,7 @@ Object {
               data-testid="username"
               name="username"
               placeholder="Username"
-              required=""
+              type="text"
               value=""
             />
             <span
@@ -93,12 +93,12 @@ Object {
               />
             </span>
           </div>
+          <span
+            class="input-error"
+          >
+            This field is required
+          </span>
         </div>
-        <span
-          class="input-error"
-        >
-          This field is required
-        </span>
         <div
           class="field"
         >
@@ -113,24 +113,23 @@ Object {
               data-testid="email"
               name="email"
               placeholder="Email"
-              required=""
-              type="email"
+              type="text"
               value=""
             />
             <span
-              class="icon is-small is-left"
+              class="icon is-medium is-left"
             >
               <i
                 class="fa fa-envelope-o"
               />
             </span>
           </div>
+          <span
+            class="input-error"
+          >
+            This field is required
+          </span>
         </div>
-        <span
-          class="input-error"
-        >
-          This field is required
-        </span>
         <div
           class="field"
         >
@@ -157,44 +156,12 @@ Object {
               />
             </span>
           </div>
-        </div>
-        <span
-          class="input-error"
-        >
-          This field is required
-        </span>
-        <div
-          class="field"
-        >
-          <label>
-            Repeat Password
-          </label>
-          <div
-            class="control has-icons-left"
+          <span
+            class="input-error"
           >
-            <input
-              class="input is-medium"
-              data-testid="confirmPassword"
-              name="confirm_password"
-              placeholder="Repeat Password"
-              required=""
-              type="password"
-              value=""
-            />
-            <span
-              class="icon is-medium is-left"
-            >
-              <i
-                class="fa fa-lock"
-              />
-            </span>
-          </div>
+            This field is required
+          </span>
         </div>
-        <span
-          class="input-error"
-        >
-          This field is required
-        </span>
         <div
           class="field"
         >
@@ -235,7 +202,7 @@ Object {
             data-testid="firstName"
             name="first_name"
             placeholder="First Name"
-            required=""
+            type="text"
             value=""
           />
           <span
@@ -266,7 +233,7 @@ Object {
             data-testid="lastName"
             name="last_name"
             placeholder="Last Name (Surname)"
-            required=""
+            type="text"
             value=""
           />
           <span
@@ -277,12 +244,12 @@ Object {
             />
           </span>
         </div>
+        <span
+          class="input-error"
+        >
+          This field is required
+        </span>
       </div>
-      <span
-        class="input-error"
-      >
-        This field is required
-      </span>
       <div
         class="field"
       >
@@ -297,7 +264,7 @@ Object {
             data-testid="username"
             name="username"
             placeholder="Username"
-            required=""
+            type="text"
             value=""
           />
           <span
@@ -308,12 +275,12 @@ Object {
             />
           </span>
         </div>
+        <span
+          class="input-error"
+        >
+          This field is required
+        </span>
       </div>
-      <span
-        class="input-error"
-      >
-        This field is required
-      </span>
       <div
         class="field"
       >
@@ -328,24 +295,23 @@ Object {
             data-testid="email"
             name="email"
             placeholder="Email"
-            required=""
-            type="email"
+            type="text"
             value=""
           />
           <span
-            class="icon is-small is-left"
+            class="icon is-medium is-left"
           >
             <i
               class="fa fa-envelope-o"
             />
           </span>
         </div>
+        <span
+          class="input-error"
+        >
+          This field is required
+        </span>
       </div>
-      <span
-        class="input-error"
-      >
-        This field is required
-      </span>
       <div
         class="field"
       >
@@ -372,44 +338,12 @@ Object {
             />
           </span>
         </div>
-      </div>
-      <span
-        class="input-error"
-      >
-        This field is required
-      </span>
-      <div
-        class="field"
-      >
-        <label>
-          Repeat Password
-        </label>
-        <div
-          class="control has-icons-left"
+        <span
+          class="input-error"
         >
-          <input
-            class="input is-medium"
-            data-testid="confirmPassword"
-            name="confirm_password"
-            placeholder="Repeat Password"
-            required=""
-            type="password"
-            value=""
-          />
-          <span
-            class="icon is-medium is-left"
-          >
-            <i
-              class="fa fa-lock"
-            />
-          </span>
-        </div>
+          This field is required
+        </span>
       </div>
-      <span
-        class="input-error"
-      >
-        This field is required
-      </span>
       <div
         class="field"
       >

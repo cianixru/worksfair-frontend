@@ -41,7 +41,6 @@ describe('Signup.jsx', () => {
     const lastName = getByTestId('lastName');
     const email = getByTestId('email');
     const password = getByTestId('password');
-    const confirmPassword = getByTestId('confirmPassword');
 
     fireEvent.change(firstName, { target: { value: 'Theo' } });
     expect(firstName.value).toEqual('Theo');
@@ -54,9 +53,6 @@ describe('Signup.jsx', () => {
 
     fireEvent.change(password, { target: { value: 'password1$' } });
     expect(password.value).toEqual('password1$');
-
-    fireEvent.change(confirmPassword, { target: { value: 'password1$' } });
-    expect(confirmPassword.value).toEqual('password1$');
 
     const submitBtn = getByText('Signup');
     await fireEvent.click(submitBtn);

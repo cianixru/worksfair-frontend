@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Form, Field } from 'react-final-form';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { toSentenceCase } from '../../components/utils/helpers';
+import AuthText from '../../atoms/AuthText';
 
 // @ts-check
 /**
@@ -10,7 +11,12 @@ import { toSentenceCase } from '../../components/utils/helpers';
  * @param {object} props
  * @returns {JSX} the signup form
  */
-const SignupForm = ({ onSubmit, validate, validationErrors }) => {
+const SignupForm = ({
+  onSubmit,
+  validate,
+  validationErrors,
+  handleErrorReset
+}) => {
   return (
     <Form
       onSubmit={onSubmit}
@@ -18,140 +24,87 @@ const SignupForm = ({ onSubmit, validate, validationErrors }) => {
       // eslint-disable-next-line react/jsx-no-bind
       render={({ handleSubmit, pristine, invalid }) => (
         <form onSubmit={handleSubmit} >
-          <Fragment>
-            <div className="field">
-              <label>First Name</label>
-              <div className="control has-icons-left">
-                <Field
-                  className="input is-medium"
-                  name="first_name"
-                  component="input"
-                  placeholder="First Name"
-                  validate={validate}
-                  data-testid="firstName"
-                  required
-                />
-                <span className="icon is-medium is-left">
-                  <i className="fa fa-user-o" />
-                </span>
-              </div>
-              { validationErrors.first_name
-                && validationErrors.first_name.map((error) => {
-                  return (
-                    <span className="input-error" key={error}>
-                      {toSentenceCase(error)}
-                    </span>
-                  );
-                })
-              }
-            </div>
-          </Fragment>
-          <Fragment>
-            <div className="field">
-              <label>Last Name</label>
-              <div className="control has-icons-left">
-                <Field
-                  name="last_name"
-                  component="input"
-                  placeholder="Last Name (Surname)"
-                  validate={validate}
-                  className="input is-medium"
-                  data-testid="lastName"
-                  required
-                />
-                <span className="icon is-medium is-left">
-                  <i className="fa fa-user-o" />
-                </span>
-              </div>
-            </div>
-            { validationErrors.last_name
-              && validationErrors.last_name.map((error) => {
-                return (
-                  <span className="input-error" key={error}>
-                    {toSentenceCase(error)}
-                  </span>
-                );
-              })
-            }
-          </Fragment>
+          <div className="field">
+            <label>First Name</label>
+            <AuthText
+              className="input is-medium"
+              name="first_name"
+              component="input"
+              placeholder="First Name"
+              validate={validate}
+              dataTestId="firstName"
+              required
+              icon="fa fa-user-o"
+              validationErrors={validationErrors}
+              handleErrorReset={handleErrorReset}
+            />
+          </div>
 
-          <Fragment>
-            <div className="field">
-              <label>Username</label>
-              <div className="control has-icons-left">
-                <Field
-                  name="username"
-                  component="input"
-                  placeholder="Username"
-                  validate={validate}
-                  className="input is-medium"
-                  data-testid="username"
-                  required
-                />
-                <span className="icon is-medium is-left">
-                  <i className="fa fa-user-o" />
-                </span>
-              </div>
-            </div>
-            { validationErrors.last_name
-              && validationErrors.last_name.map((error) => {
-                return (
-                  <span className="input-error" key={error}>
-                    {toSentenceCase(error)}
-                  </span>
-                );
-              })
-            }
-          </Fragment>
+          <div className="field">
+            <label>Last Name</label>
+            <AuthText
+              name="last_name"
+              component="input"
+              placeholder="Last Name (Surname)"
+              validate={validate}
+              className="input is-medium"
+              dataTestId="lastName"
+              required
+              icon="fa fa-user-o"
+              validationErrors={validationErrors}
+              handleErrorReset={handleErrorReset}
+            />
+          </div>
+          
+          <div className="field">
+            <label>Username</label>
+            <AuthText
+              name="username"
+              component="input"
+              placeholder="Username"
+              validate={validate}
+              className="input is-medium"
+              dataTestId="username"
+              required
+              icon="fa fa-user-o"
+              validationErrors={validationErrors}
+              handleErrorReset={handleErrorReset}
+            />
+          </div>
+          
+          <div className="field">
+            <label>Email</label>
+            <AuthText
+              name="email"
+              type="email"
+              component="input"
+              placeholder="Email"
+              validate={validate}
+              className="input is-medium"
+              dataTestId="email"
+              required
+              icon="fa fa-envelope-o"
+              validationErrors={validationErrors}
+              handleErrorReset={handleErrorReset}
+            />
+          </div>
 
-          <Fragment>
-            <div className="field">
-              <label>Email</label>
-              <div className="control has-icons-left">
-                <Field
-                  name="email"
-                  type="email"
-                  component="input"
-                  placeholder="Email"
-                  validate={validate}
-                  className="input is-medium"
-                  data-testid="email"
-                  required
-                />
-                <span className="icon is-small is-left">
-                  <i className="fa fa-envelope-o" />
-                </span>
-              </div>
-            </div>
-            { validationErrors.email
-              && validationErrors.email.map((error) => {
-                return (
-                  <span className="input-error" key={error}>
-                    {toSentenceCase(error)}
-                  </span>
-                );
-              })
-            }
-          </Fragment>
-
-          <Fragment>
-            <div className="field">
-              <label>Password</label>
-              <div className="control has-icons-left">
-                <Field
-                  name="password"
-                  type="password"
-                  component="input"
-                  placeholder="Password"
-                  validate={validate}
-                  className="input is-medium"
-                  data-testid="password"
-                  required
-                />
-                <span className="icon is-medium is-left">
-                  <i className="fa fa-lock" />
-                </span>
-              </div>
+          <div className="field">
+            <label>Password</label>
+            <div className="control has-icons-left">
+              <Field
+                name="password"
+                type="password"
+                component="input"
+                placeholder="Password"
+                validate={validate}
+                className="input is-medium"
+                data-testid="password"
+                required
+              />
+              <span className="icon is-medium is-left">
+                <i className="fa fa-lock" />
+              </span>
             </div>
             { validationErrors.password
               && validationErrors.password.map((error) => {
@@ -162,37 +115,8 @@ const SignupForm = ({ onSubmit, validate, validationErrors }) => {
                 );
               })
             }
-          </Fragment>
+          </div>
 
-          <Fragment>
-            <div className="field">
-              <label>Repeat Password</label>
-              <div className="control has-icons-left">
-                <Field
-                  name="confirm_password"
-                  type="password"
-                  component="input"
-                  placeholder="Repeat Password"
-                  validate={validate}
-                  className="input is-medium"
-                  data-testid="confirmPassword"
-                  required
-                />
-                <span className="icon is-medium is-left">
-                  <i className="fa fa-lock" />
-                </span>
-              </div>
-            </div>
-            { validationErrors.confirm_password
-              && validationErrors.confirm_password.map((error) => {
-                return (
-                  <span className="input-error" key={error}>
-                    {toSentenceCase(error)}
-                  </span>
-                );
-              })
-            }
-          </Fragment>
           <div className="field">
             Already signed up? <Link to="/login">Log in</Link>
           </div>

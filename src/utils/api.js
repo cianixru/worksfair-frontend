@@ -12,6 +12,11 @@ api.interceptors.response.use(
   error => errorInterceptor(error),
 );
 
+api.interceptors.request.use(
+  response => response,
+  error => errorInterceptor(error),
+);
+
 export const errorInterceptor = (payload) => {
   if (payload && payload.response) {
     const { status } = payload.response;

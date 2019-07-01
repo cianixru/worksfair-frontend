@@ -6,9 +6,15 @@ import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import SigninForm from '../../forms/Auth/SigninForm';
-import { signin, getCurrentUser, AUTHENTICATION_FAILED } from '../../actions/auth';
+import {
+  setAuthenticatedUser,
+  getCurrentUser,
+  AUTHENTICATION_FAILED,
+  AUTHENTICATED_USER,
+} from '../../actions/auth';
 import { isLoading, isComplete } from '../../actions/loader';
 import alert from '../utils/alert';
+import { baseURL } from '../../utils/api';
 
 class Signin extends Component {
   // ts-check
@@ -16,21 +22,50 @@ class Signin extends Component {
    * @description Handles the form submit event
    * @param {object} data
    */
-  onSubmit = async (data) => {
+  onSubmit = async (user) => {
     const { actions } = this.props;
     try {
       await actions.isLoading();
-      const response = await actions.signin(data);
-      if (response.type === AUTHENTICATION_FAILED) {
-        const { user } = response.data;
-        this.setState({
-          validationErrors: user,
-        });
-        alert.error('Login failed. Please check your credentials.');
-      } else {
-        window.location.pathname = `/dashboard/${
-          response.data.user.username}/webpages`;
-      }
+
+      const url = `${baseURL}/auth/login/`;
+      user.email = user.email.toLowerCase();
+      let type = AUTHENTICATED_USER;
+      fetch(url, {
+        method: 'POST',
+        body: JSON.stringify({user}),
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      }).then(res => {
+        if (!res.ok) {
+          type = AUTHENTICATION_FAILED;
+          alert.error('Login failed. Please check your credentials.');
+        }
+        return res.json();
+      })
+      .then(response => {
+        if (type === AUTHENTICATION_FAILED) {
+          const { user } = response;
+          this.setState({
+            validationErrors: user,
+          });
+          if (user.non_field_errors) {
+            alert.info(user.non_field_errors[0]);
+          }
+        } else {
+          alert.success('Successfully Signed up!');
+  
+          window.location.pathname = `/dashboard/${
+            response.user.username}/webpages`;
+        }
+        const payload = {
+          type,
+          data: response,
+        };
+        actions.setAuthenticatedUser(payload);
+      })
+      .catch(error => console.error('Error:', error));
+
     } catch (error) {
       console.log(error);
     } finally {
@@ -67,10 +102,10 @@ const mapStateToProps = ({ auth: { currentUser } }) => ({
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      signin,
       isLoading,
       isComplete,
       getCurrentUser,
+      setAuthenticatedUser,
     },
     dispatch,
   ),

@@ -15,10 +15,13 @@ export const accountConfirmationEmail = `
           <h4>Email Confirmation</h4>
           <p style="line-height:1.5">Please confirm your email account by clicking the link below to start using Worksfair.com</p>
         </div>
-        <div style="width:100%"><a href="{url}" style="background-color: #209cee; padding: 10px 20px; border-radius: 30px; color: white; text-decoration-line: none; display: block; text-align: center;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.10); transition: all 0.3s cubic-bezier(.25,.8,.25,1);">Confirm Account</a></div>
+        <div style="width:100%">
+          <a href="{url}" target="_blank" style="background-color: #209cee; padding: 10px 20px; border-radius: 30px; color: white; text-decoration-line: none; display: block; text-align: center;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.10); transition: all 0.3s cubic-bezier(.25,.8,.25,1);">Confirm Account</a>
+        </div>
         <p>
-          <small>If the button does not work, please use this <a href="{url}">link</a> on your browser.</small>
+          <small>If the button does not work, please use the link below on your browser.</small>
         </p>
+        <p><a href="{url}">{url}</a> </p>
     </div>
   </body>
 </html>`;

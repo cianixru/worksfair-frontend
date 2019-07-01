@@ -25,7 +25,6 @@ export const sendConfirmationEmail = (url, email) => {
   try {
     const emailBody = accountConfirmationEmail.replace(/{url}/g, url);
     const emailOptions = emailer.setMailOptions(email, 'Email Confirmation', emailBody);
-
     emailer.sendEmail(emailOptions);
     alert.success('Email has been sent successfully');
     return;

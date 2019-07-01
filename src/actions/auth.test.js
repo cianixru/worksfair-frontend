@@ -9,7 +9,7 @@ import {
   AUTHENTICATED_USER,
   signup,
   AUTHENTICATION_FAILED,
-  signin,
+  setAuthenticatedUser,
   GET_CURRENT_USER,
   getCurrentUser,
   GET_USER_FAILED,
@@ -29,77 +29,31 @@ afterAll(() => {
   store.clearActions();
 });
 
-describe('Signup action', () => {
+describe('setAuthenticatedUser action', () => {
   const mock = new MockAdapter(api);
   afterEach(() => {
     mock.reset();
     localStorage.clear();
   });
 
-  test.skip('should dispatch the credentials to the store after signup', () => {
-    mock.onPost('/auth/register/').reply(201, user);
-    const expectedActions = [{
+  test('should dispatch the credentials to the store after setAuthenticatedUser', () => {
+    const payload = {
       type: AUTHENTICATED_USER,
       data: {
         ...user,
       }
-    }];
-    return store.dispatch(signup(user))
-      .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
-      });
+    }
+    const expectedActions = payload;
+    expect(store.dispatch(setAuthenticatedUser(payload))).toEqual(expectedActions);
   });
-  test('should dispatch the credentials to the store after signup', () => {
-    mock.onPost('/auth/register/').reply(500, {
+  test('should dispatch the credentials to the store after setAuthenticatedUser', () => {
+    const payload = {
       type: AUTHENTICATION_FAILED,
       message: 'Cannot read property \'toLowerCase\' of undefined',
-      response: { data: { user: {}, }, }
-    });
-    const expectedActions = [{
-      type: AUTHENTICATION_FAILED,
-      message: 'Cannot read property \'toLowerCase\' of undefined',
-      data: 'Cannot read property \'toLowerCase\' of undefined',
-    }];
-    return store.dispatch(signup({}))
-      .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
-      });
-  });
-});
-
-describe('Signin action', () => {
-  const mock = new MockAdapter(api);
-  afterEach(() => {
-    mock.reset();
-    localStorage.clear();
-  });
-
-  test('should dispatch the credentials to the store after signin', () => {
-    mock.onPost('/auth/login/').reply(200, user);
-    const expectedActions = [{
-      type: AUTHENTICATED_USER,
-      data: {
-        ...user,
-      }
-    }];
-    return store.dispatch(signin(user))
-      .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
-      });
-  });
-  test('should dispatch the credentials to the store after signin', () => {
-    mock.onPost('/auth/login/').reply(500, {
-      type: AUTHENTICATION_FAILED,
-      message: 'Cannot read property \'toLowerCase\' of undefined',
-    });
-    const expectedActions = [{
-      type: AUTHENTICATION_FAILED,
-      message: 'Cannot read property \'toLowerCase\' of undefined',
-    }];
-    return store.dispatch(signin({}))
-      .then(() => {
-        expect(store.getActions().type).toEqual(expectedActions.type);
-      });
+    };
+    const expectedActions = payload;
+    expect(store.dispatch(setAuthenticatedUser(payload))).toEqual(expectedActions);
+ 
   });
 });
 
