@@ -1,0 +1,126 @@
+@import './Dashboard.scss';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea, select,
+input[type="button"],
+input[type="submit"],
+button {
+    font-family: raleway, helveticaneue, helvetica neue, Helvetica, Arial, sans-serif;
+    text-transform: none;
+}
+
+body, .dashboard-container, .main-container {
+    font-size: 16px;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 3em;
+}
+
+.field {
+    padding-bottom: 15px;
+}
+
+.layout-auth {
+    padding: 20px;
+    margin: 30px 0px;
+}
+
+.input-error {
+    position: relative;
+    display: block;
+    top: 2px;
+    left: 0.5em;
+    color: red;
+    font-size: 14px;
+}
+
+.spin-loader {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+}
+
+.spinner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: 0 auto;
+    z-index: 100000;
+}
+
+.is-180x180 {
+    height: 180px;
+    width: 180px;
+}
+
+.is-180x180 img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.is-150x150 {
+    height: 150px;
+    width: 150px;
+}
+
+.is-150x150 img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+img {
+    object-fit: cover;
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.margin-right-7 {
+  margin-right: 7px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.has-text-extra-large {
+    margin-top: -100px;
+    font-size: 125px;
+}
+
+.has-text-large {
+  font-size: 50px;
+}
+
+.auth {
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  box-shadow: none;
+  margin-bottom: 20px;
+}

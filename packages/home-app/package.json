@@ -1,0 +1,74 @@
+{
+  "name": "home-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "bulma": "^0.7.4",
+    "cloudinary-react": "^1.1.0",
+    "express": "^4.17.1",
+    "final-form": "^4.11.1",
+    "font-awesome": "^4.7.0",
+    "i": "^0.3.6",
+    "keygenerator": "^1.0.4",
+    "node-sass": "^4.12.0",
+    "nodemailer": "^6.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-dropzone": "^10.1.4",
+    "react-final-form": "^4.0.2",
+    "react-helmet": "^5.2.1",
+    "react-progress-button": "^5.1.0",
+    "react-redux": "^6.0.1",
+    "react-responsive-carousel": "^3.1.49",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^3.0.1",
+    "react-spinkit": "^3.0.0",
+    "react-toastify": "^5.1.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "sha1": "^1.1.1",
+    "typescript": "^3.5.2"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.16.0",
+    "eslint-plugin-react-hooks": "^1.2.0",
+    "express-pino-logger": "^4.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.4.4",
+    "react-testing-library": "^6.0.0",
+    "redux-mock-store": "^1.5.3"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "node index.js",
+    "cov": "yarn test --coverage",
+    "serve": "serve -s index.js",
+    "server-dev": "node-env-run index.js --exec nodemon | pino-colada",
+    "dev-server": "run-p server-dev dev"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
