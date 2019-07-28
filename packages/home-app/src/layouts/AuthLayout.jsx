@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 
 const AuthLayout = ({ Component }) => {
   return (
-    <div className="layout-auth">
-      <div className="columns is-mobile is-centered">
+    <Fragment>
+      <div className="auth-layout">
+        
+      </div>
+      <div className="columns is-mobile auth-overlay">
         <div className="column is-one-third-desktop" >
           <Component />
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

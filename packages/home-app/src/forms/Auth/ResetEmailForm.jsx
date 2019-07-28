@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
  * @param {object} props
  * @returns {JSX}
  */
-const SigninForm = ({ onSubmit, validate, }) => {
+const ResetEmailForm = ({ onSubmit, validate, }) => {
   return (
     <Form
       onSubmit={onSubmit}
@@ -28,33 +28,12 @@ const SigninForm = ({ onSubmit, validate, }) => {
                   component="input"
                   placeholder="Email"
                   validate={validate}
-                  data-testid="signin-email"
+                  data-testid="update-password-email"
                 />
                 <span className="icon is-medium is-left">
                   <i className="fa fa-envelope-o" />
                 </span>
               </div>
-            </div>
-
-            <div className="field">
-              <label>Password</label>
-              <div className="control has-icons-left">
-                <Field
-                  className="input is-medium"
-                  name="password"
-                  type="password"
-                  component="input"
-                  placeholder="Password"
-                  validate={validate}
-                  data-testid="signin-password"
-                />
-                <span className="icon is-medium is-left">
-                  <i className="fa fa-lock" />
-                </span>
-              </div>
-            </div>
-            <div className="field">
-              <Link to="/reset-password">Forgot Password</Link>
             </div>
             <div className="field">
               Don't have an account? <Link to="/signup">Sign up</Link>
@@ -65,7 +44,7 @@ const SigninForm = ({ onSubmit, validate, }) => {
                 disabled={pristine || invalid}
                 className="button is-link is-medium is-rounded"
               >
-                Login
+                Send
               </button>
             </div>
           </form>
@@ -75,9 +54,9 @@ const SigninForm = ({ onSubmit, validate, }) => {
   );
 };
 
-SigninForm.propTypes = {
+ResetEmailForm.propTypes = {
   onSubmit: PropTypes.func,
   validate: PropTypes.func,
 };
 
-export default SigninForm;
+export default ResetEmailForm;

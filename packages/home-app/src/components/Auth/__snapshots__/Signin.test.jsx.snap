@@ -5,7 +5,9 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="auth-content margin-top-15-vh"
+      >
         <h3
           class="subtitle is-3"
         >
@@ -67,6 +69,15 @@ Object {
           <div
             class="field"
           >
+            <a
+              href="/reset-password"
+            >
+              Forgot Password
+            </a>
+          </div>
+          <div
+            class="field"
+          >
             Don't have an account? 
             <a
               href="/signup"
@@ -90,7 +101,9 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <div>
+    <div
+      class="auth-content margin-top-15-vh"
+    >
       <h3
         class="subtitle is-3"
       >
@@ -148,6 +161,15 @@ Object {
               />
             </span>
           </div>
+        </div>
+        <div
+          class="field"
+        >
+          <a
+            href="/reset-password"
+          >
+            Forgot Password
+          </a>
         </div>
         <div
           class="field"

@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet';
 import SigninForm from '../../forms/Auth/SigninForm';
 import {
   setAuthenticatedUser,
-  getCurrentUser,
   AUTHENTICATION_FAILED,
   AUTHENTICATED_USER,
 } from '../../actions/auth';
@@ -54,7 +53,7 @@ class Signin extends Component {
             alert.info(user.non_field_errors[0]);
           }
         } else {
-          alert.success('Successfully Signed up!');
+          alert.success('Successfully logged in!');
   
           window.location.pathname = `/dashboard/${
             response.user.username}/webpages`;
@@ -76,7 +75,7 @@ class Signin extends Component {
 
   render() {
     return (
-      <div>
+      <div className="auth-content margin-top-15-vh">
         <Helmet>
           <title>
             Sign in - Worksfair
@@ -109,7 +108,6 @@ const mapDispatchToProps = dispatch => ({
     {
       isLoading,
       isComplete,
-      getCurrentUser,
       setAuthenticatedUser,
     },
     dispatch,

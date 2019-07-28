@@ -110,7 +110,7 @@ class Signup extends Component {
   render() {
     const { validationErrors } = this.state;
     return (
-      <div>
+      <div className="auth-content signup">
         <Helmet>
           <title>Sign up - Worksfair</title>
         </Helmet>

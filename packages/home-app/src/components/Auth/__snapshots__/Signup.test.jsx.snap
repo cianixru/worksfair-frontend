@@ -5,7 +5,9 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="auth-content signup"
+      >
         <h3
           class="subtitle is-3"
         >
@@ -169,7 +171,9 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <div>
+    <div
+      class="auth-content signup"
+    >
       <h3
         class="subtitle is-3"
       >

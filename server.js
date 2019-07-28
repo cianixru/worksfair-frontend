@@ -1,6 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const vhost = require('vhost');
+const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -14,6 +16,8 @@ const {
 const mainapp = express();
 const webpageApp = express();
 
+mainapp.use(bodyParser.json());
+
 mainapp.use(express.static(path.join(__dirname, 'packages/home-app/build')));
 webpageApp.use(express.static(path.join(__dirname, 'packages/webpage-app/build')));
 
@@ -24,28 +28,36 @@ mainapp.use((request, response, next) => {
 });
   
 mainapp.post('/sendmail', (request, response) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: REACT_APP_EMAIL_ACCOUNT,
-      pass: REACT_APP_EMAIL_PASSWORD,
-    }
-  });
-  const { mailOptions } = request.body;
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      return response.status(500).json({
-        status: 500,
-        error,
-      });
-    }
-    console.log('Message sent: %s', info.messageId);
-    return response.status(200).json({
-      status: 200,
-      data: info,
+  try {
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: REACT_APP_EMAIL_ACCOUNT,
+        pass: REACT_APP_EMAIL_PASSWORD,
+      }
     });
-  });
+    const { mailOptions } = request.body;
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        return response.status(500).json({
+          status: 500,
+          error,
+        });
+      }
+      console.log('Message sent: %s', info.messageId);
+      return response.status(200).json({
+        status: 200,
+        data: info,
+      });
+    });
+  } catch (error ) {
+    console.log(error.message);
+    return response.status(500).json({
+      status: 500,
+      error: error.message,
+    });
+  }
 });
 
 mainapp.get('/*', function (request, response) {

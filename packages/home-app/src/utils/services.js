@@ -1,7 +1,10 @@
 import dotenv from 'dotenv';
 import axios from 'axios';
 
-import { accountConfirmationEmail } from './emailTemplates';
+import {
+  accountConfirmationEmail,
+  passwordResetEmail,
+ } from './emailTemplates';
 import alert from '../components/utils/alert';
 
 dotenv.config();
@@ -18,7 +21,12 @@ const emailer = {
     subject,
     html,
   }),
-  sendEmail: async mailOptions => await await axios.post(`${REACT_APP_SERVER_URL}/sendmail`, { mailOptions, }),
+  sendEmail: async mailOptions => await axios({
+    url: '/sendmail',
+    method: 'post',
+    data: { mailOptions },
+    baseURL: REACT_APP_SERVER_URL,
+  }),
 };
 
 export const sendConfirmationEmail = (url, email) => {
@@ -27,6 +35,18 @@ export const sendConfirmationEmail = (url, email) => {
     const emailOptions = emailer.setMailOptions(email, 'Email Confirmation', emailBody);
     emailer.sendEmail(emailOptions);
     alert.success('Email has been sent successfully');
+    return;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const sendResetEmail = (url, email, fullname) => {
+  try {
+    const emailBody = passwordResetEmail.replace(/{url}/g, url);
+    const emailOptions = emailer.setMailOptions(email, 'Password Reset', emailBody);
+    emailer.sendEmail(emailOptions);
+    alert.success('An email has been sent to your account!');
     return;
   } catch (error) {
     console.log(error);
