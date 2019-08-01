@@ -266,3 +266,40 @@
         background: rgba(255, 255, 255, .92)
     }
 }
+
+.numbering{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    color: #C4C4C4;
+}
+
+.instruction {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.image-container {
+    max-width: 350px;
+    max-height: 400px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+.margin-15 {
+    margin: 15px;
+}
+
+.margin-25 {
+    margin: 25px;
+}

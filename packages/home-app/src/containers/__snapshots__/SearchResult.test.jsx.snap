@@ -76,20 +76,14 @@ Object {
                       <a
                         class="has-text-grey"
                         href="http://ideosynergy.worksfair.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
                         Theookafor2
                       </a>
                     </h3>
                     <p>
                       eod
-                    </p>
-                    <p
-                      class="is-size-6"
-                    >
-                      undefined, 
-                      <strong>
-                        undefined, undefined 
-                      </strong>
                     </p>
                   </div>
                   <div>
@@ -187,20 +181,14 @@ Object {
                     <a
                       class="has-text-grey"
                       href="http://ideosynergy.worksfair.com"
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       Theookafor2
                     </a>
                   </h3>
                   <p>
                     eod
-                  </p>
-                  <p
-                    class="is-size-6"
-                  >
-                    undefined, 
-                    <strong>
-                      undefined, undefined 
-                    </strong>
                   </p>
                 </div>
                 <div>

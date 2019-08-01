@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import CreateWebpage from '../components/Dashboard/CreateWebpage';
@@ -28,7 +27,13 @@ class CreateWebpageContainer extends Component {
           title="Create Webpage"
           navigation={navigation}
         >
-          <Link to="/webpage/ideosynergy-inc">View Sample Business Webpage</Link>
+          <a
+            href="http://ideosynergy.worksfair.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View a sample business webpage
+          </a>
         </DashboardHeader>
         <CreateWebpage username={username} />
         <Footer/>

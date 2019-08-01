@@ -130,7 +130,7 @@ Object {
             data-testid="save-and-preview"
             type="submit"
           >
-            Preview Webpage
+            Save and Preview Webpage
           </button>
         </div>
       </div>
@@ -262,7 +262,7 @@ Object {
           data-testid="save-and-preview"
           type="submit"
         >
-          Preview Webpage
+          Save and Preview Webpage
         </button>
       </div>
     </div>

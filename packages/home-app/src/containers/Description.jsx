@@ -12,19 +12,29 @@ class Description extends Component {
           <title>Before you continue - Worksfair</title>
         </Helmet>
         <div
-          className="hero is-small has-background-light"
+          className="hero is-small has-background-lighter"
         >
           <div className="hero-body">
             <div className="container columns">
               <div className="column is-1"/>
               <div className="column is-10">
-                <h1 className="is-size-3  margin-top-25">Before You Continue</h1>
+                <h1 className="is-size-3  margin-top-25">Before You Continue...</h1>
                 <div className="message">
                   <div className="message-body margin-top-25">
                     <p className="is-size-5">
-                      <strong>Our Mission</strong> is to be a platform for growing businesses. We aim to help people find businesses that will solve their problems (and interact with them),
-                      We aim to help businesses find and interact with other businesses,
-                      to foster knowledge-sharing, connection and collaboration. 
+                      We try to enable skilled people and businesses to showcase their works through our free business webpage.
+                      View a sample business webpage <a
+                        href="http://ideosynergy.worksfair.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        here
+                      </a> 
+                    </p>
+                    <p className="is-size-5">
+                    <strong>Our Mission</strong> is to be the platform for growing businesses.
+                      We aim to help people find businesses that will solve their problems.
+                      We also aim to help businesses find and interact with other businesses, to connect and collabo.
                     </p>
                   </div>
                 </div>

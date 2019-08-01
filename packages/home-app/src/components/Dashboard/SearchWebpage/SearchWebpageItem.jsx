@@ -22,15 +22,17 @@ const WebpageItem = ({
             <a
               href={`http://${webpage.sub_domain_name}.worksfair.com`}
               className={textColourHelper(webpage.colour)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {webpage.title}
             </a>
           </h3>
           <p>{webpage.description}</p>
-          <p className="is-size-6">
+          { webpage.address && <p className="is-size-6">
             {`${webpage.address}, `}
             <strong>{`${webpage.city}, ${webpage.state} `}</strong>
-          </p>
+          </p> }
         </div>
         <div>
           <h6 className="is-size-7">

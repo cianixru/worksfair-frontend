@@ -7,6 +7,7 @@ import video from '../assets/main-search-video.mp4';
 import background from '../assets/main-search-video-poster.jpg';
 import SearchForm from '../forms/Public/SearchForm';
 import Footer from '../components/Footer/Footer';
+import CreateWebpageInstructions from '../components/Public/CreatePageInstructions';
 
 class HomeContainer extends Component {
   static propTypes = {
@@ -50,6 +51,11 @@ class HomeContainer extends Component {
             </video>
           </div>
         </div>
+        <section className="hero is-fullheight">
+          <div className="hero-body" id="about">
+            <CreateWebpageInstructions />
+          </div>
+        </section>
         <Footer />
       </Fragment>
     );

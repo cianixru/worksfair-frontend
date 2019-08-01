@@ -57,8 +57,8 @@ Object {
               Home
             </a>
             <a
-              class="navbar-item"
-              href="/"
+              class="navbar-item is-tab"
+              href="localhost#about"
             >
               About
             </a>
@@ -150,8 +150,8 @@ Object {
             Home
           </a>
           <a
-            class="navbar-item"
-            href="/"
+            class="navbar-item is-tab"
+            href="localhost#about"
           >
             About
           </a>
@@ -308,8 +308,8 @@ Object {
               Home
             </a>
             <a
-              class="navbar-item"
-              href="/"
+              class="navbar-item is-tab"
+              href="localhost#about"
             >
               About
             </a>
@@ -400,8 +400,8 @@ Object {
               Home
             </a>
             <a
-              class="navbar-item"
-              href="/"
+              class="navbar-item is-tab"
+              href="localhost#about"
             >
               About
             </a>
@@ -506,8 +506,8 @@ Object {
             Home
           </a>
           <a
-            class="navbar-item"
-            href="/"
+            class="navbar-item is-tab"
+            href="localhost#about"
           >
             About
           </a>

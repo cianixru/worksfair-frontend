@@ -139,6 +139,8 @@ Object {
                         <a
                           class="has-text-info"
                           href="http://ideosynergy-ltd.worksfair.com"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
                           Ideosynergy LTD.
                         </a>
@@ -349,6 +351,8 @@ Object {
                       <a
                         class="has-text-info"
                         href="http://ideosynergy-ltd.worksfair.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
                         Ideosynergy LTD.
                       </a>

@@ -11,6 +11,7 @@ const {
   REACT_APP_SERVER_HOST,
   REACT_APP_EMAIL_ACCOUNT,
   REACT_APP_EMAIL_PASSWORD,
+  REACT_APP_ALTERNATE_SERVER_HOST,
 } = process.env;
 
 const mainapp = express();
@@ -30,7 +31,9 @@ mainapp.use((request, response, next) => {
 mainapp.post('/sendmail', (request, response) => {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.zoho.com',
+      port: 465,
+      secure: true, // use SSL
       auth: {
         user: REACT_APP_EMAIL_ACCOUNT,
         pass: REACT_APP_EMAIL_PASSWORD,
@@ -84,6 +87,7 @@ const app = express();
 
 // add vhost routing for main app
 app.use(vhost(REACT_APP_SERVER_HOST, mainapp));
+app.use(vhost(REACT_APP_ALTERNATE_SERVER_HOST, mainapp));
 
 app.use(vhost('*.worksfair.com', webpageApp));
 

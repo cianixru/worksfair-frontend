@@ -18,6 +18,7 @@ const Offerings = ({
   onUpdateOffering,
   handleDelete,
 }) => {
+  const preview = onUpdateOffering ? 'Preview Webpage' : 'Save and Preview Webpage';
   return (
     <div>
       <div className="margin-bottom-25">
@@ -56,7 +57,7 @@ const Offerings = ({
           data-testid="save-and-preview"
           onClick={handleSaveAndPreview}
         >
-          Preview Webpage
+          {preview}
         </button>
       </div>
     </div>

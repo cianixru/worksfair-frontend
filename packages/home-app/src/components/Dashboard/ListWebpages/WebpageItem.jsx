@@ -24,6 +24,8 @@ const WebpageItem = ({
             <a
               href={`http://${webpage.sub_domain_name}.worksfair.com`}
               className={textColourHelper(webpage.colour)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {webpage.title}
             </a>

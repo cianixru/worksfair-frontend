@@ -96,9 +96,11 @@ class Navbar extends Component {
                   Home
                 </Link>
 
-                <Link className="navbar-item" to="/">
+                <a
+                  className="navbar-item is-tab"
+                  href={`${window.location.host}#about`}>
                   About
-                </Link>
+                </a>
               </div>
 
               <div className="navbar-end">

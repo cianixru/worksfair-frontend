@@ -126,9 +126,11 @@ Object {
                     Create Webpage
                   </h2>
                   <a
-                    href="/webpage/ideosynergy-inc"
+                    href="http://ideosynergy.worksfair.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    View Sample Business Webpage
+                    View a sample business webpage
                   </a>
                 </div>
                 <div
@@ -375,9 +377,11 @@ Object {
                   Create Webpage
                 </h2>
                 <a
-                  href="/webpage/ideosynergy-inc"
+                  href="http://ideosynergy.worksfair.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  View Sample Business Webpage
+                  View a sample business webpage
                 </a>
               </div>
               <div
