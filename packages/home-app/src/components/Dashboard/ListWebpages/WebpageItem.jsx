@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Image, Transformation } from 'cloudinary-react';
 
 import { textColourHelper } from '../../../utils/helpers';
-import IconButton from '../../../atoms/IconButton';
 
 const WebpageItem = ({
   nextUpdate, dayCreated, username, webpage, sampleImage
@@ -12,10 +12,13 @@ const WebpageItem = ({
     <div className="columns box">
       <div className="column is-3">
         <figure className="image is-180x180">
-          <img
-            src={(webpage.featured_images && webpage.featured_images[0])
-              || sampleImage}
-            alt="sample" />
+          <Image
+            cloudName="worksfair"
+            publicId={(webpage.featured_images && webpage.featured_images[0]) || sampleImage}
+            type="fetch"
+            className="offering-image">
+            <Transformation width="180" fetchFormat="auto" />
+          </Image>
         </figure>
       </div>
       <div className="column is-7">
@@ -30,9 +33,10 @@ const WebpageItem = ({
               {webpage.title}
             </a>
           </h3>
-          <span>
-            {`${webpage.address}, ${webpage.city}, ${webpage.state}`}
-          </span>
+          { webpage.address && <span>
+              {`${webpage.address}, ${webpage.city}, ${webpage.state}`}
+            </span>
+          }
         </div>
         <div>
           <h6 className="is-size-7">
@@ -51,11 +55,6 @@ const WebpageItem = ({
           className="button is-white">
           <i className="fa fa-edit is-size-5 has-text-grey"/>
         </Link>
-        <IconButton
-          icon="fa fa-archive"
-          colour="has-text-grey-light"
-          // handleClick={handleClick}
-        />
       </div>
     </div>
   </li>

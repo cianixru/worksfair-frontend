@@ -59,6 +59,7 @@ class WebpageContainer extends Component {
   render() {
     const { webpage } = this.props;
     const { REACT_APP_URL } = process.env;
+    const colour = colourShadesOf(webpage && webpage.colour)[4];
     return (
       webpage
       && <div>
@@ -83,9 +84,9 @@ class WebpageContainer extends Component {
           </div>
         </div>
         <div className="webpage-hero">
-          <ImagesSlide webpage={webpage} />
+          <ImagesSlide webpage={webpage} colour={colour} />
         </div>
-        <div className="hero is-large" id="about">
+        <div className="hero is-medium" id="about">
           <div className="hero-body webpage-sections">
             {
               this.renderDetailItems(0, 3)

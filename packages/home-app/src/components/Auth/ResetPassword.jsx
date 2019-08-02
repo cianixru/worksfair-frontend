@@ -62,7 +62,7 @@ class ResetPassword extends Component {
       let type = AUTHENTICATED_USER;
 
       fetch(url, {
-        method: 'PATCH',
+        method: 'POST',
         body: JSON.stringify({user}),
         headers:{
           'Content-Type': 'application/json'

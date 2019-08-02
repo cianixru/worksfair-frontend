@@ -24,7 +24,7 @@ const CreateWebpageInstructions = () => {
               <img src={basicInfoSvg} alt="add basic business info" />
             </figure>
           </div>
-          <div className="columns margin-top-25 is-mobile">
+          <div className="columns margin-top-10 is-mobile">
             <div className="column is-2 numbering">1</div>
             <div className="column instruction"><p>Provide </p>your basic business Info</div>
           </div>
@@ -35,7 +35,7 @@ const CreateWebpageInstructions = () => {
               <img src={contactInfoSvg} alt="add contact info" />
             </figure>
           </div>
-          <div className="columns margin-top-25 is-mobile">
+          <div className="columns margin-top-10 is-mobile">
             <div className="column is-2 numbering">2</div>
             <div className="column instruction"><p>Provide </p>your business contact info</div>
           </div>
@@ -46,7 +46,7 @@ const CreateWebpageInstructions = () => {
               <img src={imageGallerySvg} alt="add gallery" />
             </figure>
           </div>
-          <div className="columns margin-top-25 is-mobile">
+          <div className="columns margin-top-10 is-mobile">
             <div className="column is-2 numbering">3</div>
             <div className="column instruction"><p>Provide the</p>best pictures of your works</div>
           </div>
@@ -55,24 +55,24 @@ const CreateWebpageInstructions = () => {
       <div className="columns padding-top-25">
         <div className="column is-1" />
         <div className="column">
-          <div className="image-container">
+          <div className="image-container padding-top-15">
             <figure className="image is-5by4">
               <img src={servicesSvg} alt="add products/services" />
             </figure>
           </div>
-          <div className="columns margin-top-25 is-mobile">
+          <div className="columns margin-top-10 is-mobile">
             <div className="column is-2 numbering">4</div>
             <div className="column instruction"><p>Provide </p>details of your <strong>works</strong> with pics</div>
           </div>
         </div>
         <div className="column is-1" />
         <div className="column">
-          <div className="image-container">
+          <div className="image-container padding-top-15">
             <figure className="image is-5by4">
               <img src={CompletedSvg} alt="completed" />
             </figure>
           </div>
-          <div className="columns margin-top-25 is-mobile">
+          <div className="columns margin-top-10 is-mobile">
             <div className="column is-2 numbering">5</div>
             <div className="column instruction">
               <p>Preview your webpage</p>

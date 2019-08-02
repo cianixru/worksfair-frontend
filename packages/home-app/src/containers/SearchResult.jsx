@@ -62,7 +62,7 @@ class SearchResultContainer extends Component {
       keywords: params.get('query'),
       location: params.get('location'),
     };
-    const sampleImage = "https://imgplaceholder.com/320x240/131111?text=PICTURE+COMING+SOON&font-size=24"
+    const sampleImage = "https://imgplaceholder.com/180x180/131111?text=PICTURE+COMING+SOON&font-size=18"
 
     return (
       <section className="section">
@@ -70,27 +70,39 @@ class SearchResultContainer extends Component {
           <title>Search - Worksfair</title>
         </Helmet>
         <div className="container margin-bottom-25">
-          <SearchForm
-            onSubmit={this.onSearch}
-            data={data}
-          />
+          <div className="columns">
+            <div className="column is-1" />
+            <div className="column">
+              <SearchForm
+                onSubmit={this.onSearch}
+                data={data}
+              />
+            </div>
+            <div className="column is-1" />
+          </div>
         </div>
         <div className="container">
-          <ul>
-            { webpages && webpages.length > 0
-              ? webpages.map((webpage) => {
-                const dayCreated = new Date(webpage.created_at).toDateString();
+          <div className="columns">
+            <div className="column is-1" />
+            <div className="column">
+              <ul>
+                { webpages && webpages.length > 0
+                  ? webpages.map((webpage) => {
+                    const dayCreated = new Date(webpage.created_at).toDateString();
 
-                const itemProps = {
-                  dayCreated, webpage, sampleImage,
-                };
-                return (
-                  <WebpageItem key={webpage.sub_domain_name} {...itemProps} />
-                );
-              })
-              : <NoSearchResults />
-            }
-          </ul>
+                    const itemProps = {
+                      dayCreated, webpage, sampleImage,
+                    };
+                    return (
+                      <WebpageItem key={webpage.sub_domain_name} {...itemProps} />
+                    );
+                  })
+                  : <NoSearchResults />
+                }
+              </ul>
+            </div>
+            <div className="column is-1" />
+          </div>
         </div>
       </section>
     );

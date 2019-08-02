@@ -171,3 +171,8 @@ export const colourShadesOf = (colourName) => {
   const value = colourName ? colourShades[colourName] : colourShades['is-dark'];
   return value;
 };
+
+export const isMobileDevice = () => {
+  const testRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return  testRegex.test(navigator.userAgent);
+}

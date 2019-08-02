@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Image, Transformation } from 'cloudinary-react';
 
 import { textColourHelper } from '../../../utils/helpers';
 
@@ -10,10 +11,13 @@ const WebpageItem = ({
     <div className="columns box">
       <div className="column is-3">
         <figure className="image is-150x150">
-          <img
-            src={(webpage.featured_images && webpage.featured_images[0])
-              || sampleImage}
-            alt="sample" />
+          <Image
+            cloudName="worksfair"
+            publicId={(webpage.featured_images && webpage.featured_images[0]) || sampleImage}
+            type="fetch"
+            className="offering-image">
+            <Transformation width="180" fetchFormat="auto" />
+          </Image>
         </figure>
       </div>
       <div className="column is-9">

@@ -122,7 +122,7 @@ Object {
                   </figure>
                 </div>
                 <div
-                  class="columns margin-top-25 is-mobile"
+                  class="columns margin-top-10 is-mobile"
                 >
                   <div
                     class="column is-2 numbering"
@@ -155,7 +155,7 @@ Object {
                   </figure>
                 </div>
                 <div
-                  class="columns margin-top-25 is-mobile"
+                  class="columns margin-top-10 is-mobile"
                 >
                   <div
                     class="column is-2 numbering"
@@ -188,7 +188,7 @@ Object {
                   </figure>
                 </div>
                 <div
-                  class="columns margin-top-25 is-mobile"
+                  class="columns margin-top-10 is-mobile"
                 >
                   <div
                     class="column is-2 numbering"
@@ -216,7 +216,7 @@ Object {
                 class="column"
               >
                 <div
-                  class="image-container"
+                  class="image-container padding-top-15"
                 >
                   <figure
                     class="image is-5by4"
@@ -228,7 +228,7 @@ Object {
                   </figure>
                 </div>
                 <div
-                  class="columns margin-top-25 is-mobile"
+                  class="columns margin-top-10 is-mobile"
                 >
                   <div
                     class="column is-2 numbering"
@@ -256,7 +256,7 @@ Object {
                 class="column"
               >
                 <div
-                  class="image-container"
+                  class="image-container padding-top-15"
                 >
                   <figure
                     class="image is-5by4"
@@ -268,7 +268,7 @@ Object {
                   </figure>
                 </div>
                 <div
-                  class="columns margin-top-25 is-mobile"
+                  class="columns margin-top-10 is-mobile"
                 >
                   <div
                     class="column is-2 numbering"
@@ -426,7 +426,7 @@ Object {
                 </figure>
               </div>
               <div
-                class="columns margin-top-25 is-mobile"
+                class="columns margin-top-10 is-mobile"
               >
                 <div
                   class="column is-2 numbering"
@@ -459,7 +459,7 @@ Object {
                 </figure>
               </div>
               <div
-                class="columns margin-top-25 is-mobile"
+                class="columns margin-top-10 is-mobile"
               >
                 <div
                   class="column is-2 numbering"
@@ -492,7 +492,7 @@ Object {
                 </figure>
               </div>
               <div
-                class="columns margin-top-25 is-mobile"
+                class="columns margin-top-10 is-mobile"
               >
                 <div
                   class="column is-2 numbering"
@@ -520,7 +520,7 @@ Object {
               class="column"
             >
               <div
-                class="image-container"
+                class="image-container padding-top-15"
               >
                 <figure
                   class="image is-5by4"
@@ -532,7 +532,7 @@ Object {
                 </figure>
               </div>
               <div
-                class="columns margin-top-25 is-mobile"
+                class="columns margin-top-10 is-mobile"
               >
                 <div
                   class="column is-2 numbering"
@@ -560,7 +560,7 @@ Object {
               class="column"
             >
               <div
-                class="image-container"
+                class="image-container padding-top-15"
               >
                 <figure
                   class="image is-5by4"
@@ -572,7 +572,7 @@ Object {
                 </figure>
               </div>
               <div
-                class="columns margin-top-25 is-mobile"
+                class="columns margin-top-10 is-mobile"
               >
                 <div
                   class="column is-2 numbering"

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { Image, Transformation } from 'cloudinary-react';
 
 import {
   cloudinaryImageUploader,
@@ -165,10 +166,13 @@ class FeaturedImages extends Component {
                 data-testid="delete-image"
               />
               <figure className="image is-180x180">
-                <img
-                  src={imageCloudURL}
+                <Image
+                  cloudName="worksfair"
+                  publicId={imageCloudURL}
                   alt={imageCloudURL}
-                />
+                  type="fetch">
+                  <Transformation width="180" height="180" fetchFormat="auto" crop="fit" />
+                </Image>
               </figure>
             </li>
           ));

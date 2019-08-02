@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Image, Transformation } from 'cloudinary-react';
 
 import { addNairaSign } from '../utils/helpers';
 
@@ -20,11 +21,13 @@ const OfferingItem = ({
               <div className="columns is-desktop">
                 <div className="column">
                   <figure className="image is-180x180">
-                    <img
-                      src={offering.image}
-                      alt=""
-                      className="offering-image"
-                    />
+                    <Image
+                      cloudName="worksfair"
+                      publicId={offering.image}
+                      type="fetch"
+                      className="offering-image">
+                      <Transformation width="180" fetchFormat="auto" />
+                    </Image>
                   </figure>
                 </div>
                 <div className="column">

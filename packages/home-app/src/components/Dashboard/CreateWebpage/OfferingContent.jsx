@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Image, Transformation } from 'cloudinary-react';
 
 import { addNairaSign } from '../../utils/helpers';
 import OfferingsForm from '../../../forms/Webpage/OfferingsForm';
@@ -95,11 +96,13 @@ class OfferingContent extends Component {
           >
             <div className="column is-3">
               <figure className="image is-180x180">
-                <img
-                  src={offering.image}
-                  alt=""
-                  className="offering-image"
-                />
+                <Image
+                  cloudName="worksfair"
+                  publicId={offering.image}
+                  alt="offering image"
+                  type="fetch">
+                  <Transformation width="180" height="180" fetchFormat="auto" crop="fit" />
+                </Image>
               </figure>
             </div>
             <div className="column is-7">

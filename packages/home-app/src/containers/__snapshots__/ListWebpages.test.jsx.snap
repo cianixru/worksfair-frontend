@@ -102,13 +102,6 @@ Object {
                   )
                 </a>
               </li>
-              <li>
-                <a
-                  href="/"
-                >
-                  Inactive Webpages
-                </a>
-              </li>
             </ul>
           </div>
           <div>
@@ -124,8 +117,8 @@ Object {
                       class="image is-180x180"
                     >
                       <img
-                        alt="sample"
-                        src="https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
+                        class="offering-image"
+                        src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
                       />
                     </figure>
                   </div>
@@ -189,13 +182,6 @@ Object {
                         class="fa fa-edit is-size-5 has-text-grey"
                       />
                     </a>
-                    <button
-                      class="button is-white"
-                    >
-                      <i
-                        class="fa fa-archive is-size-5 has-text-grey-light"
-                      />
-                    </button>
                   </div>
                 </div>
               </li>
@@ -314,13 +300,6 @@ Object {
                 )
               </a>
             </li>
-            <li>
-              <a
-                href="/"
-              >
-                Inactive Webpages
-              </a>
-            </li>
           </ul>
         </div>
         <div>
@@ -336,8 +315,8 @@ Object {
                     class="image is-180x180"
                   >
                     <img
-                      alt="sample"
-                      src="https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
+                      class="offering-image"
+                      src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
                     />
                   </figure>
                 </div>
@@ -401,13 +380,6 @@ Object {
                       class="fa fa-edit is-size-5 has-text-grey"
                     />
                   </a>
-                  <button
-                    class="button is-white"
-                  >
-                    <i
-                      class="fa fa-archive is-size-5 has-text-grey-light"
-                    />
-                  </button>
                 </div>
               </div>
             </li>

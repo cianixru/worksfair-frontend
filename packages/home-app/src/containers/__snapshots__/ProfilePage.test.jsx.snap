@@ -119,8 +119,8 @@ Object {
                           class="image is-150x150"
                         >
                           <img
-                            alt="sample"
-                            src="https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
+                            class="offering-image"
+                            src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
                           />
                         </figure>
                       </div>
@@ -304,8 +304,8 @@ Object {
                         class="image is-150x150"
                       >
                         <img
-                          alt="sample"
-                          src="https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
+                          class="offering-image"
+                          src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://res.cloudinary.com/worksfair/image/upload/v1558455846/dev/achebe_jato7y.jpg"
                         />
                       </figure>
                     </div>

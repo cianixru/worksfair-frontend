@@ -11,100 +11,128 @@ Object {
         <div
           class="container margin-bottom-25"
         >
-          <form>
+          <div
+            class="columns"
+          >
             <div
-              class="main-search-input"
+              class="column is-1"
+            />
+            <div
+              class="column"
             >
-              <div
-                class="main-search-input-item"
-              >
-                <input
-                  class="input"
-                  name="keywords"
-                  placeholder="What do you need?"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div
-                class="main-search-input-item location"
-              >
-                <input
-                  class="input"
-                  name="location"
-                  placeholder="Which city or town?"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <button
-                class="button is-info is-rounded"
-                disabled=""
-              >
-                Search
-              </button>
+              <form>
+                <div
+                  class="main-search-input"
+                >
+                  <div
+                    class="main-search-input-item"
+                  >
+                    <input
+                      class="input"
+                      name="keywords"
+                      placeholder="What do you need?"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="main-search-input-item location"
+                  >
+                    <input
+                      class="input"
+                      name="location"
+                      placeholder="Which city or town?"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <button
+                    class="button is-info is-rounded"
+                    disabled=""
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+            <div
+              class="column is-1"
+            />
+          </div>
         </div>
         <div
           class="container"
         >
-          <ul>
-            <li>
-              <div
-                class="columns box"
-              >
-                <div
-                  class="column is-3"
-                >
-                  <figure
-                    class="image is-150x150"
-                  >
-                    <img
-                      alt="sample"
-                      src="https://imgplaceholder.com/320x240/131111?text=PICTURE+COMING+SOON&font-size=24"
-                    />
-                  </figure>
-                </div>
-                <div
-                  class="column is-9"
-                >
+          <div
+            class="columns"
+          >
+            <div
+              class="column is-1"
+            />
+            <div
+              class="column"
+            >
+              <ul>
+                <li>
                   <div
-                    class="content"
+                    class="columns box"
                   >
-                    <h3>
-                      <a
-                        class="has-text-grey"
-                        href="http://ideosynergy.worksfair.com"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        Theookafor2
-                      </a>
-                    </h3>
-                    <p>
-                      eod
-                    </p>
-                  </div>
-                  <div>
-                    <h6
-                      class="is-size-7"
+                    <div
+                      class="column is-3"
                     >
-                      <strong>
-                        Added to Worksfair on:
-                      </strong>
-                      <span
-                        class="has-text-black"
+                      <figure
+                        class="image is-150x150"
                       >
-                         
-                        Invalid Date
-                      </span>
-                    </h6>
+                        <img
+                          class="offering-image"
+                          src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://imgplaceholder.com/180x180/131111%3Ftext%3DPICTURE%2BCOMING%2BSOON%26font-size%3D18"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-9"
+                    >
+                      <div
+                        class="content"
+                      >
+                        <h3>
+                          <a
+                            class="has-text-grey"
+                            href="http://ideosynergy.worksfair.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            Theookafor2
+                          </a>
+                        </h3>
+                        <p>
+                          eod
+                        </p>
+                      </div>
+                      <div>
+                        <h6
+                          class="is-size-7"
+                        >
+                          <strong>
+                            Added to Worksfair on:
+                          </strong>
+                          <span
+                            class="has-text-black"
+                          >
+                             
+                            Invalid Date
+                          </span>
+                        </h6>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="column is-1"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -116,100 +144,128 @@ Object {
       <div
         class="container margin-bottom-25"
       >
-        <form>
+        <div
+          class="columns"
+        >
           <div
-            class="main-search-input"
+            class="column is-1"
+          />
+          <div
+            class="column"
           >
-            <div
-              class="main-search-input-item"
-            >
-              <input
-                class="input"
-                name="keywords"
-                placeholder="What do you need?"
-                type="text"
-                value=""
-              />
-            </div>
-            <div
-              class="main-search-input-item location"
-            >
-              <input
-                class="input"
-                name="location"
-                placeholder="Which city or town?"
-                type="text"
-                value=""
-              />
-            </div>
-            <button
-              class="button is-info is-rounded"
-              disabled=""
-            >
-              Search
-            </button>
+            <form>
+              <div
+                class="main-search-input"
+              >
+                <div
+                  class="main-search-input-item"
+                >
+                  <input
+                    class="input"
+                    name="keywords"
+                    placeholder="What do you need?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="main-search-input-item location"
+                >
+                  <input
+                    class="input"
+                    name="location"
+                    placeholder="Which city or town?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <button
+                  class="button is-info is-rounded"
+                  disabled=""
+                >
+                  Search
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
+          <div
+            class="column is-1"
+          />
+        </div>
       </div>
       <div
         class="container"
       >
-        <ul>
-          <li>
-            <div
-              class="columns box"
-            >
-              <div
-                class="column is-3"
-              >
-                <figure
-                  class="image is-150x150"
-                >
-                  <img
-                    alt="sample"
-                    src="https://imgplaceholder.com/320x240/131111?text=PICTURE+COMING+SOON&font-size=24"
-                  />
-                </figure>
-              </div>
-              <div
-                class="column is-9"
-              >
+        <div
+          class="columns"
+        >
+          <div
+            class="column is-1"
+          />
+          <div
+            class="column"
+          >
+            <ul>
+              <li>
                 <div
-                  class="content"
+                  class="columns box"
                 >
-                  <h3>
-                    <a
-                      class="has-text-grey"
-                      href="http://ideosynergy.worksfair.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Theookafor2
-                    </a>
-                  </h3>
-                  <p>
-                    eod
-                  </p>
-                </div>
-                <div>
-                  <h6
-                    class="is-size-7"
+                  <div
+                    class="column is-3"
                   >
-                    <strong>
-                      Added to Worksfair on:
-                    </strong>
-                    <span
-                      class="has-text-black"
+                    <figure
+                      class="image is-150x150"
                     >
-                       
-                      Invalid Date
-                    </span>
-                  </h6>
+                      <img
+                        class="offering-image"
+                        src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://imgplaceholder.com/180x180/131111%3Ftext%3DPICTURE%2BCOMING%2BSOON%26font-size%3D18"
+                      />
+                    </figure>
+                  </div>
+                  <div
+                    class="column is-9"
+                  >
+                    <div
+                      class="content"
+                    >
+                      <h3>
+                        <a
+                          class="has-text-grey"
+                          href="http://ideosynergy.worksfair.com"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          Theookafor2
+                        </a>
+                      </h3>
+                      <p>
+                        eod
+                      </p>
+                    </div>
+                    <div>
+                      <h6
+                        class="is-size-7"
+                      >
+                        <strong>
+                          Added to Worksfair on:
+                        </strong>
+                        <span
+                          class="has-text-black"
+                        >
+                           
+                          Invalid Date
+                        </span>
+                      </h6>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="column is-1"
+          />
+        </div>
       </div>
     </section>
   </div>,
@@ -286,66 +342,94 @@ Object {
         <div
           class="container margin-bottom-25"
         >
-          <form>
+          <div
+            class="columns"
+          >
             <div
-              class="main-search-input"
+              class="column is-1"
+            />
+            <div
+              class="column"
             >
-              <div
-                class="main-search-input-item"
-              >
-                <input
-                  class="input"
-                  name="keywords"
-                  placeholder="What do you need?"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div
-                class="main-search-input-item location"
-              >
-                <input
-                  class="input"
-                  name="location"
-                  placeholder="Which city or town?"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <button
-                class="button is-info is-rounded"
-                disabled=""
-              >
-                Search
-              </button>
+              <form>
+                <div
+                  class="main-search-input"
+                >
+                  <div
+                    class="main-search-input-item"
+                  >
+                    <input
+                      class="input"
+                      name="keywords"
+                      placeholder="What do you need?"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="main-search-input-item location"
+                  >
+                    <input
+                      class="input"
+                      name="location"
+                      placeholder="Which city or town?"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <button
+                    class="button is-info is-rounded"
+                    disabled=""
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+            <div
+              class="column is-1"
+            />
+          </div>
         </div>
         <div
           class="container"
         >
-          <ul>
-            <li>
-              <div
-                class="message is-warning"
-              >
-                <div
-                  class="message-body"
-                >
-                  <p
-                    class="is-size-5 margin-bottom-25"
+          <div
+            class="columns"
+          >
+            <div
+              class="column is-1"
+            />
+            <div
+              class="column"
+            >
+              <ul>
+                <li>
+                  <div
+                    class="message is-warning"
                   >
-                    Sorry, we could not find any business matching your description.
-                  </p>
-                  <p
-                    class="has-text-info"
-                  >
-                    Perhaps you can try better keywords
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
+                    <div
+                      class="message-body"
+                    >
+                      <p
+                        class="is-size-5 margin-bottom-25"
+                      >
+                        Sorry, we could not find any business matching your description.
+                      </p>
+                      <p
+                        class="has-text-info"
+                      >
+                        Perhaps you can try better keywords
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="column is-1"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -357,66 +441,94 @@ Object {
       <div
         class="container margin-bottom-25"
       >
-        <form>
+        <div
+          class="columns"
+        >
           <div
-            class="main-search-input"
+            class="column is-1"
+          />
+          <div
+            class="column"
           >
-            <div
-              class="main-search-input-item"
-            >
-              <input
-                class="input"
-                name="keywords"
-                placeholder="What do you need?"
-                type="text"
-                value=""
-              />
-            </div>
-            <div
-              class="main-search-input-item location"
-            >
-              <input
-                class="input"
-                name="location"
-                placeholder="Which city or town?"
-                type="text"
-                value=""
-              />
-            </div>
-            <button
-              class="button is-info is-rounded"
-              disabled=""
-            >
-              Search
-            </button>
+            <form>
+              <div
+                class="main-search-input"
+              >
+                <div
+                  class="main-search-input-item"
+                >
+                  <input
+                    class="input"
+                    name="keywords"
+                    placeholder="What do you need?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="main-search-input-item location"
+                >
+                  <input
+                    class="input"
+                    name="location"
+                    placeholder="Which city or town?"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <button
+                  class="button is-info is-rounded"
+                  disabled=""
+                >
+                  Search
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
+          <div
+            class="column is-1"
+          />
+        </div>
       </div>
       <div
         class="container"
       >
-        <ul>
-          <li>
-            <div
-              class="message is-warning"
-            >
-              <div
-                class="message-body"
-              >
-                <p
-                  class="is-size-5 margin-bottom-25"
+        <div
+          class="columns"
+        >
+          <div
+            class="column is-1"
+          />
+          <div
+            class="column"
+          >
+            <ul>
+              <li>
+                <div
+                  class="message is-warning"
                 >
-                  Sorry, we could not find any business matching your description.
-                </p>
-                <p
-                  class="has-text-info"
-                >
-                  Perhaps you can try better keywords
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+                  <div
+                    class="message-body"
+                  >
+                    <p
+                      class="is-size-5 margin-bottom-25"
+                    >
+                      Sorry, we could not find any business matching your description.
+                    </p>
+                    <p
+                      class="has-text-info"
+                    >
+                      Perhaps you can try better keywords
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="column is-1"
+          />
+        </div>
       </div>
     </section>
   </div>,

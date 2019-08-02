@@ -235,7 +235,7 @@ class UpdateWebpage extends Component {
     // good for user experience
     setTimeout(() => {
       actions.isComplete();
-      window.location.assign(`${match.params.subDomainName}.worksfair.com`);
+      window.location.assign(`http://${match.params.subDomainName}.worksfair.com`);
     }, 1000);
   }
 

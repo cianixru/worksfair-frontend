@@ -19,11 +19,11 @@ Object {
           >
             <ul
               class="slider animated"
-              style="transform: translate3d(-50%,0,0); transition-duration: 350ms;"
+              style="transform: translate3d(-75%,0,0); transition-duration: 350ms;"
             >
               <li
                 class="slide"
-                style="min-width: 40%;"
+                style="min-width: 50%;"
               >
                 <figure
                   class="image is-4by3"
@@ -36,7 +36,7 @@ Object {
               </li>
               <li
                 class="slide"
-                style="min-width: 40%;"
+                style="min-width: 50%;"
               >
                 <figure
                   class="image is-4by3"
@@ -49,7 +49,7 @@ Object {
               </li>
               <li
                 class="slide selected"
-                style="min-width: 40%;"
+                style="min-width: 50%;"
               >
                 <figure
                   class="image is-4by3"
@@ -62,7 +62,7 @@ Object {
               </li>
               <li
                 class="slide"
-                style="min-width: 40%;"
+                style="min-width: 50%;"
               >
                 <figure
                   class="image is-4by3"
@@ -75,7 +75,7 @@ Object {
               </li>
               <li
                 class="slide"
-                style="min-width: 40%;"
+                style="min-width: 50%;"
               >
                 <figure
                   class="image is-4by3"
@@ -88,7 +88,7 @@ Object {
               </li>
               <li
                 class="slide"
-                style="min-width: 40%;"
+                style="min-width: 50%;"
               >
                 <figure
                   class="image is-4by3"
@@ -157,11 +157,11 @@ Object {
         >
           <ul
             class="slider animated"
-            style="transform: translate3d(-50%,0,0); transition-duration: 350ms;"
+            style="transform: translate3d(-75%,0,0); transition-duration: 350ms;"
           >
             <li
               class="slide"
-              style="min-width: 40%;"
+              style="min-width: 50%;"
             >
               <figure
                 class="image is-4by3"
@@ -174,7 +174,7 @@ Object {
             </li>
             <li
               class="slide"
-              style="min-width: 40%;"
+              style="min-width: 50%;"
             >
               <figure
                 class="image is-4by3"
@@ -187,7 +187,7 @@ Object {
             </li>
             <li
               class="slide selected"
-              style="min-width: 40%;"
+              style="min-width: 50%;"
             >
               <figure
                 class="image is-4by3"
@@ -200,7 +200,7 @@ Object {
             </li>
             <li
               class="slide"
-              style="min-width: 40%;"
+              style="min-width: 50%;"
             >
               <figure
                 class="image is-4by3"
@@ -213,7 +213,7 @@ Object {
             </li>
             <li
               class="slide"
-              style="min-width: 40%;"
+              style="min-width: 50%;"
             >
               <figure
                 class="image is-4by3"
@@ -226,7 +226,7 @@ Object {
             </li>
             <li
               class="slide"
-              style="min-width: 40%;"
+              style="min-width: 50%;"
             >
               <figure
                 class="image is-4by3"

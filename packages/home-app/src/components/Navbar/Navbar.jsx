@@ -91,17 +91,6 @@ class Navbar extends Component {
             : (<div
               className="navbar-menu"
               ref={this.navMenu}>
-              <div className="navbar-start">
-                <Link className="navbar-item" to="/">
-                  Home
-                </Link>
-
-                <a
-                  className="navbar-item is-tab"
-                  href={`${window.location.host}#about`}>
-                  About
-                </a>
-              </div>
 
               <div className="navbar-end">
                 <div className="navbar-item">

@@ -14,7 +14,7 @@ import {
 } from '../../actions/auth';
 import alert from '../utils/alert';
 
-const sampleImage = "https://imgplaceholder.com/320x240/131111?text=ADD+A+PICTURE&font-size=24";
+const sampleImage = "https://imgplaceholder.com/180x180/131111?text=ADD+A+PICTURE&font-size=18";
 class ListWebpages extends Component {
   async componentDidMount() {
     const { actions, location, user } = this.props;
@@ -55,11 +55,6 @@ class ListWebpages extends Component {
               <Link to={`/dashboard/${user && user.username}/webpages`}>
                 Active Webpages ({
                   (user && user.webpages) && user.webpages.length})
-              </Link>
-            </li>
-            <li>
-              <Link to="#">
-                Inactive Webpages
               </Link>
             </li>
           </ul>

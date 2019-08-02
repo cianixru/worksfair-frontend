@@ -232,8 +232,10 @@ class CreateWebpage extends Component {
         'An error occured. Don\'t worry you can continue from where you stopped'
       );
       setTimeout(() => {
-        window.location.pathname = `/dashboard/${user.username}/webpages`;
-      }, 4000);
+        window.location.replace(`http://${
+          window.location.host}/dashboard/${
+          user.username}/webpages`);
+      }, 3000);
     }
 
     actions.isLoading();
@@ -242,8 +244,8 @@ class CreateWebpage extends Component {
     setTimeout(() => {
       actions.isComplete();
 
-      window.location.assign(`${webpage.sub_domain_name}.worksfair.com`);
-    }, 3000);
+      window.location.assign(`http://${webpage.sub_domain_name}.worksfair.com`);
+    }, 1000);
   }
 
   /**

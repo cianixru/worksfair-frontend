@@ -48,22 +48,6 @@ Object {
           class="navbar-menu"
         >
           <div
-            class="navbar-start"
-          >
-            <a
-              class="navbar-item"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              class="navbar-item is-tab"
-              href="localhost#about"
-            >
-              About
-            </a>
-          </div>
-          <div
             class="navbar-end"
           >
             <div
@@ -140,22 +124,6 @@ Object {
       <div
         class="navbar-menu"
       >
-        <div
-          class="navbar-start"
-        >
-          <a
-            class="navbar-item"
-            href="/"
-          >
-            Home
-          </a>
-          <a
-            class="navbar-item is-tab"
-            href="localhost#about"
-          >
-            About
-          </a>
-        </div>
         <div
           class="navbar-end"
         >
@@ -299,22 +267,6 @@ Object {
           class="navbar-menu"
         >
           <div
-            class="navbar-start"
-          >
-            <a
-              class="navbar-item"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              class="navbar-item is-tab"
-              href="localhost#about"
-            >
-              About
-            </a>
-          </div>
-          <div
             class="navbar-end"
           >
             <div
@@ -390,22 +342,6 @@ Object {
         <div
           class="navbar-menu"
         >
-          <div
-            class="navbar-start"
-          >
-            <a
-              class="navbar-item"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              class="navbar-item is-tab"
-              href="localhost#about"
-            >
-              About
-            </a>
-          </div>
           <div
             class="navbar-end"
           >
@@ -496,22 +432,6 @@ Object {
       <div
         class="navbar-menu"
       >
-        <div
-          class="navbar-start"
-        >
-          <a
-            class="navbar-item"
-            href="/"
-          >
-            Home
-          </a>
-          <a
-            class="navbar-item is-tab"
-            href="localhost#about"
-          >
-            About
-          </a>
-        </div>
         <div
           class="navbar-end"
         >
