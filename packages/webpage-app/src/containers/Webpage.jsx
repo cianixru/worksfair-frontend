@@ -9,11 +9,11 @@ import OwnerCard from '../components/Webpage/OwnerCard';
 import TitleBar from '../components/Webpage/TitleBar';
 import ImagesSlide from '../components/Webpage/ImagesSlide';
 import OfferingItem from '../components/Webpage/OfferingItem';
-import DetailItem from '../components/Webpage/Details';
+import DetailItems from '../components/Webpage/Details';
 import WebpageFooter from '../components/Webpage/Footer';
-import getBackgroundImage from '../assets/background/backgroundImages';
-import { colourShadesOf } from '../utils/helpers';
+import { colourShadesOf, augmentDetails } from '../utils/helpers';
 import { getWebpage } from '../actions/webpage';
+import HeroSection from '../components/Webpage/HeroSection';
 
 dotenv.config();
 
@@ -47,19 +47,20 @@ class WebpageContainer extends Component {
     const { webpage } = this.props;
     const colourArray = colourShadesOf(webpage.colour).slice(start, end);
 
-    webpage.details.map((detail, index) => {
+    const details = webpage.details.slice(start, end);
+    const augmentedDetails = augmentDetails(details);
+
+    augmentedDetails.map((detail, index) => {
       detail.colour = colourArray[index];
       return detail;
     });
-    const details = webpage.details.slice(start, end);
 
-    return (<DetailItem details={details} />);
+    return (<DetailItems details={augmentedDetails} />);
   }
 
   render() {
     const { webpage } = this.props;
     const { REACT_APP_URL } = process.env;
-    const colour = colourShadesOf(webpage && webpage.colour)[4];
     return (
       webpage
       && <div>
@@ -68,34 +69,24 @@ class WebpageContainer extends Component {
           <meta name="description" content={webpage.description} />
           <meta name="keywords" content={webpage.keywords} />
         </Helmet>
-        <div
-          className={`hero is-large ${webpage.colour}`}
-          id="home"
-        >
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title is-1">
-                { `Welcome to ${webpage.title}` }
-              </h1>
-              <h2 className="subtitle is-3">
-                {webpage.description }
-              </h2>
-            </div>
-          </div>
+
+        <HeroSection webpage={webpage} />
+
+        <div>
+          <ImagesSlide webpage={webpage} />
         </div>
-        <div className="webpage-hero">
-          <ImagesSlide webpage={webpage} colour={colour} />
-        </div>
-        <div className="hero is-medium" id="about">
+        {webpage.details
+          && <div 
+            className="hero is-medium has-background-white-bis margin-bottom-25"
+            id="about"
+          >
           <div className="hero-body webpage-sections">
             {
               this.renderDetailItems(0, 3)
             }
-            {/* {
-              this.renderDetailItems(3, 5)
-            } */}
           </div>
         </div>
+        }
         <div className="container" id="contact">
           <div className="columns is-desktop">
             <div className="column is-three-quarters">
@@ -111,31 +102,17 @@ class WebpageContainer extends Component {
           </div>
         </div>
         <div
-          className="webpage-sections"
-          style={{
-            backgroundImage: `url(${
-              webpage && getBackgroundImage(webpage.colour)
-            })`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-          }}
-        >
+          className="hero is-large webpage-sections">
           <div
-            className="section-content box has-background-white-ter"
+            className="section-content box has-background-white-bis"
             id="offerings"
           >
             <h3 className="title is-4 titles has-text-grey">
-              Our Services/Products
+              Services/Products
             </h3>
             <div className="webpage-offerings">
               {
-                this.renderOfferingItems(0, 2)
-              }
-              {
-                this.renderOfferingItems(2, 4)
-              }
-              {
-                this.renderOfferingItems(4, 6)
+                this.renderOfferingItems(0, 9)
               }
             </div>
           </div>

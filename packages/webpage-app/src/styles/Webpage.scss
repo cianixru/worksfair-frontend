@@ -21,15 +21,15 @@
     margin-bottom: 50px;
 }
 
-.webpage-address {
-    font-size: 17px;
-    color: #888;
-    margin-top: 0;
-    display: inline-block
+.webpage-title-content {
+    font-size: 20px;
+    color: #666;
+    margin-top: 15px;
+    display: block
 }
 
-.webpage-address i {
-    margin-right: 5px
+.webpage-title-content i {
+    margin-right: 10px
 }
 
 .webpage-sections {
@@ -278,4 +278,9 @@ a.mfp-gallery {
         width: 80vw;
         margin-bottom: 45px;
     }
+}
+
+.offering-description {
+    min-width: 100%;
+    min-height: 100px;
 }

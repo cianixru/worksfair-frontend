@@ -2,12 +2,13 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { Image, Transformation } from 'cloudinary-react';
 
 import Footer from '../components/Footer/Footer';
-import compass from '../assets/404-compass.png';
 
 class NotFound extends Component {
   render() {
+    const compass = 'https://res.cloudinary.com/worksfair/image/upload/v1564834329/dev/qvwvfuxg6040ppipkanj.png';
     return (
       <Fragment>
         <Helmet>
@@ -34,7 +35,13 @@ class NotFound extends Component {
                 </p>
               </div>
               <div className="column is-3 has-text-extra-large">
-                <img src={compass} alt="404-compass" />
+                <Image
+                  cloudName="worksfair"
+                  publicId={compass}
+                  type="fetch"
+                  className="offering-image">
+                  <Transformation width="700" fetchFormat="auto" />
+                </Image>
               </div>
             </div>
           </div>

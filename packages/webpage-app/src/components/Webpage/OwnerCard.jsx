@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import avatar from '../../assets/worksfair-avatar1.png';
 
-const OwnerCard = ({ owner, colour, mainappUrl }) => {
+const OwnerCard = ({ owner, mainappUrl }) => {
   return (
-    <div className="card">
-      <header className="card-header">
-        <p className="card-header-title">
-          About the Creator
+    <div className="box">
+      <header>
+        <p className="card-header-title has-text-grey">
+          Managed by:
         </p>
       </header>
       <div className="card-content">

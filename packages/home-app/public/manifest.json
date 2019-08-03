@@ -3,7 +3,7 @@
   "name": "The platform for growing businesses",
   "icons": [
     {
-      "src": "worksfairIcon.png",
+      "src": "https://res.cloudinary.com/worksfair/image/fetch/c_scale,w_144/f_webp/https://res.cloudinary.com/worksfair/image/upload/v1564672220/dev/worksfairIcon2_whs9nv.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     }

@@ -1,36 +1,35 @@
-import blue1 from './blue-abstract.jpg';
-import blue2 from './blue-coffe-cup.jpg';
-import blue3 from './blue-textured-background.jpeg';
-import blue4 from './blue-pattern.jpg';
-import blue5 from './sky-blue.jpg';
+import { colourConstants } from '../../utils/constants';const blue1 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835307/dev/background/mlgwrjfxbgg4uehq7bou.jpg';
 
-import gray1 from './gray-marble-abstract.jpg';
-import gray2 from './gray-marble.jpg';
-import gray3 from './gray-relief.jpg';
-import gray4 from './gray-texture-background.jpg';
-import gray5 from './gray-wood.jpg';
-import gray6 from './grey_stones.jpg';
+const blue2 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835297/dev/background/cish5yrrwdryh3fgrsri.jpg';
+const blue3 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835307/dev/background/mlgwrjfxbgg4uehq7bou.jpg';
+const blue4 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835299/dev/background/b5ji5nzqmrnwiumrsjks.jpg';
+const blue5 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835315/dev/background/e5huxmustl2kjfx7h73h.jpg';
 
-import green1 from './green-cave.jpg';
-import green2 from './green-texture.jpg';
-import green3 from './light-green-texture-background.jpg';
-import green4 from './pastel-color-texture-background.jpg';
+const gray1 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835309/dev/background/qid1kz0jg1dttipyvsub.jpg';
+const gray2 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835302/dev/background/c0ws7mpdu5f8ai1ymvko.jpg';
+const gray3 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835302/dev/background/pqxsdxc9ay81k7au0gfc.jpg';
+const gray4 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835300/dev/background/mzt4sedxcc6044prz32o.jpg';
+const gray5 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835300/dev/background/btj4znnxfbg1byatemdh.jpg';
+const gray6 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835298/dev/background/vv8ammpt8wmmg0ccftas.jpg';
 
-import orange1 from './orange.jpg';
-import orange2 from './orange-2.jpg';
+const green1 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835305/dev/background/ixihzjzib7ofs7a5isdx.jpg';
+const green2 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835303/dev/background/qwmtxf9udwzlidmsni3r.jpg';
+const green3 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835301/dev/background/ig8mdqtmaxyjtzathxnj.jpg';
+const green4 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835301/dev/background/zeuq7rnidx2tusc5q90h.jpg';
 
-import red1 from './red-marble.jpg';
-import red2 from './red-wood-texture-wallpaper.jpg';
-import red3 from './red-wood-texture.jpg';
-import red4 from './red.jpg';
+const orange1 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835302/dev/background/fnbufovighjofeffm7ro.jpg';
+const orange2 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835302/dev/background/tuntgphiio4ssgxomn1n.jpg';
 
-import yellow1 from './bright-yellow-background-6.jpg';
-import yellow2 from './yellow-background-4.png';
-import yellow3 from './yellow-background-hd.jpg';
-import yellow4 from './yellow-balls.jpeg';
-import yellow6 from './yellow-Maple-Leaves-Background.jpg';
+const red1 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835305/dev/background/xecberz5l4ooqhyjfpmb.jpg';
+const red2 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835304/dev/background/xltmhdms3rilmaf2dik3.jpg';
+const red3 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835304/dev/background/ehkmrkcii6ggqpnccrca.jpg';
+const red4 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835303/dev/background/em3d9563pvpjew1pnbpk.jpg';
 
-import { colourConstants } from '../../utils/constants';
+const yellow1 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835307/dev/background/te9racz9csn97rbhq5xy.png';
+const yellow2 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835307/dev/background/j397viqy4gjn414azwlh.jpg';
+const yellow3 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835306/dev/background/vjamfianamksi9f2oed1.jpg';
+const yellow4 = 'https://res.cloudinary.com/worksfair/image/upload/f_auto/v1564835306/dev/background/tyj1jsnqk8davsbarxtf.jpg';
+
 
 const backgroundImageColours = {
   blue: [
@@ -38,7 +37,8 @@ const backgroundImageColours = {
     blue2,
     blue3,
     blue4,
-    blue5
+    blue5,
+    green1,
   ],
   default: [
     gray1,
@@ -61,14 +61,13 @@ const backgroundImageColours = {
     yellow2,
     yellow3,
     yellow4,
-    yellow6,
   ],
   red: [
+    yellow2,
     red1,
     red2,
     red3,
     red4,
-    yellow6,
   ],
 };
 

@@ -5,12 +5,12 @@ import { Link, withRouter } from 'react-router-dom';
 import SocialIcon from '../../atoms/SocialIcon';
 import avatar from '../../assets/worksfair-avatar1.png';
 import WebpageItem from './SearchWebpage/SearchWebpageItem';
-import sampleImage from '../../assets/sample-01.jpg';
 
 
 const UserProfile = ({ user }) => {
   const { webpages } = user;
   const username = localStorage.getItem('username');
+  const sampleImage = "https://imgplaceholder.com/180x180/131111?text=ADD+A+PICTURE&font-size=18";
 
   return (
     <Fragment>

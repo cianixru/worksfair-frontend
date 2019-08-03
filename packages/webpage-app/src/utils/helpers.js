@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { colourConstants } from './constants';
 
 const {
@@ -172,7 +174,68 @@ export const colourShadesOf = (colourName) => {
   return value;
 };
 
+/**
+ * @description checks whether the app is running on mobile
+ * 
+ * @returns {boolean}
+ */
 export const isMobileDevice = () => {
   const testRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
   return  testRegex.test(navigator.userAgent);
+}
+
+
+/**
+ * @description takes the webpage details array
+ * and augments some content to it.
+ * 
+ * @param {array} webpageDetails
+ * 
+ * @returns {array}
+ */
+export const augmentDetails = (webpageDetails) => {
+  const message = <span className="has-text-grey-light">Not available yet</span>;
+
+  const requiredContents = ['vision', 'mission', 'value'];
+
+  const detailsObject = {
+    'vision': {
+      id: 1,
+      title: 'Our Vision',
+      description: message,
+    },
+    'mission': {
+      id: 2,
+      title: 'Our Mission',
+      description: message,
+    },
+    'value': {
+      id: 3,
+      title: 'Core Values',
+      description: message,
+    }
+  };
+
+  const details = [];
+  const alreadyIn = [];
+
+  if (!webpageDetails || webpageDetails.length < 3) {
+    requiredContents.forEach(element => {
+      webpageDetails.forEach(detailItem => {
+        const title = detailItem.title.toLowerCase();
+        if(title.includes(element)){
+          details.push(detailItem);
+          alreadyIn.push(element);
+        }  
+      });
+    });
+    requiredContents.forEach(element => {
+      if (!alreadyIn.includes(element)){
+        details.push(detailsObject[element]);
+      }
+    })
+    return details;
+  } else {
+    return webpageDetails;
+  }
 }

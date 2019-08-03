@@ -3,15 +3,11 @@ import PropTypes from 'prop-types';
 import { Carousel } from 'react-responsive-carousel';
 import { Image, Transformation } from 'cloudinary-react';
 
-import sampleImage1 from '../../assets/sample-01.jpg';
-import sampleImage2 from '../../assets/sample-02.jpg';
-import sampleImage3 from '../../assets/sample-03.jpg';
-import sampleImage4 from '../../assets/sample-04.jpg';
 import { isMobileDevice } from '../../utils/helpers';
 
 
 
-const ImagesSlide = ({ webpage, colour }) => {
+const ImagesSlide = ({ webpage }) => {
   const imageProps = {
     centerMode: true,
     centerSlidePercentage: 50,
@@ -24,10 +20,10 @@ const ImagesSlide = ({ webpage, colour }) => {
   };
 
   const defaultImages = [
-    sampleImage1,
-    sampleImage2,
-    sampleImage3,
-    sampleImage4,
+    'https://imgplaceholder.com/576x432/131111?text=PICTURE+COMING+SOON&font-size=24',
+    'https://imgplaceholder.com/576x432/131111?text=PICTURE+COMING+SOON&font-size=24',
+    'https://imgplaceholder.com/576x432/131111?text=PICTURE+COMING+SOON&font-size=24',
+    'https://imgplaceholder.com/576x432/131111?text=PICTURE+COMING+SOON&font-size=24',
   ];
 
   return (
@@ -51,7 +47,7 @@ const ImagesSlide = ({ webpage, colour }) => {
           return (
             <figure className="image is-4by3" key={image}>
               <img
-                src="https://imgplaceholder.com/576x432/131111?text=PICTURE+COMING+SOON&font-size=24"
+                src={image}
                 alt="coming soon" />
             </figure>
           );

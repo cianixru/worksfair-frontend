@@ -50,8 +50,8 @@ Object {
               class="column is-3 has-text-extra-large"
             >
               <img
-                alt="404-compass"
-                src="404-compass.png"
+                class="offering-image"
+                src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://res.cloudinary.com/worksfair/image/upload/v1564834329/dev/qvwvfuxg6040ppipkanj.png"
               />
             </div>
           </div>
@@ -116,8 +116,8 @@ Object {
             class="column is-3 has-text-extra-large"
           >
             <img
-              alt="404-compass"
-              src="404-compass.png"
+              class="offering-image"
+              src="http://res.cloudinary.com/worksfair/image/fetch/f_auto/https://res.cloudinary.com/worksfair/image/upload/v1564834329/dev/qvwvfuxg6040ppipkanj.png"
             />
           </div>
         </div>

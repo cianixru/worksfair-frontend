@@ -19,7 +19,7 @@ Object {
             href="/#home"
           >
             <h2
-              class="webpage-title"
+              class="webpage-title has-text-dark"
             >
               <strong>
                 Happiness
@@ -116,7 +116,7 @@ Object {
           href="/#home"
         >
           <h2
-            class="webpage-title"
+            class="webpage-title has-text-dark"
           >
             <strong>
               Happiness

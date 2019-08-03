@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import dotenv from 'dotenv';
 
 import SocialIcon from '../../atoms/SocialIcon';
+import { textColourHelper } from '../../utils/helpers';
 
 dotenv.config();
 
@@ -46,6 +47,7 @@ class WebpageNav extends Component {
   render() {
     const { webpage, location } = this.props;
     const { REACT_APP_URL } = process.env;
+    const textColour = textColourHelper(webpage && webpage.colour);
 
     return (
       <nav
@@ -61,7 +63,7 @@ class WebpageNav extends Component {
             href={`${location.pathname}#home`}>
             { webpage && webpage.logo
               ? <img src={webpage.logo} width="112" height="28" alt="logo" />
-              : <h2 className="webpage-title">
+              : <h2 className={`webpage-title ${textColour}`}>
                 <strong>{ webpage && webpage.title }</strong>
               </h2>
             }
