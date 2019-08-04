@@ -128,6 +128,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -155,6 +156,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -182,6 +184,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -341,6 +344,7 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul />
                       </div>
                     </div>
                     <div
@@ -671,6 +675,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -693,6 +698,7 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul />
                       </div>
                     </div>
                     <div
@@ -712,6 +718,7 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul />
                       </div>
                     </div>
                     <div
@@ -736,6 +743,7 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul />
                       </div>
                     </div>
                   </div>
@@ -894,6 +902,7 @@ Object {
                             type="text"
                             value=""
                           />
+                          <ul />
                         </div>
                       </div>
                       <div
@@ -910,6 +919,13 @@ Object {
                             type="text"
                             value=""
                           />
+                          <ul>
+                            <li
+                              class="input-info"
+                            >
+                              Keep it short here, 10 words are enough
+                            </li>
+                          </ul>
                         </div>
                       </div>
                       <div
@@ -926,6 +942,18 @@ Object {
                             type="text"
                             value=""
                           />
+                          <ul>
+                            <li
+                              class="input-info"
+                            >
+                              Add numbers only (Eg. 25000)
+                            </li>
+                            <li
+                              class="input-info"
+                            >
+                              To display "Contact us for price", add 0 (ie. zero)
+                            </li>
+                          </ul>
                         </div>
                       </div>
                       <div
@@ -1102,6 +1130,7 @@ Object {
                       type="text"
                       value=""
                     />
+                    <ul />
                   </div>
                 </div>
                 <div
@@ -1129,6 +1158,7 @@ Object {
                       type="text"
                       value=""
                     />
+                    <ul />
                   </div>
                 </div>
                 <div
@@ -1156,6 +1186,7 @@ Object {
                       type="text"
                       value=""
                     />
+                    <ul />
                   </div>
                 </div>
                 <div
@@ -1315,6 +1346,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -1645,6 +1677,7 @@ Object {
                       type="text"
                       value=""
                     />
+                    <ul />
                   </div>
                 </div>
                 <div
@@ -1667,6 +1700,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -1686,6 +1720,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                   <div
@@ -1710,6 +1745,7 @@ Object {
                         type="text"
                         value=""
                       />
+                      <ul />
                     </div>
                   </div>
                 </div>
@@ -1868,6 +1904,7 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul />
                       </div>
                     </div>
                     <div
@@ -1884,6 +1921,13 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul>
+                          <li
+                            class="input-info"
+                          >
+                            Keep it short here, 10 words are enough
+                          </li>
+                        </ul>
                       </div>
                     </div>
                     <div
@@ -1900,6 +1944,18 @@ Object {
                           type="text"
                           value=""
                         />
+                        <ul>
+                          <li
+                            class="input-info"
+                          >
+                            Add numbers only (Eg. 25000)
+                          </li>
+                          <li
+                            class="input-info"
+                          >
+                            To display "Contact us for price", add 0 (ie. zero)
+                          </li>
+                        </ul>
                       </div>
                     </div>
                     <div

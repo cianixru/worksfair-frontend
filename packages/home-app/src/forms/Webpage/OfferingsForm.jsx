@@ -20,6 +20,12 @@ const OfferingsForm = ({
   offering,
   handleEditToggle,
 }) => {
+  const descriptionInfo = ['Keep it short here, 10 words are enough'];
+  const priceInfo = [
+    'Add numbers only (Eg. 25000)',
+    'To display "Contact us for price", add 0 (ie. zero)',
+  ];
+
   return (
     <Form
       onSubmit={onSubmit}
@@ -57,6 +63,7 @@ const OfferingsForm = ({
                   dataTestId="offering-description"
                   validationErrors={validationErrors}
                   handleErrorReset={handleErrorReset}
+                  info={descriptionInfo}
                 />
               </div>
             </div>
@@ -71,6 +78,7 @@ const OfferingsForm = ({
                   placeholder="Price"
                   validationErrors={validationErrors}
                   handleErrorReset={handleErrorReset}
+                  info={priceInfo}
                 />
               </div>
             </div>

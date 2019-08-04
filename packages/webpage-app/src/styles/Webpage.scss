@@ -282,5 +282,27 @@ a.mfp-gallery {
 
 .offering-description {
     min-width: 100%;
-    min-height: 100px;
+    min-height: 130px;
+    overflow: hidden;
+}
+
+@media(max-width:991px) {
+    .offering-description {
+        min-height: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+.offering-image {
+    border-radius: 4px;
+    max-width: 240px;
+    width: 100%
+}
+
+.offering-image:hover {
+    border: 2px solid #eee;
+}
+
+.has-radius-7 {
+  border-radius: 7px
 }

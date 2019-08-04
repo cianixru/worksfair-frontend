@@ -37,10 +37,15 @@ class WebpageContainer extends Component {
     const { webpage } = this.props;
     const offerings = webpage.offerings.slice(start, end);
 
-    return (<OfferingItem
-      colour={webpage.colour}
-      offerings={offerings}
-    />);
+    return (<ul className="columns is-multiline">
+        { offerings.length > 0
+          && offerings.map(offering => (<OfferingItem
+            colour={webpage.colour}
+            offering={offering}
+            key={offering.title}
+          />))
+        }
+        </ul>);
   }
 
   renderDetailItems = (start, end) => {

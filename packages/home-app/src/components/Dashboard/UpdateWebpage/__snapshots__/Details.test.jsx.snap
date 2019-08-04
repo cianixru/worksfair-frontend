@@ -67,6 +67,7 @@ Object {
                   type="text"
                   value=""
                 />
+                <ul />
               </div>
             </div>
             <div
@@ -184,6 +185,7 @@ Object {
                 type="text"
                 value=""
               />
+              <ul />
             </div>
           </div>
           <div

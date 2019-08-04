@@ -12,6 +12,7 @@ const WebpageText = ({
   dataTestId,
   validate,
   placeholder,
+  info,
   disabled
 }) => {
   const errorReset = () => handleErrorReset(name);
@@ -38,6 +39,17 @@ const WebpageText = ({
           );
         })
       }
+      <ul>
+        { info
+          && info.map((item) => {
+            return (
+              <li className="input-info" key={item}>
+                {item}
+              </li>
+            );
+          })
+        }
+      </ul>
     </Fragment>
   );
 };

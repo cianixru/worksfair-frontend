@@ -19,7 +19,10 @@ class Modal extends Component {
         <div className="modal-content">
           {children}
         </div>
-        <button className="modal-close is-large" aria-label="close" />
+        <button
+          className="modal-close is-large"
+          aria-label="close"
+          onClick={handleClick}/>
       </div>
     );
   }

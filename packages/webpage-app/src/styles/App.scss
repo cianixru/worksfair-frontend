@@ -81,6 +81,16 @@ body, .dashboard-container, .main-container {
     max-width: 100%;
 }
 
+.is-full {
+    height: 100%;
+    max-width: 100%;
+}
+
+.is-full img {
+    height: 100%;
+    width: 100%;
+}
+
 .is-150x150 {
     height: 150px;
     width: 150px;
