@@ -751,9 +751,22 @@ Object {
                     Try dropping some pictures here, or click to select pictures to upload.
                   </p>
                 </div>
-                <ul
+                <div
                   class="columns is-multiline "
                 />
+              </div>
+              <div
+                class="control"
+              >
+                <label
+                  class="checkbox"
+                >
+                  <input
+                    name="set-background"
+                    type="checkbox"
+                  />
+                  Set the first picture as your website background image
+                </label>
               </div>
               <div
                 class="control"
@@ -1690,9 +1703,22 @@ Object {
                   Try dropping some pictures here, or click to select pictures to upload.
                 </p>
               </div>
-              <ul
+              <div
                 class="columns is-multiline "
               />
+            </div>
+            <div
+              class="control"
+            >
+              <label
+                class="checkbox"
+              >
+                <input
+                  name="set-background"
+                  type="checkbox"
+                />
+                Set the first picture as your website background image
+              </label>
             </div>
             <div
               class="control"

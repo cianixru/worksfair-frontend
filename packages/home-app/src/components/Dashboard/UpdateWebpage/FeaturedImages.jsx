@@ -17,6 +17,9 @@ class FeaturedImages extends Component {
     uploadedImages: (this.props.webpage
       && this.props.webpage.featured_images) || [],
     rawFiles: {},
+    setBackground: (this.props.webpage
+    && this.props.webpage.set_background) || false,
+    updated: false,
   }
 
   /**
@@ -116,11 +119,20 @@ class FeaturedImages extends Component {
     }
   }
 
+  handleCheckboxChange = (event) => {
+    event.preventDefault();
+    this.setState({
+      setBackground: event.target.checked,
+      updated: true,
+    })
+  }
+
   /**
    * @description sends the cloudinary urls to the DB
    */
-  handleSubmit = async () => {
-    const { uploadedImages, selectedImages, rawFiles } = this.state;
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const { uploadedImages, selectedImages, rawFiles, setBackground } = this.state;
     const { isComplete, isLoading } = this.props;
 
     isLoading();
@@ -133,6 +145,7 @@ class FeaturedImages extends Component {
     axios.all(imagesData).then(() => {
       const images = {
         featured_images: uploadedImages,
+        set_background: setBackground,
       };
       this.props.onSubmit(images);
       this.setState({
@@ -144,8 +157,13 @@ class FeaturedImages extends Component {
   }
 
   render() {
-    const { selectedImages, existingImages } = this.state;
-    const hasNoImages = selectedImages.length <= 0;
+    const {
+      selectedImages,
+      existingImages,
+      setBackground,
+      updated,
+    } = this.state;
+    const hasImagesOrUpdated =  (updated || selectedImages.length > 0);
 
     return (
       <Dropzone
@@ -156,45 +174,49 @@ class FeaturedImages extends Component {
         {({ getRootProps, getInputProps }) => {
           // The list of existing pictures from the DB
           const existingPictureList = existingImages.map((imageCloudURL, index) => (
-            <li
+            <div
               key={`${imageCloudURL}${index}`}
-              className="notification column is-one-quarter"
+              className="column is-one-quarter"
             >
-              <button
-                className="delete"
-                onClick={this.handleRemoveImagefromCloud(imageCloudURL)}
-                data-testid="delete-image"
-              />
-              <figure className="image is-180x180">
+              <div className="image-preview">
                 <Image
                   cloudName="worksfair"
                   publicId={imageCloudURL}
                   alt={imageCloudURL}
                   type="fetch">
-                  <Transformation width="180" height="180" fetchFormat="auto" crop="fit" />
+                  <Transformation width="200" height="200" fetchFormat="auto" crop="fit" />
                 </Image>
-              </figure>
-            </li>
+                <div className="image-preview-overlay">
+                  <button
+                    className="delete is-large is-pulled-right"
+                    onClick={this.handleRemoveImagefromCloud(imageCloudURL)}
+                    data-testid="delete-image"
+                  />
+                </div>
+              </div>
+            </div>
           ));
 
           // The list of newly selected images
           const pictureList = selectedImages.map((localObjectURL, index) => (
-            <li
+            <div
               key={`${localObjectURL}${index}`}
-              className="notification column is-one-quarter"
+              className="column is-one-quarter"
             >
-              <button
-                className="delete"
-                onClick={this.handleRemoveImage(localObjectURL)}
-                data-testid="delete-image"
-              />
-              <figure className="image is-180x180">
+              <div className="image-preview">
                 <img
                   src={localObjectURL}
                   alt={localObjectURL}
                 />
-              </figure>
-            </li>
+                <div className="image-preview-overlay">
+                  <button
+                    className="delete is-large is-pulled-right"
+                    onClick={this.handleRemoveImage(localObjectURL)}
+                    data-testid="delete-image"
+                  />
+                </div>
+              </div>
+            </div>
           ));
 
           return (
@@ -206,22 +228,33 @@ class FeaturedImages extends Component {
                   <input {...getInputProps()} />
                   <p>Try dropping some pictures here, or click to select pictures to upload.</p>
                 </div>
-                <ul className="columns is-multiline ">
+                <div className="columns is-multiline ">
                   {existingPictureList}
                   {pictureList}
-                </ul>
+                </div>
               </div>
-              <div className="control">
-                <button
-                  type="submit"
-                  disabled={hasNoImages}
-                  className="button is-link is-medium is-rounded"
-                  data-testid="save-featured-images"
-                  onClick={this.handleSubmit}
-                >
-                  Save & Continue
-                </button>
-              </div>
+                <div className="control">
+                  <label className="checkbox">
+                    <input
+                      type="checkbox"
+                      name="set-background"
+                      checked={setBackground}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Set the first picture as your website background image
+                  </label>
+                </div>
+                <div className="control">
+                  <button
+                    type="submit"
+                    disabled={!hasImagesOrUpdated}
+                    className="button is-link is-medium is-rounded"
+                    data-testid="save-featured-images"
+                    onClick={this.handleSubmit}
+                  >
+                    Save & Continue
+                  </button>
+                </div>
             </div>
           );
         }}

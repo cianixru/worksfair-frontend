@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import getBackgroundImage from '../../assets/background/backgroundImages';
 
 const HeroSection = ({ webpage }) => {
-    const hero = webpage && (webpage.colour === 'is-dark')
+  const backgroundImageUrl = webpage && webpage.set_background
+    ? webpage.featured_images[0] : getBackgroundImage(webpage.colour);
+  const hero = webpage && (webpage.colour === 'is-dark') && !webpage.set_background
     ? <div
       className={`hero is-large ${webpage.colour}`}
       id="home"
@@ -26,7 +28,7 @@ const HeroSection = ({ webpage }) => {
         id="home"
         style={{
         background: `url(${
-            webpage && getBackgroundImage(webpage.colour)
+          backgroundImageUrl
         })`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',

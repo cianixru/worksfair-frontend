@@ -818,8 +818,43 @@ h5 {
   opacity: 0;
   filter: alpha(opacity=0)
 }
+
 .margin-bottom-25 {
   margin-bottom: 25px;
 }
 
+.checkbox {
+  margin-bottom: 15px;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+.image-preview {
+  width: 100%;
+  height: 180px;
+}
+
+.image-preview img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.image-preview-overlay {
+  position: relative;
+  top: -186px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.image-preview:hover .image-preview-overlay {
+  display: inline-block;
+}
 

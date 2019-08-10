@@ -126,22 +126,24 @@ class ImageUploader extends Component {
       >
         {({ getRootProps, getInputProps }) => {
           const pictureList = selectedImages.map(localObjectURL => (
-            <li
+            <div
               key={localObjectURL}
-              className="notification column is-one-quarter"
+              className="column is-one-quarter"
             >
-              <button
-                className="delete"
-                onClick={this.handleRemoveImage(localObjectURL)}
-                data-testid="delete-image"
+            <div className="image-preview">
+              <img
+                src={localObjectURL}
+                alt={localObjectURL}
               />
-              <figure className="image is-180x180">
-                <img
-                  src={localObjectURL}
-                  alt={localObjectURL}
+              <div className="image-preview-overlay">
+                <button
+                  className="delete is-large is-pulled-right"
+                  onClick={this.handleRemoveImage(localObjectURL)}
+                  data-testid="delete-image"
                 />
-              </figure>
-            </li>
+              </div>
+            </div>
+          </div>
           ));
 
           return (

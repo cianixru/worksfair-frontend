@@ -15,12 +15,12 @@ const DashboardLayout = ({ Component }) => {
     ],
     webpage: [
       {
-        text: 'Create Business Webpage',
+        text: 'Add Your Business',
         to: `/dashboard/${username}/webpages/new/basic-info`,
         icon: 'fa fa-plus-square',
       },
       {
-        text: 'Your Webpages',
+        text: 'Your Business/Webpages',
         to: `/dashboard/${username}/webpages`,
         icon: 'fa fa-th-list',
       },

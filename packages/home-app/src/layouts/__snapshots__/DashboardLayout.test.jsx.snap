@@ -62,7 +62,7 @@ Object {
                         aria-hidden="true"
                         class="fa fa-plus-square"
                       />
-                      Create Business Webpage
+                      Add Your Business
                     </a>
                   </li>
                   <li>
@@ -73,7 +73,7 @@ Object {
                         aria-hidden="true"
                         class="fa fa-th-list"
                       />
-                      Your Webpages
+                      Your Business/Webpages
                     </a>
                   </li>
                 </ul>
@@ -313,7 +313,7 @@ Object {
                       aria-hidden="true"
                       class="fa fa-plus-square"
                     />
-                    Create Business Webpage
+                    Add Your Business
                   </a>
                 </li>
                 <li>
@@ -324,7 +324,7 @@ Object {
                       aria-hidden="true"
                       class="fa fa-th-list"
                     />
-                    Your Webpages
+                    Your Business/Webpages
                   </a>
                 </li>
               </ul>

@@ -25,42 +25,63 @@ Object {
               Try dropping some pictures here, or click to select pictures to upload.
             </p>
           </div>
-          <ul
+          <div
             class="columns is-multiline "
           >
-            <li
-              class="notification column is-one-quarter"
+            <div
+              class="column is-one-quarter"
             >
-              <button
-                class="delete"
-                data-testid="delete-image"
-              />
-              <figure
-                class="image is-180x180"
+              <div
+                class="image-preview"
               >
                 <img
                   alt="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
-                  src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_180,w_180/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                  src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_200,w_200/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
                 />
-              </figure>
-            </li>
-            <li
-              class="notification column is-one-quarter"
+                <div
+                  class="image-preview-overlay"
+                >
+                  <button
+                    class="delete is-large is-pulled-right"
+                    data-testid="delete-image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="column is-one-quarter"
             >
-              <button
-                class="delete"
-                data-testid="delete-image"
-              />
-              <figure
-                class="image is-180x180"
+              <div
+                class="image-preview"
               >
                 <img
                   alt="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
-                  src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_180,w_180/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                  src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_200,w_200/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
                 />
-              </figure>
-            </li>
-          </ul>
+                <div
+                  class="image-preview-overlay"
+                >
+                  <button
+                    class="delete is-large is-pulled-right"
+                    data-testid="delete-image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="control"
+        >
+          <label
+            class="checkbox"
+          >
+            <input
+              name="set-background"
+              type="checkbox"
+            />
+            Set the first picture as your website background image
+          </label>
         </div>
         <div
           class="control"
@@ -98,42 +119,63 @@ Object {
             Try dropping some pictures here, or click to select pictures to upload.
           </p>
         </div>
-        <ul
+        <div
           class="columns is-multiline "
         >
-          <li
-            class="notification column is-one-quarter"
+          <div
+            class="column is-one-quarter"
           >
-            <button
-              class="delete"
-              data-testid="delete-image"
-            />
-            <figure
-              class="image is-180x180"
+            <div
+              class="image-preview"
             >
               <img
                 alt="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
-                src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_180,w_180/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_200,w_200/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
               />
-            </figure>
-          </li>
-          <li
-            class="notification column is-one-quarter"
+              <div
+                class="image-preview-overlay"
+              >
+                <button
+                  class="delete is-large is-pulled-right"
+                  data-testid="delete-image"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="column is-one-quarter"
           >
-            <button
-              class="delete"
-              data-testid="delete-image"
-            />
-            <figure
-              class="image is-180x180"
+            <div
+              class="image-preview"
             >
               <img
                 alt="https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
-                src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_180,w_180/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
+                src="http://res.cloudinary.com/worksfair/image/fetch/c_fit,f_auto,h_200,w_200/https://res.cloudinary.com/lbgcghcovyvtdbpih8ba.png"
               />
-            </figure>
-          </li>
-        </ul>
+              <div
+                class="image-preview-overlay"
+              >
+                <button
+                  class="delete is-large is-pulled-right"
+                  data-testid="delete-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="control"
+      >
+        <label
+          class="checkbox"
+        >
+          <input
+            name="set-background"
+            type="checkbox"
+          />
+          Set the first picture as your website background image
+        </label>
       </div>
       <div
         class="control"
