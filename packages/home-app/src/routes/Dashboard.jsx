@@ -9,32 +9,32 @@ const composeLayout = Component => composeDashboardLayout(Component);
 const dashboardRoutes = [
   {
     exact: true,
-    path: '/dashboard/:username/webpages/new/basic-info',
+    path: '/dashboard/:username/business/new/basic-info',
     component: composeLayout(CreateWebpage),
   },
   {
     exact: true,
-    path: '/dashboard/:username/webpages/new/contact-info',
+    path: '/dashboard/:username/business/new/contact-info',
     component: composeLayout(CreateWebpage),
   },
   {
     exact: true,
-    path: '/dashboard/:username/webpages/new/gallery',
+    path: '/dashboard/:username/business/new/gallery',
     component: composeLayout(CreateWebpage),
   },
   {
     exact: true,
-    path: '/dashboard/:username/webpages/new/offerings',
+    path: '/dashboard/:username/business/new/offerings',
     component: composeLayout(CreateWebpage),
   },
   {
     exact: true,
-    path: '/dashboard/:username/webpages/edit/:subDomainName',
+    path: '/dashboard/:username/business/edit/:subDomainName',
     component: composeLayout(UpdateWebpage),
   },
   {
     exact: true,
-    path: '/dashboard/:username/webpages',
+    path: '/dashboard/:username/businesses',
     component: composeLayout(ListWebpages),
   },
   {

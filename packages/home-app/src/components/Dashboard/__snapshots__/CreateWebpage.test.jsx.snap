@@ -23,7 +23,7 @@ Object {
                 <a
                   aria-label="Basic Info"
                   class="pagination-link"
-                  href="/dashboard/undefined/webpages/new/basic-info"
+                  href="/dashboard/undefined/business/new/basic-info"
                 >
                   <i
                     aria-hidden="true"
@@ -36,7 +36,7 @@ Object {
                 <a
                   aria-label="Goto Contact Info"
                   class="pagination-link"
-                  href="/dashboard/undefined/webpages/new/contact-info"
+                  href="/dashboard/undefined/business/new/contact-info"
                 >
                   <i
                     aria-hidden="true"
@@ -49,7 +49,7 @@ Object {
                 <a
                   aria-label="Goto Gallery"
                   class="pagination-link"
-                  href="/dashboard/undefined/webpages/new/gallery"
+                  href="/dashboard/undefined/business/new/gallery"
                 >
                   <i
                     aria-hidden="true"
@@ -62,13 +62,13 @@ Object {
                 <a
                   aria-label="Goto Offerings"
                   class="pagination-link"
-                  href="/dashboard/undefined/webpages/new/offerings"
+                  href="/dashboard/undefined/business/new/offerings"
                 >
                   <i
                     aria-hidden="true"
                     class="fa fa-money"
                   />
-                  Products/Services (Offerings)
+                  Products/Services (Your Works)
                 </a>
               </li>
             </ul>
@@ -99,7 +99,7 @@ Object {
               <a
                 aria-label="Basic Info"
                 class="pagination-link"
-                href="/dashboard/undefined/webpages/new/basic-info"
+                href="/dashboard/undefined/business/new/basic-info"
               >
                 <i
                   aria-hidden="true"
@@ -112,7 +112,7 @@ Object {
               <a
                 aria-label="Goto Contact Info"
                 class="pagination-link"
-                href="/dashboard/undefined/webpages/new/contact-info"
+                href="/dashboard/undefined/business/new/contact-info"
               >
                 <i
                   aria-hidden="true"
@@ -125,7 +125,7 @@ Object {
               <a
                 aria-label="Goto Gallery"
                 class="pagination-link"
-                href="/dashboard/undefined/webpages/new/gallery"
+                href="/dashboard/undefined/business/new/gallery"
               >
                 <i
                   aria-hidden="true"
@@ -138,13 +138,13 @@ Object {
               <a
                 aria-label="Goto Offerings"
                 class="pagination-link"
-                href="/dashboard/undefined/webpages/new/offerings"
+                href="/dashboard/undefined/business/new/offerings"
               >
                 <i
                   aria-hidden="true"
                   class="fa fa-money"
                 />
-                Products/Services (Offerings)
+                Products/Services (Your Works)
               </a>
             </li>
           </ul>

@@ -76,18 +76,18 @@ class Signup extends Component {
           const { user: { email, token, username } } = response;
           const url = `${
             window.location.host}/dashboard/${
-            username}/webpages?token=${token}`;
+            username}/businesses?token=${token}`;
 
           if (token && email) {
             sendConfirmationEmail(url, email);
             history.push({
-              pathname: `/dashboard/${username}/webpages`,
+              pathname: `/dashboard/${username}/businesses`,
               state: { previousLocation: 'signup' }
             });
           } else {
             alert.warning('Something went wrong. Confirmation email was not sent.');
             history.push({
-              pathname: `/dashboard/${username}/webpages`,
+              pathname: `/dashboard/${username}/businesses`,
               state: { previousLocation: 'login' }
             });
           }

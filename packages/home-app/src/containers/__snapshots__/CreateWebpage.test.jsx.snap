@@ -18,14 +18,14 @@ Object {
               class="column"
             >
               <h2>
-                Create Webpage
+                Add Your Business
               </h2>
               <a
                 href="http://ideosynergy.worksfair.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                View a sample business webpage
+                View a sample business website
               </a>
             </div>
             <div
@@ -45,16 +45,16 @@ Object {
                 </li>
                 <li>
                   <a
-                    href="/dashboard/null/webpages"
+                    href="/dashboard/null/businesses"
                   >
                     Dashboard
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/dashboard/null/webpages/new/basic-info"
+                    href="/dashboard/null/business/new/basic-info"
                   >
-                    Create Webpage
+                    Add Your Business
                   </a>
                 </li>
               </ul>
@@ -79,7 +79,7 @@ Object {
                   <a
                     aria-label="Basic Info"
                     class="pagination-link"
-                    href="/dashboard/null/webpages/new/basic-info"
+                    href="/dashboard/null/business/new/basic-info"
                   >
                     <i
                       aria-hidden="true"
@@ -92,7 +92,7 @@ Object {
                   <a
                     aria-label="Goto Contact Info"
                     class="pagination-link"
-                    href="/dashboard/null/webpages/new/contact-info"
+                    href="/dashboard/null/business/new/contact-info"
                   >
                     <i
                       aria-hidden="true"
@@ -105,7 +105,7 @@ Object {
                   <a
                     aria-label="Goto Gallery"
                     class="pagination-link"
-                    href="/dashboard/null/webpages/new/gallery"
+                    href="/dashboard/null/business/new/gallery"
                   >
                     <i
                       aria-hidden="true"
@@ -118,13 +118,13 @@ Object {
                   <a
                     aria-label="Goto Offerings"
                     class="pagination-link"
-                    href="/dashboard/null/webpages/new/offerings"
+                    href="/dashboard/null/business/new/offerings"
                   >
                     <i
                       aria-hidden="true"
                       class="fa fa-money"
                     />
-                    Products/Services (Offerings)
+                    Products/Services (Your Works)
                   </a>
                 </li>
               </ul>
@@ -162,14 +162,14 @@ Object {
             class="column"
           >
             <h2>
-              Create Webpage
+              Add Your Business
             </h2>
             <a
               href="http://ideosynergy.worksfair.com"
               rel="noopener noreferrer"
               target="_blank"
             >
-              View a sample business webpage
+              View a sample business website
             </a>
           </div>
           <div
@@ -189,16 +189,16 @@ Object {
               </li>
               <li>
                 <a
-                  href="/dashboard/null/webpages"
+                  href="/dashboard/null/businesses"
                 >
                   Dashboard
                 </a>
               </li>
               <li>
                 <a
-                  href="/dashboard/null/webpages/new/basic-info"
+                  href="/dashboard/null/business/new/basic-info"
                 >
-                  Create Webpage
+                  Add Your Business
                 </a>
               </li>
             </ul>
@@ -223,7 +223,7 @@ Object {
                 <a
                   aria-label="Basic Info"
                   class="pagination-link"
-                  href="/dashboard/null/webpages/new/basic-info"
+                  href="/dashboard/null/business/new/basic-info"
                 >
                   <i
                     aria-hidden="true"
@@ -236,7 +236,7 @@ Object {
                 <a
                   aria-label="Goto Contact Info"
                   class="pagination-link"
-                  href="/dashboard/null/webpages/new/contact-info"
+                  href="/dashboard/null/business/new/contact-info"
                 >
                   <i
                     aria-hidden="true"
@@ -249,7 +249,7 @@ Object {
                 <a
                   aria-label="Goto Gallery"
                   class="pagination-link"
-                  href="/dashboard/null/webpages/new/gallery"
+                  href="/dashboard/null/business/new/gallery"
                 >
                   <i
                     aria-hidden="true"
@@ -262,13 +262,13 @@ Object {
                 <a
                   aria-label="Goto Offerings"
                   class="pagination-link"
-                  href="/dashboard/null/webpages/new/offerings"
+                  href="/dashboard/null/business/new/offerings"
                 >
                   <i
                     aria-hidden="true"
                     class="fa fa-money"
                   />
-                  Products/Services (Offerings)
+                  Products/Services (Your Works)
                 </a>
               </li>
             </ul>

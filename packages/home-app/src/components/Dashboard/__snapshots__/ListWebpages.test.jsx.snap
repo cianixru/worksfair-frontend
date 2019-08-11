@@ -14,9 +14,9 @@ Object {
               class="is-active"
             >
               <a
-                href="/dashboard/TheoOkafor/webpages"
+                href="/dashboard/TheoOkafor/businesses"
               >
-                Active Webpages (
+                Active Businesses (
                 1
                 )
               </a>
@@ -95,7 +95,7 @@ Object {
                 >
                   <a
                     class="button is-white"
-                    href="/dashboard/TheoOkafor/webpages/edit/ideosynergy-ltd"
+                    href="/dashboard/TheoOkafor/business/edit/ideosynergy-ltd"
                   >
                     <i
                       class="fa fa-edit is-size-5 has-text-grey"
@@ -119,9 +119,9 @@ Object {
             class="is-active"
           >
             <a
-              href="/dashboard/TheoOkafor/webpages"
+              href="/dashboard/TheoOkafor/businesses"
             >
-              Active Webpages (
+              Active Businesses (
               1
               )
             </a>
@@ -200,7 +200,7 @@ Object {
               >
                 <a
                   class="button is-white"
-                  href="/dashboard/TheoOkafor/webpages/edit/ideosynergy-ltd"
+                  href="/dashboard/TheoOkafor/business/edit/ideosynergy-ltd"
                 >
                   <i
                     class="fa fa-edit is-size-5 has-text-grey"

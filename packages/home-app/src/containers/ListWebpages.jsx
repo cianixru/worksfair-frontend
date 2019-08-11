@@ -11,7 +11,7 @@ class ListWebpagesContainer extends Component {
     const navigation = [
       {
         text: 'Dashboard',
-        to: `dashboard/${username}/webpages`,
+        to: `dashboard/${username}/businesses`,
       },
     ];
     return (

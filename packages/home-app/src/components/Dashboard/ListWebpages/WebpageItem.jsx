@@ -51,7 +51,7 @@ const WebpageItem = ({
       </div>
       <div className="column is-2 is-mobile">
         <Link
-          to={`/dashboard/${username}/webpages/edit/${webpage.sub_domain_name}`}
+          to={`/dashboard/${username}/business/edit/${webpage.sub_domain_name}`}
           className="button is-white">
           <i className="fa fa-edit is-size-5 has-text-grey"/>
         </Link>

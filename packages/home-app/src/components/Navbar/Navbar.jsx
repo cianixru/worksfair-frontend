@@ -48,7 +48,7 @@ class Navbar extends Component {
     const links = [
       {
         text: 'Dashboard',
-        to: `/dashboard/${user && user.username}/webpages`,
+        to: `/dashboard/${user && user.username}/businesses`,
         class: 'navbar-item',
       },
       {

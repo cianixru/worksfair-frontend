@@ -13,7 +13,7 @@ class EmailConfirmation extends Component {
       const token = localStorage.getItem('token');
       const url = `${
         window.location.host}/dashboard/${
-        username}/webpages?token=${token}`;
+        username}/businesses?token=${token}`;
       if (token && email) {
         await sendConfirmationEmail(url, email);
       } else {

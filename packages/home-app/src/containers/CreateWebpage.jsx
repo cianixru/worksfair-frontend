@@ -11,20 +11,20 @@ class CreateWebpageContainer extends Component {
     const navigation = [
       {
         text: 'Dashboard',
-        to: `/dashboard/${username}/webpages`,
+        to: `/dashboard/${username}/businesses`,
       },
       {
-        text: 'Create Webpage',
-        to: `/dashboard/${username}/webpages/new/basic-info`,
+        text: 'Add Your Business',
+        to: `/dashboard/${username}/business/new/basic-info`,
       },
     ];
     return (
       <div className="dashboard-content">
         <Helmet>
-          <title>Create Webpage - Worksfair</title>
+          <title>Add Your Business - Worksfair</title>
         </Helmet>
         <DashboardHeader
-          title="Create Webpage"
+          title="Add Your Business"
           navigation={navigation}
         >
           <a
@@ -32,7 +32,7 @@ class CreateWebpageContainer extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View a sample business webpage
+            View a sample business website
           </a>
         </DashboardHeader>
         <CreateWebpage username={username} />

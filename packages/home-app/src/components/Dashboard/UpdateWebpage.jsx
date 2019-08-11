@@ -401,7 +401,7 @@ class UpdateWebpage extends Component {
           <div className="add-webpage-headline">
             <h3 className="is-size-4">
               <i className="fa fa-money" aria-hidden="true" />
-              Products/Services (Offerings)
+              Products/Services (Your Works)
             </h3>
           </div>
           <div className="add-webpage-content">

@@ -135,7 +135,7 @@ class ResetPassword extends Component {
           alert.success('Successful!');
   
           window.location.pathname = `/dashboard/${
-            response.user.username}/webpages`;
+            response.user.username}/businesses`;
         }
         const payload = {
           type,

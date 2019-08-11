@@ -97,7 +97,7 @@ class EditProfile extends Component {
     const navigation = [
       {
         text: 'Dashboard',
-        to: `dashboard/${username}/webpages`,
+        to: `dashboard/${username}/businesses`,
       },
       {
         text: 'Your Profile',

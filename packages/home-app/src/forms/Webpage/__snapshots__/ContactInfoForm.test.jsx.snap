@@ -237,29 +237,14 @@ Object {
                     Select Town
                   </option>
                   <option
-                    value="Ikeja"
+                    value="Apapa"
                   >
-                    Ikeja
+                    Apapa
                   </option>
                   <option
-                    value="Lekki"
+                    value="Agege"
                   >
-                    Lekki
-                  </option>
-                  <option
-                    value="Oshodi"
-                  >
-                    Oshodi
-                  </option>
-                  <option
-                    value="Ikoyi"
-                  >
-                    Ikoyi
-                  </option>
-                  <option
-                    value="Lagos-Island"
-                  >
-                    Lagos-Island
+                    Agege
                   </option>
                   <option
                     value="Badagry"
@@ -267,14 +252,84 @@ Object {
                     Badagry
                   </option>
                   <option
+                    value="Ebute-Meta"
+                  >
+                    Ebute-Meta
+                  </option>
+                  <option
+                    value="Ejigbo"
+                  >
+                    Ejigbo
+                  </option>
+                  <option
+                    value="Epe"
+                  >
+                    Epe
+                  </option>
+                  <option
+                    value="Festac Town"
+                  >
+                    Festac Town
+                  </option>
+                  <option
+                    value="Kosofe"
+                  >
+                    Kosofe
+                  </option>
+                  <option
+                    value="Ikotun"
+                  >
+                    Ikotun
+                  </option>
+                  <option
+                    value="Ifako"
+                  >
+                    Ifako
+                  </option>
+                  <option
+                    value="Ikeja"
+                  >
+                    Ikeja
+                  </option>
+                  <option
+                    value="Ikorodu"
+                  >
+                    Ikorodu
+                  </option>
+                  <option
+                    value="Ikoyi"
+                  >
+                    Ikoyi
+                  </option>
+                  <option
                     value="Isolo"
                   >
                     Isolo
                   </option>
                   <option
+                    value="Lekki"
+                  >
+                    Lekki
+                  </option>
+                  <option
+                    value="Lagos-Island"
+                  >
+                    Lagos-Island
+                  </option>
+                  <option
                     value="Mushin"
                   >
                     Mushin
+                  </option>
+                  <option
+                    value="Ojo"
+                  >
+                    Ojo
+                  </option>
+                  <option
+                    value="Oshodi"
+                  >
+                    Oshodi
                   </option>
                   <option
                     value="Surulere"
@@ -300,14 +355,16 @@ Object {
           <div
             class="control"
           >
-            <input
-              class="input is-medium"
-              data-testid="business-address"
-              name="address"
-              placeholder="Eg. No 12 ABC street, Zik Estate"
-              type="text"
-              value="No 7 Obinna Uzor Street, Canal Estate"
-            />
+            <div>
+              <input
+                class="input is-medium"
+                data-testid="business-address"
+                name="address"
+                placeholder="Eg. No 12 ABC street, Zik Estate"
+                type="text"
+                value="No 7 Obinna Uzor Street, Canal Estate"
+              />
+            </div>
             <span
               class="input-error"
             >
@@ -328,14 +385,16 @@ Object {
             <div
               class="control"
             >
-              <input
-                class="input is-medium"
-                data-testid="business-phone"
-                name="phone"
-                placeholder="08123456789"
-                type="text"
-                value=""
-              />
+              <div>
+                <input
+                  class="input is-medium"
+                  data-testid="business-phone"
+                  name="phone"
+                  placeholder="08123456789"
+                  type="text"
+                  value=""
+                />
+              </div>
               <span
                 class="input-error"
               >
@@ -353,14 +412,16 @@ Object {
             <div
               class="control"
             >
-              <input
-                class="input is-medium"
-                data-testid="business-email"
-                name="email"
-                placeholder="abc@anywebsite.com"
-                type="text"
-                value=""
-              />
+              <div>
+                <input
+                  class="input is-medium"
+                  data-testid="business-email"
+                  name="email"
+                  placeholder="abc@anywebsite.com"
+                  type="text"
+                  value=""
+                />
+              </div>
               <span
                 class="input-error"
               >
@@ -383,14 +444,16 @@ Object {
             <div
               class="control"
             >
-              <input
-                class="input is-medium"
-                data-testid="business-website"
-                name="website"
-                placeholder="https://www.yourwebsite.com"
-                type="text"
-                value=""
-              />
+              <div>
+                <input
+                  class="input is-medium"
+                  data-testid="business-website"
+                  name="website"
+                  placeholder="https://www.yourwebsite.com"
+                  type="text"
+                  value=""
+                />
+              </div>
               <span
                 class="input-error"
               >
@@ -648,29 +711,14 @@ Object {
                   Select Town
                 </option>
                 <option
-                  value="Ikeja"
+                  value="Apapa"
                 >
-                  Ikeja
+                  Apapa
                 </option>
                 <option
-                  value="Lekki"
+                  value="Agege"
                 >
-                  Lekki
-                </option>
-                <option
-                  value="Oshodi"
-                >
-                  Oshodi
-                </option>
-                <option
-                  value="Ikoyi"
-                >
-                  Ikoyi
-                </option>
-                <option
-                  value="Lagos-Island"
-                >
-                  Lagos-Island
+                  Agege
                 </option>
                 <option
                   value="Badagry"
@@ -678,14 +726,84 @@ Object {
                   Badagry
                 </option>
                 <option
+                  value="Ebute-Meta"
+                >
+                  Ebute-Meta
+                </option>
+                <option
+                  value="Ejigbo"
+                >
+                  Ejigbo
+                </option>
+                <option
+                  value="Epe"
+                >
+                  Epe
+                </option>
+                <option
+                  value="Festac Town"
+                >
+                  Festac Town
+                </option>
+                <option
+                  value="Kosofe"
+                >
+                  Kosofe
+                </option>
+                <option
+                  value="Ikotun"
+                >
+                  Ikotun
+                </option>
+                <option
+                  value="Ifako"
+                >
+                  Ifako
+                </option>
+                <option
+                  value="Ikeja"
+                >
+                  Ikeja
+                </option>
+                <option
+                  value="Ikorodu"
+                >
+                  Ikorodu
+                </option>
+                <option
+                  value="Ikoyi"
+                >
+                  Ikoyi
+                </option>
+                <option
                   value="Isolo"
                 >
                   Isolo
                 </option>
                 <option
+                  value="Lekki"
+                >
+                  Lekki
+                </option>
+                <option
+                  value="Lagos-Island"
+                >
+                  Lagos-Island
+                </option>
+                <option
                   value="Mushin"
                 >
                   Mushin
+                </option>
+                <option
+                  value="Ojo"
+                >
+                  Ojo
+                </option>
+                <option
+                  value="Oshodi"
+                >
+                  Oshodi
                 </option>
                 <option
                   value="Surulere"
@@ -711,14 +829,16 @@ Object {
         <div
           class="control"
         >
-          <input
-            class="input is-medium"
-            data-testid="business-address"
-            name="address"
-            placeholder="Eg. No 12 ABC street, Zik Estate"
-            type="text"
-            value="No 7 Obinna Uzor Street, Canal Estate"
-          />
+          <div>
+            <input
+              class="input is-medium"
+              data-testid="business-address"
+              name="address"
+              placeholder="Eg. No 12 ABC street, Zik Estate"
+              type="text"
+              value="No 7 Obinna Uzor Street, Canal Estate"
+            />
+          </div>
           <span
             class="input-error"
           >
@@ -739,14 +859,16 @@ Object {
           <div
             class="control"
           >
-            <input
-              class="input is-medium"
-              data-testid="business-phone"
-              name="phone"
-              placeholder="08123456789"
-              type="text"
-              value=""
-            />
+            <div>
+              <input
+                class="input is-medium"
+                data-testid="business-phone"
+                name="phone"
+                placeholder="08123456789"
+                type="text"
+                value=""
+              />
+            </div>
             <span
               class="input-error"
             >
@@ -764,14 +886,16 @@ Object {
           <div
             class="control"
           >
-            <input
-              class="input is-medium"
-              data-testid="business-email"
-              name="email"
-              placeholder="abc@anywebsite.com"
-              type="text"
-              value=""
-            />
+            <div>
+              <input
+                class="input is-medium"
+                data-testid="business-email"
+                name="email"
+                placeholder="abc@anywebsite.com"
+                type="text"
+                value=""
+              />
+            </div>
             <span
               class="input-error"
             >
@@ -794,14 +918,16 @@ Object {
           <div
             class="control"
           >
-            <input
-              class="input is-medium"
-              data-testid="business-website"
-              name="website"
-              placeholder="https://www.yourwebsite.com"
-              type="text"
-              value=""
-            />
+            <div>
+              <input
+                class="input is-medium"
+                data-testid="business-website"
+                name="website"
+                placeholder="https://www.yourwebsite.com"
+                type="text"
+                value=""
+              />
+            </div>
             <span
               class="input-error"
             >

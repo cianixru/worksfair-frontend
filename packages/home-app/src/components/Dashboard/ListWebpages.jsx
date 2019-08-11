@@ -35,7 +35,7 @@ class ListWebpages extends Component {
           alert.error(response.data.message);
         }
         setTimeout(() => (
-          window.location.replace(`/dashboard/${user.username}/webpages`)
+          window.location.replace(`/dashboard/${user.username}/businesses`)
         ), 3000);
       }
       await actions.getCurrentUser();
@@ -52,8 +52,8 @@ class ListWebpages extends Component {
         <div className="tabs is-boxed">
           <ul>
             <li className="is-active">
-              <Link to={`/dashboard/${user && user.username}/webpages`}>
-                Active Webpages ({
+              <Link to={`/dashboard/${user && user.username}/businesses`}>
+                Active Businesses ({
                   (user && user.webpages) && user.webpages.length})
               </Link>
             </li>

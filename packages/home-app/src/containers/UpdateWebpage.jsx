@@ -13,21 +13,21 @@ class UpdateWebpageContainer extends Component {
     const navigation = [
       {
         text: 'Dashboard',
-        to: `/dashboard/${username}/webpages`,
+        to: `/dashboard/${username}/businesses`,
       },
       {
-        text: 'Update Webpage',
+        text: 'Update Business Info',
         to: this.props.location.pathname,
       },
     ];
     return (
       <Fragment>
         <Helmet>
-          <title>Update Webpage</title>
+          <title>Update Business Info</title>
         </Helmet>
         <div className="dashboard-content">
           <DashboardHeader
-            title="Update Webpage"
+            title="Update Business Info"
             navigation={navigation}
           />
           <UpdateWebpage username={username} />

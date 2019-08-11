@@ -368,7 +368,7 @@ Object {
                   <li>
                     <a
                       class="navbar-item"
-                      href="/dashboard/TheoOkafor/webpages"
+                      href="/dashboard/TheoOkafor/businesses"
                     >
                       Dashboard
                     </a>
@@ -458,7 +458,7 @@ Object {
                 <li>
                   <a
                     class="navbar-item"
-                    href="/dashboard/TheoOkafor/webpages"
+                    href="/dashboard/TheoOkafor/businesses"
                   >
                     Dashboard
                   </a>

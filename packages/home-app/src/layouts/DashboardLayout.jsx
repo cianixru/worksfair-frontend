@@ -9,19 +9,19 @@ const DashboardLayout = ({ Component }) => {
     main: [
       {
         text: 'Dashboard',
-        to: `/dashboard/${username}/webpages`,
+        to: `/dashboard/${username}/businesses`,
         icon: 'fa fa-tachometer',
       },
     ],
     webpage: [
       {
         text: 'Add Your Business',
-        to: `/dashboard/${username}/webpages/new/basic-info`,
+        to: `/dashboard/${username}/business/new/basic-info`,
         icon: 'fa fa-plus-square',
       },
       {
         text: 'Your Business/Webpages',
-        to: `/dashboard/${username}/webpages`,
+        to: `/dashboard/${username}/businesses`,
         icon: 'fa fa-th-list',
       },
     ],

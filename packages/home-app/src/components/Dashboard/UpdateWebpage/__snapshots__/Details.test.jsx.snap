@@ -59,14 +59,16 @@ Object {
               <div
                 class="control"
               >
-                <input
-                  class="input is-medium"
-                  data-testid="detail-title"
-                  name="title"
-                  placeholder="Eg. Our Vision"
-                  type="text"
-                  value=""
-                />
+                <div>
+                  <input
+                    class="input is-medium"
+                    data-testid="detail-title"
+                    name="title"
+                    placeholder="Eg. Our Vision"
+                    type="text"
+                    value=""
+                  />
+                </div>
                 <ul />
               </div>
             </div>
@@ -177,14 +179,16 @@ Object {
             <div
               class="control"
             >
-              <input
-                class="input is-medium"
-                data-testid="detail-title"
-                name="title"
-                placeholder="Eg. Our Vision"
-                type="text"
-                value=""
-              />
+              <div>
+                <input
+                  class="input is-medium"
+                  data-testid="detail-title"
+                  name="title"
+                  placeholder="Eg. Our Vision"
+                  type="text"
+                  value=""
+                />
+              </div>
               <ul />
             </div>
           </div>

@@ -18,7 +18,7 @@ Object {
               class="column"
             >
               <h2>
-                Update Webpage
+                Update Business Info
               </h2>
             </div>
             <div
@@ -38,7 +38,7 @@ Object {
                 </li>
                 <li>
                   <a
-                    href="/dashboard/null/webpages"
+                    href="/dashboard/null/businesses"
                   >
                     Dashboard
                   </a>
@@ -49,7 +49,7 @@ Object {
                   <a
                     href="/"
                   >
-                    Update Webpage
+                    Update Business Info
                   </a>
                 </li>
               </ul>
@@ -77,7 +77,7 @@ Object {
               class="add-webpage-content"
             >
               <h5>
-                Website Owner
+                Business Owner
               </h5>
               <div
                 class="media"
@@ -114,20 +114,22 @@ Object {
                         <div
                           class="tip-content"
                         >
-                          Keep it short. It is also your Webpage title.
+                          Keep it short. It is also your website title.
                         </div>
                       </i>
                     </h5>
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="business-name"
-                        name="title"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="business-name"
+                          name="title"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -142,20 +144,22 @@ Object {
                         <div
                           class="tip-content"
                         >
-                          Your customers will see this message on webpage.
+                          Your customers will see this message on your website.
                         </div>
                       </i>
                     </h5>
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="description"
-                        name="description"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="description"
+                          name="description"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -177,13 +181,15 @@ Object {
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="business-keywords"
-                        name="keywords"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="business-keywords"
+                          name="keywords"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -198,7 +204,7 @@ Object {
                         <div
                           class="tip-content"
                         >
-                          The colour theme for your webpage. the default is plain gray-scale
+                          The colour theme for your website. the default is plain gray-scale
                         </div>
                       </i>
                     </h5>
@@ -336,14 +342,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="detail-title"
-                          name="title"
-                          placeholder="Eg. Our Vision"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="detail-title"
+                            name="title"
+                            placeholder="Eg. Our Vision"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul />
                       </div>
                     </div>
@@ -667,14 +675,16 @@ Object {
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="business-address"
-                        name="address"
-                        placeholder="Eg. No 12 ABC street, Zik Estate"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="business-address"
+                          name="address"
+                          placeholder="Eg. No 12 ABC street, Zik Estate"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -690,14 +700,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="business-phone"
-                          name="phone"
-                          placeholder="08123456789"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="business-phone"
+                            name="phone"
+                            placeholder="08123456789"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul />
                       </div>
                     </div>
@@ -710,14 +722,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="business-email"
-                          name="email"
-                          placeholder="abc@anywebsite.com"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="business-email"
+                            name="email"
+                            placeholder="abc@anywebsite.com"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul />
                       </div>
                     </div>
@@ -735,14 +749,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="business-website"
-                          name="website"
-                          placeholder="https://www.yourwebsite.com"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="business-website"
+                            name="website"
+                            placeholder="https://www.yourwebsite.com"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul />
                       </div>
                     </div>
@@ -847,7 +863,7 @@ Object {
                   aria-hidden="true"
                   class="fa fa-money"
                 />
-                Products/Services (Offerings)
+                Products/Services (Your Works)
               </h3>
             </div>
             <div
@@ -907,14 +923,16 @@ Object {
                         <div
                           class="control"
                         >
-                          <input
-                            class="input is-medium"
-                            data-testid="offering-name"
-                            name="title"
-                            placeholder="Name of item"
-                            type="text"
-                            value=""
-                          />
+                          <div>
+                            <input
+                              class="input is-medium"
+                              data-testid="offering-name"
+                              name="title"
+                              placeholder="Name of item"
+                              type="text"
+                              value=""
+                            />
+                          </div>
                           <ul />
                         </div>
                       </div>
@@ -924,14 +942,16 @@ Object {
                         <div
                           class="control"
                         >
-                          <input
-                            class="input is-medium"
-                            data-testid="offering-description"
-                            name="description"
-                            placeholder="Describe this item"
-                            type="text"
-                            value=""
-                          />
+                          <div>
+                            <input
+                              class="input is-medium"
+                              data-testid="offering-description"
+                              name="description"
+                              placeholder="Describe this item"
+                              type="text"
+                              value=""
+                            />
+                          </div>
                           <ul>
                             <li
                               class="input-info"
@@ -947,14 +967,16 @@ Object {
                         <div
                           class="control"
                         >
-                          <input
-                            class="input is-medium"
-                            data-testid="offering-price"
-                            name="price"
-                            placeholder="Price"
-                            type="text"
-                            value=""
-                          />
+                          <div>
+                            <input
+                              class="input is-medium"
+                              data-testid="offering-price"
+                              name="price"
+                              placeholder="Price"
+                              type="text"
+                              value=""
+                            />
+                          </div>
                           <ul>
                             <li
                               class="input-info"
@@ -1033,7 +1055,7 @@ Object {
             class="column"
           >
             <h2>
-              Update Webpage
+              Update Business Info
             </h2>
           </div>
           <div
@@ -1053,7 +1075,7 @@ Object {
               </li>
               <li>
                 <a
-                  href="/dashboard/null/webpages"
+                  href="/dashboard/null/businesses"
                 >
                   Dashboard
                 </a>
@@ -1064,7 +1086,7 @@ Object {
                 <a
                   href="/"
                 >
-                  Update Webpage
+                  Update Business Info
                 </a>
               </li>
             </ul>
@@ -1092,7 +1114,7 @@ Object {
             class="add-webpage-content"
           >
             <h5>
-              Website Owner
+              Business Owner
             </h5>
             <div
               class="media"
@@ -1129,20 +1151,22 @@ Object {
                       <div
                         class="tip-content"
                       >
-                        Keep it short. It is also your Webpage title.
+                        Keep it short. It is also your website title.
                       </div>
                     </i>
                   </h5>
                   <div
                     class="control"
                   >
-                    <input
-                      class="input is-medium"
-                      data-testid="business-name"
-                      name="title"
-                      type="text"
-                      value=""
-                    />
+                    <div>
+                      <input
+                        class="input is-medium"
+                        data-testid="business-name"
+                        name="title"
+                        type="text"
+                        value=""
+                      />
+                    </div>
                     <ul />
                   </div>
                 </div>
@@ -1157,20 +1181,22 @@ Object {
                       <div
                         class="tip-content"
                       >
-                        Your customers will see this message on webpage.
+                        Your customers will see this message on your website.
                       </div>
                     </i>
                   </h5>
                   <div
                     class="control"
                   >
-                    <input
-                      class="input is-medium"
-                      data-testid="description"
-                      name="description"
-                      type="text"
-                      value=""
-                    />
+                    <div>
+                      <input
+                        class="input is-medium"
+                        data-testid="description"
+                        name="description"
+                        type="text"
+                        value=""
+                      />
+                    </div>
                     <ul />
                   </div>
                 </div>
@@ -1192,13 +1218,15 @@ Object {
                   <div
                     class="control"
                   >
-                    <input
-                      class="input is-medium"
-                      data-testid="business-keywords"
-                      name="keywords"
-                      type="text"
-                      value=""
-                    />
+                    <div>
+                      <input
+                        class="input is-medium"
+                        data-testid="business-keywords"
+                        name="keywords"
+                        type="text"
+                        value=""
+                      />
+                    </div>
                     <ul />
                   </div>
                 </div>
@@ -1213,7 +1241,7 @@ Object {
                       <div
                         class="tip-content"
                       >
-                        The colour theme for your webpage. the default is plain gray-scale
+                        The colour theme for your website. the default is plain gray-scale
                       </div>
                     </i>
                   </h5>
@@ -1351,14 +1379,16 @@ Object {
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="detail-title"
-                        name="title"
-                        placeholder="Eg. Our Vision"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="detail-title"
+                          name="title"
+                          placeholder="Eg. Our Vision"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -1682,14 +1712,16 @@ Object {
                   <div
                     class="control"
                   >
-                    <input
-                      class="input is-medium"
-                      data-testid="business-address"
-                      name="address"
-                      placeholder="Eg. No 12 ABC street, Zik Estate"
-                      type="text"
-                      value=""
-                    />
+                    <div>
+                      <input
+                        class="input is-medium"
+                        data-testid="business-address"
+                        name="address"
+                        placeholder="Eg. No 12 ABC street, Zik Estate"
+                        type="text"
+                        value=""
+                      />
+                    </div>
                     <ul />
                   </div>
                 </div>
@@ -1705,14 +1737,16 @@ Object {
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="business-phone"
-                        name="phone"
-                        placeholder="08123456789"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="business-phone"
+                          name="phone"
+                          placeholder="08123456789"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -1725,14 +1759,16 @@ Object {
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="business-email"
-                        name="email"
-                        placeholder="abc@anywebsite.com"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="business-email"
+                          name="email"
+                          placeholder="abc@anywebsite.com"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -1750,14 +1786,16 @@ Object {
                     <div
                       class="control"
                     >
-                      <input
-                        class="input is-medium"
-                        data-testid="business-website"
-                        name="website"
-                        placeholder="https://www.yourwebsite.com"
-                        type="text"
-                        value=""
-                      />
+                      <div>
+                        <input
+                          class="input is-medium"
+                          data-testid="business-website"
+                          name="website"
+                          placeholder="https://www.yourwebsite.com"
+                          type="text"
+                          value=""
+                        />
+                      </div>
                       <ul />
                     </div>
                   </div>
@@ -1862,7 +1900,7 @@ Object {
                 aria-hidden="true"
                 class="fa fa-money"
               />
-              Products/Services (Offerings)
+              Products/Services (Your Works)
             </h3>
           </div>
           <div
@@ -1922,14 +1960,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="offering-name"
-                          name="title"
-                          placeholder="Name of item"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="offering-name"
+                            name="title"
+                            placeholder="Name of item"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul />
                       </div>
                     </div>
@@ -1939,14 +1979,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="offering-description"
-                          name="description"
-                          placeholder="Describe this item"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="offering-description"
+                            name="description"
+                            placeholder="Describe this item"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul>
                           <li
                             class="input-info"
@@ -1962,14 +2004,16 @@ Object {
                       <div
                         class="control"
                       >
-                        <input
-                          class="input is-medium"
-                          data-testid="offering-price"
-                          name="price"
-                          placeholder="Price"
-                          type="text"
-                          value=""
-                        />
+                        <div>
+                          <input
+                            class="input is-medium"
+                            data-testid="offering-price"
+                            name="price"
+                            placeholder="Price"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                         <ul>
                           <li
                             class="input-info"

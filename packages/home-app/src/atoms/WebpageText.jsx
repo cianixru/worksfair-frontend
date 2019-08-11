@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Field } from 'react-final-form';
 import PropTypes from 'prop-types';
+import slugify from 'slugify';
 
 import { toSentenceCase } from '../components/utils/helpers';
 
@@ -16,9 +17,19 @@ const WebpageText = ({
   disabled
 }) => {
   const errorReset = () => handleErrorReset(name);
+  const makeWebsiteLink = (title) => {
+    if (title) {
+      const slug = slugify(title,{
+        replacement:'-',
+        lower: true,
+      });
+      return `${slug}.worksfair.com`
+    }
+  }
+
   return (
     <Fragment>
-      <Field
+      {/* <Field
         className={className}
         type="text"
         validate={validate}
@@ -29,7 +40,29 @@ const WebpageText = ({
         // eslint-disable-next-line react/jsx-no-bind
         onFocus={errorReset}
         disabled={disabled}
-      />
+      /> */}
+      <Field
+        validate={validate}
+        name={name}>
+          {({ input, meta }) => {
+            return (<div>
+              <input
+                type="text"
+                className={className}
+                {...input}
+                placeholder={placeholder}
+                data-testid={dataTestId}
+                onFocus={errorReset}
+                disabled={disabled}
+              />
+              {meta.touched && meta.error && <span>{meta.error}</span>}
+              {input.name === 'title' && window.location.pathname.includes('new')
+              && <span>Your website URL will be 
+                  <span className="has-text-info"> {makeWebsiteLink(input.value)}</span>
+                </span>}
+            </div>)
+          }}
+        </Field>
       { validationErrors[name]
         && validationErrors[name].map((error) => {
           return (

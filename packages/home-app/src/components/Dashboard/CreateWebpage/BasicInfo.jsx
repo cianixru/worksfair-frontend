@@ -10,7 +10,7 @@ const BasicInfo = ({
 }) => {
   return (
     <Fragment>
-      <h5>Website Owner</h5>
+      <h5>Business Owner</h5> 
       <div className="media">
         <div className="media-left">
           <figure className="image is-32x32">

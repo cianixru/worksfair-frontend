@@ -89,7 +89,7 @@ class ImageUploader extends Component {
           'An error occured. Don\'t worry you can continue from where you stopped'
         );
         setTimeout(() => {
-          window.location.pathname = `/dashboard/${user.username}/webpages`;
+          window.location.pathname = `/dashboard/${user.username}/businesses`;
         }, 4000);
       }
 

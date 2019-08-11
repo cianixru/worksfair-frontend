@@ -54,7 +54,7 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         alert.success('Successful. Keep going!');
-        history.push(`/dashboard/${user.username}/webpages/new/contact-info`);
+        history.push(`/dashboard/${user.username}/business/new/contact-info`);
       }
     } catch (error) {
       alert.error(error.message);
@@ -89,7 +89,7 @@ class CreateWebpage extends Component {
           'An error occured. Don\'t worry you can continue from where you stopped'
         );
         setTimeout(() => {
-          window.location.pathname = `/dashboard/${user.username}/webpages`;
+          window.location.pathname = `/dashboard/${user.username}/businesses`;
         }, 4000);
       }
       input.subDomainName = webpage.sub_domain_name;
@@ -102,7 +102,7 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         alert.success('Successful. Keep going!');
-        history.push(`/dashboard/${user.username}/webpages/new/gallery`);
+        history.push(`/dashboard/${user.username}/business/new/gallery`);
       }
     } catch (error) {
       alert.error(error.message);
@@ -129,7 +129,7 @@ class CreateWebpage extends Component {
         alert.error('Request Failed. Check for more details');
       } else {
         alert.success('Successful. Keep going!');
-        history.push(`/dashboard/${user.username}/webpages/new/offerings`);
+        history.push(`/dashboard/${user.username}/business/new/offerings`);
       }
     } catch (error) {
       alert.error(error.message);
@@ -178,7 +178,7 @@ class CreateWebpage extends Component {
         'An error occured. Don\'t worry you can continue from where you stopped'
       );
       setTimeout(() => {
-        window.location.pathname = `/dashboard/${user.username}/webpages`;
+        window.location.pathname = `/dashboard/${user.username}/businesses`;
       }, 4000);
     }
     actions.isLoading();
@@ -234,7 +234,7 @@ class CreateWebpage extends Component {
       setTimeout(() => {
         window.location.replace(`http://${
           window.location.host}/dashboard/${
-          user.username}/webpages`);
+          user.username}/businesses`);
       }, 3000);
     }
 
@@ -284,7 +284,7 @@ class CreateWebpage extends Component {
               <li>
                 <NavLink
                   onClick={this.handleNavlinkClick}
-                  to={`/dashboard/${username}/webpages/new/basic-info`}
+                  to={`/dashboard/${username}/business/new/basic-info`}
                   activeClassName="is-current"
                   className="pagination-link"
                   aria-label="Basic Info">
@@ -295,7 +295,7 @@ class CreateWebpage extends Component {
               <li>
                 <NavLink
                   onClick={this.handleNavlinkClick}
-                  to={`/dashboard/${username}/webpages/new/contact-info`}
+                  to={`/dashboard/${username}/business/new/contact-info`}
                   activeClassName="is-current"
                   className="pagination-link"
                   aria-label="Goto Contact Info">
@@ -306,7 +306,7 @@ class CreateWebpage extends Component {
               <li>
                 <NavLink
                   onClick={this.handleNavlinkClick}
-                  to={`/dashboard/${username}/webpages/new/gallery`}
+                  to={`/dashboard/${username}/business/new/gallery`}
                   className="pagination-link"
                   activeClassName="is-current"
                   aria-label="Goto Gallery"
@@ -318,12 +318,12 @@ class CreateWebpage extends Component {
               <li>
                 <NavLink
                   onClick={this.handleNavlinkClick}
-                  to={`/dashboard/${username}/webpages/new/offerings`}
+                  to={`/dashboard/${username}/business/new/offerings`}
                   className="pagination-link"
                   activeClassName="is-current"
                   aria-label="Goto Offerings">
                   <i className="fa fa-money" aria-hidden="true" />
-                  Products/Services (Offerings)
+                  Products/Services (Your Works)
                 </NavLink>
               </li>
             </ul>
@@ -334,7 +334,7 @@ class CreateWebpage extends Component {
             <Fragment>
               <Route
                 exact
-                path="/dashboard/:username/webpages/new/basic-info"
+                path="/dashboard/:username/business/new/basic-info"
                 render={() => (<BasicInfo
                   onSubmit={this.onSubmit}
                   user={user}
@@ -343,7 +343,7 @@ class CreateWebpage extends Component {
               />
               <Route
                 exact
-                path="/dashboard/:username/webpages/new/contact-info"
+                path="/dashboard/:username/business/new/contact-info"
                 render={() => (<ContactInfo
                   onSubmit={this.submitContactInfo}
                   user={user}
@@ -352,7 +352,7 @@ class CreateWebpage extends Component {
               />
               <Route
                 exact
-                path="/dashboard/:username/webpages/new/gallery"
+                path="/dashboard/:username/business/new/gallery"
                 render={() => (<ImageUploader
                   onSubmit={this.submitImages}
                   user={user}
@@ -363,7 +363,7 @@ class CreateWebpage extends Component {
               />
               <Route
                 exact
-                path="/dashboard/:username/webpages/new/offerings"
+                path="/dashboard/:username/business/new/offerings"
                 render={() => (<Offerings
                   onSubmit={this.submitOfferings}
                   user={user}

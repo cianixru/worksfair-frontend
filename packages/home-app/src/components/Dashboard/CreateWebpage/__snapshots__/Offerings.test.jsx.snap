@@ -59,14 +59,16 @@ Object {
                 <div
                   class="control"
                 >
-                  <input
-                    class="input is-medium"
-                    data-testid="offering-name"
-                    name="title"
-                    placeholder="Name of item"
-                    type="text"
-                    value=""
-                  />
+                  <div>
+                    <input
+                      class="input is-medium"
+                      data-testid="offering-name"
+                      name="title"
+                      placeholder="Name of item"
+                      type="text"
+                      value=""
+                    />
+                  </div>
                   <ul />
                 </div>
               </div>
@@ -76,14 +78,16 @@ Object {
                 <div
                   class="control"
                 >
-                  <input
-                    class="input is-medium"
-                    data-testid="offering-description"
-                    name="description"
-                    placeholder="Describe this item"
-                    type="text"
-                    value=""
-                  />
+                  <div>
+                    <input
+                      class="input is-medium"
+                      data-testid="offering-description"
+                      name="description"
+                      placeholder="Describe this item"
+                      type="text"
+                      value=""
+                    />
+                  </div>
                   <ul>
                     <li
                       class="input-info"
@@ -99,14 +103,16 @@ Object {
                 <div
                   class="control"
                 >
-                  <input
-                    class="input is-medium"
-                    data-testid="offering-price"
-                    name="price"
-                    placeholder="Price"
-                    type="text"
-                    value=""
-                  />
+                  <div>
+                    <input
+                      class="input is-medium"
+                      data-testid="offering-price"
+                      name="price"
+                      placeholder="Price"
+                      type="text"
+                      value=""
+                    />
+                  </div>
                   <ul>
                     <li
                       class="input-info"
@@ -211,14 +217,16 @@ Object {
               <div
                 class="control"
               >
-                <input
-                  class="input is-medium"
-                  data-testid="offering-name"
-                  name="title"
-                  placeholder="Name of item"
-                  type="text"
-                  value=""
-                />
+                <div>
+                  <input
+                    class="input is-medium"
+                    data-testid="offering-name"
+                    name="title"
+                    placeholder="Name of item"
+                    type="text"
+                    value=""
+                  />
+                </div>
                 <ul />
               </div>
             </div>
@@ -228,14 +236,16 @@ Object {
               <div
                 class="control"
               >
-                <input
-                  class="input is-medium"
-                  data-testid="offering-description"
-                  name="description"
-                  placeholder="Describe this item"
-                  type="text"
-                  value=""
-                />
+                <div>
+                  <input
+                    class="input is-medium"
+                    data-testid="offering-description"
+                    name="description"
+                    placeholder="Describe this item"
+                    type="text"
+                    value=""
+                  />
+                </div>
                 <ul>
                   <li
                     class="input-info"
@@ -251,14 +261,16 @@ Object {
               <div
                 class="control"
               >
-                <input
-                  class="input is-medium"
-                  data-testid="offering-price"
-                  name="price"
-                  placeholder="Price"
-                  type="text"
-                  value=""
-                />
+                <div>
+                  <input
+                    class="input is-medium"
+                    data-testid="offering-price"
+                    name="price"
+                    placeholder="Price"
+                    type="text"
+                    value=""
+                  />
+                </div>
                 <ul>
                   <li
                     class="input-info"

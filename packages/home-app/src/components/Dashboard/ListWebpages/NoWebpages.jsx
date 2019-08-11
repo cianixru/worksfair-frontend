@@ -11,7 +11,7 @@ const NoWebpages = ({ user }) => (
         </p>
         { user && user.confirmed_account &&
           <Link
-            to={`/dashboard/${user.username}/webpages/new/basic-info`}
+            to={`/dashboard/${user.username}/business/new/basic-info`}
             className="button is-link is-outlined  margin-top-25">
             Create a Webpage
           </Link>
