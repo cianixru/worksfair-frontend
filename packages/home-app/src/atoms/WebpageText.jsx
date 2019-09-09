@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Field } from 'react-final-form';
 import PropTypes from 'prop-types';
-import slugify from 'slugify';
+import { makeWebsiteLink } from '../utils/helpers';
 
 import { toSentenceCase } from '../components/utils/helpers';
 
@@ -17,15 +17,6 @@ const WebpageText = ({
   disabled
 }) => {
   const errorReset = () => handleErrorReset(name);
-  const makeWebsiteLink = (title) => {
-    if (title) {
-      const slug = slugify(title,{
-        replacement:'-',
-        lower: true,
-      });
-      return `${slug}.worksfair.com`
-    }
-  }
 
   return (
     <Fragment>
@@ -44,25 +35,25 @@ const WebpageText = ({
       <Field
         validate={validate}
         name={name}>
-          {({ input, meta }) => {
-            return (<div>
-              <input
-                type="text"
-                className={className}
-                {...input}
-                placeholder={placeholder}
-                data-testid={dataTestId}
-                onFocus={errorReset}
-                disabled={disabled}
-              />
-              {meta.touched && meta.error && <span>{meta.error}</span>}
-              {input.name === 'title' && window.location.pathname.includes('new')
-              && <span>Your website URL will be 
-                  <span className="has-text-info"> {makeWebsiteLink(input.value)}</span>
-                </span>}
-            </div>)
-          }}
-        </Field>
+        {({ input, meta }) => {
+          return (<div>
+            <input
+              type="text"
+              className={className}
+              {...input}
+              placeholder={placeholder}
+              data-testid={dataTestId}
+              onFocus={errorReset}
+              disabled={disabled}
+            />
+            {meta.touched && meta.error && <span>{meta.error}</span>}
+            {input.name === 'title' && window.location.pathname.includes('new')
+              && <span>Your website URL will be
+                <span className="has-text-info"> {makeWebsiteLink(input.value)}</span>
+              </span>}
+          </div>);
+        }}
+      </Field>
       { validationErrors[name]
         && validationErrors[name].map((error) => {
           return (
@@ -97,6 +88,8 @@ WebpageText.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   validate: PropTypes.any,
   placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  info: PropTypes.array,
 };
 
 export default WebpageText;

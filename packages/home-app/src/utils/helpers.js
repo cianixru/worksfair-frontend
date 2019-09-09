@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import slugify from 'slugify';
 
 import { colourConstants } from './constants';
 
@@ -7,8 +8,6 @@ dotenv.config();
 const {
   black, blue, green, red, orange,
 } = colourConstants;
-
-// const { REACT_APP_URL } = process.env;
 
 /**
  * @description formats the error response messages
@@ -270,6 +269,12 @@ export const colourShadesOf = (colourName) => {
   return value;
 };
 
-// export const getAppUrl = () => {
-
-// }
+export const makeWebsiteLink = (title) => {
+  if (title) {
+    const slug = slugify(title, {
+      replacement: '-',
+      lower: true,
+    });
+    return `${slug}.worksfair.com`;
+  }
+};
