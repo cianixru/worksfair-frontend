@@ -7,21 +7,41 @@ import {
   NEW_WEBPAGE,
   createWebpage,
   CREATE_WEBPAGE_FAILED,
+
   GET_WEBPAGE,
   GET_WEBPAGE_FAILED,
   getWebpage,
+
+  getWebpages,
+  GET_WEBPAGES,
+
   UPDATED_WEBPAGE,
   UPDATE_WEBPAGE_FAILED,
   updateWebpage,
+
   CREATE_OFFERING_FAILED,
   NEW_OFFERING,
   createWebpageOffering,
+
   UPDATED_OFFERING,
   updateOffering,
   UPDATE_OFFERING_FAILED,
+
   deleteOffering,
   DELETE_OFFERING,
   DELETE_OFFERING_FAILED,
+
+  createWebpageDetails,
+  NEW_DETAIL,
+  CREATE_DETAIL_FAILED,
+
+  updateDetail,
+  UPDATED_DETAIL,
+  UPDATE_DETAIL_FAILED,
+
+  deleteDetail,
+  DELETE_DETAIL,
+  DELETE_DETAIL_FAILED,
 } from './webpage';
 import { offering, user } from '../utils/test-utils/mockData';
 import {
@@ -126,6 +146,26 @@ describe('Get Webpage action', () => {
       });
   });
 });
+
+describe('Get Webpages action', () => {
+  store = mockStore({
+    webpages: [],
+  });
+  test.skip('should dispatch the credentials to the store after getWebpages',
+    () => {
+      const expectedActions = [{
+        type: GET_WEBPAGES,
+        data: {
+          ...webpage,
+        }
+      }];
+      return store.dispatch(getWebpages(webpage))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+});
+
 describe('Update Webpage action', () => {
   test('should dispatch the credentials to the store after updateWebpage',
     () => {
@@ -316,6 +356,99 @@ describe('Get User action', () => {
       message: 'Request failed with status code 404',
     }];
     return store.dispatch(getUser(data))
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Create detail action', () => {
+  test('should dispatch the credentials to the store after create Detail',
+    () => {
+      mock.onPost('/webpages/ideosynergy/details/').reply(201, { ...offering });
+      const expectedActions = [{
+        type: NEW_DETAIL,
+        data: {
+          ...offering,
+        }
+      }];
+      return store.dispatch(createWebpageDetails(offering))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after create detail fail', () => {
+    mock.onPost('/webpages/ideosynergy/details/').reply(400, {
+      type: CREATE_DETAIL_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: CREATE_DETAIL_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(createWebpageDetails())
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Update detail action', () => {
+  test('should dispatch the credentials to the store after updateDetail',
+    () => {
+      mock.onPatch('/webpages/ideosynergy/details/1').reply(200, { ...offering });
+      const expectedActions = [{
+        type: UPDATED_DETAIL,
+        data: {
+          ...offering,
+        }
+      }];
+      return store.dispatch(updateDetail(offering))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after update detail fail', () => {
+    mock.onPatch('/webpages/ideosynergy/details/1').reply(400, {
+      type: UPDATE_DETAIL_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: UPDATE_DETAIL_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(updateDetail())
+      .then(() => {
+        expect(store.getActions().type).toEqual(expectedActions.type);
+      });
+  });
+});
+
+describe('Delete detail action', () => {
+  test('should dispatch the credentials to the store after deleteDetail',
+    () => {
+      mock.onDelete('/webpages/ideosynergy/details/1').reply(204, null);
+      const expectedActions = [{
+        type: DELETE_DETAIL,
+      }];
+      return store.dispatch(deleteDetail(offering))
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        });
+    });
+
+  test('should dispatch error to the store after delete detail fail', () => {
+    mock.onDelete('/webpages/ideosynergy/details/1').reply(400, {
+      type: DELETE_DETAIL_FAILED,
+      message: 'Request failed with status code 400',
+    });
+    const expectedActions = [{
+      type: DELETE_DETAIL_FAILED,
+      message: 'Request failed with status code 400',
+    }];
+    return store.dispatch(deleteDetail({}))
       .then(() => {
         expect(store.getActions().type).toEqual(expectedActions.type);
       });

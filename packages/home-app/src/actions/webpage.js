@@ -12,7 +12,7 @@ export const CREATE_WEBPAGE_FAILED = 'CREATE_WEBPAGE_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const createWebpage = data => async (dispatch) => {
+export const createWebpage = (data) => async (dispatch) => {
   try {
     const newWebpage = await axios({
       url: '/webpages/',
@@ -42,7 +42,7 @@ export const GET_WEBPAGE_FAILED = 'GET_WEBPAGE_FAILED';
  * @param { string } data
  * @returns { func } dispatch
  */
-export const getWebpage = data => async (dispatch) => {
+export const getWebpage = (data) => async (dispatch) => {
   try {
     const webpage = await axios({
       url: `/webpages/${data}/`,
@@ -71,7 +71,7 @@ export const UPDATE_WEBPAGE_FAILED = 'UPDATE_WEBPAGE_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const updateWebpage = data => async (dispatch) => {
+export const updateWebpage = (data) => async (dispatch) => {
   try {
     const webpage = await axios({
       url: `/webpages/${data.subDomainName}/`,
@@ -101,7 +101,7 @@ export const CREATE_OFFERING_FAILED = 'CREATE_OFFERING_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const createWebpageOffering = data => async (dispatch) => {
+export const createWebpageOffering = (data) => async (dispatch) => {
   try {
     const newOffering = await axios({
       url: `/webpages/${data.subDomainName}/offerings/`,
@@ -129,7 +129,7 @@ export const GET_WEBPAGES = 'GET_WEBPAGES';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const getWebpages = data => (dispatch) => {
+export const getWebpages = (data) => (dispatch) => {
   return dispatch({
     type: GET_WEBPAGES,
     data,
@@ -143,7 +143,7 @@ export const UPDATE_OFFERING_FAILED = 'UPDATE_OFFERING_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const updateOffering = data => async (dispatch) => {
+export const updateOffering = (data) => async (dispatch) => {
   try {
     const updatedOffering = await axios({
       url: `/webpages/${data.subDomainName}/offerings/${data.id}`,
@@ -172,7 +172,7 @@ export const DELETE_OFFERING_FAILED = 'DELETE_OFFERING_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const deleteOffering = data => async (dispatch) => {
+export const deleteOffering = (data) => async (dispatch) => {
   try {
     await axios({
       url: `/webpages/${data.subDomainName}/offerings/${data.id}`,
@@ -201,7 +201,7 @@ export const CREATE_DETAIL_FAILED = 'CREATE_DETAIL_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const createWebpageDetails = data => async (dispatch) => {
+export const createWebpageDetails = (data) => async (dispatch) => {
   try {
     const newDetail = await axios({
       url: `/webpages/${data.subDomainName}/details/`,
@@ -230,7 +230,7 @@ export const UPDATE_DETAIL_FAILED = 'UPDATE_DETAIL_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const updateDetail = data => async (dispatch) => {
+export const updateDetail = (data) => async (dispatch) => {
   try {
     const updatedDetail = await axios({
       url: `/webpages/${data.subDomainName}/details/${data.id}`,
@@ -259,7 +259,7 @@ export const DELETE_DETAIL_FAILED = 'DELETE_DETAIL_FAILED';
  * @param { object } data
  * @returns { func } dispatch
  */
-export const deleteDetail = data => async (dispatch) => {
+export const deleteDetail = (data) => async (dispatch) => {
   try {
     await axios({
       url: `/webpages/${data.subDomainName}/details/${data.id}`,

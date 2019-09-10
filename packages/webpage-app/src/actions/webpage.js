@@ -8,7 +8,7 @@ export const GET_WEBPAGE_FAILED = 'GET_WEBPAGE_FAILED';
  * @param { string } data
  * @returns { func } dispatch
  */
-export const getWebpage = data => async (dispatch) => {
+export const getWebpage = (data) => async (dispatch) => {
   try {
     const webpage = await api.get(`/webpages/${data}/`);
     return dispatch({

@@ -10,9 +10,9 @@ const manageAuth = new auth();
 export const AUTHENTICATED_USER = 'AUTHENTICATED_USER';
 export const AUTHENTICATION_FAILED = 'AUTHENTICATION_FAILED';
 
-export const setAuthenticatedUser = payload => dispatch => {
+export const setAuthenticatedUser = (payload) => (dispatch) => {
   return dispatch(payload);
-}
+};
 
 export const LOGOUT = 'LOGOUT';
 export const logout = () => (dispatch) => {
