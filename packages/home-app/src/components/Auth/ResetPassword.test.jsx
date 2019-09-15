@@ -11,6 +11,7 @@ afterEach(cleanup);
 
 const actions = {
   setAuthenticatedUser: jest.fn(),
+  isLoading: jest.fn(),
 };
 const middlewares = [thunk];
 const store = configureMockStore(middlewares);
@@ -28,7 +29,7 @@ describe('ResetPassword.jsx', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should login a user', () => {
+  test('should send reset email a user', () => {
     const { getByText, getByTestId } = render(
       <Provider store={mockStore}>
         <Router>
@@ -38,13 +39,16 @@ describe('ResetPassword.jsx', () => {
     );
 
     const email = getByTestId('update-password-email');
+    const sendButton = getByText('Send');
 
     fireEvent.change(email, { target: { value: 'theo.io@hannon.com' } });
     expect(email.value).toEqual('theo.io@hannon.com');
+
+    fireEvent.click(sendButton);
   });
 
 
-  test('should login a user', () => {
+  test('should change password a user', () => {
     localStorage.setItem('token', 'nshjhfasvdb WASVDW SDQWJVA');
     const { getByText, getByTestId } = render(
       <Provider store={mockStore}>
@@ -55,13 +59,16 @@ describe('ResetPassword.jsx', () => {
     );
 
     const password = getByTestId('update-password');
-    const confirm_password = getByTestId('confirm-password');
+    const confirmPassword = getByTestId('confirm-password');
+    const submitButton = getByText('Submit');
 
-    fireEvent.change(confirm_password, { target: { value: 'password1$' } });
-    expect(confirm_password.value).toEqual('password1$');
+    fireEvent.change(confirmPassword, { target: { value: 'password1$' } });
+    expect(confirmPassword.value).toEqual('password1$');
 
     fireEvent.change(password, { target: { value: 'password1$' } });
     expect(password.value).toEqual('password1$');
+
+    fireEvent.click(submitButton);
   });
 
   test.skip('should map dispatch to prop correctly', () => {

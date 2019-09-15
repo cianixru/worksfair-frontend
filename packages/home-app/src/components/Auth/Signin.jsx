@@ -8,64 +8,37 @@ import { Helmet } from 'react-helmet';
 import SigninForm from '../../forms/Auth/SigninForm';
 import {
   setAuthenticatedUser,
-  AUTHENTICATION_FAILED,
-  AUTHENTICATED_USER,
 } from '../../actions/auth';
 import { isLoading, isComplete } from '../../actions/loader';
-import alert from '../utils/alert';
 import { baseURL } from '../../utils/api';
+import { ResponseCallback, SIGNIN } from '../utils/callbacks';
 
 class Signin extends Component {
   // ts-check
   /**
    * @description Handles the form submit event
-   * @param {object} data
+   * @param {object} user
    */
   onSubmit = async (user) => {
     const { actions } = this.props;
+    const Callback = new ResponseCallback(SIGNIN);
+
     try {
       await actions.isLoading();
 
       const url = `${baseURL}/auth/login/`;
       user.email = user.email.toLowerCase();
-      let type = AUTHENTICATED_USER;
 
       fetch(url, {
         method: 'POST',
-        body: JSON.stringify({user}),
-        headers:{
+        body: JSON.stringify({ user }),
+        headers: {
           'Content-Type': 'application/json'
         }
-      }).then(res => {
-        if (!res.ok) {
-          type = AUTHENTICATION_FAILED;
-          alert.error('Login failed. Please check your credentials.');
-        }
-        return res.json();
-      })
-      .then(response => {
-        if (type === AUTHENTICATION_FAILED) {
-          const { user } = response;
-          this.setState({
-            validationErrors: user,
-          });
-          if (user.non_field_errors) {
-            alert.info(user.non_field_errors[0]);
-          }
-        } else {
-          alert.success('Successfully logged in!');
-  
-          window.location.pathname = `/dashboard/${
-            response.user.username}/businesses`;
-        }
-        const payload = {
-          type,
-          data: response,
-        };
-        actions.setAuthenticatedUser(payload);
-      })
-      .catch(error => console.error('Error:', error));
-
+      }).then(Callback.formatJson)
+        .then(Callback.handleResponseAndPayload)
+        .then((payload) => actions.setAuthenticatedUser(payload))
+        .catch((error) => console.error('Error:', error));
     } catch (error) {
       console.log(error);
     } finally {
@@ -103,7 +76,7 @@ const mapStateToProps = ({ auth: { currentUser } }) => ({
   user: currentUser.user,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(
     {
       isLoading,

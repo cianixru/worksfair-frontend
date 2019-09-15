@@ -8,15 +8,12 @@ import jwtDecode from 'jwt-decode';
 
 import PasswordForm from '../../forms/Auth/PasswordForm';
 import ResetEmailForm from '../../forms/Auth/ResetEmailForm';
-import {
-  setAuthenticatedUser,
-  AUTHENTICATION_FAILED,
-  AUTHENTICATED_USER,
-} from '../../actions/auth';
+import { setAuthenticatedUser } from '../../actions/auth';
 import { isLoading, isComplete } from '../../actions/loader';
 import alert from '../utils/alert';
 import { baseURL } from '../../utils/api';
 import { sendResetEmail } from '../../utils/services';
+import { ResponseCallback, RESET_PASSWORD } from '../utils/callbacks';
 
 class ResetPassword extends Component {
   constructor(props) {
@@ -29,20 +26,21 @@ class ResetPassword extends Component {
         password: [],
         confirm_password: [],
       },
-    }
+    };
   }
 
   sendEmail = async (user) => {
     try {
+      // eslint-disable-next-line camelcase
       const { token, email, get_fullname } = user;
       const url = `${
         window.location.host}/update-password?token=${token}`;
-        if (token && email) {
-            await sendResetEmail(url, email, get_fullname);
-        } else {
-            alert.error('Something went wrong. Please try again.');
-        }
-    } catch (error){
+      if (token && email) {
+        await sendResetEmail(url, email, get_fullname);
+      } else {
+        alert.error('Something went wrong. Please try again.');
+      }
+    } catch (error) {
       console.log(error);
     }
   }
@@ -50,45 +48,31 @@ class ResetPassword extends Component {
   // ts-check
   /**
    * @description Handles the form submit event
+   *
    * @param {object} data
    */
-  submitEmail = async (user) => {
+  submitEmail = async (data) => {
     const { actions } = this.props;
     try {
       await actions.isLoading();
 
       const url = `${baseURL}/auth/reset-password/`;
-      user.email = user.email.toLowerCase();
-      let type = AUTHENTICATED_USER;
+      data.email = data.email.toLowerCase();
+      const Callback = new ResponseCallback(RESET_PASSWORD);
 
       fetch(url, {
         method: 'POST',
-        body: JSON.stringify({user}),
-        headers:{
+        body: JSON.stringify({ data }),
+        headers: {
           'Content-Type': 'application/json'
         }
-      }).then(res => {
-        if (!res.ok) {
-          type = AUTHENTICATION_FAILED;
-          alert.error('Reset Password failed. Please try again.');
-        }
-        return res.json();
-      })
-      .then(response => {
-        if (type === AUTHENTICATION_FAILED) {
-          const { user } = response;
-          this.setState({
-            validationErrors: user,
-          });
-          if (user.non_field_errors) {
-            alert.info(user.non_field_errors[0]);
-          }
-        } else {
-          this.sendEmail(response.user);
-        }
-      })
-      .catch(error => console.error('Error:', error));
-
+      }).then(Callback.formatJson)
+        .then(Callback.handleResponseAndPayload)
+        .then((payload) => {
+          this.setState(payload.state);
+          this.sendEmail(payload.data.user);
+        })
+        .catch((error) => console.error('Error:', error));
     } catch (error) {
       console.log(error);
     } finally {
@@ -102,49 +86,26 @@ class ResetPassword extends Component {
     try {
       const { email } = jwtDecode(token);
       passwords.email = email;
+      const Callback = new ResponseCallback(RESET_PASSWORD);
 
       await actions.isLoading();
 
       const url = `${baseURL}/auth/update-password/`;
-      let type = AUTHENTICATED_USER;
 
       fetch(url, {
         method: 'PATCH',
         body: JSON.stringify({ passwords }),
-        headers:{
+        headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Token ${token}`,
+          Authorization: `Token ${token}`,
         }
-      }).then(res => {
-        if (!res.ok) {
-          type = AUTHENTICATION_FAILED;
-          alert.error('Reset password failed. Please try again');
-        }
-        return res.json();
-      })
-      .then(response => {
-        if (type === AUTHENTICATION_FAILED) {
-          const { user } = response;
-          this.setState({
-            validationErrors: user,
-          });
-          if (user.non_field_errors) {
-            alert.info(user.non_field_errors[0]);
-          }
-        } else {
-          alert.success('Successful!');
-  
-          window.location.pathname = `/dashboard/${
-            response.user.username}/businesses`;
-        }
-        const payload = {
-          type,
-          data: response,
-        };
-        actions.setAuthenticatedUser(payload);
-      })
-      .catch(error => console.error('Error:', error));
-
+      }).then(Callback.formatJson)
+        .then(Callback.handleResponseAndPayload)
+        .then((payload) => {
+          this.setState(payload.state);
+          actions.setAuthenticatedUser(payload);
+        })
+        .catch((error) => console.error('Error:', error));
     } catch (error) {
       alert.error('Reset password failed. Please try again');
       console.log(error);
@@ -201,7 +162,7 @@ const mapStateToProps = ({ auth: { currentUser } }) => ({
   user: currentUser.user,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(
     {
       isLoading,

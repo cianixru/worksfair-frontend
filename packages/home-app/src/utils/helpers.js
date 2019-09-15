@@ -22,7 +22,7 @@ export default (data) => {
     }, '');
     return errorMessage;
   }
-  return 'An error has occured. Please contact the admin for help.'
+  return 'An error has occured. Please contact the admin for help.';
 };
 
 export const states = {
@@ -114,7 +114,7 @@ export const states = {
   Niger: ['Minna', 'Madalla', 'Baro'],
   Ogun: [
     'Abeokuta',
-    'Sango Ota', 
+    'Sango Ota',
     'Ijebu Ode',
     'Sagamu',
     'Mowe',

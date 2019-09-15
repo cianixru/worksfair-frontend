@@ -12,9 +12,6 @@
     "vhost": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "^6.3.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
     "express-pino-logger": "^4.0.0",
     "node-env-run": "^3.0.2",
     "nodemon": "^1.19.1",

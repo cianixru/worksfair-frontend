@@ -14,14 +14,14 @@ import {
 } from '../../actions/auth';
 import alert from '../utils/alert';
 
-const sampleImage = "https://imgplaceholder.com/180x180/131111?text=ADD+A+PICTURE&font-size=18";
+const sampleImage = 'https://imgplaceholder.com/180x180/131111?text=ADD+A+PICTURE&font-size=18';
 class ListWebpages extends Component {
   async componentDidMount() {
     const { actions, location, user } = this.props;
     try {
       const params = new URLSearchParams(location.search);
       const token = params.get('token');
-      if (token){
+      if (token) {
         const response = await actions.confirmAccount({
           token,
         });
@@ -90,7 +90,7 @@ const mapStateToProps = ({ auth: { currentUser } }) => ({
   user: currentUser.user,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(
     {
       getCurrentUser,

@@ -20,20 +20,20 @@ const AuthText = ({
     <Fragment>
       <div className="control has-icons-left">
         <Field
-            className={className}
-            type="text"
-            validate={validate}
-            data-testid={dataTestId}
-            component="input"
-            name={name}
-            placeholder={placeholder}
-            // eslint-disable-next-line react/jsx-no-bind
-            onFocus={errorReset}
-            disabled={disabled}
+          className={className}
+          type="text"
+          validate={validate}
+          data-testid={dataTestId}
+          component="input"
+          name={name}
+          placeholder={placeholder}
+          // eslint-disable-next-line react/jsx-no-bind
+          onFocus={errorReset}
+          disabled={disabled}
         />
-          <span className="icon is-medium is-left">
-            <i className={icon} />
-          </span>
+        <span className="icon is-medium is-left">
+          <i className={icon} />
+        </span>
       </div>
       { validationErrors[name]
         && validationErrors[name].map((error) => {

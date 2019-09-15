@@ -5,7 +5,6 @@ import alert from '../utils/alert';
 import { sendConfirmationEmail } from '../../utils/services';
 
 class EmailConfirmation extends Component {
-
   sendConfirmationEmail = async () => {
     try {
       const username = localStorage.getItem('username');
@@ -19,10 +18,11 @@ class EmailConfirmation extends Component {
       } else {
         alert.error('Something went wrong. Please try to log into your account.');
       }
-    } catch (error){
+    } catch (error) {
       console.log(error);
     }
   }
+
   render() {
     const content = {
       signup: {
@@ -68,6 +68,7 @@ class EmailConfirmation extends Component {
 
 EmailConfirmation.propTypes = {
   location: PropTypes.object,
+  previousLocation: PropTypes.string,
 };
 
 export default EmailConfirmation;

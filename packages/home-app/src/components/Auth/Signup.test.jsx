@@ -51,6 +51,9 @@ describe('Signup.jsx', () => {
     fireEvent.change(email, { target: { value: 'theo.okafor@worksfair.com' } });
     expect(email.value).toEqual('theo.okafor@worksfair.com');
 
+    fireEvent.focus(email);
+    expect(email.value).toEqual('theo.okafor@worksfair.com');
+
     fireEvent.change(password, { target: { value: 'password1$' } });
     expect(password.value).toEqual('password1$');
 
